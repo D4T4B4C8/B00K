@@ -1,0 +1,232 @@
+███████╗██╗  ██╗████████╗    ██╗███╗   ███╗██████╗     ██████╗ ██████╗ ███████╗    ██████╗  █████╗ ████████╗ █████╗     ███╗   ██╗██████╗  ██████╗  ██████╗ ██╗  ██╗     ██╗     ███╗   ███╗
+██╔════╝╚██╗██╔╝╚══██╔══╝    ██║████╗ ████║██╔══██╗    ██╔══██╗██╔══██╗██╔════╝    ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗    ████╗  ██║██╔══██╗██╔═══██╗██╔═══██╗██║ ██╔╝     ██║     ████╗ ████║
+█████╗   ╚███╔╝    ██║       ██║██╔████╔██║██████╔╝    ██████╔╝██║  ██║█████╗      ██║  ██║███████║   ██║   ███████║    ██╔██╗ ██║██████╔╝██║   ██║██║   ██║█████╔╝█████╗██║     ██╔████╔██║
+██╔══╝   ██╔██╗    ██║       ██║██║╚██╔╝██║██╔═══╝     ██╔═══╝ ██║  ██║██╔══╝      ██║  ██║██╔══██║   ██║   ██╔══██║    ██║╚██╗██║██╔══██╗██║   ██║██║   ██║██╔═██╗╚════╝██║     ██║╚██╔╝██║
+███████╗██╔╝ ██╗   ██║       ██║██║ ╚═╝ ██║██║         ██║     ██████╔╝██║         ██████╔╝██║  ██║   ██║   ██║  ██║    ██║ ╚████║██████╔╝╚██████╔╝╚██████╔╝██║  ██╗     ███████╗██║ ╚═╝ ██║
+╚══════╝╚═╝  ╚═╝   ╚═╝       ╚═╝╚═╝     ╚═╝╚═╝         ╚═╝     ╚═════╝ ╚═╝         ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝    ╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝     ╚══════╝╚═╝     ╚═╝
+
+[EXTRACT IMPORTANT PDF DATA] [NOTEBOOK LM]                                                                                                                                                                                                      
+█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗
+╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝                                                                                                                                                                                            
+
+Read the entire PDF from beginning to end. Identify every major topic, chapter, section, example, explanation, definition, process, important detail and conclusion. Do not give me a short summary. I want comprehensive coverage of the complete PDF. in romanised hindi
+
+
+██████╗       ██╗  ██╗██╗███╗   ██╗██████╗ ██╗       ██╗        █████╗ ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗     ████████╗ █████╗  ██████╗ ███████╗   
+██╔══██╗      ██║  ██║██║████╗  ██║██╔══██╗██║       ██║       ██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔════╝     ╚══██╔══╝██╔══██╗██╔════╝ ██╔════╝   
+██████╔╝█████╗███████║██║██╔██╗ ██║██║  ██║██║    ████████╗    ███████║██║  ██║██║  ██║██║██╔██╗ ██║██║  ███╗       ██║   ███████║██║  ███╗███████╗   
+██╔══██╗╚════╝██╔══██║██║██║╚██╗██║██║  ██║██║    ██╔═██╔═╝    ██╔══██║██║  ██║██║  ██║██║██║╚██╗██║██║   ██║       ██║   ██╔══██║██║   ██║╚════██║   
+██║  ██║      ██║  ██║██║██║ ╚████║██████╔╝██║    ██████║      ██║  ██║██████╔╝██████╔╝██║██║ ╚████║╚██████╔╝       ██║   ██║  ██║╚██████╔╝███████║   
+╚═╝  ╚═╝      ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝    ╚═════╝      ╚═╝  ╚═╝╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝        ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   
+                                                                                                                                                      
+[CONVERY BOOK INTO SIMPLE ROMANISED HINDI AND ADDING TAGS INTO YOUR TXT FILE]                                                                                                                                                      
+                                                                                                                                                      
+█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗
+╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝
+                                                                                                                                                                                                                               
+# Combined Task: Simplify Book into Romanised Hindi + Output in Tagged Line Format
+
+I have uploaded a book/document (or raw notes) written in Hindi, English, or mixed language.
+
+Your task is to **rewrite the entire content into very simple, natural, easy-to-understand Romanised Hindi**, and output it directly in a specific **tagged line format** (no markdown, no headings, no bullets — just tags).
+
+This is a **language simplification + reformatting task**, NOT a summary.
+
+---
+
+## PART A — LANGUAGE RULES (apply to every line of content)
+
+### 1. Keep the full information
+- Do NOT summarize the book.
+- Do NOT remove important information.
+- Do NOT skip chapters, sections, concepts, examples, explanations, rules, principles, stories, case studies, or details.
+- Keep the original meaning and message exactly the same.
+- Do not add information from your own knowledge — use ONLY the source content.
+- If something is unclear in the source, do not guess or invent an explanation.
+
+### 2. Simple Romanised Hindi
+Convert the language into very simple Romanised Hindi.
+
+Example:
+- Difficult: "Vyakti ko paristhitiyon ke prati pratikriya dene ke bajay apni pratikriya ka chunav karne ki kshamata viksit karni chahiye."
+- Simple: "Insaan ko situation ke hisaab se automatically react nahi karna chahiye. Use khud decide karna chahiye ki woh kaise respond karega."
+
+### 3. Roman script only
+- Hindi ko English/Roman letters mein likho. Devanagari script bilkul mat use karo.
+- Simple everyday Hindi use karo; zarurat padne par common English words use kar sakte ho.
+- Language natural honi chahiye — jaise ek educated person kisi dost ko simple language mein samjha raha ho.
+
+### 4. Simplify difficult words
+Agar koi difficult Hindi, Sanskrit, Urdu ya English word hai, uska easy meaning use karo (e.g. "Atmanirikshan" → "Khud ko honestly dekhna").
+
+Lekin agar koi technical term, book ka special term, theory, model ya concept hai, uska original naam rakho aur simple language mein explain karo (e.g. "Circle of Influence — iska matlab hai woh cheezein jinhe hum control ya change kar sakte hain").
+
+### 5. Concepts
+Jahan concept difficult ho, use simple words mein explain karo. Format concept name + simple meaning + example (only if source gives an example — don't invent one).
+
+### 6. Important terms
+Pehle original term rakho, phir simple explanation do. Don't fully replace technical terms.
+
+### 7. Quotes
+Preserve important quotes as-is, followed by their simple Romanised Hindi meaning. Don't change the quote's meaning.
+
+### 8. Repetition
+Agar same idea repeat ho raha hai bina naya info ke, language simple karte waqt duplication thoda reduce kar sakte ho — lekin important meaning mat hatao. Agar repetition mein naya info/example hai, use rakho.
+
+### 9. Writing style
+Simple, natural, conversational, clear, easy to remember and read. Not overly formal/Sanskritised/Urdu-style. Not word-to-word literal translation.
+
+### 10. Do NOT
+❌ Summarize or shorten ❌ Remove important info ❌ Add your own knowledge ❌ Change author's ideas ❌ Alter meaning while interpreting ❌ Use Devanagari script ❌ Replace difficult Hindi with difficult English ❌ Do literal word-to-word translation
+
+---
+
+## PART B — OUTPUT FORMAT (tagged lines, applied AFTER simplification)
+
+Once a piece of content has been simplified per Part A, tag it as one of the following, based on what it actually is:
+
+- `H1|` — a major heading (a Part, a Chapter, a big numbered section, or a standalone top-level topic)
+- `H2|` — a sub-heading nested under the H1 above it (a named group of points, e.g. "Principle X" or "Y Dimensions")
+- `P|` — a plain paragraph (intro or transition prose that isn't a bullet point or heading)
+- `B|` — a bullet/detail point. If it starts with a short label + colon (e.g. "Term: explanation"), keep that structure — text before the first colon will be auto-bolded. Use this format for concepts, technical terms, and quotes too (e.g. `B|Circle of Influence: iska matlab hai woh cheezein jinhe hum control ya change kar sakte hain.`)
+- `S|` — a nested example or sub-item sitting underneath a B or H2 point above it (individual items inside a numbered/lettered sub-list, or an example belonging to a concept/quote above it)
+
+### Formatting rules
+1. The very first line of output must be: `B="Book Title"` (exact title in quotes) — this is used to auto-detect the title, not a content line.
+2. The very second line of output must be: `A="Author Name"` (exact author name in quotes) — this is used to auto-detect the author, not a content line. Find the author's name from the source (cover, title page, front matter, "by ___", etc.). If the source genuinely doesn't state an author anywhere, leave it as `A=""` rather than guessing or inventing a name.
+3. Every other line must start with one of `H1|`, `H2|`, `B|`, `P|`, or `S|` immediately followed by the content — no other prefixes, no blank lines, no markdown symbols (`-`, `*`, numbering) left in.
+4. Preserve all original content and meaning — reclassify and re-tag, don't drop anything.
+5. Nest logically: sub-points of a heading become `B|` directly under `H1|`/`H2|`; deeper nested items (a sub-list under a `B|` or `H2|`) become `S|`.
+6. Keep intro/transition sentences under a heading as `P|`, not `B|`.
+7. Quotes: tag as `B|` with the quote, followed by an `S|` line with its simple meaning.
+8. Output ONLY the tagged lines — no explanation, no commentary, no code fences.
+
+> Note: `B="..."` (title, line 1) and `A="..."` (author, line 2) look similar to the `B|` bullet tag but are different things — they're plain `key="value"` lines, not content lines, and only ever appear once each, at the very top.
+
+---
+
+## FINAL QUALITY CHECK (internal, before finalizing)
+1. Is all original information preserved?
+2. Is any chapter/section missing?
+3. Is the meaning unchanged?
+4. Is the language simple Romanised Hindi (no Devanagari)?
+5. Are difficult concepts explained simply?
+6. Are technical terms preserved (original name + simple explanation)?
+7. Did I add nothing from my own knowledge?
+8. Does every line follow the tag format correctly, with no markdown symbols left in?
+9. Does the output start with `B="Book Title"` followed immediately by `A="Author Name"`?
+
+### FINAL GOAL
+Original book's FULL information + SAME meaning + SIMPLE ROMANISED HINDI + correctly TAGGED LINE FORMAT (H1|/H2|/P|/B|/S|), starting with `B="Book Title"` then `A="Author Name"`.
+
+---
+
+Here are my raw notes:
+[PASTE RAW NOTES HERE]
+                                                                                                                                                      
+
+
+
+██████╗  ██████╗  ██████╗ ██╗  ██╗    ████████╗██╗████████╗██╗     ███████╗    ██╗███╗   ███╗ █████╗  ██████╗ ███████╗  
+██╔══██╗██╔═══██╗██╔═══██╗██║ ██╔╝    ╚══██╔══╝██║╚══██╔══╝██║     ██╔════╝    ██║████╗ ████║██╔══██╗██╔════╝ ██╔════╝  
+██████╔╝██║   ██║██║   ██║█████╔╝        ██║   ██║   ██║   ██║     █████╗      ██║██╔████╔██║███████║██║  ███╗█████╗    
+██╔══██╗██║   ██║██║   ██║██╔═██╗        ██║   ██║   ██║   ██║     ██╔══╝      ██║██║╚██╔╝██║██╔══██║██║   ██║██╔══╝    
+██████╔╝╚██████╔╝╚██████╔╝██║  ██╗       ██║   ██║   ██║   ███████╗███████╗    ██║██║ ╚═╝ ██║██║  ██║╚██████╔╝███████╗  
+╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝       ╚═╝   ╚═╝   ╚═╝   ╚══════╝╚══════╝    ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝  
+                                                                                                                        
+                                                                                                                                                                                                                                                
+█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗
+╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝
+                                                                                                                        
+
+Create a clean, elegant, handmade black-and-white typography page using the exact title written inside the quotation marks: **"[Ultralearning]"** Design requirements: * Portrait page, **2:3 aspect ratio, 800 × 1200 pixels**. * Pure white or very slightly warm-white paper background. * Pure black hand-drawn ink typography. * The title must be reproduced **exactly**, with correct spelling, capitalization, and every word preserved. * Use an attractive **handwritten / hand-lettered brush-pen style**, as if drawn by hand with a black marker. * Make the main title large, bold, expressive, artistic, and easy to read. * Arrange the words beautifully across the page with balanced spacing and strong visual hierarchy. * Use natural handwritten imperfections: slightly irregular strokes, subtle variations in line thickness, and authentic hand-drawn character. * Add tasteful hand-drawn underlines, small dots, tiny decorative strokes, simple flourishes, and minimal botanical/leaf doodles around the typography. * Use a **very thin, imperfect hand-drawn rectangular border** around the page. * Keep the composition centered, spacious, balanced, and aesthetically pleasing. * The overall appearance should feel like a **beautiful handmade journal/book title page**, created with a black ink pen on clean paper. * Maintain generous white space around the lettering. * Keep the decorations subtle so they never compete with the title. * Use only **black ink and white paper**. No other colors. IMPORTANT — CLEAN PAGE: * **NO pen** * **NO pencil** * **NO hands** * **NO people** * **NO objects** * **NO desk** * **NO paper shadows** * **NO realistic shadows** * **NO coffee cups** * **NO stationery** * **NO photographs** * **NO 3D effects** * **NO mockup** * **NO textured background** * **NO gray background** * **NO colored elements** * **NO unnecessary illustrations** * **NO clutter** The final result should look like a **clean scanned handmade illustration/page**, not a photograph of a physical page. The title is the absolute focal point. Make the typography highly attractive, artistic, readable, and convincingly handwritten. Do not add any words, subtitles, author names, logos, or text that are not present in the supplied title.
+
+
+███╗   ██╗ ██████╗     ███████╗ █████╗  ██████╗███████╗    ██╗   ██╗██╗██████╗ ███████╗ ██████╗ 
+████╗  ██║██╔═══██╗    ██╔════╝██╔══██╗██╔════╝██╔════╝    ██║   ██║██║██╔══██╗██╔════╝██╔═══██╗
+██╔██╗ ██║██║   ██║    █████╗  ███████║██║     █████╗      ██║   ██║██║██║  ██║█████╗  ██║   ██║
+██║╚██╗██║██║   ██║    ██╔══╝  ██╔══██║██║     ██╔══╝      ╚██╗ ██╔╝██║██║  ██║██╔══╝  ██║   ██║
+██║ ╚████║╚██████╔╝    ██║     ██║  ██║╚██████╗███████╗     ╚████╔╝ ██║██████╔╝███████╗╚██████╔╝
+╚═╝  ╚═══╝ ╚═════╝     ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝      ╚═══╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝ 
+                                                                                                
+                                                                                                
+                                                                                                
+█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗█████╗
+╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝
+                                                                                                
+                                                                                                
+                                                                                                
+STRICT VISUAL RULE — NO FACES / NO LIVING BEINGS:
+
+Create the video using ONLY non-living subjects, objects, environments, architecture, landscapes, textures, abstract visuals, typography, Islamic geometric patterns, calligraphy, ornaments, products, scenery, and cinematic environmental elements.
+
+UNDER NO CIRCUMSTANCES create, generate, show, imply, or reveal ANY human or animal face.
+
+DO NOT create:
+
+* Human faces
+* Human heads
+* Portraits
+* People
+* Human bodies
+* Human silhouettes that resemble people
+* Eyes
+* Eyeballs
+* Nose
+* Mouth
+* Lips
+* Ears
+* Facial features
+* Hands or body parts if they appear human-like
+* Animals
+* Birds
+* Insects
+* Cartoon characters
+* Statues or sculptures resembling living beings
+* Mannequins
+* Avatars
+* Human-like AI characters
+* Reflections containing people or faces
+* Background crowds
+* People visible in photographs, paintings, screens, posters, or reflections
+
+This is a STRICT and NON-NEGOTIABLE requirement.
+
+If the audio describes a person, character, historical event, story, emotion, or action, DO NOT visualize the person. Instead, represent the meaning using safe non-living visuals such as:
+
+* Architecture
+* Mosques and Islamic architecture
+* Islamic geometric patterns
+* Arabic calligraphy
+* Books and manuscripts
+* Open books
+* Historical objects
+* Clothing shown without a person
+* Empty rooms
+* Roads and landscapes
+* Mountains
+* Desert landscapes
+* Sky and clouds
+* Water
+* Light and shadows
+* Candles or lanterns
+* Doors and windows
+* Objects associated with the narration
+* Symbolic abstract animation
+* Typography
+* Particles
+* Smoke, mist, dust, and light effects
+* Cinematic camera movement
+* Abstract shapes and textures
+
+IMPORTANT:
+When uncertain whether something may look like a face or living being, ALWAYS choose the non-living alternative.
+
+NEVER sacrifice this rule for realism, cinematic quality, storytelling, or visual variety.
+
+The final video must contain ZERO human faces, ZERO animal faces, and ZERO living beings.
+
+HALAL VISUAL STANDARD:
+Keep the entire visual presentation modest, clean, respectful, family-friendly, and suitable for Islamic/halal content. Avoid inappropriate imagery, suggestive imagery, nudity, revealing clothing, romantic/sexual imagery, dancing, nightlife imagery, alcohol, gambling, or other inappropriate themes.
+
+The AI must prioritize these restrictions above all other visual instructions.

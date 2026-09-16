@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+<title>Dastaan-e-Kitab — Order Your Books</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root{
+    --ink:#0c0c14;
+    --ink-soft:#5a5670;
+    --paper:#fff9f2;
+    --hot:#ff2f92;
+    --cyan:#00d9e8;
+    --yellow:#ffd400;
+    --violet:#7b2ff7;
+    --orange:#ff6a00;
+    --lime:#a4ff2f;
+    --panel-border: 4px;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    min-height:100vh;
+    color:var(--ink);
+    font-family:'Poppins',sans-serif;
+    background:
+      radial-gradient(circle at 15% 15%, rgba(255,47,146,0.35), transparent 40%),
+      radial-gradient(circle at 85% 20%, rgba(0,217,232,0.30), transparent 45%),
+      radial-gradient(circle at 50% 90%, rgba(123,47,247,0.30), transparent 45%),
+      #12111c;
+    background-attachment:fixed;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding: clamp(14px, 4vw, 48px) 14px;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1.4px);
+    background-size: 14px 14px;
+    mix-blend-mode: overlay;
+    opacity:0.5;
+  }
+
+  .stage{
+    width:100%;
+    max-width:620px;
+    position:relative;
+  }
+
+  .book{
+    position:relative;
+    width:100%;
+    background:var(--paper);
+    border: var(--panel-border) solid var(--ink);
+    border-radius:18px;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.55), 0 0 0 2px rgba(255,255,255,0.04) inset;
+    overflow:hidden;
+  }
+  .page{
+    position:relative;
+    padding: clamp(22px,5vw,44px) clamp(18px,5vw,42px) clamp(26px,5vw,40px);
+    min-height: 560px;
+    display:none;
+    flex-direction:column;
+  }
+  .page.active{display:flex;}
+
+  /* Gives the last field on the info page (email) room to scroll clear
+     of the on-screen keyboard on phones, instead of the keyboard just
+     covering it. */
+  .kb-spacer{ height:0; }
+  @media (max-width: 600px){
+    .kb-spacer{ height:45vh; }
+  }
+  .field input{ scroll-margin: 24px 0; }
+
+  /* splash blob behind headline */
+  .splash{
+    position:absolute;
+    z-index:0;
+    filter: blur(2px);
+    opacity:0.9;
+    pointer-events:none;
+  }
+  .splash-1{ top:-40px; left:-40px; width:180px; height:180px;
+    background: radial-gradient(circle, var(--hot), transparent 70%); }
+  .splash-2{ top:-20px; right:-50px; width:200px; height:200px;
+    background: radial-gradient(circle, var(--cyan), transparent 70%); }
+
+  .head-wrap{ position:relative; z-index:1; margin-bottom:6px; }
+  .kicker{
+    display:inline-block;
+    font-family:'Poppins',sans-serif;
+    font-weight:800;
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    letter-spacing:0.14em;
+    color:#fff;
+    background:var(--violet);
+    padding:5px 14px;
+    border-radius:999px;
+    border:3px solid var(--ink);
+    transform: rotate(-3deg);
+    margin-bottom:14px;
+  }
+  .headline{
+    font-family:'Bangers',cursive;
+    font-weight:400;
+    letter-spacing:0.02em;
+    font-size: clamp(2.4rem, 8vw, 3.6rem);
+    line-height:0.95;
+    color:var(--ink);
+    -webkit-text-stroke: 1.5px var(--ink);
+    text-shadow: 4px 4px 0 var(--hot), 7px 7px 0 var(--ink);
+    margin:0 0 6px 0;
+  }
+  .subtitle{
+    position:relative; z-index:1;
+    font-size: clamp(0.85rem, 2.4vw, 0.98rem);
+    font-weight:500;
+    color:var(--ink-soft);
+    margin:0 0 20px 0;
+  }
+
+  /* ---------- Page 1: Books ---------- */
+  .book-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    flex:1;
+    position:relative;
+    z-index:1;
+  }
+  .book-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:12px;
+    border-radius:14px;
+    border:3px solid var(--ink);
+    background:#fff;
+    box-shadow:5px 5px 0 rgba(0,0,0,0.85);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .book-row:nth-child(odd){ transform:rotate(-0.6deg); }
+  .book-row:nth-child(even){ transform:rotate(0.6deg); }
+  .book-row:hover{ transform:translateY(-2px) rotate(0deg); }
+  .book-row.is-checked{
+    background: linear-gradient(135deg, #fff 60%, rgba(255,212,0,0.25));
+  }
+  .cover{
+    width: clamp(64px, 15vw, 92px);
+    height: clamp(90px, 21vw, 128px);
+    object-fit:cover;
+    border-radius:6px;
+    border:3px solid var(--ink);
+    box-shadow:3px 3px 0 rgba(0,0,0,0.5);
+    flex-shrink:0;
+  }
+  .book-meta{flex:1; min-width:0;}
+  .book-title{
+    font-weight:800;
+    font-size: clamp(0.95rem, 2.6vw, 1.15rem);
+    color:var(--ink);
+    margin:0 0 4px 0;
+    line-height:1.15;
+  }
+  .book-price{
+    display:inline-block;
+    font-weight:800;
+    font-size:0.85rem;
+    color:#fff;
+    background:var(--ink);
+    padding:2px 10px;
+    border-radius:999px;
+  }
+  .checkbox{
+    width:38px;
+    height:38px;
+    border:3px solid var(--ink);
+    border-radius:10px;
+    flex-shrink:0;
+    cursor:pointer;
+    position:relative;
+    background:#fff;
+    box-shadow:3px 3px 0 rgba(0,0,0,0.5);
+    transition: transform .1s ease, background .15s ease;
+  }
+  .checkbox:active{ transform: scale(0.9); }
+  .checkbox.checked{
+    background:var(--lime);
+  }
+  .checkbox.checked::after{
+    content:"";
+    position:absolute;
+    left:11px; top:5px;
+    width:9px; height:18px;
+    border:solid var(--ink);
+    border-width:0 4px 4px 0;
+    transform:rotate(40deg);
+  }
+
+  .total-strip{
+    position:relative; z-index:1;
+    margin-top:20px;
+    padding:16px 18px;
+    border-radius:14px;
+    border:3px solid var(--ink);
+    background:var(--yellow);
+    box-shadow:5px 5px 0 rgba(0,0,0,0.85);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    transform: rotate(-0.4deg);
+  }
+  .total-strip .label{
+    font-weight:800;
+    font-size:0.9rem;
+    letter-spacing:0.04em;
+    color:var(--ink);
+  }
+  .total-strip .value{
+    font-family:'Bangers',cursive;
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    color:var(--ink);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-row{
+    display:flex;
+    justify-content:center;
+    margin-top:26px;
+    position:relative; z-index:1;
+  }
+  .btn-next, .btn-paid{
+    font-family:'Poppins',sans-serif;
+    font-weight:800;
+    font-size: clamp(0.95rem, 3vw, 1.05rem);
+    letter-spacing:0.02em;
+    color:var(--ink);
+    background:var(--lime);
+    border:3px solid var(--ink);
+    padding: 14px 42px;
+    border-radius:999px;
+    cursor:pointer;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.85);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .btn-next:hover, .btn-paid:hover{ transform: translate(-2px,-2px); box-shadow: 7px 7px 0 rgba(0,0,0,0.85); }
+  .btn-next:active, .btn-paid:active{ transform: translate(2px,2px); box-shadow: 2px 2px 0 rgba(0,0,0,0.85); }
+  .btn-next:disabled{
+    background:#d8d4e6;
+    color:#8f8aa3;
+    box-shadow:none;
+    cursor:not-allowed;
+    transform:none;
+  }
+  .btn-back{
+    font-family:'Poppins',sans-serif;
+    font-weight:700;
+    font-size:0.85rem;
+    color:#fff;
+    background:var(--ink);
+    border:3px solid var(--ink);
+    border-radius:999px;
+    cursor:pointer;
+    padding:7px 16px;
+    align-self:flex-start;
+    margin-bottom:16px;
+    position:relative; z-index:1;
+  }
+  .btn-back:hover{ background:var(--violet); }
+
+  /* ---------- Page 2: Info ---------- */
+  .field{
+    margin-bottom:20px;
+    position:relative; z-index:1;
+  }
+  .field label{
+    display:inline-block;
+    font-size: clamp(0.85rem, 2.4vw, 0.95rem);
+    font-weight:800;
+    color:#fff;
+    margin-bottom:8px;
+    padding:3px 12px;
+    border-radius:8px;
+    border:2.5px solid var(--ink);
+  }
+  .field:nth-of-type(5n+1) label{ background:var(--hot); }
+  .field:nth-of-type(5n+2) label{ background:var(--cyan); color:var(--ink); }
+  .field:nth-of-type(5n+3) label{ background:var(--violet); }
+  .field:nth-of-type(5n+4) label{ background:var(--orange); }
+  .field:nth-of-type(5n+5) label{ background:var(--lime); color:var(--ink); }
+  .field input{
+    width:100%;
+    border:3px solid var(--ink);
+    border-radius:12px;
+    background:#fff;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    color:var(--ink);
+    padding:12px 14px;
+    outline:none;
+    box-shadow:4px 4px 0 rgba(0,0,0,0.5);
+    transition: box-shadow .15s ease, transform .1s ease;
+  }
+  .field input:focus{ box-shadow:4px 4px 0 var(--hot); transform:translate(-1px,-1px); }
+  .field input.error{ border-color:#e0225a; }
+  .hint{
+    font-size:0.75rem;
+    font-weight:700;
+    color:#e0225a;
+    margin-top:6px;
+    min-height:14px;
+  }
+
+  /* ---------- Page 3: Payment ---------- */
+  .amount-block{
+    position:relative; z-index:1;
+    text-align:center;
+    margin:4px 0 24px 0;
+  }
+  .amount-block .tag{
+    font-weight:800;
+    font-size:0.8rem;
+    color:#fff;
+    background:var(--ink);
+    display:inline-block;
+    padding:4px 14px;
+    border-radius:999px;
+    letter-spacing:0.08em;
+  }
+  .amount-block .amt{
+    font-family:'Bangers',cursive;
+    font-size: clamp(3.4rem, 16vw, 5.2rem);
+    line-height:1;
+    color:var(--ink);
+    text-shadow: 5px 5px 0 var(--orange), 9px 9px 0 var(--ink);
+    margin-top:10px;
+  }
+  .amount-block .amt sup{
+    font-size:0.4em;
+    margin-right:4px;
+  }
+
+  .qr-wrap{
+    position:relative; z-index:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    margin-top:6px;
+  }
+  .qr-frame{
+    background:#fff;
+    padding:14px;
+    border-radius:14px;
+    border:3px solid var(--ink);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.85);
+  }
+  .qr-frame img{ display:block; width:min(50vw,180px); height:min(50vw,180px); }
+  .upi-note{
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--ink-soft);
+    text-align:center;
+    max-width:300px;
+  }
+  .pay-link{
+    display:inline-block;
+    margin-top:2px;
+    font-weight:800;
+    font-size:0.9rem;
+    color:#fff;
+    background:var(--violet);
+    text-decoration:none;
+    padding:8px 18px;
+    border-radius:999px;
+    border:2.5px solid var(--ink);
+  }
+  .order-summary{
+    position:relative; z-index:1;
+    margin-top:24px;
+    padding:14px 16px;
+    border-radius:12px;
+    border:2.5px dashed var(--ink);
+    font-size:0.85rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .order-summary div{margin-bottom:4px;}
+
+  .screenshot-step{
+    position:relative; z-index:1;
+    margin-top:22px;
+    padding:16px 18px;
+    border-radius:14px;
+    border:3px solid var(--ink);
+    background:#fff;
+    box-shadow:5px 5px 0 rgba(0,0,0,0.85);
+    text-align:center;
+  }
+  .step-label{
+    font-weight:800;
+    font-size:0.82rem;
+    letter-spacing:0.04em;
+    color:var(--violet);
+    margin:0 0 6px 0;
+    text-transform:uppercase;
+  }
+  .step-text{
+    font-size:0.86rem;
+    font-weight:500;
+    color:var(--ink-soft);
+    margin:0 0 14px 0;
+    line-height:1.4;
+  }
+  .mail-btn{
+    display:inline-block;
+    font-weight:800;
+    font-size:0.92rem;
+    color:var(--ink);
+    background:var(--cyan);
+    border:3px solid var(--ink);
+    padding:10px 22px;
+    border-radius:999px;
+    text-decoration:none;
+    box-shadow:4px 4px 0 rgba(0,0,0,0.85);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .mail-btn:hover{ transform:translate(-2px,-2px); box-shadow:6px 6px 0 rgba(0,0,0,0.85); }
+  .mail-btn:active{ transform:translate(2px,2px); box-shadow:2px 2px 0 rgba(0,0,0,0.85); }
+
+  .waiting-note{
+    position:relative; z-index:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:22px;
+    font-weight:700;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .waiting-dot{
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--orange);
+    animation: pulseDot 1.1s ease-in-out infinite;
+  }
+  @keyframes pulseDot{
+    0%,100%{ transform:scale(0.7); opacity:0.6; }
+    50%{ transform:scale(1.15); opacity:1; }
+  }
+  .btn-row.reveal{
+    animation: revealUp .35s ease both;
+  }
+  @keyframes revealUp{
+    from{ opacity:0; transform:translateY(10px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  .success-block{
+    position:relative; z-index:1;
+    text-align:center;
+    padding: 20px 8px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+  .success-emoji{ font-size:3.2rem; }
+  .success-title{
+    font-family:'Bangers',cursive;
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    color:var(--ink);
+    text-shadow: 3px 3px 0 var(--lime);
+  }
+  .success-msg{
+    font-weight:600;
+    font-size:1rem;
+    color:var(--ink-soft);
+    max-width:340px;
+  }
+
+  /* ---------- Admin page (#whitex) ---------- */
+  .admin-page{
+    padding: clamp(20px, 4vw, 36px);
+    min-height:100vh;
+    max-width:960px;
+    margin:0 auto;
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+  }
+  .admin-title{
+    font-family:'Bangers',cursive;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    color:#fff;
+    text-shadow: 4px 4px 0 var(--hot);
+    margin-bottom:6px;
+  }
+  .admin-sub{color:#c9c6db; font-size:0.9rem; margin-bottom:20px;}
+  .table-scroll{overflow-x:auto; border-radius:12px; border:3px solid var(--ink);}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff9f2;
+    color:var(--ink);
+  }
+  th,td{
+    text-align:left;
+    padding:10px 14px;
+    font-size:0.82rem;
+    border-bottom:2px solid #eee;
+    white-space:nowrap;
+  }
+  th{
+    background:var(--ink);
+    color:#fff;
+    font-weight:700;
+    position:sticky;
+    top:0;
+  }
+  tr:last-child td{border-bottom:none;}
+  .empty-note{color:#c9c6db; font-size:0.9rem; padding:20px 0;}
+  .refresh-btn{
+    margin-bottom:14px;
+    font-weight:700;
+    font-size:0.85rem;
+    padding:9px 20px;
+    border-radius:999px;
+    border:3px solid #fff;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+  }
+  .refresh-btn:hover{ background:#fff; color:var(--ink); }
+  .storage-note{
+    margin-top:16px;
+    font-size:0.78rem;
+    color:#c9c6db;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:10px;
+    padding:12px 14px;
+    max-width:640px;
+  }
+
+  @media (min-width:720px){
+    .stage{ max-width:640px; }
+    .book-list{ gap:18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage" id="app"></div>
+
+<script>
+const BOOKS = [
+  { id:'b1', title:'The 7 Habits of Highly Effective People', price:50, img:'front_image/01.webp' },
+  { id:'b2', title:'How to Win Friends and Influence People', price:50, img:'front_image/02.webp' },
+  { id:'b3', title:'Atomic Habits', price:50, img:'front_image/03.webp' },
+  { id:'b4', title:'Ultralearning', price:50, img:'front_image/04.webp' },
+  { id:'b5', title:'TED Talks', price:50, img:'front_image/05.webp' },
+  { id:'b6', title:'12 Rules for Life', price:50, img:'front_image/06.webp' },
+  { id:'b7', title:'Awaken the Giant Within', price:50, img:'front_image/07.webp' },
+  { id:'b8', title:'Never Split the Difference', price:50, img:'front_image/08.webp' },
+  { id:'b9', title:'Deep Work', price:50, img:'front_image/09.webp' },
+  { id:'b10', title:'Eat That Frog', price:50, img:'front_image/10.webp' },
+  { id:'b11', title:'You Can Heal Your Life', price:50, img:'front_image/11.webp' },
+  { id:'b12', title:'The Subtle Art of Not Giving a Fck', price:50, img:'front_image/12.webp' },
+  { id:'b13', title:'The Science of Getting Rich', price:50, img:'front_image/13.webp' },
+  { id:'b14', title:'Mindset', price:50, img:'front_image/14.webp' },
+  { id:'b15', title:'Mastery', price:50, img:'front_image/15.webp' },
+  { id:'b16', title:'Good to Great', price:50, img:'front_image/16.webp' },
+  { id:'b17', title:'Grit', price:50, img:'front_image/17.webp' },
+  { id:'b18', title:'Influence: The Psychology of Persuasion', price:50, img:'front_image/18.webp' },
+  { id:'b19', title:'Pre-Suasion', price:50, img:'front_image/19.webp' },
+  { id:'b20', title:'Radical Candor', price:50, img:'front_image/20.webp' },
+  { id:'b21', title:'The 4-Hour Workweek: Escape 9-5, Live Anywhere', price:50, img:'front_image/21.webp' },
+  { id:'b22', title:'The 10X Rule', price:50, img:'front_image/22.webp' },
+  { id:'b23', title:'The 22 Immutable Laws of Marketing', price:50, img:'front_image/23.webp' },
+  { id:'b24', title:'The 48 Laws of Power', price:50, img:'front_image/24.webp' },
+  { id:'b25', title:'The 21 Irrefutable Laws of Leadership', price:50, img:'front_image/25.webp' },
+  { id:'b26', title:'The Personal MBA: Master the Art of Business', price:50, img:'front_image/26.webp' },
+  { id:'b27', title:'To Sell is Human: The Surprising Truth About Convincing and Influencing Others', price:50, img:'front_image/27.webp' },
+  { id:'b28', title:'The Ultimate Sales Machine', price:50, img:'front_image/28.webp' },
+  { id:'b29', title:'What We Know about our Universe', price:50, img:'front_image/29.webp' },
+  { id:'b30', title:'Thinking in Systems', price:50, img:'front_image/30.webp' },
+  { id:'b31', title:'A More Beautiful Question', price:50, img:'front_image/31.webp' },
+  { id:'b32', title:'The Inside Scoop - How Two Real Guys Built a Business', price:50, img:'front_image/32.webp' },
+  { id:'b33', title:'Beyond The Emyth: The Evolution of an Enterprise', price:50, img:'front_image/33.webp' },
+  { id:'b34', title:'Black Box Thinking: Why Most People Never Learn from Their Mistakes—But Some Do', price:50, img:'front_image/34.webp' },
+  { id:'b35', title:'Blue Ocean Shift', price:50, img:'front_image/35.webp' },
+  { id:'b36', title:'Blue Ocean Strategy', price:50, img:'front_image/36.webp' },
+  { id:'b37', title:'Buddha’s Brain', price:50, img:'front_image/37.webp' },
+  { id:'b38', title:'Building a StoryBrand', price:50, img:'front_image/38.webp' },
+  { id:'b39', title:'Built to Last: Successful Habits of Visionary Companies', price:50, img:'front_image/39.webp' },
+  { id:'b40', title:'Built to Sell', price:50, img:'front_image/40.webp' },
+  { id:'b41', title:'Clockwork', price:50, img:'front_image/41.webp' },
+  
+];
+
+const UPI_PAYEE = '7683044711@ptsbi';
+const UPI_NAME = 'Dastaan-e-Kitab';
+const ADMIN_HASH = '#whitex';
+
+let state = {
+  page: 'books', // books | info | payment | success
+  selected: {},
+  info: { name:'', city:'', phone:'', insta:'', email:'' },
+  lastOrderKey: null,
+};
+
+const ORDERS_API = '/api/orders';
+let hasCloud = true; // optimistic; flips to false if the API call ever fails
+
+// ---------- routing ----------
+function isAdminRoute(){
+  return window.location.hash === ADMIN_HASH;
+}
+
+function total(){
+  return BOOKS.reduce((sum,b)=> sum + (state.selected[b.id] ? b.price : 0), 0);
+}
+function selectedBooks(){
+  return BOOKS.filter(b=>state.selected[b.id]);
+}
+
+// ---------- render ----------
+function render(){
+  const app = document.getElementById('app');
+  if (isAdminRoute()){
+    app.innerHTML = renderAdmin();
+    loadAdminData();
+    return;
+  }
+  app.innerHTML = `<div class="book">${renderPage()}</div>`;
+  attachPageHandlers();
+}
+
+function renderPage(){
+  if (state.page === 'books') return renderBooksPage();
+  if (state.page === 'info') return renderInfoPage();
+  if (state.page === 'payment') return renderPaymentPage();
+  if (state.page === 'success') return renderSuccessPage();
+}
+
+function renderBooksPage(){
+  const rows = BOOKS.map(b=>{
+    const checked = !!state.selected[b.id];
+    return `
+      <div class="book-row ${checked?'is-checked':''}">
+        <img class="cover" src="${b.img}" alt="${b.title} cover" loading="lazy" decoding="async"/>
+        <div class="book-meta">
+          <p class="book-title">${b.title}</p>
+          <span class="book-price">₹${b.price}</span>
+        </div>
+        <div class="checkbox ${checked?'checked':''}" data-book="${b.id}"></div>
+      </div>
+    `;
+  }).join('');
+
+  const t = total();
+  return `
+    <div class="page active">
+      <div class="splash splash-1"></div>
+      <div class="splash splash-2"></div>
+      <div class="head-wrap">
+        <span class="kicker">Step 1 of 3</span>
+        <h1 class="headline">Choose your books</h1>
+        <p class="subtitle">Tap a book to grab it — every title is ₹50.</p>
+      </div>
+      <div class="book-list">${rows}</div>
+      <div class="total-strip">
+        <span class="label">TOTAL</span>
+        <span class="value" id="runningTotal">₹${t}</span>
+      </div>
+      <div class="btn-row">
+        <button class="btn-next" id="toInfo" ${t===0?'disabled':''}>Next</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderInfoPage(){
+  const i = state.info;
+  return `
+    <div class="page active">
+      <button class="btn-back" id="backToBooks">&larr; Books</button>
+      <div class="splash splash-1"></div>
+      <div class="splash splash-2"></div>
+      <div class="head-wrap">
+        <span class="kicker">Step 2 of 3</span>
+        <h1 class="headline">Who's this for?</h1>
+        <p class="subtitle">Just enough details so your books find you.</p>
+      </div>
+      <div class="field">
+        <label for="fName">Name</label>
+        <input id="fName" type="text" value="${i.name}" placeholder="Your full name" />
+        <div class="hint" id="hName"></div>
+      </div>
+      <div class="field">
+        <label for="fCity">City</label>
+        <input id="fCity" type="text" value="${i.city}" placeholder="Where you're based" />
+        <div class="hint" id="hCity"></div>
+      </div>
+      <div class="field">
+        <label for="fPhone">Phone number</label>
+        <input id="fPhone" type="tel" value="${i.phone}" placeholder="10-digit mobile number" />
+        <div class="hint" id="hPhone"></div>
+      </div>
+      <div class="field">
+        <label for="fInsta">Instagram username</label>
+        <input id="fInsta" type="text" value="${i.insta}" placeholder="@yourhandle" />
+        <div class="hint" id="hInsta"></div>
+      </div>
+      <div class="field">
+        <label for="fEmail">Email</label>
+        <input id="fEmail" type="email" value="${i.email}" placeholder="you@example.com" />
+        <div class="hint" id="hEmail"></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn-next" id="toPayment">Next</button>
+      </div>
+      <div class="kb-spacer" aria-hidden="true"></div>
+    </div>
+  `;
+}
+
+function upiLink(amount){
+  return `upi://pay?pa=${UPI_PAYEE}&pn=${encodeURIComponent(UPI_NAME)}&am=${amount}&cu=INR&tn=Payment`;
+}
+
+function renderPaymentPage(){
+  const t = total();
+  const books = selectedBooks().map(b=>b.title).join(', ');
+  return `
+    <div class="page active">
+      <button class="btn-back" id="backToInfo">&larr; Your info</button>
+      <div class="splash splash-1"></div>
+      <div class="splash splash-2"></div>
+      <div class="head-wrap">
+        <span class="kicker">Step 3 of 3</span>
+        <h1 class="headline">Scan &amp; pay</h1>
+        <p class="subtitle">Use any UPI app to scan the code below.</p>
+      </div>
+
+      <div class="amount-block">
+        <span class="tag">TOTAL AMOUNT</span>
+        <div class="amt"><sup>₹</sup>${t}.00</div>
+      </div>
+
+      <div class="qr-wrap">
+        <div class="qr-frame" id="qrHolder"></div>
+        <a class="pay-link" href="${upiLink(t)}">Open in UPI app</a>
+        <p class="upi-note">Paying to <strong>${UPI_NAME}</strong> · ${UPI_PAYEE}</p>
+      </div>
+
+      <div class="order-summary">
+        <div><strong>Books:</strong> ${books}</div>
+        <div><strong>Name:</strong> ${state.info.name || '—'}</div>
+      </div>
+
+      <div class="screenshot-step">
+        <p class="step-label">Step 2 — send your payment screenshot</p>
+        <p class="step-text">After paying, take a screenshot of the successful payment screen and email it to us so we can confirm your order.</p>
+        <a class="mail-btn" id="sendScreenshot" href="mailto:dastaanekitab@gmail.com?subject=${encodeURIComponent('Payment screenshot - ' + (state.info.name || 'Order'))}&body=${encodeURIComponent('Hi,\n\nI just paid ₹' + t + ' for: ' + books + '.\n\nAttaching my payment screenshot below.\n\nName: ' + (state.info.name || '') + '\nEmail: ' + (state.info.email || '') + '\nPhone: ' + (state.info.phone || ''))}">✉️ Email screenshot</a>
+      </div>
+
+      <div class="waiting-note" id="waitingNote">
+        <span class="waiting-dot"></span> Waiting for you to come back…
+      </div>
+      <div class="btn-row" id="paidBtnRow" style="display:none;">
+        <button class="btn-paid" id="manualDone">I've sent it</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderSuccessPage(){
+  return `
+    <div class="page active">
+      <div class="splash splash-1"></div>
+      <div class="splash splash-2"></div>
+      <div class="success-block">
+        <div class="success-emoji">🎉</div>
+        <div class="success-title">Got it!</div>
+        <p class="success-msg">Once we verify your payment screenshot, all your audiobooks will be sent to your email within 24 hours. Thanks for ordering from Dastaan-e-Kitab!</p>
+      </div>
+    </div>
+  `;
+}
+
+// ---------- validation ----------
+function validateInfo(){
+  const i = state.info;
+  let ok = true;
+  const setErr = (fieldId, hintId, msg) => {
+    document.getElementById(fieldId).classList.add('error');
+    document.getElementById(hintId).textContent = msg;
+    ok = false;
+  };
+  const clearErr = (fieldId, hintId) => {
+    document.getElementById(fieldId).classList.remove('error');
+    document.getElementById(hintId).textContent = '';
+  };
+
+  if (!i.name.trim()) setErr('fName','hName','Please enter your name'); else clearErr('fName','hName');
+  if (!i.city.trim()) setErr('fCity','hCity','Please enter your city'); else clearErr('fCity','hCity');
+  if (!/^\d{10}$/.test(i.phone.trim())) setErr('fPhone','hPhone','Enter a valid 10-digit number'); else clearErr('fPhone','hPhone');
+  if (!i.insta.trim()) setErr('fInsta','hInsta','Please enter your Instagram username'); else clearErr('fInsta','hInsta');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(i.email.trim())) setErr('fEmail','hEmail','Enter a valid email'); else clearErr('fEmail','hEmail');
+
+  return ok;
+}
+
+// ---------- storage (Netlify Blobs via our own /api/orders function,
+// local fallback only if that call fails, e.g. no network) ----------
+async function storageSet(key, valueObj){
+  const value = JSON.stringify(valueObj);
+  try{
+    const res = await fetch(ORDERS_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key, order: valueObj }),
+    });
+    if (!res.ok) throw new Error('orders API responded ' + res.status);
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'orders API returned ok:false');
+    hasCloud = true;
+    return 'cloud';
+  }catch(e){
+    console.error('cloud order save failed, falling back to local storage', e);
+    hasCloud = false;
+  }
+  try{
+    localStorage.setItem('dek_' + key, value);
+    return 'local';
+  }catch(e){ console.error('local storage set failed', e); }
+  return null;
+}
+
+async function storageGetAllOrders(){
+  const orders = {};
+  try{
+    const res = await fetch(ORDERS_API);
+    if (!res.ok) throw new Error('orders API responded ' + res.status);
+    const data = await res.json();
+    if (data && data.orders) Object.assign(orders, data.orders);
+    hasCloud = true;
+  }catch(e){
+    console.error('cloud order list failed', e);
+    hasCloud = false;
+  }
+  try{
+    for (let idx=0; idx<localStorage.length; idx++){
+      const k = localStorage.key(idx);
+      if (k && k.startsWith('dek_order_')){
+        const realKey = k.slice(4);
+        if (!orders[realKey]){
+          try{ orders[realKey] = JSON.parse(localStorage.getItem(k)); }catch(e){}
+        }
+      }
+    }
+  }catch(e){ /* localStorage may be unavailable */ }
+  return orders;
+}
+
+async function saveOrder(){
+  const key = 'order_' + Date.now() + '_' + Math.random().toString(36).slice(2,7);
+  const order = {
+    date: new Date().toISOString(),
+    books: selectedBooks().map(b=>b.title),
+    total: total(),
+    name: state.info.name,
+    city: state.info.city,
+    phone: state.info.phone,
+    insta: state.info.insta,
+    email: state.info.email,
+    paid: false,
+  };
+  const where = await storageSet(key, order);
+  state.lastOrderKey = key;
+  state.lastOrderWhere = where;
+  return order;
+}
+
+async function markOrderPaid(){
+  if (!state.lastOrderKey) return;
+  const key = state.lastOrderKey;
+  // re-read, flip paid flag, re-save
+  const order = {
+    date: new Date().toISOString(),
+    books: selectedBooks().map(b=>b.title),
+    total: total(),
+    name: state.info.name,
+    city: state.info.city,
+    phone: state.info.phone,
+    insta: state.info.insta,
+    email: state.info.email,
+    paid: true,
+  };
+  await storageSet(key, order);
+}
+
+// ---------- event handlers ----------
+function attachPageHandlers(){
+  if (state.page === 'books'){
+    document.querySelectorAll('.checkbox').forEach(cb=>{
+      cb.addEventListener('click', ()=>{
+        const id = cb.dataset.book;
+        state.selected[id] = !state.selected[id];
+        render();
+      });
+    });
+    const nextBtn = document.getElementById('toInfo');
+    if (nextBtn) nextBtn.addEventListener('click', ()=>{
+      if (total() === 0) return;
+      state.page = 'info';
+      render();
+    });
+  }
+
+  if (state.page === 'info'){
+    document.getElementById('backToBooks').addEventListener('click', ()=>{
+      state.page = 'books';
+      render();
+    });
+    const ids = [['fName','name'],['fCity','city'],['fPhone','phone'],['fInsta','insta'],['fEmail','email']];
+    ids.forEach(([elId,key])=>{
+      const el = document.getElementById(elId);
+      el.addEventListener('input', (e)=>{
+        state.info[key] = e.target.value;
+      });
+      // On phones, the keyboard popping up can cover the field the user
+      // just tapped (especially the last one, email). Nudge it into view
+      // once the keyboard has finished animating in.
+      el.addEventListener('focus', ()=>{
+        setTimeout(()=>{
+          el.scrollIntoView({ behavior:'smooth', block:'center' });
+        }, 300);
+      });
+    });
+    document.getElementById('toPayment').addEventListener('click', async ()=>{
+      if (!validateInfo()) return;
+      const btn = document.getElementById('toPayment');
+      btn.disabled = true;
+      btn.textContent = 'Saving…';
+      await saveOrder();
+      state.page = 'payment';
+      render();
+    });
+  }
+
+  if (state.page === 'payment'){
+    document.getElementById('backToInfo').addEventListener('click', ()=>{
+      cleanupPaymentWatchers();
+      state.page = 'info';
+      render();
+    });
+    const holder = document.getElementById('qrHolder');
+    if (holder && window.QRCode){
+      holder.innerHTML = '';
+      new QRCode(holder, {
+        text: upiLink(total()),
+        width: 180,
+        height: 180,
+        colorDark: '#0c0c14',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M
+      });
+    }
+    const paidBtn = document.getElementById('manualDone');
+    paidBtn.addEventListener('click', async ()=>{
+      cleanupPaymentWatchers();
+      paidBtn.disabled = true;
+      paidBtn.textContent = 'Confirming…';
+      await markOrderPaid();
+      state.page = 'success';
+      render();
+    });
+
+    // The person emails a screenshot of their successful payment to
+    // dastaanekitab@gmail.com. When they switch back to this tab after
+    // opening their mail app, we auto-advance to the final message.
+    // This is a UX nudge, not a verified payment confirmation — a manual
+    // fallback button appears shortly after in case auto-detection misses.
+    const mailLink = document.getElementById('sendScreenshot');
+    let attempted = false;
+    let finished = false;
+
+    const goToSuccess = async ()=>{
+      if (finished) return;
+      finished = true;
+      cleanupPaymentWatchers();
+      await markOrderPaid();
+      state.page = 'success';
+      render();
+    };
+
+    const showFallbackBtn = ()=>{
+      const row = document.getElementById('paidBtnRow');
+      const note = document.getElementById('waitingNote');
+      if (!row || row.style.display === 'flex') return;
+      row.style.display = 'flex';
+      row.classList.add('reveal');
+      if (note) note.textContent = "Sent it already? Tap the button below.";
+    };
+
+    const onVisible = ()=>{
+      if (document.visibilityState === 'visible' && attempted) goToSuccess();
+    };
+
+    if (mailLink){
+      mailLink.addEventListener('click', ()=>{ attempted = true; });
+    }
+    document.addEventListener('visibilitychange', onVisible);
+
+    const fallbackTimer = setTimeout(showFallbackBtn, 6000);
+
+    state._paymentCleanup = ()=>{
+      document.removeEventListener('visibilitychange', onVisible);
+      clearTimeout(fallbackTimer);
+    };
+  }
+}
+
+function cleanupPaymentWatchers(){
+  if (state._paymentCleanup){
+    state._paymentCleanup();
+    state._paymentCleanup = null;
+  }
+}
+
+// ---------- admin ----------
+function renderAdmin(){
+  return `
+    <div class="admin-page">
+      <h1 class="admin-title">Order log</h1>
+      <p class="admin-sub">All book orders submitted through the form.</p>
+      <button class="refresh-btn" id="refreshAdmin">Refresh</button>
+      <div id="adminTableWrap"><p class="empty-note">Loading…</p></div>
+      <div class="storage-note" id="storageNote">
+        ${hasCloud
+          ? "Orders are saved to shared cloud storage (Netlify Blobs), so this log shows every order placed by anyone, from any device."
+          : "Couldn't reach the orders API just now, so this log is showing only what's saved in this browser's local storage. Refresh once you're back online to see every order."}
+      </div>
+    </div>
+  `;
+}
+
+async function loadAdminData(){
+  const wrap = document.getElementById('adminTableWrap');
+  const refreshBtn = document.getElementById('refreshAdmin');
+  if (refreshBtn) refreshBtn.addEventListener('click', loadAdminData);
+  try{
+    const ordersMap = await storageGetAllOrders();
+    const note = document.getElementById('storageNote');
+    if (note){
+      note.textContent = hasCloud
+        ? "Orders are saved to shared cloud storage (Netlify Blobs), so this log shows every order placed by anyone, from any device."
+        : "Couldn't reach the orders API just now, so this log is showing only what's saved in this browser's local storage. Refresh once you're back online to see every order.";
+    }
+    const orders = Object.values(ordersMap);
+    if (orders.length === 0){
+      wrap.innerHTML = '<p class="empty-note">No orders yet.</p>';
+      return;
+    }
+    orders.sort((a,b)=> new Date(b.date) - new Date(a.date));
+    const rows = orders.map(o=>`
+      <tr>
+        <td>${new Date(o.date).toLocaleString()}</td>
+        <td>${o.name || ''}</td>
+        <td>${o.city || ''}</td>
+        <td>${o.phone || ''}</td>
+        <td>${o.insta || ''}</td>
+        <td>${o.email || ''}</td>
+        <td>${(o.books||[]).join(', ')}</td>
+        <td>₹${o.total}</td>
+        <td>${o.paid ? 'Screenshot sent' : 'Pending'}</td>
+      </tr>
+    `).join('');
+    wrap.innerHTML = `
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th><th>Name</th><th>City</th><th>Phone</th><th>Instagram</th><th>Email</th><th>Books</th><th>Total</th><th>Screenshot</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    `;
+  }catch(e){
+    wrap.innerHTML = '<p class="empty-note">Could not load orders.</p>';
+    console.error(e);
+  }
+}
+
+window.addEventListener('hashchange', render);
+render();
+</script>
+</body>
+</html>
