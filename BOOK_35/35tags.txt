@@ -1,0 +1,144 @@
+B="Blue Ocean Shift"
+A="Renée Mauborgne aur W. Chan Kim"
+H1|Blue Ocean Shift ka basic idea
+P|Yeh book Renée Mauborgne aur W. Chan Kim ne likhi hai. Yeh unki pehli mashhoor book "Blue Ocean Strategy" jo 2005 mein aayi thi, uske tools aur frameworks ko ek systematic 5-step process mein organize karti hai. Iska purpose kisi bhi organization, chahe woh profit ke liye ho, non-profit ho ya public sector mein ho, use bahut zyada competition wale "Red Ocean" se nikal kar ek naye aur lagbhag competition-free "Blue Ocean" mein le jana hai.
+H2|Red Ocean vs. Blue Ocean
+B|Red Ocean: Yeh aisa market hota hai jahan bahut zyada competition hota hai. Companies survive karne ke liye ek-doosre se ladti hain, costs badhti hain aur competition bahut tough hota hai.
+B|Blue Ocean: Yeh aisa market hota hai jahan competition bahut kam ya lagbhag nahi hota. Yahan ek nayi market space banayi jati hai jahan lower cost aur higher buyer value dono ek saath hasil kiye jate hain. Isse Value Innovation kehte hain.
+H1|1. Fundamental Concepts
+H2|Market Creation
+P|Market creation ka matlab hamesha purane markets ko destroy ya disrupt karna nahi hota. Iske 3 main approaches hain, jinmein disruptive aur non-disruptive creation ka alag-alag mix hota hai.
+B|Disruptive Creation: Iska matlab hai kisi existing problem ka naya aur behtar solution dena, jo purani companies ya markets ko replace kar deta hai.
+S|Example: Cassette tapes ko CDs ne replace kiya aur CDs ko iPod aur digital music ne badal diya.
+B|Redefine and Solve an Existing Problem: Existing problem ko ek naye tareeqe se samajhna aur industry ki purani assumptions ko badalna. Ismein disruptive aur non-disruptive dono elements ho sakte hain.
+S|Example: Cirque du Soleil ne traditional circus ke elements, jaise clowns aur tents, ko music aur dance ke saath milaya aur ek naya circus-theatre market banaya.
+B|Non-Disruptive Creation: Ek bilkul nayi problem ko dhoondhna aur uska solution dena, jisse existing market ko nuksan nahi hota aur nayi demand create hoti hai.
+S|Example: Sesame Street ne early childhood education ke liye ek naya market banaya bina preschools ya libraries ko nuksan pahunchaye.
+H2|Technology vs. Value Innovation
+P|Blue Ocean hamesha nayi technology ki wajah se nahi banta. Yeh Value Innovation se aata hai, jisme buyer ko ek alag aur valuable experience ya benefit diya jata hai.
+S|Example: Starbucks aur Grameen Bank ne bina kisi nayi ya superior technology ke naye markets create kiye.
+H2|The Blue Ocean Mindset
+P|Aapko Red Ocean strategist ki tarah sirf existing competition ke andar sochna nahi chahiye. Blue Ocean mindset ke 4 main principles hain.
+B|Industry ki boundaries fixed nahi hoti: Industry ki boundaries aur conditions ko badla ja sakta hai.
+B|Competition ko irrelevant banana: Apne rivals ko harane par focus mat karo. Aisi value create karo ki competition hi kam important ho jaye.
+B|Naye customers par focus: Existing customers ke liye ladne ke bajay naye customers, yani noncustomers, ko attract karne par dhyan do.
+B|Low cost aur differentiation: In dono mein se sirf ek ko choose mat karo. Dono ko ek saath achieve karne ki koshish karo.
+H2|Humanness
+P|Log badlav se darte hain. Isliye strategy ko successful banane ke liye logon ko badlav ke process mein saath lekar chalna zaroori hai. Iske 3 important elements hain.
+B|Atomization: Bade aur difficult change ko chhote, simple aur easily understandable steps mein todna, taaki log jaldi chhoti jeet, yani quick wins, dekh saken.
+B|Firsthand Discovery: Sirf logon ko yeh kehna ki badlav karo, resistance paida kar sakta hai. Iske bajay unhe field mein customers ke pain points aur alternatives ko khud dekhne ka mauka do, taaki woh khud conclusions nikal saken.
+B|Fair Process: Iske 3 rules hain.
+S|Engagement: Sabhi relevant logon ko process mein involve karna.
+S|Explanation: Har decision ke peeche ka reason clearly batana.
+S|Clear Expectations: Roles aur responsibilities ko clearly samjhana.
+H1|2. The 5 Steps of a Blue Ocean Shift
+H2|Step 1: Get Started
+P|Is step mein hum us area ko identify karte hain jahan sabse zyada fayda mil sakta hai aur uske liye ek suitable team banate hain.
+B|Pioneer-Migrator-Settler (PMS) Map: Yeh tool organization ki value innovation pipeline ko visual form mein dikhata hai. Yeh industry ke restrictions ke bajay buyer ko milne wali value aur innovation par focus karta hai.
+B|Pioneers: Aise products ya services jo nayi value innovation dete hain, competition se alag nikalte hain aur future growth ka source ban sakte hain.
+B|Settlers: Aise products jo purani value ko copy karte hain, yani value imitation. Yeh mainly price aur chhote-mote improvements par compete karte hain aur inki growth kam hoti hai.
+S|Example: Microsoft ke Windows aur Office ab Settlers ban chuke hain. Yeh stable profit dete hain, lekin future growth ke liye strong source nahi hain.
+B|Migrators: Aise products jo Settlers se thode behtar hote hain, yani value improvement dete hain, lekin koi bada naya value innovation nahi dete.
+B|PMS Map kaise banayein: Sabhi unit heads apne products aur services ko Pioneers, Migrators aur Settlers ki 3 categories mein divide karte hain. Phir unke revenue ke hisaab se circles banaye jate hain. Sabhi managers ko milkar is map ko discuss aur plot karna chahiye. Yeh Fair Process ka part hai.
+B|Initiative ke liye 1 Offering chunna: Agar organization ka portfolio already balanced hai, to ek offering chunna zaroori nahi hai. Agar portfolio balanced nahi hai, to aisi offering choose karein jo in conditions ko meet kare.
+S|Woh ek Settler ya low Migrator ho aur Red Ocean mein phansi hui ho.
+S|Uske under aisa manager ho jo Blue Ocean shift karna chahta ho.
+S|Us unit mein koi aur bada project already na chal raha ho.
+S|Woh unit kisi pressure mein ho, jaise high competition ya loss.
+B|Team Selection: 10 se 15 logon ki team banayein jo different departments, jaise operations, legal, finance aur doosre areas se aaye hon. Team members ka title important nahi hai; unka character zyada important hai. Team mein good listeners aur respected log hone chahiye.
+S|Team mein 1 ya 2 naysayers, yani aise log jo disagree karne se nahi darte, unhe bhi include karna chahiye.
+H2|Step 2: Establish the Current State of Play
+P|Is step ka purpose sabhi managers ko industry ki current strategic situation ke saath align karna hai.
+B|The Strategy Canvas: Yeh ek 1-page graph hota hai jo industry aur company ki current strategic position ko dikhata hai.
+B|Horizontal Axis: Woh key factors jin par poori industry invest karti hai ya jin par competition hota hai.
+B|Vertical Axis: Buyer ko har factor par kitna offering level mil raha hai.
+B|Strategic Canvas Draw Karna: Strategy Canvas banane ke liye kuch important steps follow kiye jate hain.
+S|5 se 12 aise factors identify karein jo buyer ke liye important hain. Brand strength ko competing factors ke saath mix na karein.
+S|Apni company aur top 3 competitors ya industry leader ko 5-point scale par rate karein aur un points ko line se connect karein. Isse strategic profile kehte hain.
+S|Ek acche strategic profile ki 3 pehchan hain: divergent shape, key factors par focus aur ek compelling tagline.
+S|Divergent shape ka matlab hai graph doosron se clearly alag dikhe.
+S|Key factors par focus ka matlab hai sabhi cheezon ke bajay important factors par dhyan ho.
+S|Compelling tagline ka matlab hai aisi short line jo offering ki main value ko clearly bataye.
+P|Strategy Canvas se yeh samajhne mein madad milti hai ki aapka profile unique hai ya sirf "me-too", yani doosron jaisa hai.
+H2|Step 3: Explore What Could Be
+P|Is step mein team industry ke un pain points ko dhoondhti hai jo customers ko pareshan karte hain ya demand ko rok rahe hain.
+B|Buyer Utility Map: Yeh tool hidden pain points ko identify karne mein help karta hai. Ismein 2 dimensions hote hain.
+B|6 Stages of Buyer Experience Cycle (BEC): Buyer ka experience 6 stages mein dekha jata hai.
+S|Purchase: Product kharidna.
+S|Delivery: Product ka delivery milna.
+S|Use: Product ka istemal karna.
+S|Supplements: Product ke saath use hone wali doosri cheezein.
+S|Maintenance: Product ka rakh-rakhav.
+S|Disposal: Product ko phenkna ya usse niptana.
+B|6 Utility Levers: Buyer ko value dene ke 6 important tareeqe hain.
+S|Productivity: Kaam ko zyada effectively karne mein madad.
+S|Simplicity: Cheez ko simple banana.
+S|Convenience: Use karna zyada convenient banana.
+S|Risk Reduction: Risk ya danger ko kam karna.
+S|Fun and Image: Fun aur image se related value dena.
+S|Environmental Friendliness: Environment ke liye zyada friendly hona.
+B|36 Spaces: 6 Buyer Experience Cycle stages aur 6 Utility Levers ko milane se total 36 spaces bante hain. Team ko har space ke liye yeh poochna chahiye: "Is stage par is lever ko block karne wali sabse badi wajah kya hai?"
+S|Jin spaces mein pain point mile, wahan "X" lagayein.
+S|Jahan industry already focus karti hai, wahan "O" lagayein.
+B|3 Tiers of Noncustomers: Total potential demand mein existing customers ke saath 3 tarah ke noncustomers bhi hote hain.
+B|Tier 1: Soon-to-be noncustomers: Aise log jo majboori mein humare products use kar rahe hain aur mauka milte hi unhe chhod denge.
+B|Tier 2: Refusing noncustomers: Aise log jinhone humare product ko consider kiya, lekin use reject karke koi doosra option choose kar liya.
+B|Tier 3: Unexplored noncustomers: Aise log jinhone kabhi humare product ke baare mein socha hi nahi, kyunki unke liye woh unviable ya unattractive tha.
+S|Example: Square Inc. ne dekha ki chhote food trucks credit cards accept nahi kar pa rahe the. Isliye unhone mobile card readers banaye jo unke liye saste aur easy the.
+B|Fieldwork aur Brainstorming: Team brainstorming karti hai aur research karti hai ki noncustomers ka rough size kitna bada hai aur unhe kaise unlock ya attract kiya ja sakta hai.
+H2|Step 4: Define How to Get There
+P|Is step mein market ki boundaries ko badalne aur concrete options taiyar karne par focus kiya jata hai.
+B|The Six Paths Framework: Sabhi organizations 6 artificial constraints ya fixed soch ke patterns mein bandhi hoti hain. Inhe todne ke liye team ko 2 subgroups mein divide karein. Har group 3 paths par kaam kare aur 10 se 12 logon ke interviews lene ke liye field mein jaye.
+B|Path 1: Industry: Sirf apne rivals ko dekhne ke bajay alternative industries ko dekhein aur unki achhi cheezein apnayein.
+S|Example: Trains aur planes ko compare karke dekha ja sakta hai ki alternative industry kya value deti hai.
+B|Path 2: Strategic Group: Sirf ek strategic group mein rehne ke bajay doosre strategic groups ko study karein.
+S|Example: Fast food aur fine-dining alag strategic groups hain.
+B|Path 3: Buyer Group: Chain of buyers ko dekhein, jaise users, purchasers aur influencers. Un neglected groups par dhyan dein jinpar industry normally focus nahi karti.
+B|Path 4: Scope of Offering: Dekhein ki complementary products ya services aapki value ko kaise badha ya kam kar sakti hain.
+S|Example: South Africa ke rural areas mein electricity nahi thi. Isliye car-battery se chalne wale TVs beche gaye, jisse ek bada naya demand opportunity khula.
+B|Path 5: Nature of Appeal: Apni industry ki functional ya emotional appeal ko badlein ya flip karein.
+S|Functional appeal ka matlab hai product ki practical usefulness par focus.
+S|Emotional appeal ka matlab hai product se judi feelings ya emotions par focus.
+B|Path 6: Trends over Time: Agle 3 se 5 saal ke bade aur irreversible trends ko identify karein aur unke according pehle se value create karein.
+B|The Four Actions Framework / ERRC Grid: Fieldwork ke baad team 4 important questions ka answer dhoondhti hai.
+B|Eliminate: Aise factors ko poori tarah hata dein jo ab koi value nahi dete lekin cost badhate hain.
+B|Reduce: Aise factors ko industry standard se bahut neeche le aayein jo over-designed hain, yani jinmein zarurat se zyada diya gaya hai.
+B|Raise: Aise factors ko industry standard se upar le jayein jo buyers sach mein chahte hain.
+B|Create: Bilkul naye factors create karein jo industry ne pehle kabhi offer nahi kiye.
+B|To-Be Strategy Canvas: In inputs ke basis par ek naya ERRC Grid banaya jata hai aur uske baad naya "To-Be" Strategy Canvas banaya jata hai. Iska profile purane profile se clearly alag, yani divergent, hona chahiye aur iske saath ek compelling tagline honi chahiye.
+H2|Step 5: Make Your Blue Ocean Move
+P|Is step mein nayi offering ko select karke launch kiya jata hai.
+B|The Blue Ocean Fair: Bina corporate politics ke sahi strategic option choose karne ke liye ek Fair, yani mela, organize kiya jata hai. Ismein team, decision-makers, customers aur noncustomers sabhi participate karte hain.
+B|Pehla stage: Sabse pehle Red Ocean ki current situation aur change ki zarurat explain ki jati hai.
+B|Proposed strategic options: Har proposed strategic option ke liye ek display station hota hai.
+S|Log in stations par jate hain, options ko dekhte hain, questions poochte hain aur vote karte hain.
+B|Final Decision: Executive team sabhi logon ke votes aur feedback ko dekhkar sabse behtar option choose karti hai.
+B|Prototype and Costing: Selected offering ko practical banane ke liye prototype aur costing ki jati hai.
+B|Fast Prototype: Sabse pehle ek fast prototype banaya jata hai aur uska market-test kiya jata hai.
+B|Target Costing: Pehle product ki ideal strategic price aur desired profit margin decide kiya jata hai. Uske baad backwards kaam karke target cost nikali jati hai.
+S|Target cost achieve karne ke liye strategic partnerships ka use kiya jata hai.
+S|Operational streamlining ka use kiya jata hai.
+S|Employees ke positive contribution ka use kiya jata hai.
+B|Launch Approach: Shuruaat chhote level se karein aur uske baad momentum build karein.
+H1|3. Real-Life Case Study: Group SEB aur ActiFry
+P|French multinational company Group SEB ko electronic French-fry makers ke market mein bahut tough competition aur girti hui demand ka saamna karna pad raha tha. Yeh ek Red Ocean situation thi.
+H2|Industry Assumptions aur Pain Points
+B|Industry Assumption 1: Industry ka maanna tha ki achhi fries banane ke liye fries ko fry karna zaroori hai.
+B|Industry Assumption 2: Industry ka maanna tha ki fries banane ke liye bahut saara oil chahiye.
+B|Customer Pain Points: Customer interviews se pata chala ki customers ko kai problems ka saamna tha.
+S|Frying ke dauran accident hone ka darr.
+S|Tel ka kharcha.
+S|Used oil ko store karne ki pareshani.
+S|Used oil ko dispose karne ki pareshani.
+S|Machine ko clean karne ka jhanjhat.
+H2|Problem ko Redefine Kiya
+P|Group SEB ne problem ko "hum behtar fry-maker kaise banayein" se badalkar "hum bina traditional frying ke tasty aur healthy fries kaise banayein" kar diya.
+H2|The Solution - ActiFry, 2006
+P|Group SEB ne ActiFry launch kiya. Ismein sirf 1 bada tablespoon tel use karke 2 pounds tasty fries banayi ja sakti thi.
+B|Safety: Ismein traditional frying ke dauran hone wale darr ya accident ka concern nahi tha.
+B|Oil Problem: Used oil ko dispose karne ki pareshani nahi thi.
+B|Cleaning: Machine ko clean karna bahut easy tha.
+H2|Results
+P|Group SEB ne sirf existing market share capture nahi kiya, balki naye customers ko bhi attract kiya. Yeh woh log the jo pehle health concerns ya cleaning ke jhanjhat ki wajah se fry-makers nahi kharidte the. Is tarah new demand create hui.
+H1|Nishkarsh
+P|Blue Ocean Shift koi magic ya jaadu nahi hai. Yeh ek systematic aur accessible process hai jo organization ko competition-free naye markets ki taraf le jata hai. Sabse important baat yeh hai ki yeh badlav ke poore journey mein organization ke logon ka trust aur confidence bhi saath lekar chalta hai.

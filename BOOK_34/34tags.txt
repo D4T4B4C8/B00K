@@ -1,0 +1,78 @@
+B="Black Box Thinking: Why Most People Never Learn from Their Mistakes—But Some Do"
+A="Matthew Syed"
+H1|Introduction: The Big "So What"
+P|Galti aur success ka rishta yeh hai ki har insaan se galti hoti hai, lekin hum un galtiyon ke saath kaise deal karte hain, isi se pata chalta hai ki long term mein hum successful honge ya fail. Agar hum galtiyon se seekhte hain, toh unhe baar-baar repeat karne ke bajay unka use success ki building blocks ki tarah kar sakte hain.
+B|Systems aur Mindsets: Galtiyon se seekhne ke liye do cheezein zaroori hain. Pehli, aisa system jo galtiyon ko progress ka zariya banaye. Doosri, aisa mindset jo is system ko properly chalne de.
+B|Aviation Industry ka Progressive Approach: Aviation industry iska sabse achha example hai.
+S|Black Boxes: Har aircraft mein do black boxes hote hain. Ek mechanical information, jaise fuel levels, record karta hai aur doosra cockpit ki sounds, jaise pilots ki baatein, record karta hai.
+S|Accident ke baad: Accident hone ke baad black boxes se unbiased data nikala jata hai, taaki future mein corrective measures liye ja saken.
+S|Mistakes report karna: Pilots ko mistakes report karne ke liye reward kiya jata hai, punish nahi. Isse poori industry mein learning share hoti hai.
+H1|Part 1: Redefining Failures
+H2|Hum Galtiyon Se Kyun Bachte Aur Inkaar Karte Hain?
+B|Cognitive Dissonance: Jab hamari gehri beliefs ya self-image kisi failure ki wajah se challenge hoti hai, toh hum andar se conflict feel karte hain.
+S|Pehla rasta: Apni galti accept karna aur apni soch ya actions ko badalna.
+S|Doosra rasta: Apne ego ko bachane ke liye galti deny karna aur facts ko apne hisaab se badalna. Aksar log doosra rasta choose karte hain. Research se yeh bhi pata chala hai ki kabhi-kabhi hum apni failures ko memory se hi hata dete hain.
+B|Professional Stakes: Jin logon ki self-identity aur professional image unke kaam se bahut judi hoti hai, jaise doctors aur prosecutors, unke liye apni galti maanna aur bhi mushkil hota hai.
+H2|Aham Case Studies aur Examples
+B|Jimmy Bromgard Case, 1987: Jimmy ko rape ke aarop mein 40 saal ki saza mili thi. 13 saal baad DNA tests ne prove kiya ki woh innocent tha. Lekin case ke prosecutor ne naye evidence ko accept karne se mana kar diya kyunki isse uski professional mistake saamne aa rahi thi. Usne DNA results ko galat sabit karne ke liye ajeeb arguments diye, jaise Bromgard ek "chimera" tha jiske do blood types the.
+B|Iraq Invasion, 2003: US ne Iraq par is belief ke basis par attack kiya tha ki wahan Weapons of Mass Destruction, yani WMDs, hain. Jab clear ho gaya ki wahan WMDs nahi mile, tab bhi aadhe se zyada Republicans ne is sach ko accept nahi kiya aur claim kiya ki WMDs mile the.
+B|Doomsday Cult, 1954: Ek cult ne kaha tha ki 21 December 1954 ko flood se duniya khatam ho jayegi aur aliens unhe bacha lenge. Members ne apni jobs tak chhod di. Jab prediction sach nahi hui, toh unhone apni galti maanne ke bajay kaha ki unki faith ne planet ko bacha liya. Iske baad unhone aur logon ko recruit karna shuru kar diya.
+H2|Psychological Biases
+B|Confirmation Bias: Hum unhi facts ko dhoondhte aur dekhte hain jo hamari purani soch ko support karte hain aur baaki facts ko ignore kar dete hain.
+S|Experiment: Volunteers ko capital punishment ke support mein aur against do reports di gayin. Readers ne unhi evidence ko sahi maana jo unke pehle se bane views se match karta tha aur doosri report ko flawed kehkar reject kar diya.
+B|Expertise Entrenchment: Kisi field mein jitna zyada experience ya expertise hota hai, log utna hi apne beliefs par zyada jam jaate hain aur unke against aane wale evidence ko resist karte hain.
+B|Anticipating and Avoiding Blame, Fundamental Attribution Error: Jab kuch galat hota hai, hum situation ke factors dekhne ke bajay seedha kisi person ko blame karne lagte hain. Is wajah se log backlash ke darr se apni mistakes chhupane lagte hain aur real cause saamne nahi aa pata.
+B|Silent Culture in Healthcare: Jab blame se bachna aur cognitive dissonance normal ban jata hai, log bina realize kiye mistakes chhupane lagte hain. Hospitals mein junior staff aur nurses backlash ke darr se senior doctors ke khilaf nahi bol paate. Medical errors ko "one-off accidents" ya "complications" kehkar explain kar diya jata hai aur wahi mistakes repeat hoti rehti hain. Is wajah se har saal lakhon preventable deaths hoti hain.
+H2|Two Types of Mistakes
+B|Mistakes due to Ignorance: Aisi galti jahan humein answer pata hi nahi hota, jaise pharmaceutical company ka kisi nayi disease ki medicine dhoondhna.
+B|Mistakes in Execution: Humein sahi procedure pata hota hai, lekin karte waqt mistake ho jati hai, jaise surgeon ka operation ke dauran standard step bhool jana.
+H2|Closed-Loop vs. Open-Loop Systems
+B|Closed-Loop Systems: Is system mein log mistakes se nahi seekhte. Errors ka data ignore hota hai aur wahi mistakes bina jaane repeat hoti rehti hain.
+B|Open-Loop Systems: Ismein failures ka data collect aur analyze kiya jata hai aur usse practical learning mein badla jata hai, taaki poore system mein improvement ho.
+B|Healthcare vs. Aviation, 2013 Data: Aviation mein har 2.4 million flights par sirf 1 accident hota tha. Hospitals mein preventable errors se hone wali deaths ki sankhya aisi thi jaise har din do B747 planes crash ho rahe hon.
+B|Elaine Bromiley Case: Elaine ki routine operation ke dauran oxygen ki kami se brain damage hua aur unki death ho gayi. Doctors airway tube daalne par itna focus kar rahe the ki nurse ke tracheotomy ke suggestion ko ignore kar diya. Tracheotomy ka matlab gale mein chhota cut karke saans dene ka rasta banana hai. Elaine ke husband Martin ne investigation ki demand ki, lekin hospital ne ise "unexpected complication" kehkar dismiss karne ki koshish ki. Martin ki persistence se inquiry hui aur usse kai improvements ki recommendations nikli.
+B|American Airlines Flight 173, 1978: Is crash ki detailed investigation hui. Iske basis par NASA ne Crew Resource Management, ya CRM, develop kiya. Isse pilots ke beech communication aur crisis management improve hua, accidents bahut kam hue aur hazaaron lives bachi.
+H1|Part 2: Learning from Mistakes
+H2|Practice, Feedback, and Mastery
+B|David Beckham Example: Mastery sirf baar-baar practice karne se nahi aati, balki instant feedback se aati hai. Beckham ne 6 saal ki age se kick-me-ups practice ki. Teen saal ki daily trial-and-error practice se unka record 5 se badhkar 2003 ho gaya. Unhone free kicks ko tens of thousands of times practice kiya aur har mistake se seekhkar apni technique badli.
+B|Feedback Issue: Agar feedback late mile, jaise radiologists ko tumors diagnose karne mein ya psychotherapists ko mental illnesses treat karne mein, toh yeh samajhna mushkil hota hai ki kya sach mein kaam kar raha hai.
+B|Science as an Open System: Science mistakes ka systematic use karke progress karta hai. Scientists apni theories ko disprove karne ke liye contradicting information dhoondhte hain.
+S|Example: Low altitude par water 100°C par boil hota hai. Lekin "water always boils at 100°C" statement high altitude par test karne par galat prove ho sakta hai.
+H2|Developing the Right Systems
+B|Virginia Mason Hospital Success, Dr. Kaplan: Dr. Kaplan ne staff ke liye Patient Safety Alerts shuru kiye, taaki log bina darr ke errors report kar saken. Shuruat mein darr ki wajah se reports bahut kam aayi. 2004 mein ek wrong injection ki wajah se ek elderly woman ki death hui, jo ek bada wake-up call bana. Logon ne mistakes report karni shuru ki aur unhe punish karne ke bajay appreciate kiya gaya. Alerts har month 1,000 tak pahunch gaye.
+S|Color-Coded Wristbands: Pata chala ki color-blind nurses ke liye color-coded wristbands kaam nahi kar rahe the, isliye wristbands par text bhi likha gaya.
+S|Result: Is approach se liability insurance premium 74% kam hua aur 2013 tak hospital safest hospitals mein shamil ho gaya.
+B|Cumulative Selection, Evolutionary Process: Trial-and-error se kai alternatives test karna, failed options ko hataana aur workable solutions ko improve karna. Iska basic rule hai ki pichle round ki learning ko agle round mein carry forward kiya jaye.
+S|Unilever Nozzle Design: Unilever ki detergent factory mein nozzle baar-baar kharab ho raha tha. Unhone natural selection ko copy karte hue 10 nozzle designs banaye. Best design choose karke uske 10 naye versions banaye. 45 testing rounds ke baad aur 449 failed options hataane ke baad unhe ek bahut superior nozzle mila.
+S|Free Markets vs. Centrally-Planned Economies: Free markets efficient isliye hote hain kyunki fail hone wale businesses jaldi market se bahar ho jaate hain aur viable models survive aur repeat hote hain. Isse "cumulative adaptation" hota hai.
+B|Testing Assumptions & Minimum Viable Product, MVP: Technologists Lean Startup approach use karte hain. Pehle MVP, yani Minimum Viable Product, banaya jata hai, use real customers par test kiya jata hai aur feedback ke basis par baar-baar improve kiya jata hai.
+S|Steve Jobs, Apple Retail: Steve Jobs ne pehle retail concept ko ek warehouse mein test kiya. Phir feedback lene ke liye 2 stores khole aur uske baad nationwide stores launch kiye.
+S|Drew Houston, Dropbox Founder: Product ka ek line code likhne se pehle unhone ek MVP video release kiya, taaki pata chale ki market mein log interested hain ya nahi.
+H2|Randomized Control Trials, RCTs, & Dissecting Problems
+B|The Counterfactual Test: Sirf observational data misleading ho sakta hai. Isliye Randomized Control Trials, ya RCTs, zaroori hain jo counterfactual ko test karte hain.
+S|Website Sales Example: Agar naye website design ke baad sales badh gayi, toh lag sakta hai ki design kaam kar gaya. Lekin ho sakta hai sales kisi influencer ki recommendation se badhi ho. RCT mein dono designs ko split-test kiya jata hai.
+S|Scared Straight Program, 1970s: Delinquent teens ko jail dikhakar darane ke liye TV show aur campaign shuru hua tha. Surveys ne ise successful bataya. Lekin ek scientist ki longitudinal RCT study ne dikhaya ki program mein gaye bachchon ke dobara crime karne ke chances un bachchon se 28% zyada the jo program mein nahi gaye the.
+B|Dissecting Complex Problems: Jab RCT bade scale par possible na ho, toh problem ko chhote parts mein todkar study kiya jata hai.
+S|Africa Poverty, Kenya Schooling Case: Economists Kenyan students ke grades improve karna chahte the. Pehle free textbooks diye, lekin result nahi mila. Phir flipcharts diye, phir bhi result nahi mila. Aakhir mein bahut sasta solution mila: de-worming medicine. Parasites hatne se bachchon ki attendance 25% badh gayi aur grades automatically improve ho gaye.
+H2|Marginal Gains Approach
+B|Sir David Brailsford, British Track Cycling Team: Unhone ek average cycling team ko Olympic gold medalists bana diya. Unhone bade goal ko chhote parts mein tod diya. Bike design se lekar cyclists ke mattresses aur pillows tak, har variable mein 1% improvement, yani marginal gain, kiya. Jab sab gains ko ek saath joda gaya, toh overall performance mein bahut bada improvement aaya.
+B|Formula One Pit Stop Teams: Ye teams high-level strategies banakar unhe pit-stop practice runs, data analysis aur repeated testing ke through continuously improve karti hain. Isse seconds ke fractions tak bachaye jaate hain.
+H2|Problems & Failures as Ingredients for Innovation
+B|Typical Creative Process: Innovation ke process mein aksar failure ya problem se shuruaat hoti hai.
+S|Pehla step: Innovator ek failure ya problem face karta hai jo use motivation deta hai.
+S|Doosra step: Woh problem ko analyze karta hai aur kai options ko reject karta hai.
+S|Teesra step: Gestation period ke baad solution milta hai. Yeh aksar tab hota hai jab dimaag relaxed ya "switched off" ho, jaise shower lete waqt ya walk karte waqt, ya jab different backgrounds ke log disagreement aur criticism kar rahe hon.
+S|Chautha step: Idea ko baar-baar test, fail aur refine kiya jata hai.
+B|James Dyson: Vacuum bag choke hone ke baad unhone 3 saal research ki aur 5,000 se zyada prototypes banaye. Tab jaakar pehla bagless vacuum cleaner bana.
+B|Pixar Movies: Toy Story ya Finding Nemo jaisi films seedhe final form mein nahi banti. Har movie final hone se pehle 125,000 se zyada storyboard iterations se guzarti hai aur final product shuruat ke version se bahut alag ho jata hai.
+H1|Part 3: Developing the Right Mindsets
+H2|Growth Mindset vs. Fixed Mindset
+B|Carol Dweck's Research: Growth Mindset wale bachche maante hain ki hum badal sakte hain aur mistakes se seekh sakte hain. Woh challenges ko learning opportunity maante hain aur zyada resilient hote hain. Fixed mindset wale bachche jaldi demoralize ho jaate hain.
+B|Company Culture: Growth mindset wali companies mistakes share karne aur collaboration ke liye open hoti hain. Fixed mindset wali companies mistakes chhupane aur blame game mein zyada busy rehti hain.
+B|Discipline & Willpower: Discipline aur willpower ko nurture kiya ja sakta hai. Ek experiment mein bachchon ke do groups ko alag tasks diye gaye. Pehle group ko easy tasks mile aur unhone achha perform kiya. Doosre group ko difficult tasks mile aur unhe struggle karna pada. Jab dono groups ko tough challenge diya gaya, pehla group jaldi demoralize hua, jabki doosre group ne challenge accept kiya aur aur tasks maange.
+H2|Culture of Fairness and Transparency
+B|Blame vs. Negligence: Leaders ko honest mistakes aur negligence, yani laparvahi, ke beech difference samajhna chahiye. Aisa support system hona chahiye jahan log backlash ke darr ke bina mistakes report kar saken.
+H2|Legal System Case Study, The Innocence Project
+B|Purani Soch: Pehle legal aur criminal system ko infallible, yani aisa system jo galti na kare, maana jata tha. DNA testing ne prove kiya ki hazaaron innocent log galat tarike se jail mein band the.
+B|The Innocence Project: Is project ki sthapna innocent logon ko bachane ke liye hui. Shuruat mein judges aur prosecutors ki taraf se bahut resistance mila kyunki woh apni purani professional mistakes ka saamna nahi kar pa rahe the.
+B|System Improvements: Saalon ke struggle ke baad project ne eyewitness processes, interrogation techniques aur forensic science mein flaws identify kiye aur system-wide improvements lagaye. Isse system zyada fair aur transparent bana.

@@ -1,0 +1,105 @@
+B="Building a StoryBrand"
+A="Donald Miller"
+H1|Building a StoryBrand ka Core Idea
+P|Marketing campaigns aksar kharab ya uljhe hue message ki wajah se fail ho jaate hain aur paisa barbaad hota hai. Is framework ka maqsad business ke message ko clear karna hai, taaki customers ka attention mile aur business grow kare.
+P|Insaan basic taur par apne primitive survival instincts, yani jeene aur behtar tarah se rehne ki basic khwahish, se chalta hai. Hum apne aas-paas ke environment ko lagatar scan karte hain taaki aisi cheezein dhoondh sakein jo humein survive aur thrive karne mein help karein. Aur hum yeh sabse kam energy aur effort laga kar karna chahte hain.
+H1|Brands ki 2 Badi Galtiyan
+B|Brand par focus karna: Brands khud ko hero ki tarah dikhati hain, jabki unhe yeh dikhana chahiye ki woh customers ko survive ya thrive karne mein kaise help kar rahi hain.
+B|Complex Message: Brand ka message bahut uljha hua hota hai. Agar aapka message 5 seconds mein samajh nahi aata, toh woh simple aur easily repeatable nahi hai.
+H1|Stories aur Clarity
+P|Stories powerful hoti hain kyunki woh bikhri hui cheezon aur events ko ek clear aur connected structure mein badal deti hain, jise yaad rakhna aasan hota hai. Clarity paane ke liye humein saara noise, yani faltu aur uljhi hui information, hataani hoti hai.
+B|Grunt Test: Aapka message aisa hona chahiye ki ek caveman bhi use dekhte hi turant samajh sake aur grunt karke repeat kar sake.
+H1|The 7 Plot Points — StoryBrand Framework
+P|Yeh framework 7 musical chords ki tarah hai, jise kisi bhi business ke liye use kiya ja sakta hai.
+B|Basic Formula: A Character with a Problem meets a Guide who gives a Plan and calls them to Action that helps them avoid Failure and ends in Success.
+S|Simple meaning: Ek character ko problem hoti hai. Woh ek Guide se milta hai, jo use Plan deta hai. Guide use Action lene ke liye kehta hai. Is action se character Failure se bachkar Success tak pahunchta hai.
+B|BrandScript: mystorybrand.com par jaakar aap apna free 1-page BrandScript bana sakte hain. Miller recommend karte hain ki har element par brainstorm karein, phir ideas ko filter karke har section ke liye ek clear message choose karein.
+H1|1. The Character — Hero
+B|Customer Hero hai, brand nahi: Aapka customer is kahani ka main character hai.
+B|Hitchhikers Analogy: Customers un hitchhikers ki tarah hain jo aapki gaadi mein tab tak nahi baithenge jab tak unhe yakeen na ho ki aap unhe us jagah le ja sakte hain jahan woh jaana chahte hain.
+B|Story Gap: Insaan ka dimaag hamesha closure, yani kahani ko complete karne, ki koshish karta hai. Jab aap customer ko woh cheez dikhate hain jo woh chahta hai, toh ek "story gap" khul jata hai. Customer yeh dekhne ke liye rukta hai ki aap is gap ko kaise fill karenge. Agar aap customer ki zaroorat identify nahi karenge, toh story gap khulega hi nahi.
+B|1 Core Desire par focus karein: Bahut saare benefits batane ke bajay customer ki ek main desire par focus karein jo uske survival se judi ho.
+S|Survival ka matlab hai safe, healthy, strong aur happy rehna.
+H2|Survival Areas
+B|Conserving resources: Time, money aur energy bachana.
+S|Accumulating resources: Zyada paise kamana aur productivity badhana.
+B|Building social networks: Security, connection aur support ke liye social networks banana.
+B|Gaining social status: Power, prestige aur abundance paana.
+B|Sense of meaning & contribution: Kisi badi cheez ka hissa banna ya doosron ki madad karna.
+H1|2. The Problem
+P|Problem customer ki interest ko hook ki tarah kheenchti hai. Kahani mein ek Villain hota hai jo hero ki life mein frustration paida karta hai.
+B|Villain ki 4 Main Characteristics: Villain ke andar ye 4 qualities honi chahiye.
+S|Root cause: Villain problem ka asli root cause hona chahiye, jaise unstable economy financial darr ki root cause hai.
+S|Relatable: Customer villain ko pehchan sake aur use dislike kare.
+S|Singular: Sirf ek villain hona chahiye.
+S|Real: Villain asli aur believable hona chahiye.
+H2|Problem ke 3 Levels
+B|External Problem: Hero aur uske goal ke beech ka physical obstacle. Jaise leaky roof ya flabby tummy.
+B|Internal Problem: External problem ki wajah se hone wali frustration ya self-doubt. Companies aam taur par external problems ke solutions bechti hain, lekin customers aksar internal frustration door karne ke liye buy karte hain.
+S|Apple Example: Apple isliye successful hai kyunki uska simple interface logon ki is internal frustration ko solve karta hai ki technology use karna bahut mushkil hai.
+B|Philosophical Problem: Kahani ke peeche ka bada "Why" ya moral value. Jaise "good should triumph over evil" ya "mujhe gourmet coffee ke liye barista banna nahi padna chahiye."
+H2|Examples
+B|Tesla Cars: Villain = Gas guzzling, inferior tech; External = Mujhe car chahiye; Internal = New tech ka early adopter banna hai; Philosophical = Mujhe aisi car chalani chahiye jo environment-friendly ho.
+B|Nespresso: Villain = Bad coffee banane wali machines; External = Ghar par acchi coffee chahiye; Internal = Sophisticated feel karna hai; Philosophical = Ghar par gourmet coffee banane ke liye mujhe barista ki tarah trained hone ki zaroorat nahi honi chahiye.
+H1|3. The Guide
+B|Customer ko ek Guide chahiye, ek aur Hero nahi: Hero ke paas self-doubts hote hain, isliye use aise Guide ki zaroorat hoti hai jo pehle us situation se guzar chuka ho.
+S|Luke Skywalker ke liye Yoda aur Katniss ke liye Haymitch Guide ke examples hain.
+B|Brand ko kabhi Hero mat banayein: Agar brand khud ko Hero banayega, toh woh customer ke saath compete karne lagega.
+B|Guide ki 2 Main Characteristics: Guide mein empathy aur authority honi chahiye.
+S|Empathy: Customer ko dikhana ki aap uska dard aur frustration samajhte hain, jaise "We understand how it feels to..."
+S|Authority: Apni competence aur expertise dikhana, lekin brag ya guroor kiye bina.
+H2|Authority Dikhane ke 4 Tareeqe
+B|Testimonials: Doosre heroes ke solid results ke chhote aur effective quotes.
+B|Statistics: Kitne satisfied customers hain ya clients ko kitne percent profit growth mila.
+B|Awards: Industry mein aapne jo awards jeete hain.
+B|Logos: Well-known brands ke logos jinke saath aapne kaam kiya hai.
+H1|4. The Plan
+P|Customers tab tak apna hard-earned paisa kharch nahi karenge jab tak unhe clear na dikhe ki aapke paas unki problem solve karne ka ek clear plan hai. Plan customer ke darr aur confusion ko door karta hai.
+B|Plans ke 2 Types: Plans do tarah ke hote hain.
+S|Process Plan: Business karne ya product use karne ke simple steps. Jaise download the app → input expenses → manage finances.
+S|Process Plan ko 3-6 steps mein rakhein, taaki customer ke dimaag par zyada bojh na pade.
+S|Agreement Plan: Customer ke darr ko kam karne ke liye assurances aur quality guarantees. Jaise "Quality Guarantee" ya "Easy Installment Plan."
+S|Agreement Plan customer ke perceived risk ko khatam karta hai. Yeh sirf homepage par hona zaroori nahi hai; FAQ ya packaging par bhi dikhaya ja sakta hai.
+H1|5. Calls to Action
+P|Insaan bina kisi clear reason ya bahari push ke bade decisions nahi leta. Isliye aapko customers ko clearly aur baar-baar action lene ke liye kehna hoga.
+B|Calls to Action ke 2 Types: Calls to Action do tarah ke hote hain.
+B|Direct Calls to Action: Seedhe buy karne ke requests, jaise "buy now", "book an appointment", ya "call today". Inhe website par alag-alag jagah, formats aur buttons mein repeat karein.
+B|Transitional Calls to Action: Agar customer turant buy karne ke liye ready nahi hai, toh relationship ko dheere-dheere deepen karne ke liye transitional CTA use karein, jaise dating mein relationship dheere-dheere aage badhta hai.
+S|Free Information: Worksheets, webinars ya informative videos share karein.
+S|Testimonials: Aise testimonials share karein jo story map ko reinforce karein.
+S|Samples ya Free Trials: Logon ko product ko khud bina risk ke experience karne ka mauka dein.
+H1|6. Avoid Failure
+P|Kahani tabhi aage badhti hai jab usmein kuch stakes, yani daanv par kuch laga ho. Customers ko clearly dikhana zaroori hai ki aapka product use na karne se kya nuksan ho sakta hai.
+B|Potential Loss: Log loss-averse hote hain, yani nuksan se darte hain. Unhe unke risk ka ehsaas dilayein aur action lene ke liye kahein.
+B|Bad Outcomes: Customers ko batayein ki aap unhe kis kharab situation se bacha rahe hain.
+S|Used Cars Example: Lemon, yani kharab gaadi, milne ka darr aur cheated feel karna.
+S|Summer Camp Example: Bachhon ka boring summer guzarna aur baad mein regret hona.
+H1|7. Attain Success
+P|Customer ko kahani ka happy ending aur ek clear, aspirational picture dikhayein ki aapka product use karne ke baad unki life kaisi ho sakti hai.
+B|Before-and-After Exercise — Ryan Deiss: Is exercise ka use karke map karein ki customer ke paas kya hai, woh kya feel karta hai, uska average day kaisa hai aur uska status kya hai — Before vs After.
+B|Story ko Powerful End Dene ke 3 Tareeqe: Kahani ko teen tarah se powerful ending di ja sakti hai.
+S|Gaining power or status: Respected aur admired banna ya premium status paana.
+S|Becoming whole with something extrinsic: Time, money ya superhuman tools paana.
+S|Becoming whole with something intrinsic: Inner peace aur self-acceptance haasil karna.
+H1|Going Beyond: Personal Transformation
+P|Successful brands sirf product nahi bechti hain. Woh customers ki identity transformation, yani ek behtar insaan banne ki unki chah, mein bhi participate karti hain. Isse passionate brand evangelists bante hain.
+H2|Identity Shift Examples
+B|Pet Food Brand: "Passive dog owner" se "Every dog’s hero" banne tak.
+B|Shampoo Brand: "Anxious and dull" se "Carefree and radiant" banne tak.
+H1|StoryBrand ko Apply Kaise Karein — Implementation Guide
+H2|A. Improve Your Website
+B|Clear offer "above the fold": Website kholte hi, bina scroll kiye, clear hona chahiye ki aap kya offer karte hain, aapka offer kaunsi problem solve karega aur customer ki identity kaise badlegi.
+B|Explicit calls to action: Z-shape mein buttons lagayein — top-right, middle above the fold aur scroll karte waqt neeche.
+B|Success-related images: Raw products ki photos ke bajay khush aur satisfied customers ki photos lagayein.
+B|Snapshot of key revenue streams: Pehle overall message clear karein, phir neeche alag-alag divisions ya products batayein.
+B|Few words: Log website ko scan karte hain, detail mein padhte nahi hain. Isliye bullet points, images aur short soundbites use karein, bade paragraphs nahi.
+B|Stick to the BrandScript: Naye faltu ideas jodkar unnecessary noise create na karein.
+H2|B. Transform Your Organization
+B|BrandScript ko use karke saare departments, jaise mission statement, strategy aur operations, ko align karein taaki employees ka noise aur confusion door ho.
+B|Company story: Team members Heroes hain aur leaders Guides hain. Jab puri company on-mission hoti hai, toh har staff member ambassador ban jata hai aur same compelling message ko spread karta hai.
+H2|C. Grow Your Business — 5 Remaining Steps
+B|Develop a One-liner: Character, Problem, Plan aur Success ko mila kar ek strong one-liner banayein jise puri team use kar sake.
+B|Create a lead generator: Free PDFs ya video series share karke email addresses collect karein.
+B|Automated email drip campaign: Regular valuable emails bhejein jo Problem, Plan aur Success ko highlight karein aur CTA dein.
+B|Share transformation stories: Customers ke testimonials, yani Before vs After stories, share karein.
+B|Create a referral-generation system: Happy customers ko incentivize karein taaki woh aapke baare mein doosron ko batayein aur word spread karein. Is process ko automate karein.
