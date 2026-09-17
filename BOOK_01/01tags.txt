@@ -1,0 +1,137 @@
+B="The 7 Habits of Highly Effective People"
+A="Stephen R. Covey"
+H1|Shuruaat: Basic Idea
+P|Stephen R. Covey ki The 7 Habits of Highly Effective People ka main idea hai ki real success aur real change andar se shuru hota hai.
+P|Sirf skills, knowledge ya techniques seekhna enough nahi hai. Hume apni soch, character aur intentions ko improve karna hota hai. Jab andar badlav aata hai, tab bahar ki zindagi bhi badalti hai.
+P|Is approach ko Inside-Out kaha gaya hai.
+P|7 Habits ek sequence mein hain. Pehli habits hume khud ko manage karna sikhati hain, phir doosron ke saath better relationships banana, aur aakhir mein khud ko continuously improve karna.
+H1|Habit 1 — Be Proactive
+H2|Simple Meaning
+P|Apni life ki responsibility khud lo.
+P|Har situation mein hum apna response choose kar sakte hain. Situation hamare control mein na ho, phir bhi hum us situation par kaise react karein, yeh hamare control mein hota hai.
+P|Reactive hone ke bajay proactive bano.
+S|Reactive: "Main ye nahi kar sakta."
+S|Reactive: "Mujhe ye karna hi padega."
+S|Proactive: "Main ye kar sakta hoon."
+S|Proactive: "Main ye karunga."
+S|Proactive: "Main ye choose karta hoon."
+H2|Circle of Influence
+P|Apni energy un cheezon par lagao jinhe tum change kar sakte ho.
+S|Apni soch
+S|Apna behaviour
+S|Apne decisions
+S|Apni habits
+P|Un cheezon par energy waste mat karo jinpar tumhara control nahi hai, jaise weather ya economy.
+B|Yaad rakho: "Jo mere control mein hai, us par focus karo."
+H1|Habit 2 — Begin with the End in Mind
+H2|Simple Meaning
+P|Pehle decide karo ki tumhe banna kya hai aur pahunchna kahan hai.
+P|Har important cheez pehle mind mein create hoti hai, phir real life mein.
+P|Isliye pehle clear vision banao:
+S|Main kya banna chahta hoon?
+S|Main kya achieve karna chahta hoon?
+S|Mere liye important principles kya hain?
+H2|Personal Mission Statement
+P|Apni life ke liye ek clear mission banao jo bataye: "Main kaun banna chahta hoon aur meri life mein kya important hai?"
+P|Ye mission tumhare daily decisions ko direction dega.
+H2|Principle-Centered Life
+P|Apni life ka center sirf paisa, career, relationship ya kisi temporary cheez ko mat banao.
+P|Strong principles ko apna center banao.
+P|Isse tumhe milti hai:
+S|Security
+S|Guidance
+S|Wisdom
+S|Power
+B|Yaad rakho: "Pehle destination clear karo, phir journey start karo."
+H1|Habit 3 — Put First Things First
+H2|Simple Meaning
+P|Jo sabse important hai, use sabse pehle karo.
+P|Problem aksar discipline ki nahi hoti. Problem ye hoti hai ki hume apni priorities clearly pata nahi hoti.
+H2|Time Management ke 4 Quadrants
+S|Quadrant 1: Urgent + Important — Crisis aur immediate problems.
+S|Quadrant 2: Not Urgent + Important — Planning, prevention, relationships, personal growth. Ye sabse important quadrant hai.
+S|Quadrant 3: Urgent + Not Important — Unnecessary calls, interruptions, meetings.
+S|Quadrant 4: Not Urgent + Not Important — Time waste, excessive entertainment.
+H2|Quadrant 2 par Focus Karo
+P|Har week:
+S|Apne important life roles identify karo.
+S|Har role ke liye 2–3 important goals banao.
+S|Un goals ke liye pehle se time schedule karo.
+S|Zarurat padne par daily plan adjust karo.
+P|Important idea: Schedule mein jo aa gaya usko priority mat do. Pehle apni priorities decide karo, phir unke liye schedule mein time rakho.
+H1|Habit 4 — Think Win-Win
+H2|Simple Meaning
+P|Aisi situation create karo jahan dono sides ka fayda ho.
+P|Win-Win sirf ek negotiation technique nahi hai. Ye relationships ko dekhne ka ek mindset hai.
+P|Agar dono ka fayda possible nahi hai, to zabardasti jeetne ki jagah "No Deal" karna better hai.
+H2|Win-Win ke liye
+B|Integrity: Jo tum kehte ho, us par khade raho.
+B|Maturity: Apni baat kehne ka courage rakho aur doosron ki baat ka respect bhi karo.
+B|Abundance Mindset: Ye socho ki success sirf ek insaan ke liye nahi hai. Sabke liye enough opportunities ho sakti hain.
+H2|Relationships mein Trust Banao
+P|Trust badhta hai jab tum:
+S|Doosre ko genuinely samajhne ki koshish karo.
+S|Chhoti kindness dikhao.
+S|Apne promises poore karo.
+S|Expectations clear rakho.
+S|Honest raho.
+S|Galti hone par dil se sorry bolo.
+B|Yaad rakho: "Mujhe sirf jeetna nahi hai; hume dono ko jeetna hai."
+H1|Habit 5 — Pehle Samjho, Phir Samjhao
+H2|Simple Meaning
+P|Pehle doosre insaan ko genuinely samjho, phir apni baat samjhao.
+P|Normally log doosron ki baat isliye sunte hain taaki unhe apna answer dena ho.
+P|Empathic listening mein goal alag hai: "Mujhe pehle samajhna hai ki saamne wala kya feel aur soch raha hai."
+P|Sirf words mat suno. Unki in cheezon ko samajhne ki koshish karo:
+S|Feelings
+S|Emotions
+S|Point of view
+S|Situation
+P|Jab log ek doosre ko genuinely samajhte hain, tab naye aur creative solutions mil sakte hain — jise Third Alternative kaha gaya hai.
+B|Yaad rakho: "Answer dene ke liye mat suno; samajhne ke liye suno."
+H1|Habit 6 — Synergize
+H2|Simple Meaning
+P|Differences ko problem nahi, strength samjho.
+P|Har insaan duniya ko apne experience aur thinking ke according dekhta hai.
+P|Isliye doosre insaan ka perspective tumse different ho sakta hai.
+P|Us difference ko reject karne ke bajay samjho aur value karo.
+P|Jab different ideas ko combine kiya jata hai, to kabhi-kabhi aisa solution milta hai jo dono individual ideas se better hota hai.
+P|Whole, parts ke simple sum se bada ho sakta hai.
+B|Synergy ka matlab hai: "Tumhari strength + meri strength = kuch aur better."
+H1|Habit 7 — Sharpen the Saw
+H2|Simple Meaning
+P|Khud ko continuously renew aur improve karte raho.
+P|Agar tum khud ko maintain nahi karoge, to baaki habits bhi weak ho jayengi.
+P|Apne aap ko 4 areas mein regularly improve karo:
+H2|1. Physical
+S|Achha khana
+S|Proper rest
+S|Exercise
+H2|2. Spiritual
+P|Apne inner self ko strong karo:
+S|Reading
+S|Nature
+S|Music
+S|Meditation
+S|Prayer
+H2|3. Mental
+P|Apne mind ko grow karo:
+S|Study
+S|Reading
+S|Writing
+S|Apni thinking ko examine karna
+H2|4. Social / Emotional
+P|Daily relationships mein Habits 4–6 ko practice karo.
+B|Yaad rakho: "Khud ko improve karna band mat karo."
+P|Jab tum doosron mein unki potential dekhte ho aur unhe encourage karte ho, to tum unhe grow karne mein help karte ho.
+H1|Sabhi 7 Habits ka Simple Formula
+B|Habit 1: Apni responsibility lo.
+B|Habit 2: Apna destination clear karo.
+B|Habit 3: Important cheezon ko priority do.
+B|Habit 4: Dono sides ki jeet socho.
+B|Habit 5: Pehle samjho, phir samjhao.
+B|Habit 6: Differences ko use karke better solutions banao.
+B|Habit 7: Khud ko continuously improve karte raho.
+H1|Sabse Important Lesson
+P|Pehle khud ko manage karo → phir relationships ko better karo → phir continuously khud ko renew karte raho.
+P|Ye poori book ka core idea hai: real effectiveness sirf results paane ka naam nahi hai; apni capacity ko bhi strong banana zaroori hai.

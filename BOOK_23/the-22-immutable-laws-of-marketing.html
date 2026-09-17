@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 22 Immutable Laws of Marketing — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 4.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 23</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">The 22 Immutable Laws of Marketing</span>
+          <span class="headline-main">The 22 Immutable Laws of Marketing</span>
+        </div>
+        <p class="subhead">Reading notes on The 22 Immutable Laws of Marketing</p>
+        <div class="meta-row">
+          <span>14 min read</span><span class="meta-dot">•</span><span>By Al Ries aur Jack Trout</span>
+          <span class="meta-dot">•</span>
+          <span>Added September 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<p class="drop-cap">Al Ries aur Jack Trout ki "The 22 Immutable Laws of Marketing" marketing ke 22 buniyadi aur aparivartaniya niyamon ke baare mein hai. Authors kehte hain ki ye laws nature ke laws ki tarah hain. Agar aap in laws ko todte hain, to aapka marketing program fail ho sakta hai, chahe aapke paas kitne bhi creative log hon ya aap kitna bhi time, energy aur paisa laga dein. Marketing aur business mein success ke liye in laws ke andar rehkar kaam karna zaroori hai.</p>
+<p>Is book mein ye 22 Laws, unke basic principles, definitions aur real-world examples diye gaye hain. </p>
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>1. The Law of Leadership — Leadership ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Market mein sabse pehle aana, baad mein ek better product lekar aane se zyada powerful hota hai. Consumers ke dimag mein sabse pehle jagah banana zyada effective hai, bajaye iske ki baad mein unhe convince kiya jaye ki aapka product better hai.</p>
+<h3 class="sub-heading">Log Firsts ko kyun yaad rakhte hain?</h3>
+<p><strong>Human behavior:</strong> Log aksar un cheezon ke saath bane rehte hain jo unke paas pehle se hoti hain.</p>
+<p><strong>First brand:</strong> Jo brand market mein sabse pehle aata hai, uska naam kabhi-kabhi puri category ka common naam ban jata hai.</p>
+<h3 class="sub-heading">Examples</h3>
+<div class="sub-points">
+<p><strong>Heineken:</strong> America mein establish hone wali pehli imported beer.</p>
+<p><strong>Harvard:</strong> America mein banne wala sabse pehla college.</p>
+<p><strong>Atlantic Ocean:</strong> Jo vyakti sabse pehle Atlantic Ocean ko solo fly karke cross karta hai, log uska naam yaad rakhte hain, jabki doosre vyakti ko log nahi jaante.</p>
+</div>
+<p><strong>Crucial Detail:</strong> Har first mover successful nahi hota. Agar timing kharab ho ya idea bura ho, to failure ho sakta hai. Lekin first hone ka bahut bada advantage hota hai. Competitor se better product banane ke bajaye ek nayi category banane par focus karna zyada useful hai. </p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>2. The Law of the Category — Category ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Agar aap kisi existing category mein first nahi ho sakte, to ek nayi category banaiye jismein aap first ban sakein.</p>
+<h3 class="sub-heading">Examples</h3>
+<div class="sub-points">
+<p><strong>Amelia Earhart:</strong> Wo Atlantic Ocean ko solo fly karne wali pehli vyakti nahi thin, lekin wo aisa karne wali pehli woman thin.</p>
+<p><strong>Dell:</strong> Personal computer market mein competition bahut tha. Dell ne phone ke through computer bechne wali pehli company bankar apni alag jagah banayi.</p>
+</div>
+<h3 class="sub-heading">Process &amp; Strategy</h3>
+<p><strong>Category thinking:</strong> Brands ke bajaye categories ke baare mein sochiye. Consumers apne favorite brands ko defend kar sakte hain, lekin ek nayi category ke naye product ke liye wo zyada open hote hain.</p>
+<p><strong>Category ownership:</strong> Agar aap nayi category mein first hote hain, to us category ko strongly promote karein aur consumers ko samjhayen ki is category ka product kyun kharidna chahiye. Isse aap us category ke "owner" ban sakte hain. </p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>3. The Law of the Mind — Dimag ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Marketplace mein pehle aana important hai, lekin consumers ke dimag mein sabse pehle jagah banana usse bhi zyada important hai.</p>
+<p><strong>Perception:</strong> Marketing asal mein logon ki soch aur perception ki ladai hai. Jo cheez prospect ke dimag mein hai, wahi sabse important hai. Ek baar kisi vyakti ka mind set ho jaye, to use badalna bahut mushkil hota hai.</p>
+<p><strong>Process:</strong> Dimag mein jagah banane ka effective tareeka dheere-dheere enter karna nahi, balki ek bada splash ya impact create karna hai jisse aap turant notice ho sakein. Iske liye bahut zyada paisa zaroori nahi hai.</p>
+<p><strong>Example:</strong> Apple pehla personal computer nahi tha. Lekin iska naam pehle ke computers, jaise Commodore Pet, IMSAI 8080, MITS Altair 8800 aur Radio Shack TRS-80, ke comparison mein yaad rakhna bahut easy tha. </p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>4. The Law of Perception — Perception ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Marketing products ke beech ki ladai nahi hai. Ye consumers ke perceptions, yani unki soch aur nazariye, ke beech ki ladai hai.</p>
+<p><strong>Explanation:</strong> Long run mein hamesha best product nahi jeetta, kyunki "best" kya hai ye subjective hota hai. Customer ke liye wahi sach hota hai jo uske dimag mein perception bana hua hai.</p>
+<p><strong>Example:</strong> Toyota Japan mein Honda se 4 guna zyada cars bechta hai, kyunki Japan mein Honda ko motorcycle company ke roop mein dekha jata hai.</p>
+<p><strong>Crucial Detail:</strong> Zyada tar log apna perception bahut kam information se bana lete hain. Ye information kisi chhote personal experience ya kisi doosre vyakti ke experience se bhi aa sakti hai. Marketing success ke liye sahi perception banana bahut zaroori hai. </p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>5. The Law of Focus — Focus ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Marketing success ki sabse badi key ye hai ki prospect ke dimag mein ek single word ya concept ko own kiya jaye.</p>
+<p><strong>Explanation &amp; Process:</strong> Marketing ek magnifying glass ki tarah kaam karti hai. Ye message ko itna focus karti hai ki wo customer ke dimag mein clearly baith jaye. Jab customer wo word sunta hai, to uske dimag mein aapke product ka khayal aana chahiye.</p>
+<h3 class="sub-heading">Examples</h3>
+<div class="sub-points">
+<p><strong>FedEx:</strong> "Overnight"</p>
+<p><strong>Volvo:</strong> "Safety"</p>
+<p><strong>Crest:</strong> "Cavities"</p>
+</div>
+<p><strong>Rule for Word Selection:</strong> Chuna hua word simple hona chahiye, customer ke benefit se related hona chahiye aur halo effect create karna chahiye. Halo effect ka matlab hai ki ek word sunte hi doosre benefits bhi automatically dimag mein aane lagen.</p>
+<div class="sub-points">
+<p><strong>Halo effect example:</strong> "Thicker" sauce se better quality aur rich taste ka feeling aa sakta hai.</p>
+</div>
+<p><strong>Words to avoid:</strong> "Quality" ya "honest" jaise words ko own karna possible nahi hai, kyunki koi competitor apne aap ko low-quality ya dishonest nahi batayega. </p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>6. The Law of Exclusivity — Ananyata ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Prospect ke dimag mein ek hi word ko do companies own nahi kar sakti.</p>
+<p><strong>Explanation:</strong> Agar competitor pehle hi kisi word ko own karta hai, to aapko koi doosra unique word choose karna chahiye. Competitor ka word copy ya chheenne ki koshish karna waste hai. Isse competitor ki position aur strong ho sakti hai.</p>
+<p><strong>Examples:</strong> FedEx "worldwide" word ko DHL se nahi le paya. Energizer "long-lasting" word ko Duracell se nahi le paya. </p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>7. The Law of the Ladder — Seedhi ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Aapki marketing strategy is baat par depend karti hai ki consumers ke dimag ki ladder par aap kis rung ya paydaan par hain.</p>
+<p><strong>Ladder concept:</strong> Har product category ke consumers ke dimag mein ek ladder hoti hai. Is ladder ke alag-alag rungs par different brands hote hain.</p>
+<p><strong>Rule of thumb:</strong> Log ek baar mein lagbhag 7 rungs tak handle kar sakte hain. Aapka market share aam taur par aapke neeche wale rung ke brand se lagbhag dugna hota hai.</p>
+<p><strong>Strategy implication:</strong> Isliye kabhi-kabhi bade ladder par #2 ya #3 hona, chhote ladder par #1 hone se zyada profitable ho sakta hai.</p>
+<p><strong>Strategy:</strong> Pehle pata karein ki aap ladder par kis position par hain. Uske baad apni marketing strategy usi position ke according banayein.</p>
+<p><strong>Example:</strong> Avis ne pehle khud ko rent-a-car market mein finest batane ki koshish ki. Ye position Hertz ke paas thi, isliye Avis fail raha. Baad mein Avis ne message badla: "Avis is only No. 2 in rent-a-cars. So why go with us? We try harder."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Avis ne accept kiya ki wo No. 2 hai aur bataya ki isi wajah se wo customers ke liye zyada mehnat karta hai. Logon ne is message ko easily accept kiya aur Avis profitable ho gaya. </p>
+</div>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>8. The Law of Duality — Dwaita ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Long term mein market battles aksar sirf do bade players ke beech ki competition ban jaati hain.</p>
+<p><strong>Explanation:</strong> Shuru mein kisi category ki ladder par bahut saare brands ho sakte hain. Lekin time ke saath competition usually do major competitors tak simat jata hai.</p>
+<p><strong>Examples:</strong> Coke vs Pepsi, Nike vs Reebok, Crest vs Colgate.</p>
+<p><strong>Crucial Detail:</strong> Jaise-jaise market mature hota hai, #3 brand ka market share unstable ho jata hai. Consumers top brands ko prefer karte hain kyunki unhe lagta hai ki leaders ke products best hain.</p>
+<p><strong>Strategy:</strong> Agar aap #1 ya #2 nahi ban sakte, to un niches par focus karein jahan aap profitable reh sakte hain. </p>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>9. The Law of the Opposite — Vipreet ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Agar aap market mein second position par hain, to aapki strategy market leader ke according decide hoti hai.</p>
+<p><strong>Explanation &amp; Process:</strong> Leader ki strength ko identify karein aur khud ko uske opposite position karein. Leader ko copy na karein. Uski weakness par attack karein.</p>
+<h3 class="sub-heading">Examples</h3>
+<div class="sub-points">
+<p><strong>Scope:</strong> Listerine ke "medicine breath", yani disinfectant jaisa taste, ke opposite Scope ne khud ko "good-tasting" mouthwash ke roop mein present kiya.</p>
+<p><strong>Pepsi:</strong> Coca-Cola ki old aur established image ke opposite Pepsi ne khud ko young logon ki choice, "Pepsi Generation", ke roop mein present kiya. </p>
+</div>
+<div class="specimen-row"><span class="specimen-label">48pt</span><h2>10. The Law of Division — Vibhajan ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Time ke saath ek category kai naye sub-categories mein divide ho jaati hai.</p>
+<p><strong>Explanation:</strong> Categories generally merge nahi hoti; wo split hoti hain. Jaise "computers" category baad mein mainframes, minicomputers, personal computers, tablets aur doosri categories mein divide ho gayi.</p>
+<p><strong>Process:</strong> Customers ko confuse hone se bachane ke liye established leader ko har naye segment ke liye alag brand develop karna chahiye.</p>
+<p><strong>Example:</strong> Automobile industry ke expand hone par General Motors ne Chevrolet, Pontiac, Cadillac jaise alag brands banaye. </p>
+<div class="specimen-row"><span class="specimen-label">56pt</span><h2>11. The Law of Perspective — Drishtikon ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Marketing mein long-term effects aksar short-term effects ke opposite hote hain.</p>
+<h3 class="sub-heading">Sales Promotions — Discounting</h3>
+<p><strong>Short-term effect:</strong> Discounts se short-term revenue badh sakta hai.</p>
+<p><strong>Long-term effect:</strong> Customers ko aadat ho sakti hai ki wo regular price par product na kharidein.</p>
+<p><strong>Example:</strong> Wal-Mart aur K-Mart ki "everyday low prices" strategy ko zyada effective bataya gaya hai.</p>
+<h3 class="sub-heading">Line Extensions</h3>
+<p><strong>Short-term effect:</strong> Line extensions sales ko temporarily badha sakti hain.</p>
+<p><strong>Long-term effect:</strong> Ye brand ka focus aur value dilute kar sakti hain.</p>
+<p><strong>Rule:</strong> Marketing programs hamesha long-term effects ko dhyan mein rakhkar banayein. </p>
+<div class="specimen-row"><span class="specimen-label">64pt</span><h2>12. The Law of Line Extensions — Line Extension ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Ek successful brand ki equity ko naye areas mein extend karne ka temptation aksar harmful hota hai.</p>
+<p><strong>Explanation:</strong> Jab company har kisi ke liye sab kuch banne ki koshish karti hai, to wo apna original focus kho deti hai jiski wajah se wo successful bani thi.</p>
+<p><strong>Brand stretching:</strong> Jitne zyada products ke liye aap ek brand name use karenge, utna hi kam profit ho sakta hai.</p>
+<p><strong>Strategy:</strong> Successful strategy aksar focus ko narrow rakhna hoti hai.</p>
+<p><strong>Example:</strong> IBM ne mainframe se PC, software, copiers, telephones aur doosre areas mein line extend ki. Long term mein IBM ne market share lose kiya. </p>
+<div class="specimen-row"><span class="specimen-label">72pt</span><h2>13. The Law of Sacrifice — Tyag ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Success ke liye aapko kuch na kuch sacrifice ya give up karna padta hai.</p>
+<h3 class="sub-heading">Three Sacrifices</h3>
+<p><strong>Full Product Line:</strong> Specialization, generalization se better hoti hai.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Interstate Department Stores bankrupt hone ke baad sab kuch chhodkar sirf toys par focus karne laga. Company ne apna naam Toys "R" Us rakha aur badi success hasil ki.</p>
+</div>
+<p><strong>Broad Target Market:</strong> Jab aap har kisi ko serve karne ki koshish karte hain, to koi bhi fully satisfied nahi hota.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Pepsi ne youth par aur Marlboro ne cowboys par focus kiya. Ek sharply defined target market rakhne se aap aam customers tak bhi zyada easily pahunch sakte hain.</p>
+</div>
+<p><strong>Constant Changes:</strong> Har baar market change hone par apni strategy change nahi karni chahiye. Apne basic focus par tikna chahiye. </p>
+<div class="specimen-row"><span class="specimen-label">84pt</span><h2>14. The Law of Attributes — Gunon ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Market leader ke attributes ko copy karne ke bajaye ek opposite attribute dhundhein jise aap own kar sakein.</p>
+<p><strong>Explanation &amp; Process:</strong> Un segments par focus karein jinhe leader ignore kar raha hai. Jo attribute aapne choose kiya hai, uski value ko strongly promote karein taaki aap bada market share hasil kar sakein.</p>
+<p><strong>Example:</strong> Crest "cavity prevention" ke liye jaana jata tha. Doosre brands ne "whitening", "breath protection" ya "taste" jaise different attributes par focus kiya. </p>
+<div class="specimen-row"><span class="specimen-label">96pt</span><h2>15. The Law of Candor — Imaandari ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Agar aap apni kisi negative baat ya weakness ko openly accept karte hain, to prospects use positive way mein le sakte hain.</p>
+<p><strong>Explanation:</strong> Honesty unexpected hoti hai aur logon ko defensive hone se rok sakti hai. Log positive claims par doubt karte hain, lekin negative statements par jaldi trust kar lete hain.</p>
+<p><strong>Example:</strong> Listerine ne apne bad taste ko accept karke campaign chalaya: "the taste you hate twice a day".</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Listerine ne khud kaha ki iska taste din mein do baar aisa hai jo aapko pasand nahi aayega. Isse perception bana ki agar iska taste disinfectant jaisa kadwa hai, to shayad ye germs ko bhi zyada effectively maarta hai.</p>
+</div>
+<p><strong>Rules:</strong> Customer ko negative statement se turant agree karna chahiye. Uske baad us negative point ko jaldi se ek strong positive benefit mein convert karna chahiye. </p>
+<div class="specimen-row"><span class="specimen-label">108pt</span><h2>16. The Law of Singularity — Ekmatra Kadam ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Marketing success bahut saari chhoti koshishon se nahi, balki ek single bold stroke ya bade decisive action se mil sakti hai.</p>
+<p><strong>Explanation &amp; Process:</strong> Har competitor ki ek sabse weak jagah hoti hai, jise "Achilles' heel" kaha gaya hai. Marketing mein us weak point par attack karein.</p>
+<p><strong>Marketing management:</strong> Marketing managers ko frontline par rehkar market ko khud samajhna chahiye. Aise important decisions ko completely delegate nahi kiya ja sakta.</p>
+<p><strong>Example:</strong> 1985 mein Coca-Cola ne Pepsi ke sweet taste ko challenge karne ke liye "New Coke" launch kiya. Ye flop ho gaya.</p>
+<p><strong>Coca-Cola ka asset:</strong> Coke ka sabse bada asset uski image thi ki wo "The Real Thing" hai. Use isi image par focus karna chahiye tha. </p>
+<div class="specimen-row"><span class="specimen-label">120pt</span><h2>17. The Law of Unpredictability — Anishchitata ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Aap apne competitors ke future plans nahi jaante, isliye future ko accurately predict nahi kar sakte.</p>
+<p><strong>Explanation:</strong> Market research mostly past ko measure karta hai. Wo future ko accurately predict nahi kar sakta.</p>
+<p><strong>Process:</strong> Organization mein flexibility rakhein taaki market mein change aane par aap quickly adapt kar sakein. Calculated risks lene se bhi nahi darna chahiye.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Gourmet popcorn jaise ideas mein calculated risk lene ki zaroorat ho sakti hai. </p>
+</div>
+<div class="specimen-row"><span class="specimen-label">144pt</span><h2>18. The Law of Success — Safalta ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Success se arrogance ya ghamand aa sakta hai, aur arrogance se failure aa sakta hai.</p>
+<p><strong>Explanation:</strong> Jab koi brand successful hota hai, to log apni objectivity lose kar sakte hain. Ego marketing decisions mein aa jata hai aur company har category mein line extensions karne lagti hai.</p>
+<p><strong>Process:</strong> CEOs ko bade events aur meetings mein busy hokar marketing ko completely delegate nahi karna chahiye. Unhe frontline par jaakar khud market intelligence collect karni chahiye. </p>
+<div class="specimen-row"><span class="specimen-label">168pt</span><h2>19. The Law of Failure — Asafalta ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Failure hona normal aur expected hai. Isse accept karna chahiye.</p>
+<p><strong>Explanation:</strong> Jab aap mistakes ko jaldi accept karte hain, to aap apne losses ko bhi jaldi cut kar sakte hain.</p>
+<p><strong>Crucial Detail:</strong> Kabhi-kabhi log company ke benefit ke bajaye apne personal career ke fear ki wajah se risks nahi lete.</p>
+<p><strong>Work Environment:</strong> Aisa environment banana chahiye jahan log experiment karne ke liye punish na hon aur ideas ko unki actual performance ke basis par test kiya jaye.</p>
+<p><strong>Sam Walton quote:</strong> "woe to the person who makes the same mistake twice"</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Jo vyakti ek hi mistake ko do baar repeat karta hai, uske liye problem hai. </p>
+</div>
+<div class="specimen-row"><span class="specimen-label">192pt</span><h2>20. The Law of Hype — Hype ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Press aur media mein jo kuch dikhaya jata hai, reality aksar uske opposite hoti hai.</p>
+<p><strong>Explanation:</strong> Media hype bahut baar misleading hoti hai.</p>
+<p><strong>Examples:</strong> "New Coke", "NeXT computer" aur "USA Today" ko bahut media hype mili, lekin ye fail rahe.</p>
+<p><strong>Real Change:</strong> Asli bade changes aksar quietly start hote hain aur dheere-dheere speed pakadte hain.</p>
+<div class="sub-points">
+<p><strong>Examples:</strong> Personal computers aur fax machines.</p>
+</div>
+<p><strong>Strategy:</strong> Sirf front-page news par depend na karein. Chhoti aur less-sensationalized news ko bhi observe karein, kyunki wahan real changes ke signals mil sakte hain. </p>
+<div class="specimen-row"><span class="specimen-label">220pt</span><h2>21. The Law of Acceleration — Tezi ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Successful marketing programs trends par based hote hain, fads par nahi.</p>
+<p><strong>Trend:</strong> Trend ek long-term change hota hai jo lambe time tak chal sakta hai.</p>
+<p><strong>Fad:</strong> Fad ek short-term excitement ya tezi hoti hai jo jaldi aati hai aur jaldi chali jaati hai.</p>
+<p><strong>Simple comparison:</strong> Fad samudra ki wave jaisa hai jo achanak aata hai aur chala jata hai. Trend tide ya jwar-bhata jaisa hai jo surface par hamesha obvious nahi hota, lekin long term tak chalta hai.</p>
+<p><strong>Process:</strong> Kisi fad ko trend mein convert karne ke liye demand ko thoda control mein rakhein. Demand ko completely satisfy na karein, taaki uska charm aur long-term demand bani rahe. </p>
+<div class="specimen-row"><span class="specimen-label">253pt</span><h2>22. The Law of Resources — Sansadhanon ka Niyam</h2></div>
+<p><strong>Siddhant:</strong> Ek bahut achhe idea ko successful banane ke liye enough funding ya paisa zaroori hai.</p>
+<p><strong>Explanation:</strong> Bina paise ke koi bhi idea bahut door tak nahi ja sakta. Consumers ke dimag mein jagah banane aur us jagah ko maintain karne ke liye paisa lagta hai.</p>
+<h3 class="sub-heading">Small Players ke liye Process</h3>
+<p>Agar aapke paas strong idea hai lekin paisa nahi hai, to franchise karein, venture capital dhundhein ya investors se milen.</p>
+<h3 class="sub-heading">Big Players ke liye Process</h3>
+<p>Successful hone ke liye starting ke 2-3 saal ke profits ko marketing mein hi reinvest ya "plough back" karein. </p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

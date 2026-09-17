@@ -1,0 +1,140 @@
+B="Pre-Suasion"
+A="Robert Cialdini"
+H1|1. Introduction aur The Big "So What"
+H2|Pre-Suasion Kya Hai?
+P|Pre-suasion ka matlab hai pehle se aisi buniyaad tayaar karna jisse aapka message dene se pehle hi saamne wala use accept karne ke liye mentally ready ho jaye. Iska focus naye product features ya offers ko better banane par nahi, balki unhe psychological tareeke se sabse appealing tarike se present karne par hota hai.
+B|Scientific Principles: Yeh technique kisi product ya offer ko better banane ke bajay scientific principles par based hai. In principles ko systematically seekha aur apply kiya ja sakta hai. Iska use ghar mein bachchon se cooperation lene se lekar business mein bade clients ko jeetne tak kiya ja sakta hai.
+B|High Achievers ki Strategy: Sabse achhe persuaders request karne se pehle apne words aur actions ko carefully prepare karne mein sabse zyada time lagate hain. Basic idea yeh hai ki pehle se milne wale attention ko strategically guide karke communicator saamne wale ko message se agree karne ki taraf le ja sakta hai, message ko actually experience karne se pehle hi.
+B|Book ki Structure: Is content ko do bade parts mein divide kiya gaya hai.
+S|Sources of Pre-Suasion: Pre-suasion ke sources aur yeh kyun kaam karte hain.
+S|Putting Pre-Suasion to Work: Pre-suasion ko practically kaise use kiya jaye.
+H1|2. Part 1: Sources of Pre-Suasion aur Yeh Kyun Kaam Karte Hain
+H2|A. Attention ka Importance
+B|Limited Human Focus: Insaan ek waqt mein mainly ek hi cheez par focus kar sakta hai. Jab koi cheez hamara attention pakad leti hai, toh hum baaki cheezon ko ignore kar dete hain. Hum decisions sirf is basis par nahi lete ki kya sahi ya sabse helpful hai, balki is basis par bhi lete hain ki us moment hum kis cheez par focus kar rahe hain.
+B|Privileged Moments: Yeh woh noticeable moments hote hain jab koi insaan kisi message ko accept karne ke liye sabse zyada ready hota hai.
+B|Hits vs. Misses: Human brain ke liye kisi cheez ke present hone ko confirm karna ya use dhoondhna, us cheez ke absent hone ko notice karne se easy hota hai. Agar kisi ko ek din kaha jaye ki woh "hard-headed", yani ziddi hai, aur doosre din kaha jaye ki woh "flexible" hai, toh woh dono statements se agree kar sakta hai, kyunki uski memory unhi incidents ko yaad karegi jo us trait ko confirm karte hain.
+B|Single-Chute Questions: Yeh biased aur ek-tarfa questions hote hain jo logon ko ek hi viewpoint ko confirm karne ki taraf le jaate hain aur privileged moments create karte hain.
+S|Study: Ek study mein sirf 33% log apna contact detail dene ke liye ready hue taaki unhe ek naye soft drink ka sample bheja ja sake.
+S|Study ka doosra result: Jab unse pehle poocha gaya, "Kya aap adventurous hain aur nayi cheezein try karna pasand karte hain?", toh 97% logon ne "haan" kaha. Iske baad 75.7% log contact details dene ke liye agree ho gaye.
+B|Focusing Illusion: Hum aksar sochte hain ki jis cheez par hum focus kar rahe hain, wahi sabse important hai. Daniel Kahneman ke words mein: "Nothing in life is as important as you think it is while you are thinking about it".
+S|Simple meaning: Jab hum kisi cheez ke baare mein soch rahe hote hain, us waqt humein wahi cheez reality se bhi zyada important lag sakti hai.
+B|Communicators ka use: Communicators is illusion ka fayda uthakar attention ko narrow kar dete hain aur kisi particular feature ya message ko pehle se important bana dete hain. Yeh teen main tarikon se hota hai.
+B|Background Cues: Online furniture store mein ek test kiya gaya. Jin visitors ne cloud, yani badal, wale background ka landing page dekha, unhone sofas ke comfort par focus kiya. Jin visitors ne pennies, yani sikke, wale background ka landing page dekha, unhone price par focus kiya.
+B|Innocent Questions aur Surveys: Surveys logon ka attention kisi specific option ki taraf le ja sakte hain. Jab kisi organization ke leaders se kisi particular solution ke baare mein survey kiya gaya, toh unhone usi solution ko recommend kiya. Customers se survey karwane par unka attention brand ki strong qualities ki taraf bhi ja sakta hai.
+B|Media Exposure / Agenda-Setting: Hum un issues ko zyada important maanne lagte hain jo news mein baar-baar dikhaye jaate hain. Jaise 2003 ke Iraq campaign ke time Bush administration ne reporters ko combat units ke saath embed kiya. Isse news coverage ka attention war ke peeche ke reasons ke bajay soldiers ki daily combat life par chala gaya.
+H2|B. Assumed Causality
+B|Focus equals Cause: Hum jis cheez par zyada focus karte hain, use hi kisi behavior ya problem ka main cause maan sakte hain, chahe dono ke beech ka connection logically sahi na ho.
+B|Example: 1982 mein Johnson & Johnson ne drug tampering ki wajah se Tylenol pills recall ki aur batches ko identify karne ke liye numbers diye. Log un batch numbers ko lekar lottery khelne lage, kyunki woh numbers media mein itne visible ho gaye the ki logon ko laga ki un numbers se unke jeetne ke chances badh jayenge.
+B|Visibility aur Responsibility: Jo insaan sabse zyada visible hota hai, use outcomes ke liye sabse zyada responsible maana jata hai. Jaise leaders ko team ki success ya failure ka zimmedar maana ja sakta hai, chahe actual result par systems ya market conditions ka bhi effect ho.
+B|Interrogation Camera Angle Study: Jab police interrogation ki video court trial mein dikhayi jaati hai, toh camera angle bahut important hota hai.
+S|Agar camera sirf suspect par focused ho, toh log use guilty, yani doshi, maanne lagte hain.
+S|Agar camera sideways ho aur suspect aur questioner dono dikh rahe hon, toh yeh bias khatam ho jata hai.
+S|Agar camera sirf interrogator par focused ho, toh log soch sakte hain ki suspect ko force ya pressure dekar confession karwaya gaya.
+H2|C. Attention ko Attract aur Hold Karna
+P|Humein un cheezon ki taraf attention jaata hai jo hamare survival, goals aur unfinished tasks se connected hoti hain.
+B|Survival-Relevant Stimuli: Survival se related cheezein hamara attention strongly attract karti hain.
+B|Environmental Changes: Hamara attention badlaav ki taraf turant jaata hai. Contrast aur novelty ka use pre-suasion ke liye kiya ja sakta hai.
+S|Example: Jab do sofas dikhaye gaye, toh 58% logon ne comfort ke bajay durability ko preference di.
+S|Example: Jab 4 sofas dikhaye gaye, jinmein 3 durable aur 1 comfortable tha, toh contrast ki wajah se 77% logon ne comfortable sofa choose kiya.
+B|Sex Appeal: Yeh tabhi effective hota hai jab product se related ho, jaise cosmetics ya tight clothes. Unrelated products, jaise detergent ya kitchen appliances, ke liye sex appeal attention nahi kheench pata.
+B|Violence aur Fear: Violence aur fear powerful attention grabbers hain. Jaise 9/11 ke baad logon ne flights ke bajay road travel choose kiya, bina yeh jaane ki car accidents mein casualty rate bahut zyada tha.
+B|Bad Habits Badalkar: Agar buri aadat badalni ho, toh sirf uske scary negative effects dikhana enough nahi hai. Saath mein actionable steps bhi dene chahiye. Jaise anti-smoking pack par warning ke saath cigarette chhodne ki advice dena.
+B|Threat vs. Sexual Stimuli Response: Jo log pehle sexual stimuli ke contact mein aaye, un par "stand out from the crowd" wala ad zyada effective tha.
+S|Jo log pehle violence ya threats ke contact mein aaye, un par "everyone else is doing this, don't miss out" wala message zyada effective tha.
+B|Self-Relevant Topics: Jab hum "you", yani "aap", word use karte hain, toh log zyada attention dete hain. Health information mein agar unki age ya gender ke according specific data diya jaye, toh log use zyada jaldi samajh aur absorb karte hain.
+B|Unfinished Tasks (The Zeigarnik Effect): Insaan completed tasks ke comparison mein unfinished tasks par zyada focus karta hai.
+B|Procrastination se Bachna: Agar aap writer hain, toh apni writing ko complete paragraph par rokne ke bajay beech mein unfinished chhod sakte hain, taaki agle din kaam par wapas aane ki strong desire bani rahe.
+B|Mysteries ka Istemal: Teachers ko class kisi mystery se start ya end karni chahiye, taaki students us mystery ko solve karne ke liye apna attention banaye rakhein.
+B|Counter-arguments aur Mystery: Persuasion ke contest mein counter-arguments bahut powerful ho sakte hain. Iska step-by-step process hai.
+S|Mystery present karein.
+S|Data aur questions se mystery ko aur deep karein.
+S|Alternatives ko refute, yani unhe galat sabit karne ke tareeke se, present karein.
+S|Right answer ka clue dein.
+S|Mystery solve karein.
+S|Uske implications, yani uske results aur meaning, samjhayein.
+H2|D. The Power of Association
+P|Human brain mein har idea doosre concepts, images aur feelings se connected hota hai. Words aur metaphors brain mein favorable associations, yani positive connections, trigger kar sakte hain.
+B|Language aur Visual Associations: Words aur visuals dono logon ke thoughts aur feelings ko influence kar sakte hain.
+B|Call-Center Study: Fundraisers ko do groups mein divide kiya gaya. Ek group ko sirf printed text diya gaya aur doosre group ko text ke saath race jeetne wale runner ki photo di gayi. Doosre group ne 60% zyada funds raise kiye. Yeh visual association ki power dikhata hai.
+B|Metaphors: Metaphors, yani kisi idea ko kisi doosri image ya comparison ke through samjhana, logon ki thinking ko ek particular direction mein frame kar sakte hain aur unki choices ko influence kar sakte hain.
+B|Crime Metaphor Study: Jab crime ko "ravaging beast", yani khoonkhar janwar, ke roop mein present kiya gaya, toh logon ne criminals ko pakadne aur jail mein daalne wale solutions ko support kiya.
+S|Jab crime ko "virus" ki tarah present kiya gaya, toh logon ne un underlying social aur economic conditions ko theek karne wale solutions ko support kiya jo crime ko failati hain.
+B|Non-Verbal Metaphors: Jab hum garam cup tea pakadte hain, toh hum aas-paas ke logon ko zyada "warm", yani friendly aur apna-sa, feel kar sakte hain.
+S|Bina clipboard ke resume padhne par, ya lightweight Kindle par book padhne par, content halka aur less important lag sakta hai.
+B|Surroundings: Hamara surrounding environment bhi hamari thinking aur behavior ko influence karta hai.
+S|Dermatological lecture sunte hi audience khud ko scratch karne lagti hai.
+S|Meeting rooms mein clients ki photos lagane se team ka focus client ki needs par bana rehta hai.
+S|Agar writer university mein baithkar likhega, toh woh academic style mein likhega. Agar woh casual café mein baithkar likhega, toh uski writing casual style ki ho sakti hai.
+B|Internal Environments aur Self-Influence: Apna internal focus anxiety aur inadequacy, yani apni kami ya capability kam hone ki feeling, se hata kar strengths aur past successes par lana chahiye.
+S|Subah uthte hi gratitude list banana, positive cheezon par focus karna aur unhappy events par attention na dena logon ko happier feel karata hai.
+S|Exam se pehle last-minute cramming karne ke bajay apni strengths aur past academic achievements ko yaad karna chahiye.
+B|If/When-Then Plans: Apne desired goals ko specific cues ke saath connect karein.
+S|Example: "If/when mujhe meal ke dauran soft drink offer hogi, toh main green tea mangunga."
+B|Cognitive Fluency: Hum un cheezon ko zyada pasand aur sahi maan sakte hain jo samajhne, bolne ya dekhne mein easy hoti hain. US Stock Exchange mein jin companies ke ticker codes ya names aasaani se pronounce kiye ja sakte the, unhone initially better perform kiya.
+B|Opener Concepts aur Connections: Jo cheez hum pehle dekhte ya experience karte hain, woh baad ki thinking aur behavior ko influence kar sakti hai.
+S|Violent video games khelne ke baad log aggressive ho sakte hain, jabki prosocial games khelne ke baad log helpful ho sakte hain.
+S|Agar violent games mein cooperation, yani milkar kaam karna, zaroori ho, toh aggression suppress ho jata hai kyunki attention cooperation par chala jaata hai.
+S|Agar hum aisi photo dekhein jisme log ek-doosre ke paas khade hain, toh log akele logon ki photos dekhne walon ke comparison mein 3x zyada helpful behave karte hain, kyunki togetherness aur helping closely connected hain.
+B|Constructed Links (Celebrity Endorsement): Do unrelated cheezon ko baar-baar saath dikhane se brain unke beech connection bana leta hai.
+S|Example: Ek Belgian Beer ne apne ad mein beer ko 5 baar enjoyable activities, jaise cuddling, sailing aur waterskiing, ke saath superimpose kiya. Isse brand ke liye positive feelings badh gayi.
+B|Subtle vs. Conscious Influence: Pre-suasion tab sabse achha kaam karta hai jab influence subtle aur unconscious ho. Lekin agar logon ko cue ka pata chal jaye, toh uska effect khatam ho sakta hai.
+B|Sunny Day Study: Sunny day par phone survey mein log 20% zyada life satisfaction report karte hain.
+S|Lekin agar interviewer survey start hone se pehle weather, yani mausam, ke baare mein pooch le, toh yeh positive bias bilkul khatam ho jaata hai.
+S|Product placement ko jab viewers notice kar lete hain, toh unki buying probability kam ho jaati hai.
+H1|3. Part 2: Putting Pre-Suasion into Action
+H2|A. The 6 Universal Influence Principles
+P|Cialdini kehte hain ki in principles ko message se pehle use karke logon ko pre-suade kiya ja sakta hai.
+B|Reciprocation (Lena-dena / Ehsaan-mand Hona): Log us insaan ko "yes" bolne ki zyada tendency rakhte hain jiske liye woh indebted, yani ehsaan-mand, feel karte hain. Candy store par free chocolate paane wale shoppers ke kharidne ke chances 42% badh gaye.
+B|Optimal Returns ke liye: Gift request se pehle diya jaana chahiye. Gift meaningful, unexpected aur customized hona chahiye.
+B|Diner Study: Meal ke baad ek chocolate dene se tips 3.3% badh gayi.
+S|Jab 2 chocolates di gayi, jo meaningful aur unexpected dono thi, toh tips 14.1% badh gayi.
+S|Jab waitress jaane lagi aur phir wapas aakar boli ki "Aap jaise ache logon ke liye ek aur chocolate", toh tips aur bhi zyada badh gayi.
+B|Liking (Pasandida Hona): Hum un logon ko zyada pasand karte hain jo hum jaise hote hain. Liking badhane ke do bade tareeke hain.
+B|Highlight Similarities: Verbal style ya interests ko mirror, yani similar, karna. Waitresses aur salespeople jo client ke verbal style ko mimic karte hain, unhe zyada tips aur sales milti hain.
+B|Give Compliments (Taarif): Jab hair stylist ne client ko compliment diya, "You'd look good in any hairstyle", toh unki tips 37% badh gayi.
+B|Social Proof (Samajik Saboot): Jab hum apne jaise logon ko kisi tareeke se respond karte dekhte hain, toh humein lagta hai ki wahi sahi tareeka hai.
+B|Validity: Log torture ko support karne lagte hain agar unhe pata chale ki unke peers bhi aisa karte hain. Food and beverage mein kisi dish par "Most Popular" likhne se uski sales 13-20% badh jaati hain.
+B|Feasibility: Residents ko jab message mila ki unke neighbors energy save kar rahe hain, toh unhone doosre messages ke comparison mein 3.5x zyada energy save ki.
+B|Authority (Visheshagyaata / Adhikaar): Perceived authority, yani kisi messenger ka expert ya powerful maana jaana, uski baat ko zyada trustworthy bana sakta hai. Yeh do cheezon par depend karta hai: Expertise aur Trustworthiness.
+B|Expertise: Jab communicator kisi subject ka expert hota hai, toh hum bina zyada soche uski advice follow karte hain.
+B|Trustworthiness: Apni honesty ko pre-suasively establish karne ke liye apni weakness, yani kami, ko conversation ki shuruat mein hi admit karna chahiye.
+S|Iske liye "but" ya "yet" jaise transitional words use karke weakness ko strength mein badla ja sakta hai.
+S|Example: "We are new to this market, but we already have a strong presence in 13 other countries".
+B|Scarcity (Kami): Jab koi cheez limited hoti hai, toh hum uski value zyada maante hain aur use lose karne ke darr se jaldi action lete hain. Sale ke time "X items per customer" ki limit lagane se sales kam hone ke bajay badh sakti hain.
+B|Consistency (Pratibaddhata / Nirantarta): Log apne past commitments ke saath consistent rehna chahte hain.
+B|Blood Donor Study: Ek organization ne blood donors ki participation 12.4% badha di sirf unse verbal confirmation lekar: "Hum aapka naam aane walon ki list mein likh rahe hain, thik hai? [Pause for confirmation] Thank you."
+B|Commercial Relationship ke 3 Stages:
+B|Stage 1 (Relationship banana): Reciprocity aur Liking ka use karein.
+B|Stage 2 (Doubt dur karna): Social Proof aur Authority ka use karein.
+B|Stage 3 (Action lene par majboor karna): Consistency aur Scarcity ka use karein.
+H2|B. The 7th Principle: Unity aur Shared Identity
+P|Cialdini ne ek naya 7th principle identify kiya jo logon ko ek-doosre ki help karne ke liye strongly influence karta hai. Yeh hai Unity, yani Ekta, aur Shared Identity, jise "we-ness", yani "hum-pan", kaha gaya hai. Yeh do main tareekon se banti hai.
+B|Being Together (Sath Hona): Yeh kinship aur physical proximity se banta hai.
+B|Kinship (Parivaar / Bloodline): Hum biologically un logon ki help karne ki taraf programmed hain jo hamare bloodline se hote hain. "Brotherhood", "motherland" ya "forefathers" jaise family-related words logon ko group ke liye sacrifice karne ke liye ready kar sakte hain.
+B|Physical Proximity (Nikatta): Saath rehne se bhi shared identity develop ho sakti hai.
+S|Example: WWII ke dauran Chiune Sugihara ne apna career risk mein daalkar hazaron Jews ki Holocaust se jaan bachayi.
+S|Iska reason yeh tha ki bachpan mein unke parents ne har nationality ke logon ko apne ghar mein shelter diya tha. Is wajah se Sugihara ke liye family ki definition bahut zyada broad ho gayi thi.
+B|Acting Together (Sath Kaam / Activity Karna): Synchronized activities, yani ek saath same rhythm mein ki jaane wali activities, jaise marches, prayers, rituals, dances aur songs, logon ko ek unit ki tarah feel karwa sakti hain.
+B|Liking Study: Jo log stranger ke saath face-brushing wali video ko sync mein dekhte the, unhe us stranger ke saath physical connection feel hone laga.
+B|Collaboration Study: Jo log ek saath sync mein kadam mila kar chale, unhone baad mein economic game mein 50% zyada cooperation dikhaya aur personal gain ko group success ke liye sacrifice kiya.
+B|System 1 vs. System 2: Daniel Kahneman ke mutabik System 1 fast aur emotional decisions leta hai, jabki System 2 slow aur logical decisions leta hai.
+S|Music System 1 ko appeal karta hai aur unity ki feelings create karta hai.
+S|Jo bachche music ke saath ek saath chale, woh 3x zyada helpful aur selfless paye gaye.
+B|Exchange of Favors: Jab do strangers ne 45 minutes tak turns lekar 36 personal questions ke answers diye, toh unke beech bahut strong emotional connection develop ho gaya.
+B|Co-Creation (Sath Milkar Kuch Banana): Hum apni banayi hui cheezon ko zyada value dete hain. Jab hum kisi ke saath milkar kuch create karte hain, toh hum us co-creator ko bhi zyada value dete hain.
+S|Managers jo project mein zyada involved hote hain, woh co-creators ko project ki success ka zyada credit dete hain.
+B|Advice vs. Opinion: Jab aap kisi se "Advice", yani salah, maangte hain, toh saamne wale ko lagta hai ki usne solution aapke saath milkar create kiya hai. Isliye companies ko opinion ya feedback maangne ke bajay "Advice" maangni chahiye.
+H1|4. Ethical Pre-Suasion
+B|Ethical Dilemma: Psychological tactics bahut powerful hoti hain. Isliye kuch log consumers ko trick karne ke liye inka unethical use karte hain. 50% CEOs short-term gains ke liye malpractice karne ko ready rehte hain, yeh sochkar ki woh pakde nahi jayenge.
+B|Long-Term Damage: Cialdini warn karte hain ki unethical actions ka nuksaan short-term benefit se bahut bada hota hai. Yeh teen bade tareekon se saamne aata hai.
+B|Employee Performance: Ethical values ke against kaam karne se employees mein moral stress hota hai. Isse fatigue, low morale aur enthusiasm ki kami hoti hai. Iske result mein profitability aur performance dono girte hain.
+B|Staff Turnover: Stress aur unhappiness ki wajah se employee turnover 30% tak badh sakta hai. Har staff replacement par company ko lagbhag ek saal ki salary ke barabar cost uthani padti hai.
+B|Employee Fraud and Misconduct: Jo employees aisi companies mein kaam karte rehte hain, wahi baad mein company ko cheat ya nuksaan pahunchane lag sakte hain.
+B|Important Quote: "Those who cheat for you will cheat against you".
+S|Simple meaning: Jo log aapke fayde ke liye cheating karne ko ready hain, woh baad mein aapke khilaaf bhi cheating kar sakte hain.
+H1|5. Post-Suasion: Ensuring Continuity
+P|Pre-suasive openers se turant behavior change laya ja sakta hai, lekin us change ko permanent banane ke liye do strategies zaroori hain.
+B|Create Strong Commitments: Change ko lasting banane ke liye logon ko future actions ke commitments mein baandhna chahiye aur un commitments ko unki identity se connect karna chahiye.
+S|Example: Group coaching session mein logon ke aane ke chances badhane ke liye appointment card unse khud fill karwana chahiye.
+S|Deposit lena ya community mein plug-in karna commitment ko aur strong bana sakta hai.
+B|Design Your Cues and Environments: Apne external living aur work spaces ko is tarah design karein ki aap hamesha apne goals ko support karne wale cues aur stimuli se surrounded rahein. Dusron ke cues se influence hone ke bajay apne environment par khud control rakhein.

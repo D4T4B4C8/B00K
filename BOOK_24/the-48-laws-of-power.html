@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 48 Laws of Power — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 5.6rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 24</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">The 48 Laws of Power</span>
+          <span class="headline-main">The 48 Laws of Power</span>
+        </div>
+        <p class="subhead">Reading notes on The 48 Laws of Power</p>
+        <div class="meta-row">
+          <span>19 min read</span><span class="meta-dot">•</span><span>By Robert Greene</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Prastavna: Power ka Asli Concept</h2></div>
+<p class="drop-cap">The 48 Laws of Power, Robert Greene ki kitab hai. Yeh 3,000 saal ke history se power ke rules aur use haasil karne ke tareeqe samjhati hai.</p>
+<p><strong>Power is Amoral:</strong> Power na achhi hoti hai na buri. Yeh depend karta hai ki aap iska use kaise karte hain. Power ko ignore karna ya use hamesha bura samajhna badi galti hai.</p>
+<p><strong>The Courtier's Paradox:</strong> Aaj ke civilized aur democratic samaj mein har kisi ko decent aur fair dikhna padta hai. Lekin agar hum in rules ko bahut zyada strictly follow karein, toh chalaak log humein easily nuksan pahucha sakte hain. Isliye purane royal courts ke clever courtiers se seekhna zaroori hai, jo subtly charm, deception aur manipulation ka use karke aage badhte the.</p>
+<p><strong>Deception aur Patience:</strong> Chalaaki aur dhokha power ke game mein important weapons hain, jabki patience sabse badi protection hai. Jo log bahut innocent ya seedhe dikhte hain, kabhi-kabhi wahi sabse bade manipulators hote hain.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Game ke Buniyadi Rules: Apna Perspective Badalna</h2></div>
+<p>Power ke game ko samajhne ke liye apna nazariya badalna zaroori hai.</p>
+<p><strong>Kaam ke Outcome ko Dekho:</strong> Log kya bolte hain isse zyada important hai ki unke actions ka actual result kya hota hai. Jo log baar-baar morality ki baat karte hain, woh kabhi-kabhi khud bade manipulators ho sakte hain.</p>
+<p><strong>Apne Emotions ko Control Karo:</strong> Gusse aur emotions ko control mein rakho, taaki aapka judgment dhundhla na ho.</p>
+<p><strong>Deception ko Accept Karo:</strong> Masquerade aur deception ko human interaction ka ek normal aur zaroori hissa samjho.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>The 48 Laws of Power</h2></div>
+<h3 class="sub-heading">Law 1: Never outshine the master</h3>
+<p><strong>Explanation:</strong> Apne boss ya superior ko kabhi insecure feel mat karvao. Agar aap apna talent bahut zyada show karoge, toh woh aapse dar sakta hai aur aapko replace karne ki koshish kar sakta hai.</p>
+<p><strong>Tactic:</strong> Apne master ko hamesha smarter aur brilliant dikhne do. Unse advice ya help maango aur apne achhe ideas ka credit unki advice ko do.</p>
+<p><strong>Quote:</strong> "Make your masters appear more brilliant than you are and you will attain the heights of power."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Apne superior ko aapse zyada brilliant dikhne do, isse aap power mein aage badh sakte ho.</p>
+</div>
+<h3 class="sub-heading">Law 2: Don’t over-trust friends. Use enemies</h3>
+<p><strong>Explanation:</strong> Doston ko kaam par rakhne se bachna chahiye kyunki friendship mein professional distance kam ho sakta hai aur jealousy ya betrayal ka risk badh sakta hai.</p>
+<p><strong>Tactic:</strong> Purane enemies ko kaam par lagaya ja sakta hai. Jo purana dushman dost ban gaya ho, woh kabhi-kabhi zyada loyal ho sakta hai kyunki use khud ko prove karna hota hai.</p>
+<p><strong>Quote:</strong> "Keep friends for friendship, but work with the skilled and competent."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Doston ko friendship ke liye rakho, lekin kaam un logon ke saath karo jo skilled aur competent hain.</p>
+</div>
+<h3 class="sub-heading">Law 3: Mask your intentions</h3>
+<p><strong>Explanation:</strong> Apne asli goals ko tab tak chhupa kar rakho jab tak aap poori tarah ready na ho. Seedhi honesty har situation mein faydemand nahi hoti aur kabhi-kabhi nuksan kar sakti hai.</p>
+<p><strong>Tactic:</strong> Throw off the scent: Doosri direction ka dikhava karo ya kisi chhoti aur unimportant baat par sach bolo, taaki log aapko honest samjhein aur baad mein aapke actual intentions par shaq na karein.</p>
+<p><strong>Tactic:</strong> Smoke screen: Logon ke saamne koi familiar ya purana pattern create karo, taaki unka guard neeche ho jaye aur phir aap unexpected move kar sako.</p>
+<p><strong>Quote:</strong> "The best deceivers... cultivate an air of honesty in one area to disguise their dishonesty in others."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Sabse achhe deceivers ek jagah honesty ka impression banate hain taaki doosri jagah ki dishonesty chhupi rahe.</p>
+</div>
+<h3 class="sub-heading">Law 4: Always say less than necessary</h3>
+<p><strong>Explanation:</strong> Aap jitna zyada bolenge, utna hi kam impressive aur kam control mein lagenge. Zyada bolne se galat ya foolish baat nikalne ka chance bhi badhta hai.</p>
+<p><strong>Tactic:</strong> Kam bolo aur silence ka use karo. Silence se saamne wala uncomfortable ho sakta hai aur khud hi gap fill karte hue apni information bata sakta hai.</p>
+<p><strong>Quote:</strong> "A person who cannot control his words shows that he cannot control himself, and is unworthy of respect."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jo insaan apne words ko control nahi kar sakta, woh khud ko bhi control nahi kar sakta aur respect ke layak nahi maana jata.</p>
+</div>
+<h3 class="sub-heading">Law 5: Protect your reputation at all cost</h3>
+<p><strong>Explanation:</strong> Reputation power ki sabse important foundation hai. Agar reputation damage ho jaye, toh aap vulnerable ho jaate hain.</p>
+<p><strong>Tactic:</strong> Apne enemies ki reputation ko damage karo aur phir public ke gusse ko unke khilaaf kaam karne do.</p>
+<p><strong>Quote:</strong> "Reputation is a treasure to be carefully collected and hoarded."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Reputation ek aisi valuable cheez hai jise bahut carefully banana aur protect karna chahiye.</p>
+</div>
+<h3 class="sub-heading">Law 6: Be conspicuous. Stand out</h3>
+<p><strong>Explanation:</strong> Jo insaan ya cheez attention mein nahi aati, uska influence kam ho jata hai. Isliye attention attract karne wala bano.</p>
+<p><strong>Tactic:</strong> Mystery ka impression create karo ya controversial aur notorious dikhne se bhi attention pao, kyunki bad publicity bhi publicity hoti hai.</p>
+<p><strong>Quote:</strong> "Better to be slandered and attacked than ignored."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Kabhi-kabhi ignore hone se better hai ki log aapke baare mein baat karein, chahe woh negative hi kyun na ho.</p>
+</div>
+<h3 class="sub-heading">Law 7: Get others to do the work and take the credit</h3>
+<p><strong>Explanation:</strong> Doosron ke knowledge, wisdom aur hard work ka benefit lekar apna time aur energy bachao.</p>
+<p><strong>Tactic:</strong> Duniya mein hunter aur prey jaise roles hote hain. Hunter bano aur credit lo. Lekin jab tak aapka power base strong nahi hua hai, tab tak credit lene ke bajay upar ke logon ko credit dena better hai.</p>
+<p><strong>Quote:</strong> "Never do yourself what others can do for you."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jo kaam doosre log aapke liye kar sakte hain, use khud karne ki zaroorat nahi.</p>
+</div>
+<h3 class="sub-heading">Law 8: Make people come to you</h3>
+<p><strong>Explanation:</strong> Jab aap doosron ko apni conditions par respond karne ke liye majboor karte ho, toh control aapke haath mein rehta hai.</p>
+<p><strong>Tactic:</strong> Apne enemies ko bait ya gusse ke through provoke karo aur unhe apni territory mein aane par majboor karo.</p>
+<p><strong>Quote:</strong> "When you force the other person to act, you are the one in control."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jab aap saamne wale ko action lene ke liye force karte ho, toh control aapke paas hota hai.</p>
+</div>
+<h3 class="sub-heading">Law 9: Win through actions, not argument</h3>
+<p><strong>Explanation:</strong> Argument se mili jeet aksar temporary hoti hai aur saamne wale ke mann mein resentment paida kar sakti hai.</p>
+<p><strong>Tactic:</strong> Bahas karne ke bajay apne actions se prove karo ki aap sahi ho.</p>
+<p><strong>Quote:</strong> "Demonstrate, do not explicate."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Sirf explain mat karo, apne kaam se dikhao.</p>
+</div>
+<h3 class="sub-heading">Law 10: Don’t get infected by misery and misfortune</h3>
+<p><strong>Explanation:</strong> Helplessness aur misery ki feelings bhi bimari ki tarah doosron par fail sakti hain.</p>
+<p><strong>Tactic:</strong> Apne toxic attitude aur misery se pareshaan logon se distance rakho aur positive, khush aur successful logon ke saath raho.</p>
+<p><strong>Quote:</strong> "Emotional states are as infectious as disease."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Emotional states bhi disease ki tarah ek insaan se doosre tak fail sakti hain.</p>
+</div>
+<h3 class="sub-heading">Law 11: Make yourself indispensable</h3>
+<p><strong>Explanation:</strong> Logon ko unki success, happiness aur prosperity ke liye aap par dependent rakho.</p>
+<p><strong>Tactic:</strong> Apne saare skills ek saath doosron ko mat sikhao, taaki unhe aapki zaroorat bani rahe.</p>
+<p><strong>Quote:</strong> "Necessity rules the world… If you create no need for yourself, then you will be done away with at first opportunity."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Duniya mein zaroorat power deti hai. Agar kisi ko aapki zaroorat hi nahi hai, toh pehla mauka milte hi aapko hata diya ja sakta hai.</p>
+</div>
+<h3 class="sub-heading">Law 12: Disarm with strategic honesty and generosity</h3>
+<p><strong>Explanation:</strong> Chhota sa sach bolna ya generous gift dena saamne wale ka suspicion kam kar sakta hai.</p>
+<p><strong>Tactic:</strong> Pehli meeting mein selective honesty ka use karo, taaki strong first impression ban sake.</p>
+<p><strong>Quote:</strong> "Open-hearted gestures of honesty and generosity bring down the guard of even the most suspicious people."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Imaandari aur generosity ka open gesture sabse suspicious insaan ka bhi guard neeche kar sakta hai.</p>
+</div>
+<h3 class="sub-heading">Law 13: Appeal to self-interest, not virtue</h3>
+<p><strong>Explanation:</strong> Jab aap kisi se help maango, toh unke purane ehsaan ya mercy par depend mat karo.</p>
+<p><strong>Tactic:</strong> Saaf batao ki jo kaam aap unse karwana chahte ho, usse unka khud ka kya fayda hoga.</p>
+<p><strong>Quote:</strong> "When people choose between talk about the past and talk about the future, a pragmatic person will always opt for the future..."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Practical insaan past ke ehsaan ki baat ke bajay future ke fayde ko choose karega.</p>
+</div>
+<h3 class="sub-heading">Law 14: Be a spy. Gather intelligence</h3>
+<p><strong>Explanation:</strong> Apne opponent ke next move ko samajhna bahut important hai.</p>
+<p><strong>Tactic:</strong> Spy ki tarah behave karo. Social events mein saamne wale se baat karke information nikalo aur zaroorat pade toh friendly hone ka impression do.</p>
+<p><strong>Quote:</strong> "Give them a false confession and they will give you a real one."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Agar aap saamne wale ko ek fake confession doge, toh woh badle mein real information de sakta hai.</p>
+</div>
+<h3 class="sub-heading">Law 15: Crush your enemy totally</h3>
+<p><strong>Explanation:</strong> Agar enemy ko thoda bhi chhod diya jaye, toh woh dobara strong ho sakta hai aur revenge le sakta hai.</p>
+<p><strong>Tactic:</strong> Enemy ko body aur spirit dono level par poori tarah crush karo aur koi reham mat dikhao.</p>
+<p><strong>Quote:</strong> "If one ember is left alight, no matter how dimly it smolders, a fire will eventually break out."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Agar ek chhoti si jalti hui chingari bhi reh gayi, toh future mein dobara aag lag sakti hai.</p>
+</div>
+<h3 class="sub-heading">Law 16: Raise your value via absence and scarcity</h3>
+<p><strong>Explanation:</strong> Agar aap har waqt available rahoge, toh log aapko ordinary samajhne lag sakte hain.</p>
+<p><strong>Tactic:</strong> Kabhi-kabhi temporary distance banao, taaki log aapki absence feel karein aur aapki value aur respect badhe.</p>
+<p><strong>Quote:</strong> "What withdraws, what becomes scarce, suddenly seems to deserve our respect and honor."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jo cheez rare ya unavailable ho jati hai, woh achanak zyada valuable aur respectable lagne lagti hai.</p>
+</div>
+<h3 class="sub-heading">Law 17: Be unpredictable: keep others in suspense</h3>
+<p><strong>Explanation:</strong> Log naturally patterns dhoondhte hain. Agar aap unpredictable rahoge, toh saamne wale ko samajh nahi aayega ki aap next kya karoge.</p>
+<p><strong>Tactic:</strong> Pehle predictable behavior se unhe relaxed karo aur phir achanak apna move badal kar unhe surprise karo.</p>
+<p><strong>Quote:</strong> "When people cannot figure out what you are doing, they are kept in a state of terror..."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jab log aapke actions ko samajh nahi paate, toh woh uncertainty aur fear mein rehte hain.</p>
+</div>
+<h3 class="sub-heading">Law 18: Don’t isolate yourself behind a fortress</h3>
+<p><strong>Explanation:</strong> Khud ko fortress ke peeche isolate karna dangerous ho sakta hai kyunki aap important information se cut off ho jaate ho.</p>
+<p><strong>Tactic:</strong> Crowd aur social connections ke saath connected raho aur har jagah apne allies, eyes aur ears banao.</p>
+<p><strong>Quote:</strong> "Isolation exposes you to more dangers than it protects you from."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Isolation protection se zyada danger create kar sakta hai.</p>
+</div>
+<h3 class="sub-heading">Law 19: Know who you’re dealing with</h3>
+<p><strong>Explanation:</strong> Har insaan ek jaisa nahi hota. Kisi insecure ya suspicious person ko offend karne par woh revenge lene ke liye aapke peeche pad sakta hai.</p>
+<p><strong>Tactic:</strong> Sirf appearance par trust mat karo. Pehle saamne wale ke baare mein concrete information gather karo.</p>
+<h3 class="sub-heading">Law 20: Stay independent</h3>
+<p><strong>Explanation:</strong> Kisi ek party ya cause ke saath jaldi mein commitment mat karo.</p>
+<p><strong>Tactic:</strong> Neutral raho, taaki dono sides aapke paas aane ki koshish karein aur aap mediator bankar power gain kar sako.</p>
+<h3 class="sub-heading">Law 21: Make your victims feel smarter than you</h3>
+<p><strong>Explanation:</strong> Logon ko achha lagta hai jab woh doosron se zyada intelligent feel karte hain.</p>
+<p><strong>Tactic:</strong> Kabhi-kabhi khud ko thoda less intelligent dikhayo, taaki saamne wale ko aapke plans par shaq na ho.</p>
+<p><strong>Quote:</strong> "To reveal the true nature of your intelligence rarely pays; you should get in the habit of downplaying it at all times."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Apni asli intelligence ko openly dikhana aksar faydemand nahi hota; use kam dikhane ki aadat rakho.</p>
+</div>
+<h3 class="sub-heading">Law 22: Use surrender as a tool</h3>
+<p><strong>Explanation:</strong> Agar aap weak position mein ho, toh seedha fight karna faydemand nahi hota.</p>
+<p><strong>Tactic:</strong> Bahar se surrender kar do taaki enemy satisfied ho jaye. Andar se strong raho, recover karo aur sahi waqt par attack ki preparation karo.</p>
+<p><strong>Quote:</strong> "This is the essence of the surrender tactic: Inwardly you stay firm, but outwardly you bend."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Surrender ka essence yeh hai ki andar se strong raho, lekin bahar se zaroorat ke hisaab se jhuk jao.</p>
+</div>
+<h3 class="sub-heading">Law 23: Concentrate your forces</h3>
+<p><strong>Explanation:</strong> Apne resources ko bahut saari fights mein spread karne se aap weak ho jaoge.</p>
+<p><strong>Tactic:</strong> Apni forces ko ek hi target par focus karo aur bahut saare chhote patrons ke bajay ek powerful patron par rely karo.</p>
+<p><strong>Quote:</strong> "Intensity defeats extensity every time."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Strong focused effort har jagah thoda-thoda effort karne se zyada powerful hota hai.</p>
+</div>
+<h3 class="sub-heading">Law 24: Be a masterful courtier</h3>
+<p><strong>Explanation:</strong> Purane courtiers ki tarah smartly behave karo, jo modesty aur flattery ka use carefully karte the.</p>
+<p><strong>Tactic:</strong> Polite raho, indirect flattery karo, apne emotions ko control mein rakho aur positive attitude spread karo.</p>
+<p><strong>Quote:</strong> "Courtiers are like magicians: They deceptively play with appearances..."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Courtiers magicians ki tarah appearances ko cleverly use karte the.</p>
+</div>
+<h3 class="sub-heading">Law 25: Create your own identity</h3>
+<p><strong>Explanation:</strong> Agar aap apni identity khud define nahi karoge, toh doosre log aapke liye role decide kar denge.</p>
+<p><strong>Tactic:</strong> Different situations ke liye different roles, costumes ya characters create karo aur drama, suspense aur surprise ka use karo.</p>
+<p><strong>Quote:</strong> "The first step in the process of self-creation is self-consciousness..."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Khud ki identity banane ka pehla step apne aap ko clearly samajhna aur consciously dekhna hai.</p>
+</div>
+<h3 class="sub-heading">Law 26: Don’t dirty your hands</h3>
+<p><strong>Explanation:</strong> Apne aap ko hamesha positive aur achhi cheezon ke saath associate karo.</p>
+<p><strong>Tactic:</strong> Gande ya problematic kaam ke liye doosron ka use karo aur apni mistakes ka blame lene ke liye scapegoat, yani bali ka bakra, ready rakho.</p>
+<p><strong>Quote:</strong> "Our good name and reputation depend more on what we conceal than on what we reveal."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Hamari achhi reputation kai baar is baat par depend karti hai ki hum kya chhupate hain, sirf is par nahi ki hum kya dikhate hain.</p>
+</div>
+<h3 class="sub-heading">Law 27: Create a cult-like following</h3>
+<p><strong>Explanation:</strong> Logon ke andar kisi badi cheez par believe karne ki need hoti hai.</p>
+<p><strong>Tactic:</strong> Vague aur promising words ka use karo, rituals aur sacrifices rakho aur ek external enemy create karo, taaki us-versus-them mentality se group united rahe.</p>
+<h3 class="sub-heading">Law 28: Act with boldness</h3>
+<p><strong>Explanation:</strong> Fear aur timidity doubts create karte hain, jabki log bold aur confident logon ki respect karte hain.</p>
+<p><strong>Tactic:</strong> Agar aap kisi decision ko lekar darr rahe ho, toh bina confidence ke aage mat badho. Boldness aur timidity dono habits hain jinhe develop kiya ja sakta hai.</p>
+<p><strong>Quote:</strong> "Everyone admires the bold; no one honors the timid."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Log bold insaan ko admire karte hain, timid insaan ko nahi.</p>
+</div>
+<h3 class="sub-heading">Law 29: Plan till the end</h3>
+<p><strong>Explanation:</strong> Possible obstacles aur badalte situations ko pehle se consider karna zaroori hai.</p>
+<p><strong>Tactic:</strong> Aakhiri result tak planning karo, taaki unexpected circumstances ko bhi handle kiya ja sake.</p>
+<p><strong>Quote:</strong> "Gently guide fortune and help determine the future by thinking far ahead."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Door tak soch kar future ko better direction dene ki koshish karo.</p>
+</div>
+<h3 class="sub-heading">Law 30: Make your achievements seem effortless</h3>
+<p><strong>Explanation:</strong> Logon ke saamne apni poori mehnat aur techniques ko expose mat karo, warna doosre log aapke methods copy kar sakte hain.</p>
+<p><strong>Tactic:</strong> Kaam ke peeche ki hard work ko hidden rakho, taaki achievement effortless aur superior lage.</p>
+<p><strong>Quote:</strong> "One never sees the source of a god’s power revealed; one only sees its effect."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Log power ke source ko nahi dekhte, woh sirf uska effect dekhte hain.</p>
+</div>
+<h3 class="sub-heading">Law 31: Control the options</h3>
+<p><strong>Explanation:</strong> Sabse effective manipulation tab hoti hai jab saamne wale ko lage ki choice uski khud ki hai.</p>
+<p><strong>Tactic:</strong> Aisi limited choices do jahan har possible option ka final benefit aapko mile.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Do difficult choices mein se choose karne dena ya delay karne par price badha dena.</p>
+</div>
+<h3 class="sub-heading">Law 32: Play to people’s fantasies</h3>
+<p><strong>Explanation:</strong> Life harsh hoti hai, isliye log gradual change ke bajay quick fantasies aur easy dreams par believe karna pasand karte hain.</p>
+<p><strong>Tactic:</strong> Unhe ek aisa attractive dream dikhao jo mirage ki tarah thoda door ho, taaki woh uske peeche continuously chalte rahein.</p>
+<p><strong>Quote:</strong> "Life is so harsh and distressing that people who can manufacture romance... are like oases in the desert..."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jab life bahut difficult lagti hai, toh jo log attractive dreams aur romance create karte hain, woh desert mein oasis ki tarah lagte hain.</p>
+</div>
+<h3 class="sub-heading">Law 33: Find your opponent’s fatal weakness</h3>
+<p><strong>Explanation:</strong> Har insaan ki koi na koi fatal weakness ho sakti hai, jaise insecurity, secret desire ya bachpana.</p>
+<p><strong>Tactic:</strong> Saamne wale ke child-like triggers aur insecurities ko observe karo aur unhi points par attack karo.</p>
+<h3 class="sub-heading">Law 34: Act in the way you want to be treated</h3>
+<p><strong>Explanation:</strong> Aap khud ko jis tarah carry karte ho, log bhi aapko usi tarah treat karte hain.</p>
+<p><strong>Tactic:</strong> King ki tarah confident aur dignified behave karo, lekin arrogant mat bano. Superiors ke saamne bhi equality aur confidence ke saath pesh aao.</p>
+<p><strong>Quote:</strong> "How you carry yourself reflects what you think of yourself."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Aap khud ko jis tarah dekhte aur present karte ho, woh doosron ko bhi batata hai ki aap apne baare mein kya sochte ho.</p>
+</div>
+<h3 class="sub-heading">Law 35: Master the art of timing</h3>
+<p><strong>Explanation:</strong> Sahi waqt ka wait karna aur sahi waqt par action lena ek important skill hai.</p>
+<p><strong>Tactic:</strong> Kabhi jaldi mein mat dikho. Long-term socho, doosron ko forced timelines se pressure mein lao aur sahi waqt aane par action karo.</p>
+<p><strong>Quote:</strong> "Learn to stand back when the time is not yet ripe, and to strike fiercely when it has reached fruition."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jab waqt sahi na ho toh peeche raho, aur jab sahi waqt aa jaye toh strongly action lo.</p>
+</div>
+<h3 class="sub-heading">Law 36: Ignore what you can’t have</h3>
+<p><strong>Explanation:</strong> Kisi chhoti problem par zyada attention dene se woh aur important aur credible lagne lagti hai.</p>
+<p><strong>Tactic:</strong> Agar koi inferior person aap par attack kar raha hai aur long-term mein aapko nuksan nahi pahucha sakta, toh use completely ignore karo aur contempt dikhao.</p>
+<p><strong>Quote:</strong> "Learn to play the card of disdain and turn our back on what cannot harm you in the long term."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jo cheez future mein aapko nuksan nahi kar sakti, uske peeche apna attention waste mat karo.</p>
+</div>
+<h3 class="sub-heading">Law 37: Dazzle people with spectacles</h3>
+<p><strong>Explanation:</strong> Log grand aur spectacular appearances se easily impress aur dazed ho jaate hain.</p>
+<p><strong>Tactic:</strong> Bade visuals, symbols aur strong associations ka use karo, taaki log spectacle mein itne involved ho jayein ki aapke real moves unki nazar se bach jaayein.</p>
+<p><strong>Quote:</strong> "People love what is grand, spectacular, and larger than life. Appeal to their emotions and they will flock to your spectacle in hordes."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Log grand aur spectacular cheezon ko pasand karte hain. Unki emotions ko appeal karoge toh woh us spectacle ki taraf attract honge.</p>
+</div>
+<h3 class="sub-heading">Law 38: Hide your unorthodox thinking</h3>
+<p><strong>Explanation:</strong> Agar aap apni unconventional ya unusual thinking ko openly flaunt karoge, toh log samajh sakte hain ki aap unhe neecha dikhana chahte ho.</p>
+<p><strong>Tactic:</strong> Bahar se doosron ki tarah behave karo aur apni radical thinking sirf apne trusted inner circle ke saath share karo.</p>
+<h3 class="sub-heading">Law 39: Stir up waters to catch the fish</h3>
+<p><strong>Explanation:</strong> Agar aap khud calm raho aur enemy ko gusse mein lao, toh aapko strong advantage mil sakta hai.</p>
+<p><strong>Tactic:</strong> Unke pride, love, hate ya vanity ko target karke unhe emotionally disturb ya angry karo.</p>
+<p><strong>Quote:</strong> "Stir the waters, force the fish to the surface, get them to act before they are ready, steal the initiative."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Situation ko disturb karo, saamne wale ko jaldi action lene par majboor karo aur initiative apne haath mein le lo.</p>
+</div>
+<h3 class="sub-heading">Law 40: Beware the free lunch</h3>
+<p><strong>Explanation:</strong> Jo cheez free mein milti hai, uske peeche hidden traps, obligations ya compromises ho sakte hain.</p>
+<p><strong>Tactic:</strong> Agar kisi cheez ki real value hai, toh uski proper price pay karo. Khud generous spender bankar influence ko buy karne ki koshish karo.</p>
+<p><strong>Quote:</strong> "In the realm of power, everything must be judged by its cost, and everything has a price."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Power ke world mein har cheez ko uski cost se judge karna chahiye, kyunki har cheez ki koi na koi price hoti hai.</p>
+</div>
+<h3 class="sub-heading">Law 41: Don’t try to fill a great man’s shoes</h3>
+<p><strong>Explanation:</strong> Agar aap kisi famous predecessor ki position le rahe ho, toh uski shadow mein rehne ke bajay apna naya path banana zaroori hai.</p>
+<p><strong>Tactic:</strong> Purani traditions ko kam importance do aur naye symbols aur rituals create karo, taaki aapki alag identity clearly dikhe.</p>
+<h3 class="sub-heading">Law 42: Strike the shepherd to scatter the sheep</h3>
+<p><strong>Explanation:</strong> Group ke andar trouble aksar ek toxic ya conflict create karne wale person se shuru hoti hai.</p>
+<p><strong>Tactic:</strong> Us toxic source ko physically, politically ya psychologically isolate karo, taaki baaki group bhi uske influence se alag ho jaye.</p>
+<p><strong>Quote:</strong> "Cancer begins with a single cell; excise it before it spreads beyond cure."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jaise cancer ek cell se shuru hokar spread ho sakta hai, waise hi problem ko badhne se pehle uske source ko hata dena chahiye.</p>
+</div>
+<h3 class="sub-heading">Law 43: Win both hearts and minds</h3>
+<p><strong>Explanation:</strong> Kisi ko force karne se uske andar hatred aur resistance badh sakta hai, jo baad mein retaliation mein badal sakta hai.</p>
+<p><strong>Tactic:</strong> Saamne wale ke emotions aur interests ko samjho aur use feel karao ki aapka action uske benefit mein hai.</p>
+<p><strong>Quote:</strong> "Ignore the hearts and minds of others and they will grow to hate you."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Agar aap logon ke emotions aur thinking ko ignore karoge, toh unke andar aapke liye hatred badh sakti hai.</p>
+</div>
+<h3 class="sub-heading">Law 44: Unbalance and confuse with the mirror effect</h3>
+<p><strong>Explanation:</strong> Mirror Effect ka use karke saamne wale ka balance disturb kiya ja sakta hai.</p>
+<p><strong>Tactic:</strong> Unke actions ko copy karke unhe confuse karo.</p>
+<div class="sub-points">
+<p>Unke values ko reflect karke unka guard neeche karo.</p>
+<p>Unhe unhi ke tareeke ka experience dekar lesson sikhao.</p>
+<p>Aisa illusion create karo jise woh real samajh lein.</p>
+</div>
+<h3 class="sub-heading">Law 45: Go for gradual change, not drastic reform</h3>
+<p><strong>Explanation:</strong> Log habits ke aadhi hote hain aur sudden change ko resist karte hain.</p>
+<p><strong>Tactic:</strong> Change ko gradually introduce karo aur purani habits aur conventions ka respect rakho.</p>
+<p><strong>Quote:</strong> "Everyone understands the need for change in the abstract, but on the day-to-day level people are creatures of habit."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Log theory mein change ki zaroorat samajh sakte hain, lekin daily life mein woh apni habits se strongly jude rehte hain.</p>
+</div>
+<h3 class="sub-heading">Law 46: Don’t seem too perfect</h3>
+<p><strong>Explanation:</strong> Agar aap bahut perfect dikhte ho, toh log andar hi andar aapse jealous ya resentful ho sakte hain.</p>
+<p><strong>Tactic:</strong> Kabhi-kabhi apni chhoti aur harmless weaknesses dikhao, taaki aap zyada approachable aur human lago.</p>
+<p><strong>Quote:</strong> "The fool dares the gods of envy by flaunting his victories."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Jo insaan apni victories ko bahut openly flaunt karta hai, woh doosron ki jealousy ko invite kar sakta hai.</p>
+</div>
+<h3 class="sub-heading">Law 47: Don’t push too far in victory</h3>
+<p><strong>Explanation:</strong> Jeet ke baad overconfidence aur arrogance aane se naye enemies ban sakte hain.</p>
+<p><strong>Tactic:</strong> Jo goal aapne set kiya tha, us point par rukna seekho aur success ka rhythm maintain karo.</p>
+<h3 class="sub-heading">Law 48: Be formless</h3>
+<p><strong>Explanation:</strong> Enemy us cheez par easily attack nahi kar sakta jise woh clearly dekh ya predict nahi kar sakta.</p>
+<p><strong>Tactic:</strong> Apne style aur moves ko flexible aur fluid rakho. Paani ki tarah formless raho, taaki doosre aapko predict na kar saken.</p>
+<p><strong>Quote:</strong> "The best way to protect yourself is to be as fluid and formless as water."</p>
+<div class="sub-points">
+<p><strong>Meaning:</strong> Khud ko flexible aur unpredictable rakho, jaise paani kisi fixed shape mein nahi rehta.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Kitab ki Doosri Khaas Baatein aur Conclusion</h2></div>
+<p><strong>Rich in Stories and History:</strong> Is guide mein court politics, warfare aur nobility se judi bahut si purani stories aur historical examples diye gaye hain. Robert Greene ne har law ko samjhane ke liye emperors, kings aur historical figures ke real-life cases ka use kiya hai.</p>
+<p><strong>Exceptions to the Laws:</strong> Kuch laws ke exceptions aur alternate interpretations bhi diye gaye hain, jo alag-alag situations mein powerplay ko samajhne mein help karte hain.</p>
+<p><strong>Conclusion:</strong> Is guide ka main maksad power ke game ke rhythms aur patterns ko samajhna aur control karna hai.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

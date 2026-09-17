@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To Sell is Human: The Surprising Truth About Persuading, Convincing and Influencing Others — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 3.4rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 27</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">To Sell is Human: The Surprising Truth About Persuading, Convincing and Influencing Others</span>
+          <span class="headline-main">To Sell is Human: The Surprising Truth About Persuading, Convincing and Influencing Others</span>
+        </div>
+        <p class="subhead">Reading notes on To Sell is Human: The Surprising Truth About Persuading, Convincing and Influencing Others</p>
+        <div class="meta-row">
+          <span>9 min read</span><span class="meta-dot">•</span><span>By Daniel H. Pink</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>1. Redefining Sales: Sales Ki Nayi Definition</h2></div>
+<h3 class="sub-heading">Selling Se Moving Tak: Naya Tareeqa</h3>
+<p class="drop-cap"><strong>Traditional vs. Non-Monetary Sales:</strong> Daniel Pink kehte hain ki zyadatar log sales ko pushy ya dishonest door-to-door sales ke roop mein dekhte hain. Lekin aaj ke samay mein sales badal chuki hai. Aaj do tarah ki sales hoti hain.</p>
+<div class="sub-points">
+<p><strong>Monetary Sales:</strong> Paise ke badle products bechna.</p>
+<p><strong>Non-Monetary Sales:</strong> Ismein log apne resources, jaise time, effort, attention ya expertise, ko kisi doosri cheez ke badle exchange karte hain.</p>
+</div>
+<p><strong>Hum Sab Sellers Hain:</strong> Aaj digital aur smartphone ke daur mein information chhupana ya zabardasti convince karna jaisi traditional sales approaches kaam nahi karti. Pink ke mutabik, "Like it or not, we’re all in sales now."</p>
+<div class="sub-points">
+<p>Iska matlab hai ki chahe humein pasand ho ya na ho, hum sab ab logon ko move karne, yani unhe kisi baat ya action ki taraf le jaane ke kaam mein lage hue hain.</p>
+</div>
+<h3 class="sub-heading">Moving Business Ke Peeche Ke Teen Factors: The 3Es</h3>
+<p><strong>Entrepreneurship:</strong> Internet aur smartphones ki wajah se naye aur chhote businesses, yani micro-businesses, shuru karna bahut aasan aur sasta ho gaya hai.</p>
+<div class="sub-points">
+<p>Chhote businesses mein alag-alag kaam ke liye hamesha specialized roles nahi hote, isliye har entrepreneur ko khud sales aur marketing bhi sambhalni padti hai.</p>
+</div>
+<p><strong>Elasticity:</strong> Pehle ke stable environments mein ek specialized skill kaafi hoti thi. Lekin aaj ke flat organizations aur badalte samay mein humein marketing, design aur accounting jaise functional boundaries ke bahar jaakar flexible skills seekhni padti hain.</p>
+<div class="sub-points">
+<p>Atlassian enterprise software company iska ek bada example hai. Unhone bina kisi professional salesperson ke $100 million ki annual sales achieve ki, kyunki unka har employee sales par focus karta hai.</p>
+<p>Palantir ek aur example hai. Yeh company sales trainers ke bajay "forward-deployed engineers" ko seedha customers ke paas bhejti hai taaki woh customers ki problems ko samajh saken.</p>
+</div>
+<p><strong>Ed-Med:</strong> Education aur Medicine do bahut tezi se badhne wale industries hain.</p>
+<div class="sub-points">
+<p>Kisi student ko padhne ke liye motivate karna ya kisi patient ko healthy lifestyle apnane ke liye razi karna bhi nonsales selling, yani moving, hai.</p>
+<p>Is process mein logon ko pawns ke bajay partners ki tarah treat kiya jata hai.</p>
+</div>
+<h3 class="sub-heading">Caveat Emptor Se Caveat Venditor Tak</h3>
+<p><strong>Caveat Emptor:</strong> Pehle sellers ke paas buyers se zyada information hoti thi. Isliye rule tha Caveat Emptor, yani Buyer Beware.</p>
+<div class="sub-points">
+<p>Iska matlab tha ki khariddar ko khud savdhan rehna chahiye.</p>
+</div>
+<p><strong>Caveat Venditor:</strong> Internet ke aane ke baad buyers ke paas bhi lagbhag barabar information aa gayi hai aur woh bad reviews share karke sellers ke khilaf response bhi de sakte hain.</p>
+<div class="sub-points">
+<p>Isliye ab naya rule Caveat Venditor hai, yani Seller Beware.</p>
+<p>Ab seller ka kaam sirf information dena nahi, balki information ko filter aur clearly samjhana bhi hai.</p>
+</div>
+<h3 class="sub-heading">Teen Myths: Galatfahmiyan</h3>
+<p><strong>Myth 1:</strong> Selling kam dimaag wale logon ke liye hai.</p>
+<div class="sub-points">
+<p><strong>Sach:</strong> Selling ke liye engineering ya medicine jitni hi high-value skills ki zaroorat hoti hai.</p>
+</div>
+<p><strong>Myth 2:</strong> Salespeople sirf paise ke peeche bhaagte hain.</p>
+<div class="sub-points">
+<p><strong>Sach:</strong> Bahut behtareen salespeople hamesha kisi bade purpose se driven hote hain.</p>
+</div>
+<p><strong>Myth 3:</strong> Kuch log natural salespeople paida hote hain.</p>
+<div class="sub-points">
+<p><strong>Sach:</strong> Hum sabke andar doosron ko influence ya move karne ka natural instinct hota hai.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>2. How to Be a Good Mover: The New ABCs</h2></div>
+<p>Daniel Pink purane sales mantra "Always Be Closing", yani ABC, ko replace karke ek naya ABC model dete hain.</p>
+<h3 class="sub-heading">A: Attunement</h3>
+<p><strong>Attunement:</strong> Iska matlab hai khud ko doosron ke perspective aur situation ke saath align karna.</p>
+<div class="sub-points">
+<p>Attunement ke teen important rules hain.</p>
+</div>
+<p><strong>Lessen your power to amplify it:</strong> Jin logon ke paas zyada power hoti hai, unka empathy level kam ho sakta hai.</p>
+<div class="sub-points">
+<p>Isliye baat shuru karte waqt yeh maan kar chalein ki aapki power samne wale se kam hai.</p>
+<p>Amazon ke founder Jeff Bezos iska example dete hain. Woh meetings mein hamesha ek empty chair rakhte hain jo customer ke perspective ko represent karti hai.</p>
+</div>
+<p><strong>Use your head + heart:</strong> Kisi ko move karne ke liye aapko dimaag, yani logic, aur dil, yani empathy, dono ka use karna hota hai.</p>
+<div class="sub-points">
+<p><strong>Meet the time traveller:</strong> Kisi 300 saal purane insaan ko smartphone jaisi modern cheez samjhane ki koshish karein. Isse aap doosron ke perspective ko samajhna seekh sakte hain.</p>
+<p><strong>Draw a discussion:</strong> Kisi meeting mein chal rahe moods aur content ke flow ka ek map banayein.</p>
+</div>
+<p><strong>Strategic Mimicry:</strong> Samne wale ki body language, gestures aur words ko dheere aur naturally copy karna, yani mirroring, sales aur negotiations mein achhe results de sakta hai.</p>
+<div class="sub-points">
+<p>Yeh bilkul natural aur sincere hona chahiye.</p>
+<p>Iske liye Watch-Wait-Wane approach apnaya ja sakta hai.</p>
+</div>
+<p><strong>Ambiverts Ka Fayda:</strong> Research ke mutabik extraverts ya introverts ke bajay ambiverts sabse behtareen movers hote hain.</p>
+<div class="sub-points">
+<p>Ambiverts woh log hote hain jo bolne aur sunne dono mein balance rakhte hain.</p>
+</div>
+<h3 class="sub-heading">B: Buoyancy</h3>
+<p><strong>Buoyancy:</strong> Sales mein sabse mushkil kaam rejection ko jhelna hota hai. Buoyancy aapko har situation mein tairte rehne, yani optimistic aur resilient rehne, mein madad karti hai.</p>
+<div class="sub-points">
+<p>Iske teen hisse hain.</p>
+</div>
+<p><strong>Before:</strong> Questioning Self-Talk</p>
+<div class="sub-points">
+<p>Taiyari karte waqt sirf positive statement, jaise "Main yeh kar sakta hoon", bolne ke bajay khud se sawal poochein: "Kya main yeh kar sakta hoon?"</p>
+<p>Uske baad un 5 reasons ki list banayein jinke wajah se jawab "Yes" ho sakta hai.</p>
+<p>Yeh aapki intrinsic motivation aur strategies ko activate karta hai.</p>
+</div>
+<p><strong>During:</strong> Positivity Ratio</p>
+<div class="sub-points">
+<p>Negative emotions samne wale ke andar defense mechanism activate kar sakte hain.</p>
+<p>Positivity logon ko open-minded banati hai aur long-term relationships develop karne mein madad karti hai.</p>
+<p><strong>Pink ke mutabik ideal ratio 3:</strong> 1 hona chahiye, yani 3 positive encounters ke badle 1 negative encounter.</p>
+</div>
+<p><strong>After:</strong> Explanatory Style</p>
+<div class="sub-points">
+<p>Rejection ke baad aap us experience ko kaise samjhate hain, isse aapka resilience tay hota hai.</p>
+<p>Rejection ko temporary, yani kuch samay ke liye, specific, yani sirf us particular situation ke liye, aur external, yani sirf aapki personal kami ki wajah se nahi, is tarah dekhna chahiye.</p>
+<p>Ek achha tareeqa hai khud ko ek rejection letter likhna taaki rejection ka darr kam ho sake.</p>
+</div>
+<h3 class="sub-heading">C: Clarity</h3>
+<p><strong>Clarity:</strong> Aaj information ki kami nahi hai. Isliye sirf problem solve karne se zyada zaroori problem find karna hai.</p>
+<div class="sub-points">
+<p>Iska matlab hai aisi problems dhoondhna jo customer ko khud pehle dikhai bhi nahi de rahi thi.</p>
+<p>Clarity ke do main aspects hain.</p>
+</div>
+<p><strong>Curation:</strong> Bahut zyada data dene ke bajay sirf sabse relevant aur useful information pesh karein.</p>
+<div class="sub-points">
+<p><strong>Seek:</strong> Data collect karna.</p>
+<p><strong>Sense:</strong> Data ko samajhna.</p>
+<p><strong>Share:</strong> Samjhi hui useful information ko doosron ke saath share karna.</p>
+</div>
+<p><strong>Asking Questions:</strong> Sahi sawal poochkar logon ko apni situation aur problems ko samajhne mein madad milti hai.</p>
+<div class="sub-points">
+<p><strong>The 2-Questions approach:</strong> Kisi se poochein, "1 se 10 ke scale par aap is kaam ke liye kitne ready hain?"</p>
+<p>Uske baad poochein, "Aapka number isse lower kyun nahi hai?"</p>
+<p>Isse samne wala khud apne positive reasons dhoondhne lagta hai.</p>
+<p><strong>The Five Whys approach:</strong> Kisi bhi problem ki jad tak pahunchne ke liye 5 baar "Kyun?" poochein.</p>
+</div>
+<h3 class="sub-heading">Framing the Offer: Apne Offer Ko Kaise Present Karein</h3>
+<p><strong>Reduce:</strong> Logon ko kam options dene se sales badh sakti hain, kyunki "less is more".</p>
+<p><strong>Experience:</strong> Sirf products ke bajay experiences bechein.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Chocolate ke bajay indulgence, yani us chocolate ko enjoy karne ka experience, bechna.</p>
+</div>
+<p><strong>Labels:</strong> Jab aap logon ko positive label dete hain, jaise "kind" ya "generous", toh woh us label ke mutabik behave karne lag sakte hain.</p>
+<p><strong>Blemishes:</strong> Apne offer ki ek chhoti si kami, yani blemish, batane se honesty dikhai deti hai aur baaki positive points par dhyan badh sakta hai.</p>
+<p><strong>Potential:</strong> Log un cheezon ke prati zyada receptive hote hain jinka future potential bada ho, jaise "this could be the next game-changer", bajay un cheezon ke jo pehle se hi best maani ja rahi hain.</p>
+<p><strong>Give Clear Directions:</strong> Jab samne wale ko problem aur solution samajh aa jaye, toh use clear next steps batayein ki use aage kya karna hai.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>3. What To Do to Move People: Logon Ko Move Karne Ke Liye Kya Karein</h2></div>
+<p>Jab aapke paas ABCs ki qualities aa jayein, toh logon ko move karne ke liye aapko teen kaam karne honge.</p>
+<h3 class="sub-heading">I. Pitch: Apni Baat Rakhna</h3>
+<p><strong>Pitch:</strong> Pitch ka maqsad kisi ko zabardasti convince karna nahi, balki uska interest jagana aur conversation shuru karna hota hai.</p>
+<p>Pink purane elevator pitch ke bajay 6 naye pitches batate hain.</p>
+<p><strong>One-Word Pitch:</strong> Apne poore message ko sirf ek word mein badal dena.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Google ne "search" ko claim kiya aur Mastercard ne "priceless" ko.</p>
+</div>
+<p><strong>Question Pitch:</strong> Statements passive ho sakte hain, jabki sawal logon ko khud sochne aur agree karne ki taraf le ja sakte hain.</p>
+<p><strong>Rhyming Pitch:</strong> Jo sentences rhyme karte hain, jaise "Leaders are readers", log unhe aasan samajhte hain aur un par subconscious level par jaldi trust kar sakte hain.</p>
+<p><strong>Subject-Line Pitch:</strong> Emails ki subject lines aisi honi chahiye jo ya toh bahut useful hon, yani Utility dein, ya curiosity jagayein, yani Uncertainty create karein.</p>
+<p><strong>Twitter Pitch:</strong> Apne message ko 140 characters, ya 120 characters, se kam mein likhna, sawal poochte hue ya koi link dete hue.</p>
+<p><strong>Pixar Pitch:</strong> Pixar movies ki tarah ek 6-part narrative structure banana.</p>
+<div class="sub-points">
+<p>"Once upon a time... Every day... One day... Because of that... Because of that... Until finally..."</p>
+</div>
+<h3 class="sub-heading">II. Improvise: Turant Sochna Aur Situation Ke Hisaab Se Badalna</h3>
+<p>Jab cheezein plan ke mutabik na chalein, toh improvise karein.</p>
+<div class="sub-points">
+<p>Iske teen rules hain.</p>
+</div>
+<p><strong>Listen out for offers:</strong> Har rejection ko dhyan se sunein, kyunki uske andar ek chhupi hui "offer" ho sakti hai.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> "Budget nahi hai" ka matlab price negotiation ki offer ho sakti hai.</p>
+</div>
+<p><strong>Use "Yes and...":</strong> "No" ya "Yes, but" ke bajay "Yes, and..." ka use karein taaki dimaag possibilities ki taraf badhe.</p>
+<p><strong>Make others look good:</strong> Sirf apne views share karne ke bajay samne wale ko dhyan se sunein aur open-ended sawal poochein.</p>
+<div class="sub-points">
+<p>Isse samne wala achha aur important feel kar sakta hai.</p>
+</div>
+<h3 class="sub-heading">III. Serve: Sewa Bhaav</h3>
+<p><strong>Serve:</strong> Selling tab meaningful aur long-lasting banti hai jab aap sach mein samne wale ko serve karte hain.</p>
+<p><strong>Be Personal:</strong> Kisi bhi problem ya report mein jab aap kisi real person ka face, yani photograph, add karte hain, toh woh kaam zyada personal aur real lagne lagta hai.</p>
+<div class="sub-points">
+<p>Har customer ko ek unique individual ki tarah samjhein.</p>
+</div>
+<p><strong>Focus on Purpose:</strong> Upserve, Don't Upsell.</p>
+<div class="sub-points">
+<p>Log kisi bade purpose ke liye jaldi action lete hain.</p>
+<p><strong>Example:</strong> Hospital staff ne apne haath tab zyada dhoye jab unhe patients ki health ki yaad dilayi gayi, bajay sirf unki apni health ki.</p>
+<p>Logon ko sirf zyada bechne ke bajay unhe "upserve" karein, yani bina extra expectations ke unhe extra value dein.</p>
+</div>
+<p><strong>The Self-Check Test:</strong> Hamesha khud se do sawal poochein.</p>
+<div class="sub-points">
+<p>Agar samne wala kharidta hai, toh kya uski life behtar hogi?</p>
+<p>Kya is interaction ke baad duniya ek behtar jagah banegi?</p>
+<p>Agar dono sawalon ka jawab "Yes" hai, toh hi aage badhein.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Conclusion: Nishkarsh</h2></div>
+<p>Daniel Pink is book mein yeh clearly batate hain ki modern sales ab chalaki ya manipulation ka kaam nahi hai.</p>
+<p>Aaj information parity ke daur mein buyers aur sellers ke paas information ka gap kam ho gaya hai.</p>
+<p>Sabse behtar seller aur mover wahi hai jo empathetic ho, honesty se baat kare, sahi problems dhoondhe aur sachche dil se samne wale ki life ko behtar banana chahe.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

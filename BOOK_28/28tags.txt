@@ -1,0 +1,210 @@
+B="The Ultimate Sales Machine"
+A="Chet Holmes"
+H1|Book Ka Parichay
+P|Chet Holmes ki famous book "The Ultimate Sales Machine" ka yeh bahut detailed aur comprehensive content hai. Chet Holmes kehte hain ki business mein "Mastery" koi special talent ya gift nahi hai. Yeh "pigheaded discipline", yani bahut ziddi discipline, aur determination ka seedha result hai.
+P|Business ko ek machine ki tarah chalane ke liye basic cheezon ko baar-baar repeat karna padta hai, jab tak woh naturally aapki aadat ka hissa na ban jayein.
+P|Is content ko 4 main parts mein divide kiya gaya hai: Management, Marketing, Sales, aur Operating Your Ultimate Sales Machine, yani USM.
+H1|Part 1: Management
+P|Management mein Chet Holmes ne organization ko andar se strong banane aur productivity ko maximum karne ke tareeqe bataye hain.
+H2|Great Time Management: Waqt Ka Sahi Istemal
+P|Aapko aur aapki team ko achanak aane wale issues par sirf react karne ke bajaye apne time par control paana hoga. Iske liye Chet Holmes ne 6 important steps diye hain jo sirf 5 minutes mein kiye ja sakte hain.
+B|Touch It Once: Kisi bhi cheez ya email ko tabhi haath lagayein jab aap uspar action lene ke liye ready hon.
+S|Isse aapka wahi material baar-baar padhne ka time bachta hai.
+S|Staff ko kahe ki emails ke titles clear aur descriptive rakhein, taaki aap sirf wahi emails open karein jinhe turant handle karna hai.
+B|Daily 6 Important Tasks Ki List Banayein: Apne din ke 6 sabse important tasks likhein aur unhe poora karne ka pakka decision lein.
+B|Time Allocate Karein: Har task ke liye pehle se time slot fix karein.
+S|Ideal tareeqe se in 6 tasks ke liye total 6 hours schedule karein.
+S|Agar koi task bada hai, toh use chhote parts mein divide karein.
+B|Difficult Tasks Ko Pehle Karein: Sabse important aur mushkil kaam sabse pehle schedule karein, jab aapki energy sabse zyada ho.
+B|Business Growth Ke Liye Dedicated Time: Agar aap salesperson hain ya akele team chala rahe hain, toh roz kam se kam 2.5 hours sirf business ko grow karne mein lagayein.
+B|Faltu Files Ko Hata Dein: Lagbhag 80% stored files dobara kabhi use nahi hoti hain.
+S|Khud se poochein, "Kya ise phenkne se koi nuksan hoga?"
+S|Jo zaroori nahi hai use hata dein.
+H2|Reprogram Your Organization with Effective Training: Behtar Training
+P|Chet Holmes ke mutabik training tabhi strong hoti hai jab poori staff "great performance" ki ek hi definition samjhe aur har client ko ek jaisa perfect experience mile.
+B|Mandatory Education: Lagbhag 90% log khud ko tab tak improve nahi karte jab tak improvement unki job ki compulsory requirement na ho.
+S|Isliye continuous education ko mandatory, yani zaroori, banayein.
+B|Training Program Design: Training mein naye employees ko train karne ke programs hone chahiye.
+S|Purane staff ki skills upgrade karne ke programs hone chahiye.
+S|Professional development ke programs hone chahiye.
+S|Company ki problems solve karne ke programs bhi hone chahiye.
+B|Blend of Methods: Lectures, role-plays, quizzes, case studies aur demonstrations ka mix use karein.
+S|Isse training interesting aur engaging rahegi.
+B|Repetition Is Key: Ek saath bahut saari cheezein sikhane ke bajaye kuch basic cheezon ko baar-baar practice aur application ke saath repeat karein.
+H2|Workshop Meetings: Company Ko Improve Karne Ka Tareeqa
+P|Agar badi company banani hai, toh ek hafte mein 50 naye logon ko hire karke unhe peak performance tak lana hoga. Iske liye Weekly Workshop Meetings ek important tareeqa hai.
+B|Joint Problem Solving: Workshops mein staff ko seedha instructions dene ke bajaye unke saath milkar business ko improve karne ke ideas par brainstorming karein.
+B|Workshop Structure: Har workshop mein maximum 30 log hone chahiye.
+S|Workshop business ke sirf ek chhote part par focused hona chahiye.
+S|Example: "Point of sale par hum buyer ko aur kya offer kar sakte hain?"
+B|Brainstorming Aur Prioritizing: Participants ko 3 minutes dein taaki woh company ya department ke improvement ke 3 areas likhein.
+S|Phir unhe whiteboard par share karein.
+S|Uske baad unhe 30 seconds mein apni top 3 choices ko priority order mein likhne ko kahe.
+S|Sabse high score wale top 5 issues ko priority dein.
+S|Har issue par alag workshop karein.
+B|Create Manuals: Har session ke baad solutions ko 1 ya 2 page ke memos mein likhein.
+S|Example: "Gusse wale customer ko handle karne ke 9 tareeqe."
+S|In memos ko training manuals ki tarah collect aur organize karein.
+H2|Implementing New Policies Effectively: Nayi Policy Lagu Karne Ke 10 Steps
+P|Naye rule ya policy ko aasani se implement karne ke liye Chet Holmes ne 10 steps bataye hain.
+B|Get Buy-In by Making Them Feel the Pain: Staff se unki top 3 problems par discussion karwayein.
+S|Unse poochein, "Agar abhi thoda extra kaam karke yeh saari problems hamesha ke liye khatam ho jayein toh kaisa rahega?"
+S|Unse woh problems bhi likhwayein jo in issues ko solve na karne par future mein ho sakti hain.
+B|Generate Solutions: Workshop ke through solutions dhoondhein.
+B|Define a Conceptual Solution: Solutions ki list mein se ek aisa conceptual solution nikalein jise test kiya ja sake.
+B|Test with Top Performers: Pehle apne top leaders ya top performers ke saath is solution ko test karein.
+B|Set Deadlines: Weekly meetings mein updates ke saath testing ki strict deadline fix karein.
+B|Document Processes: Saare step-by-step processes, scripts aur expected outcomes ko properly document karein.
+B|Show-and-Tell: Top performers ko role-plays aur show-and-tell ke through baaki staff ko train karne dein.
+B|Refining Workshop: Policy ko officially launch karne se pehle poore staff ke saath ek aur workshop karein aur policy ko improve karke final banayein.
+B|Monitor Weekly/Daily: Naye procedure ko daily ya weekly level par check karein taaki galtiyan turant sudhari ja saken.
+B|Measure and Reward: Jab tak naya behavior natural aadat na ban jaye, results ko measure karein aur team ko reward dein.
+H2|Hiring and Managing Superstars
+P|Superstars woh top performers hote hain jo khud se aage badhte hain, bahut kharab situation ko bhi improve kar sakte hain aur har tarah ke rejection ko handle kar sakte hain.
+B|Share the Wealth: Superstars ko attract karne ke liye unhe bahut achhe incentives dene ke liye ready rahein.
+S|SMEs ko apne top 3 initiatives ki monetary value estimate karni chahiye.
+S|Us value ka bada hissa superstar ko offer karna chahiye.
+S|Example: $100,000 sales target ka 30% share, yani $30,000 monthly income.
+B|Hire for Personality, Not Background: Background ke bajaye candidate ki personal qualities dekhein.
+S|DISC profiling ke mutabik sales ke liye High Dominance, yani D, aur High Influence, yani I, wale log suitable hote hain.
+S|Woh customer se connect kar sakte hain aur rejection se zyada nahi darte.
+B|Design Compelling Ads: Job advertisement mein highest possible income range likhein jo overachievers ko challenge kare.
+S|"Superstars only. $180k-$300k. Don't call unless you're an overachiever and can prove it."
+B|Phone Pre-Screening: Phone par candidate ki pitch sunne ke baad use jaanbujhkar reject karein.
+S|Example: "Mujhe nahi lagta aap superstar hain."
+S|Ek asli superstar is rejection ko challenge karega aur aapko convince karne ki koshish karega.
+B|3-Step Interview Process: Interview ko teen steps mein karein.
+S|Relax: Shuruat mein friendly rahein taaki candidate comfortable hokar apna best de sake.
+S|Probe: Candidate ki personality profile ko samajhne ke liye questions poochein aur uski stories sunein.
+S|Uske childhood challenges, proud accomplishments, self-improvement ke commitment, recently padhi self-help book, uske hisaab se best salesperson kaun hai, aur previous job ke disagreements ke baare mein poochein.
+S|Attack: Candidate par sharp lekin polite challenge karein.
+S|Example: "Aap baatein toh achhi kar rahe hain, par mujhe superstar wali vibe nahi aa rahi."
+S|Real superstar ghabrayega nahi aur confidence ke saath apna case rakhega.
+B|Managing Superstars: Unhe seedha "No" na kahe.
+S|Unki energy ko kisi aur direction mein lagayein ya unke saamne bada challenge rakhein.
+S|Example: "Agar aap 30% sales badha dete hain, toh aapki request poori ho jayegi."
+S|Jab woh challenge complete karein, toh unki publicly tareef karein.
+H1|Part 2: Marketing
+P|Marketing ka sabse bada challenge prospects ka attention lena aur use banaye rakhna hai.
+H2|The Buyer's Pyramid: Khariddaron Ka Pyramid
+P|Holmes ne 20 saal ki research ke baad paya ki kisi bhi market mein target audience alag-alag groups mein divided hoti hai.
+B|3%: Yeh log abhi kharidne ke liye ready hain, yani Buying Now.
+B|6-7%: Yeh log kharidne ke idea ke liye open hain, yani Open to Buying.
+B|30%: Yeh log abhi iske baare mein soch nahi rahe hain, yani Not Thinking About It.
+B|30%: Yeh log interested nahi hain, yani Not Interested.
+B|30%: Yeh log puri tarah disinterested hain aur apni current situation, yani status quo, ko badalna nahi chahte.
+P|Zyadatar businesses sirf upar ke lagbhag 10%, yani 3% aur 7%, par focus karti hain.
+P|Asli strategy baaki 90% audience ko nurture karne mein hai.
+H2|Education-Based Marketing
+P|Log aksar us product ke expert nahi hote jo woh kharid rahe hote hain.
+P|Agar aap unhe educate karte hain, toh aap unke buying criteria ko apne favour mein badal sakte hain.
+P|Jab aap sirf sell karte hain, toh rapport toot sakta hai. Jab aap educate karte hain, toh rapport build hota hai.
+B|Example: Agar aap video-conferencing bechna chahte hain, toh sirf product data dikhana boring ho sakta hai.
+S|Iske bajaye ek free course offer karein: "5 Reasons Why 96% of Businesses Fail."
+S|Is course mein batayein ki communication gap ki wajah se businesses kaise fail hoti hain.
+S|Wahan apna case study bhi include karein.
+H2|Stadium Pitch Aur The Smoking Gun
+B|Stadium Pitch: Sochiye agar aapko apne saare ideal buyers se bhara hua ek stadium mil jaye, toh aap aisa kya title rakhenge ki koi bhi stadium chhodkar na jaye?
+S|Is core story ko banane ke liye market data ka use karein.
+B|The Smoking Gun: Yeh aisa market data ya fact hai jo aapko market mein ek aisi choice bana de jise ignore karna mushkil ho.
+S|Example: Hospital ko art bechne ke liye yeh data dikhana ki specific art ki wajah se patients ki recovery rate bahut improve hoti hai.
+H2|Master the 7 Marketing Essentials
+P|Aapko in 7 tools par weekly workshops karke apni team ko master banana hoga.
+B|Advertising: Ads alag aur noticeable hone chahiye.
+S|Headline attention-grabbing aur benefit-oriented honi chahiye.
+S|Headline buyer, yani "you", par focused honi chahiye.
+S|Body copy offer ki value samjhaye.
+S|End mein strong Call-to-Action, yani CTA, hona chahiye.
+B|Direct Mail: Stadium Pitch ke base par colorful envelopes aur creative gifts bhejein.
+S|Inhe baar-baar bhejein aur phone call ke through follow-up karein.
+B|Brochures: Corporate brochures mein sirf apni company ki tareef karne ke bajaye apni core story aur buyer ke benefits par focus karein.
+B|Personal Contact: Salespeople aur customer service representatives ka client ke saath personal contact marketing ka bahut powerful mauka hai.
+B|Market Education: Trade shows, speaking engagements aur educational webinars ke through knowledge share karein.
+B|Public Relations, PR: Aise articles ya press releases likhein jo kisi bade issue ko cover karein aur jahan aapka halka sa mention ho.
+S|Credible sources aur Fortune 500 companies ka mention PR ko strong banata hai.
+S|Editors ke saath achha relationship banayein.
+S|Charity events aur award ceremonies ke through influencers aur dream clients ko invite karein.
+B|Internet and Websites: Emails, websites, affiliate marketing aur single-focused microsites ka use karein.
+S|Example: Ek focused website jaise "[www.howtodoublesales.com](http://www.howtodoublesales.com)".
+S|In tools ke through leads capture karein aur unke aas-paas ek interactive community banayein.
+H1|Part 3: Sales
+P|Sales mein sabse fast growth un ideal clients par focused effort se aati hai jo sabse zyada aur sabse frequently kharidte hain.
+P|Chet Holmes ise "Dream 100 Strategy" kehte hain.
+H2|Dream 100 Strategy Ko Implement Karne Ke 6 Steps
+B|Identify Dream Clients: Apne ideal buyers ki list banayein.
+S|Unke criteria ko refine karein.
+S|Websites ya Hoovers ke through unki details collect karein.
+B|Select Great Gifts: Har 2 weeks mein unhe chhote, useful aur inexpensive gifts bhejein.
+S|Gift ko apni pitch ke saath creative tareeqe se connect karein.
+S|Yeh bribe ki tarah nahi lagna chahiye aur aisa ho jo unke desk par reh sake.
+B|Create Letters to Go with Gifts: Gift ke saath ek chhota aur creative letter bhejein jo gift se connected ho.
+S|Flashlight: "Don't be kept in the dark..."
+S|Rubik's Cube: "Don't be puzzled by..."
+S|Calculator: "Calculate your savings..."
+S|Letter mein hamesha free course ya consultation ke liye CTA hona chahiye.
+B|Map Out Your Calendar: Agle 3 se 6 months ka calendar plan karein.
+S|Har 2 weeks mein, ya kam se kam mahine mein ek baar, kuch creative bhejne ka plan rakhein.
+B|Follow Up with Phone Calls: Goal appointment fix karna hona chahiye.
+S|B-to-B sales mein gatekeepers ko bypass karne ke liye confident aur authoritative tone ka use karein.
+S|Example: "Hi, this is Bill Allen. Is Tom in?"
+S|"How are you today?" se bachne ko kaha gaya hai.
+B|Present Your Core Story: Appointment ke dauran seedha product bechne ke bajaye education-based presentation dein.
+S|Smoking Gun data ka use karke customer ke pain points par focus karein.
+H2|Mastering Your Presentations: Presentation Mein Mastery
+P|Aapka visual aid bahut strong hona chahiye, kyunki source ke mutabik human brain ka 90% input aankhon ke through aata hai.
+B|K.I.S.S. - Keep It Simple, Stupid: Har slide par sirf ek badi heading aur 3 ya 4 bullet points rakhein.
+B|K.I.F.P. - Keep It Fast Paced: Har minute mein 2 ya 3 slides cover karein.
+S|Har 15 seconds mein screen par koi naya visual element aana chahiye.
+B|WOW Facts and Stories: Aise statistics aur stories use karein jinhe log yaad rakhein aur doosron ko bhi batayein.
+B|Maintain Curiosity: Pehle facts batayein aur uske baad explanation dein.
+S|Aage kya aane wala hai, iski curiosity banaye rakhein.
+B|Convey Authority: Confident rahein lekin arrogant na banein.
+S|Apni tone of voice aur body language se authority dikhayein.
+S|Audience ko unki problems ke baare mein actively involve karein.
+B|Mistakes to Avoid: Kuch galtiyon se bachein.
+S|Client ko unke time ke liye "Thank you" ya "Apologize" na kahe.
+S|Agar presentation achha hoga toh client khud aapko thank you kahega.
+S|Presentation baithkar ya pockets mein haath daal kar na dein.
+S|Hamesha khade hokar aur haath waist ke upar rakhkar interact karein.
+S|Questions ko apne presentation ko disrupt na karne dein.
+S|Slides ko seedha padhkar presentation na dein.
+H2|Perfecting Your Sales Engine: Selling Ke 7 Steps
+P|Team ko in 7 steps ko yaad aur practice karwana chahiye jab tak yeh unki "subconscious competence", yani bina soche naturally karne ki ability, na ban jaye.
+B|Establish Rapport: Client ke saath gehra personal relationship banayein.
+S|Unke background, family, interests aur personal goals ke baare mein jaanein.
+S|Unke saath dosti banayein.
+B|Discover Buying Criteria: Client ki buying criteria ko samjhein aur use apne favour mein reset karein.
+B|Build Value: Apne product ya service ke manufacturing aur quality standards ke baare mein educate karke value create karein.
+B|Create Desire: Aise strong questions aur data pesh karein jisse prospect ko samajh aaye ki purane tareeqe, yani status quo, par rehna theek nahi hai.
+B|Overcome Objections: Pehle objection ko clearly alag karke samjhein.
+S|Agar client kahe ki price zyada hai, toh poochein: "Kya price ke alawa koi aur wajah hai jo aapko is deal se rok rahi hai?"
+S|Agar jawab nahi hai, toh poochein: "Agar hum ise aapke budget ke hisaab se affordable bana dein, toh kya aap ise buy karenge?"
+B|Close the Sale: Agar aapko sach mein lagta hai ki aapka product client ko benefit karega, toh confidence ke saath sale close karne ki taraf badhein.
+B|Follow-Up: Sale close hone ke baad bhi client ko follow-up ke through yaad dilate rahein ki usne aapko kyun choose kiya.
+H2|10 Steps to Great Follow-Up
+P|Client ke saath relationship aur dosti ko long-term strong banane ke liye Chet Holmes ne 10 systematic steps bataye hain.
+B|Pehla Letter ya Email: Meeting ke 1 ya 2 hours ke andar pehla letter ya email bhejein.
+S|Ismein personal touch, compliment aur benefits ka recap hona chahiye.
+B|Value-Adding Phone Call: Client ko call karke koi naya idea ya uski problem ka solution share karein.
+B|Personal Interest: Har mahine client ke personal interest se related koi cheez share karein.
+B|Personal Life Se Connect: Parties ya meals jaise events ke through unki personal life se connect karein.
+B|Event Follow-Up: Har event ke baad ek chhota aur personal follow-up card ya letter bhejein.
+B|Fun Plan: Client aur uski family ke liye kuch enjoyable plan karein.
+B|Help Their Business Succeed: Client ke business ko successful banane mein help karein.
+S|Example: Unhe naye clients se connect karwana ya useful seminar mein le jaana.
+B|Stay Top of Mind: Cards, letters ya emails ke through unke mind mein apni presence banaye rakhein.
+B|Become a Trusted Asset and Confidant: Client ke liye ek trusted aur reliable person banein jiske saath woh apni baatein share kar sake.
+B|Personal Invitations: Client ko apne ghar invite karein ya unke ghar par invite hon.
+H1|Part 4: Operating Your Ultimate Sales Machine, USM
+P|Is part mein bataya gaya hai ki in saari strategies ko personal aur organizational level par kaise chalana hai.
+B|Organizational USM: Apne key goals ke liye Measures of Effectiveness, yani performance metrics, track karein.
+S|Example: Calls ki number aur conversions.
+S|In metrics ko tab tak track karein jab tak yeh organization ke DNA, yani normal working culture, ka hissa na ban jayein.
+B|Personal USM and Reticular Activating System, RAS: Dimaag ka RAS system unhi cheezon ko dhoondhne par focus karta hai jin cheezon ke liye aap use instructions dete hain.
+S|Isliye apne mind ko success aur solutions par focus karne ki direction dein.
+S|Weekly workshops ke through apne lifetime aur annual goals define karein.
+S|In goals ko achieve karne ke liye ziddi discipline aur strong focus ke saath lage rahein.
+H1|Conclusion
+P|Chet Holmes is book ko sales, marketing aur management ki ek aisi important guide kehte hain jise baar-baar padhna chahiye.
+B|"Attitude": Chet Holmes ke mutabik Attitude ek aisi cheez hai jise hum control kar sakte hain aur yeh hamara sabse powerful weapon hai.
+P|Agar aap in 12 strategies ko pigheaded determination, yani ziddi determination, ke saath lagatar apply karte hain, toh aap apne market ko puri tarah dominate kar sakte hain.

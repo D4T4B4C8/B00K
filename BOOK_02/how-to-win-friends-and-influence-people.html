@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Win Friends and Influence People — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 3.4rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 02</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">How to Win Friends and Influence People</span>
+          <span class="headline-main">How to Win Friends and Influence People</span>
+        </div>
+        <p class="subhead">Reading notes on How to Win Friends and Influence People</p>
+        <div class="meta-row">
+          <span>10 min read</span><span class="meta-dot">•</span><span>By Dale Carnegie</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Introduction</h2></div>
+<p class="drop-cap">Dale Carnegie ki is book ka main idea hai ki logon ke saath achhe relations banane ke liye hume sirf apne baare mein nahi sochna chahiye. Hume doosre logon ke perspective, feelings aur needs ko samajhna chahiye.</p>
+<h3 class="sub-heading">Book se Sabse Zyada Benefit Kaise Lein?</h3>
+<p>Carnegie kehte hain ki sirf principles padhna enough nahi hai. Aapke andar logon ke saath better deal karne ki sachchi aur strong desire honi chahiye. Ye principles kisi ko manipulate karne ki tricks nahi hain. Ye tabhi kaam karenge jab aap inhe honestly aur sincerely apni life mein apply karenge.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Part 1: Logon ke Saath Deal Karne ke Basic Tarike</h2></div>
+<h3 class="sub-heading">Principle 1: Kisi ki Burai, Ninda ya Shikayat Mat Karo</h3>
+<p>Jab hum kisi ko criticize karte hain, to woh usually defensive ho jata hai. Woh apne aap ko sahi sabit karne lagta hai. Criticism se uski self-respect hurt ho sakti hai aur hamare liye gussa ya resentment paida ho sakta hai.</p>
+<p>Hans Seyle ka idea hai: jitna hum tareef chahte hain, utna hi hume ninda se darr lagta hai.</p>
+<p>Isliye kisi ko criticize karne ke bajaye ye samajhne ki koshish karo ki woh aisa kyun kar raha hai. Isse sympathy aur understanding badhegi.</p>
+<h3 class="sub-heading">Principle 2: Sincere aur Sacchi Tareef Karo</h3>
+<p>Logon ko important aur appreciated feel karna bahut pasand hota hai. Agar aap kisi ki is need ko genuinely samajhte hain, to log aapko zyada pasand karenge.</p>
+<p>Sacchi appreciation aur chaploosi mein farq hai. Appreciation dil se hoti hai aur uske peeche selfish motive nahi hota. Flattery sirf tareef karne ke liye hoti hai aur aksar uske peeche apna fayda hota hai.</p>
+<p>Khud se pucho: "Is insaan mein aisi kaunsi baat hai jise main honestly admire kar sakta hoon?" Phir us quality ki genuine tareef karo.</p>
+<h3 class="sub-heading">Principle 3: Samne Wale ke Andar Khud Kaam Karne ki Strong Desire Paida Karo</h3>
+<p>Agar aap kisi se kuch karwana chahte ho, to pehle uske perspective se socho. Uski needs ko samjho aur dekho ki aapki baat uske liye kaise useful ho sakti hai.</p>
+<p>Fishing ka simple example hai: agar machhli pakadni hai, to hook par wahi cheez lagani hogi jo machhli ko pasand hai, na ki jo aapko pasand hai.</p>
+<p>Logon ke saath bhi yahi principle use karo. Baat unki needs aur goals ke hisaab se karo aur clearly batao ki aapka suggestion unke goals ko kaise help karega.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Part 2: Logon ka Dil Jeetne ke 6 Tarike</h2></div>
+<h3 class="sub-heading">Rule 1: Doosre Logon mein Genuinely Interest Lo</h3>
+<p>Aksar hum un logon mein interest lete hain jo hum mein interest lete hain. Agar aap kisi ka attention aur cooperation chahte ho, to pehle usmein genuine interest lo.</p>
+<p>Logon ko enthusiasm ke saath greet karo aur unke liye bina kisi selfish reason ke thoughtful cheezein karne mein time aur energy lagao.</p>
+<h3 class="sub-heading">Rule 2: Smile</h3>
+<p>Aapke face ke expressions aapke kapdon se bhi zyada important ho sakte hain. Ek genuine aur warm smile saamne wale ka mood better kar sakti hai.</p>
+<p>Phone par bhi smile ka effect aapki voice mein sunai de sakta hai. Fake ya forced smile ka ulta effect ho sakta hai.</p>
+<p>Agar mood kharab ho, to apne thoughts ko manage karne ki koshish karo aur consciously smile karo.</p>
+<h3 class="sub-heading">Rule 3: Naam Yaad Rakho</h3>
+<p>Kisi bhi insaan ke liye uska naam bahut important hota hai. Naam uski identity ka important part hai.</p>
+<p>Logon ke naam yaad karne ki effort karo aur unka naam sahi pronounce aur spell karo. Isse unhe important feel hota hai.</p>
+<h3 class="sub-heading">Rule 4: Achhe Listener Bano aur Doosron ko Apne Baare mein Bolne Do</h3>
+<p>Achha conversationalist banne ke liye achha listener banna zaroori hai.</p>
+<p>Log apne aur apni problems ke baare mein baat karne mein bahut interested hote hain. Aise questions pucho jinka jawab dene mein unhe maza aaye.</p>
+<p>Unhe apni achievements aur experiences share karne do. Apne baare mein tab bolo jab woh khud poochein.</p>
+<h3 class="sub-heading">Rule 5: Samne Wale ke Interests ki Baat Karo</h3>
+<p>Kisi insaan ke dil tak pahunchne ka ek simple tareeka hai un cheezon ke baare mein baat karna jo uske liye important hain.</p>
+<p>Kisi se milne se pehle uske interests ke baare mein thoda jaan lena useful ho sakta hai. Isse relation bhi better hoga aur aapki knowledge bhi badhegi.</p>
+<h3 class="sub-heading">Rule 6: Doosre Insaan ko Important Feel Karao — aur Sincerely</h3>
+<p>Ek basic principle hai: doosron ke saath waisa hi behaviour karo jaisa aap chahte ho ki woh aapke saath karein.</p>
+<p>Agar aap chahte ho ki log aapko appreciate karein aur important samjhein, to pehle aap unhe wahi feeling dena shuru karo.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Part 3: Apni Soch se Logon ko Sahmat Kaise Karein</h2></div>
+<h3 class="sub-heading">Rule 1: Argument se Jeetne ka Best Tareeka Hai Argument Avoid Karna</h3>
+<p>Aap argument jeet bhi jao, to zaroori nahi ki saamne wala andar se aapki baat maan le. Ulta uski goodwill bhi khatam ho sakti hai.</p>
+<p>Disagreement ko argument banne se rokne ke liye:</p>
+<div class="sub-points">
+<p>Pehle apne defensive reaction ko control karo.</p>
+<p>Gussa control karo.</p>
+<p>Saamne wale ki baat poori suno.</p>
+<p>Jahan agreement hai, usse pehle identify karo.</p>
+<p>Agar galti aapki hai to honestly apologize karo.</p>
+<p>Saamne wale ke ideas ko sochne ka promise karo.</p>
+<p>Uski baat rakhne ke liye uska thank you karo.</p>
+</div>
+<h3 class="sub-heading">Rule 2: Doosron ki Opinions ki Respect Karo. Kabhi Seedha Mat Kaho, "Tum Galat Ho"</h3>
+<p>Kisi ko directly galat bolne se uski ego hurt ho sakti hai aur woh oppose karne lag sakta hai.</p>
+<p>Polite aur open-minded raho.</p>
+<p><strong>Ek useful approach hai:</strong> "Main galat ho sakta hoon. Main aksar galat hota hoon. Chaliye facts ko saath mein check karte hain."</p>
+<p>Agar aapko apni baat prove karni hai, to itne soft aur subtle tareeke se karo ki saamne wale ko insult feel na ho.</p>
+<h3 class="sub-heading">Rule 3: Agar Aap Galat Ho, to Turant aur Clearly Maan Lo</h3>
+<p>Har insaan naturally apni galti defend karna chahta hai. Lekin apni galti ko honestly accept karna maturity dikhata hai.</p>
+<p>Agar aapko pata hai ki aapki galti hai, to saamne wale ke point out karne se pehle khud hi maan lo. Isse uska gussa kam ho sakta hai aur woh bhi zyada open-minded ho sakta hai.</p>
+<h3 class="sub-heading">Rule 4: Friendly Tareeke se Shuru Karo</h3>
+<p>Jab log gusse mein hote hain, tab logic kam kaam karta hai.</p>
+<p>Kisi situation ko handle karte waqt friendly, kind aur appreciative approach se shuruat karo.</p>
+<h3 class="sub-heading">Rule 5: Conversation mein Jaldi "Haan" Wali Common Ground Banao</h3>
+<p>Jab koi insaan "no" bolta hai, to woh defensive position mein ja sakta hai. "Yes" se conversation zyada open reh sakti hai.</p>
+<p>Isliye shuruat un baaton se karo jahan aap dono agree karte ho. Aise questions pucho jinka natural answer "haan" ho.</p>
+<h3 class="sub-heading">Rule 6: Samne Wale ko Zyada Bolne Do</h3>
+<p>Log apni problems aur apne business ke baare mein aksar aapse zyada jaante hain. Isliye unhe bolne ka mauka do.</p>
+<p>Sincerely aur patiently suno. Beech mein interrupt mat karo, chahe aap disagree hi kyun na karte ho.</p>
+<h3 class="sub-heading">Rule 7: Samne Wale ko Feel Hone Do ki Idea Unka Apna Tha</h3>
+<p>Logon ko pasand nahi hota ki koi unhe orders de ya unhe kuch sell kare. Hum un ideas par zyada trust karte hain jo hume lagta hai ki humne khud discover kiye hain.</p>
+<p>Apne idea ko direct order ki tarah mat do. Use suggestion ki tarah rakho aur saamne wale ko khud conclusion tak pahunchne do. Credit dene mein generous raho.</p>
+<h3 class="sub-heading">Rule 8: Doosre ke Perspective se Honestly Dekhne ki Koshish Karo</h3>
+<p>Kisi ko uski thinking ke liye condemn mat karo. Ye samajhne ki koshish karo ki uske actions ke peeche koi reason zaroor hoga.</p>
+<p>Khud ko uski situation mein rakh kar dekho. Samajhne ki koshish karo ki woh aisa kyun soch raha hai.</p>
+<h3 class="sub-heading">Rule 9: Samne Wale ke Ideas aur Desires ke Prati Sympathy Rakho</h3>
+<p>Agar aap chahte ho ki log aapke point of view ko samjhein, to pehle aapko unke point of view ki respect karni hogi.</p>
+<p><strong>Ek useful approach:</strong> "Main aapko aisa feel karne ke liye blame nahi karta. Agar main aapki jagah hota, to shayad main bhi aisa hi feel karta."</p>
+<h3 class="sub-heading">Rule 10: Unke Better aur Noble Motives ko Appeal Karo</h3>
+<p>Log kisi kaam ko karne ke liye ek real reason rakhte hain aur ek aisa reason bhi ho sakta hai jo sunne mein better lagta hai.</p>
+<p>Logon ke saath fair, honest aur respectful raho. Unke achhe motives ko appeal karne se unke positive side ko encourage kiya ja sakta hai.</p>
+<h3 class="sub-heading">Rule 11: Apne Ideas ko Interesting aur Powerful Tareeke se Present Karo</h3>
+<p>Sirf sach bol dena hamesha enough nahi hota. Kabhi-kabhi idea ko interesting aur memorable tareeke se present karna zaroori hota hai.</p>
+<p>Creative presentation aur drama ka use karke logon ka attention aur imagination capture kiya ja sakta hai.</p>
+<h3 class="sub-heading">Rule 12: Challenge Do</h3>
+<p>Kuch log challenge aur competition se strongly motivate hote hain. Unhe apni ability prove karne ka chance dena unhe better performance ke liye motivate kar sakta hai.</p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Part 4: Leader Bano — Bina Logon ko Naraz Kiye Unhe Badlo</h2></div>
+<p>Leader ke liye kisi ki galti point out karna delicate kaam hai. Isliye approach respectful honi chahiye.</p>
+<h3 class="sub-heading">Rule 1: Praise aur Honest Appreciation se Shuru Karo</h3>
+<p>Kisi ki galti batane se pehle uski genuine tareef karo. Isse saamne wale ka confidence bana rehta hai aur criticism ka effect kam harsh ho sakta hai.</p>
+<h3 class="sub-heading">Rule 2: Galti ki Taraf Indirectly Attention Dilao</h3>
+<p>Direct criticism resentment paida kar sakta hai.</p>
+<p>Praise ke baad "but" lagane ke bajaye "and" ka use karo.</p>
+<div class="sub-points">
+<p><strong>Instead of:</strong> "Mujhe proud hai ki tumne kaam time par kiya, but agar tumne..."</p>
+<p><strong>Better:</strong> "Mujhe proud hai ki tumne kaam time par kiya, and agar hum is part ko is tarah karein to ye aur better ho sakta hai."</p>
+</div>
+<h3 class="sub-heading">Rule 3: Pehle Apni Galtiyon ki Baat Karo</h3>
+<p>Apni mistakes accept karne se aap saamne wale ko judge karne wale person ki jagah relatable person lagte ho.</p>
+<p>Kisi ko criticize karne se pehle honestly maan lo ki aap bhi perfect nahi ho aur aapse bhi mistakes hui hain.</p>
+<h3 class="sub-heading">Rule 4: Direct Orders Dene ke Bajaye Questions Pucho</h3>
+<p>Logon ko direct orders lena pasand nahi hota.</p>
+<div class="sub-points">
+<p><strong>"Ye karo" kehne ke bajaye:</strong> "Kya hum isko is tarah kar sakte hain?"</p>
+</div>
+<p>Questions saamne wale ko decision-making ka part feel kara sakte hain aur uski creativity bhi badha sakte hain.</p>
+<h3 class="sub-heading">Rule 5: Samne Wale ko Apni Izzat Bachane ka Mauka Do</h3>
+<p>Kisi ko insult ya directly fault-find karne se uska self-respect hurt ho sakta hai.</p>
+<p>Kind aur understanding words use karo. Uski dignity aur value ko protect karo.</p>
+<h3 class="sub-heading">Rule 6: Har Improvement ki Tareef Karo, Chahe Woh Chhoti Ho</h3>
+<p>Criticism se confidence aur ability weak ho sakti hai. Encouragement se log better perform kar sakte hain.</p>
+<p>Chhoti improvement ko bhi genuinely appreciate karo aur logon ko unki hidden abilities realize karne mein encourage karo.</p>
+<h3 class="sub-heading">Rule 7: Samne Wale ko Ek Achhi Reputation Do Jise Woh Maintain Karna Chahe</h3>
+<p>Agar aap kisi person mein kisi achhi quality ko recognize karke uski respect karte ho, to woh aksar us quality ko aur improve karne ki koshish karta hai.</p>
+<p>Uske andar achhi quality ko pehle se present samjho aur usse us reputation par khara utarne ke liye encourage karo.</p>
+<h3 class="sub-heading">Rule 8: Encourage Karo aur Galti ko Easy-to-Correct Dikhao</h3>
+<p>Agar aap kisi ko baar-baar bataoge ki woh capable nahi hai, to woh try karna chhod sakta hai.</p>
+<p>Uski weaknesses ko unnecessarily bada mat banao. Good points ko highlight karo aur encourage karo taaki use lage ki improvement possible aur manageable hai.</p>
+<h3 class="sub-heading">Rule 9: Apne Suggestion ko Uske Benefit se Connect Karo</h3>
+<p>Agar aap chahte ho ki koi aapka suggestion khushi se follow kare, to:</p>
+<div class="sub-points">
+<p>Sincere raho.</p>
+<p>Uske benefits par focus karo.</p>
+<p>Clearly samjho ki aap usse kya karwana chahte ho.</p>
+<p>Uski needs aur wants ko samjho.</p>
+<p>Batao ki aapka suggestion uske liye kya benefit laayega.</p>
+<p>Request karte waqt uska benefit clearly explain karo.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Book ka Maximum Benefit Lene ke 9 Tarike</h2></div>
+<p><strong>Keen Desire:</strong> Logon ke saath better relations banana seekhne ki strong desire develop karo.</p>
+<p><strong>Double Read:</strong> Agle chapter par jaane se pehle har chapter ko do baar padho.</p>
+<p><strong>Stop and Think:</strong> Padhte waqt rukkar socho ki is principle ko real life mein kaise apply kar sakte ho.</p>
+<p><strong>Underline:</strong> Important aur core ideas ko underline karo.</p>
+<p><strong>Daily Practice:</strong> Daily problems aur situations mein in principles ko apply karne ki koshish karo.</p>
+<p><strong>Penalty Game:</strong> Ek game bana sakte ho — jab koi friend aapko in principles ko todte hue pakde, to use $1 do.</p>
+<p><strong>Weekly Review:</strong> Har week apni progress aur learning ka review karo.</p>
+<p><strong>Keep Notes:</strong> Likho ki tumne kaunsa principle kab aur kaise apply kiya.</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>Conclusion</h2></div>
+<p>Dale Carnegie ki book sirf theory nahi hai. Ismein diye gaye principles historical examples aur real-life situations mein use kiye gaye hain.</p>
+<p>Is book ka basic message simple hai: Logon ko manipulate karne ke bajaye unhe genuine respect do. Unki feelings aur point of view ko samjho. Unhe important feel karao. Sincerely appreciate karo aur relationships mein sympathy aur understanding rakho.</p>
+<p>Jab aap ye principles honestly aur consistently apply karte ho, to logon ke saath aapke relationships better ho sakte hain.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

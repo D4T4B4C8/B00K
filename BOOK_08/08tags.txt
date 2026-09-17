@@ -1,0 +1,220 @@
+B="Never Split the Difference"
+A="Chris Voss"
+H1|Core Philosophy — Basic Soch aur Introduction
+H2|Book aur Author
+P|Yeh document Chris Voss ki book Never Split the Difference par based hai. Chris Voss ek experienced FBI hostage negotiator aur award-winning teacher rahe hain.
+P|Unka maanna hai ki FBI mein hostage negotiation se seekhi gayi techniques sirf hostage situations ke liye useful nahi hain. Inhe hum apni personal life aur business life mein bhi use kar sakte hain.
+H2|Life is Negotiation
+P|Voss kehte hain: "Life is negotiation." Matlab, zindagi mein hum bahut saari situations mein negotiation kar rahe hote hain.
+P|Ghar mein, office mein, business mein aur doosre logon ke saath hone wali bahut si conversations ke peeche ek basic feeling hoti hai: "I want." — "Mujhe ye chahiye."
+P|Har person ki apni needs, wants aur expectations hoti hain. Isi wajah se logon ke beech negotiation hoti hai.
+H2|Decisions sirf logic se nahi hote
+P|Log aksar sochte hain ki woh logical decisions lete hain. Lekin Voss ke according, human decision-making bahut had tak emotions se influence hoti hai aur hamesha perfectly logical nahi hoti.
+P|Isliye negotiation mein sirf facts aur logic dena enough nahi hota. Aapko saamne wale ki feelings aur emotional thinking ko bhi samajhna padta hai.
+H2|Negotiation ka asli matlab
+P|Negotiation ko ek fight ya battle ki tarah nahi dekhna chahiye. Yeh ek "process of discovery" hai.
+P|Aapka kaam sirf apni baat manwana nahi hai. Aapka kaam saamne wale ke baare mein jitni possible information ho sake, utni discover karna hai.
+P|Jitni zyada information aapke paas hogi, utna better aap samajh paoge ki saamne wala kya chahta hai aur kis wajah se chahta hai.
+H1|Part 1 — Establishing Rapport
+H2|Achha Rishta Banana aur Saamne Wale Ko Sunna
+P|Negotiation ki shuruaat mein sabse important cheez hai rapport build karna aur saamne wale ko properly sunna.
+P|Rapport ka simple matlab hai: Saamne wale ke saath comfortable aur trust-based connection banana.
+P|Iske liye document mein kuch important techniques di gayi hain.
+H2|Hypothesize, Don't Assume (Andaza mat lagao, hypothesis banao)
+P|Smart negotiator kisi baat ko bina verify kiye sach nahi maan leta.
+B|Example: Agar saamne wala kisi demand ko reject karta hai, toh turant yeh assume nahi karna chahiye ki "Woh ye deal karna hi nahi chahta." Ho sakta hai uske paas koi aur reason ho.
+P|Isliye different possibilities ko hypothesis ki tarah rakho aur negotiation ke dauran questions aur observation ke through check karo ki actual reason kya hai.
+B|Simple rule: Assumption ko fact mat samjho. Pehle test karo.
+H2|Listen Fully (Puri tarah suno)
+P|Bahut se log saamne wale ki baat sunte waqt actually sun nahi rahe hote. Unke dimaag mein already yeh chal raha hota hai: "Iska jawab main kya dunga?" Ya: "Main iski baat ko kaise counter karunga?" Isse hum saamne wale ki baat properly samajh nahi paate.
+P|Isliye negotiation ke waqt apne dimaag ke is inner dialogue ko shaant karo. Saamne wale ki baat poori attention se suno.
+P|Jab doosre person ko feel hota hai ki aap genuinely uski baat sun rahe ho, toh woh zyada safe feel karta hai aur khulkar baat karne lagta hai.
+H2|Don't Rush (Jaldi mat karo)
+P|Negotiation mein hum aksar jaldi se result chahte hain. Hum sochte hain: "Chalo jaldi se decision lete hain."
+P|Lekin agar aap resolution ki taraf bahut jaldi bhagte ho, toh saamne wale ko lag sakta hai: "Meri baat suni hi nahi ja rahi." Isse trust kam ho sakta hai.
+P|Isliye conversation ko slow rakho. Logon ko time do taaki woh:
+S|apni baat properly bata sakein
+S|apni problem explain kar sakein
+S|apni feelings share kar sakein
+S|aur khud ko comfortable feel karein.
+H2|Tone of Voice
+P|Aap kya bolte ho sirf wahi important nahi hai. Aap kis tone mein bolte ho, woh bhi bahut important hai. Tone saamne wale ke emotions ko influence kar sakti hai. Document mein 3 types ki voices batayi gayi hain.
+B|Positive / Playful Voice: Zyadatar situations mein isi tone ka use karna chahiye. Awaaz relaxed, friendly, calm, clear, pleasant ho. Agar possible ho toh smile karte hue aur dheere bolna useful hai. Goal yeh hai ki saamne wale ko aap pleasant aur friendly lago.
+B|Late-night FM DJ Voice: Jab aapko kisi important point par emphasis dena ho ya authority dikhani ho, tab yeh voice useful hai. Ismein awaaz calm, slow, warm honi chahiye. Awaaz ko neeche ki taraf le jaane wali tone authority show kar sakti hai. Jab awaaz upar ki taraf jaati hai, toh woh saamne wale se response invite kar sakti hai.
+B|Assertive Voice: Iska use bahut kam karna chahiye. Agar aap bahut assertive ya forceful tone use karte ho, toh saamne wala naturally push back kar sakta hai. Matlab woh aapki baat ko resist karne lag sakta hai.
+H2|Pause and Encourage (Chup rehna bhi ek technique hai)
+P|Negotiation mein silence bahut powerful ho sakti hai. Kabhi-kabhi saamne wale ko bolne ke liye bas thoda silence chahiye hota hai. Aapko har pause ko apni baat se fill karne ki zarurat nahi.
+B|Simple phrases: "Yes.", "OK.", "I see." Inka purpose agreement dena zaroori nahi hai. Inka purpose hai saamne wale ko signal dena: "Main sun raha hoon. Aap continue karo." Isse woh aur information share kar sakta hai.
+H2|Mirroring (Saamne wale ke important words repeat karna)
+P|Mirroring ka simple matlab hai saamne wale ke bolne ke style ya words ko reflect karna. Document ke according, aap uske speech pattern, tone aur vocabulary ko mirror kar sakte ho.
+B|Method: Saamne wale ke last 3 words ya 1–3 important words repeat karo. Isse saamne wala aksar apni baat aur explain karta hai. Aapko bina directly argue kiye zyada information mil sakti hai.
+S|Boss aur Employee ka Example: Maan lo boss aapse kehta hai: "Aaj hi poora project dobara karo." Aap directly confront karke yeh mat bolo: "Ye impossible hai." Iske badle calm Late-night FM DJ voice mein bolo: "I'm sorry, redo everything by today?" Phir kam se kam 4 seconds chup raho. Is silence se boss ko apni demand explain karne ka mauka milega. Ho sakta hai boss khud clarify kare: exactly kya redo karna hai, kya urgent hai, kab tak chahiye, ya uski actual problem kya hai. Yaani aapne fight start nahi ki. Aapne usko apni demand clarify karne ke liye encourage kiya.
+H1|Part 2 — Showing Empathy and Building Trust
+H2|Tactical Empathy
+P|Tactical Empathy ka matlab sirf kisi ke saath nice hona nahi hai. Aur iska matlab yeh bhi nahi hai ki aap saamne wale se agree karte ho. Iska matlab hai: khud ko saamne wale ki position mein rakhkar uska perspective aur motivation samajhna.
+B|Aapko samajhna hai: woh situation ko kaise dekh raha hai, usko kya chahiye, usko kis cheez ki tension hai, woh kis wajah se resist kar raha hai.
+P|Is understanding ka use karke aap negotiation ko better direction mein le ja sakte ho.
+H2|Labeling (Feelings ko naam dena)
+P|Kabhi-kabhi saamne wale ke behavior ke peeche ek emotion chhupi hoti hai. Labeling ka matlab hai us emotion ko pehchan kar uska naam lena.
+B|Example: "It seems like you're worried about losing control of the situation." — "Mujhe lag raha hai ki aapko situation par control lose hone ki tension hai."
+P|Aap emotion ko identify karte ho, lekin usse judge nahi karte.
+H2|Labeling ka Process
+B|Step 1 — Feelings detect karo: Saamne wale ke words, behavior aur response ko carefully observe karo. Dekho ki uske peeche kaunsi feeling ho sakti hai.
+B|Step 2 — Label lagao: Aap apni line in phrases se start kar sakte ho: "It seems like…", "It looks like…", "It sounds like…" Inka simple sense hai: "Mujhe lag raha hai…", "Aisa lagta hai…", "Aisa sunai de raha hai…"
+B|Step 3 — "I" se bachna: Label lagate waqt sentence ko "I" se start karna avoid karo. Kyunki "I think you are…" ya "I feel you are…" saamne wale ko defensive bana sakta hai. Instead "It seems like…" use karo.
+B|Step 4 — Label ke baad chup raho: Label bolne ke turant baad apni explanation mat shuru karo. Chup ho jao aur listen karo. Saamne wale ko respond karne do.
+H2|Negative aur Positive Feelings ko Label Karna
+P|Document ke according: Negative feelings ko label karne se unki intensity kam ho sakti hai. Aur: Positive feelings ko label karne se unka effect badh sakta hai. Isliye feelings ko ignore karne ke bajay unhe identify karna useful hai.
+H2|Accusation Audit (Apne khilaaf hone wale aarop pehle hi bol dena)
+P|Kabhi-kabhi saamne wala negotiation mein aapke baare mein kuch negative soch raha hota hai. Jaise: "Ye person unfair hai." "Ye apni authority ka misuse kar raha hai." "Ye sirf apna fayda dekh raha hai."
+P|Agar yeh negative thoughts saamne wale ke mind mein already hain, toh unka negotiation par effect ho sakta hai. Accusation Audit mein aap in negative accusations ko pehle hi khud saamne rakh dete ho. Isse unka effect kam karne ki koshish ki jaati hai.
+H2|Accusation Audit ka Process
+B|Step 1: Socho ki saamne wala aap par kaun-kaun se negative accusations laga sakta hai. Unki list banao.
+B|Step 2: Un fears ko pehle hi label kar do. Example: "Aapko lag sakta hai ki main apni authority ka galat fayda utha raha hoon." Ya: "You may feel like I'm treating you unfairly." — "Aapko shayad lag raha ho ki main aapke saath fair nahi ho raha."
+B|Step 3: Uske baad saamne wale se feedback ya input maango. Matlab unko opportunity do ki woh batayein ki unki actual concern kya hai.
+H1|Part 3 — "No" ka Use
+H2|"No" se Safety aur Momentum banana
+P|Log jab "Yes" bolte hain, toh iska matlab hamesha genuine commitment nahi hota. Kabhi-kabhi person sirf conversation se bachne ke liye "Yes" bol deta hai. Isliye saamne wale ko "No" bolne ki permission dena useful ho sakta hai. No bolne par person ko zyada safe aur control mein feel ho sakta hai.
+H2|"No" ka Actually Kya Matlab Ho Sakta Hai?
+P|"No" ka matlab hamesha "Main ye deal reject karta hoon." nahi hota.
+B|Iska matlab ho sakta hai: "Main abhi agree karne ke liye ready nahi hoon." "Mujhe aur information chahiye." "Mujhe thoda time chahiye."
+P|Isliye "No" ko conversation ka end samajhna zaroori nahi hai.
+H2|"No" se "Yes" ki taraf kaise badhein?
+P|Jab person "No" bolta hai, toh usko lag sakta hai ki "Mere paas control hai." Uske baad aap calibrated questions use kar sakte ho.
+B|Examples: "What about this doesn't work for you?" — "Is proposal mein aapko kya theek nahi lag raha?" Ya: "How could we make this work?" — "Hum isko kaise workable bana sakte hain?"
+P|Aise questions se saamne wale ko lag sakta hai ki solution develop karne mein uska bhi control hai.
+H2|"No" ko Extract Karna
+P|Kabhi-kabhi person apni objection directly nahi bolta. Aise case mein document ek technique suggest karta hai:
+B|Wants ko deliberately mis-label karo, ya unse poochho ki: "Aapko kya nahi chahiye?" Galat label sun kar person aksar correction karta hai. Us correction ke through aapko actual information mil sakti hai.
+H2|Email Technique — Jab Reply Na Mile
+P|Agar aap kisi ko emails bhej rahe ho aur woh reply nahi kar raha, toh normal "Just following up…" type message ke bajay No-oriented question use kiya ja sakta hai.
+B|Example: "Have you given up on this deal?" — "Kya aapne is deal ko chhod diya hai?" Document ke according log is tarah ke question ka reply jaldi kar sakte hain kyunki woh yeh clarify karna chahte hain ki unhone deal abandon nahi ki hai.
+H1|Part 4 — "That's Right"
+H2|Persuade karne ki Permission
+P|Negotiation mein ek important moment tab hota hai jab saamne wala kehta hai: "That's right." Lekin "You're right." aur "That's right." same nahi hain.
+H2|"You're Right"
+P|Kabhi-kabhi saamne wala "You're right." sirf isliye bolta hai taaki aap chup ho jao aur conversation khatam ho. Iska matlab yeh zaroori nahi ki usne aapki baat ko genuinely accept kiya hai. Isliye sirf "You're right" sun kar yeh assume mat karo ki negotiation successful ho gayi.
+H2|"That's Right"
+P|"That's right" tab aata hai jab saamne wale ko genuinely feel hota hai: "Is person ne meri situation, meri baat aur mere concerns ko properly samajh liya hai." Yeh ek important breakthrough ho sakta hai. Iske baad saamne wala aapki baat ko zyada openly sunne aur consider karne ke liye ready ho sakta hai.
+H2|"That's Right" kaise laayein? — Summary Technique
+P|Ek strong summary mein do important cheezein honi chahiye:
+B|Paraphrasing: Saamne wale ne jo kaha hai, usko apne simple words mein repeat karo. Matlab: "Aap basically ye keh rahe hain…"
+B|Labeling: Uske words ke peeche jo feelings aur fears hain, unko acknowledge karo. Matlab: "Aapko main concern ye lag raha hai…"
+P|Jab aap dono cheezein accurately combine karte ho, saamne wala keh sakta hai: "That's right." Yeh signal hai ki usko feel hua ki aapne uski situation genuinely samajh li.
+H1|Part 5 — Reality aur Perception ko Shape Karna
+P|Log emotional aur irrational tareeke se decisions le sakte hain. Isliye negotiation mein sirf facts rakhna enough nahi hota. Aapko yeh bhi samajhna hota hai ki saamne wala situation ko kis tarah perceive kar raha hai. Document mein reality aur fairness ko frame karne ke kuch methods diye gaye hain.
+H2|Time is on Your Side (Deadline hamesha utni fixed nahi hoti jitni dikhai deti hai)
+P|Negotiation mein deadlines ko blindly accept nahi karna chahiye. Document ke according, deadlines aksar arbitrary hoti hain, flexible hoti hain. Isliye agar koi bole: "Aaj last day hai." toh automatically panic karne ki zarurat nahi.
+B|Important principle: "No deal is better than a bad deal."
+P|Agar aapko saamne wale ki actual drop-dead deadline pata chal jaye, toh aap us information ka use better negotiation ke liye kar sakte ho. Example ke taur par month ya quarter ke end mein saamne wali party deal close karne ke liye zyada motivated ho sakti hai.
+H2|Perception of Fairness (Fair feel karna bahut important hai)
+P|Log sirf yeh nahi dekhte ki unhe kitna benefit mil raha hai. Woh yeh bhi dekhte hain: "Kya mere saath fair treatment ho raha hai?" Agar unhe deal unfair lagti hai, toh woh kabhi-kabhi khud ka nuksaan hone ke baad bhi deal reject kar dete hain.
+S|Ultimatum Game Example: Is example mein proposer ko $10 diye jaate hain. Usko doosre person ke saath paisa divide karne ka proposal dena hota hai. Maan lo proposer doosre person ko sirf $1 offer karta hai aur khud $9 rakhta hai. Doosra person $1 accept karne ke bajay offer reject kar sakta hai. Result: Dono ko $0 milta hai. Logical point of view se $1 lena $0 se better hai. Lekin agar doosre person ko offer bahut unfair lagta hai, toh woh apna $1 bhi sacrifice karke deal reject kar sakta hai. Is example ka lesson hai: Fairness ka feeling negotiation mein bahut powerful hota hai.
+S|Fairness Strategy: Negotiation ke beginning mein aap keh sakte ho: "Main chahta hoon ki aap hamesha fair feel karein. Agar aapko kahin bhi lage ki main unfair ho raha hoon, toh mujhe turant rokein." Iska purpose saamne wale ko signal dena hai ki fairness important hai aur agar usko kuch unfair lage toh woh openly bol sakta hai.
+H2|Bending Their Reality
+P|Is section ka focus hai ki emotional aur mental patterns ko samajhkar saamne wale ki perception ko influence kaise kiya ja sakta hai.
+B|Extreme Anchor: Ek extreme starting number saamne wale ki expectations ko influence kar sakta hai. Is technique mein pehle Accusation Audit karo. Matlab pehle saamne wale ke fears aur negative thoughts acknowledge karo. Uske baad extreme anchor offer karo. Isse negotiation ke numbers ke baare mein saamne wale ki starting expectation change ho sakti hai.
+B|Let Them Make the First Offer: Possible ho toh saamne wale ko pehla number bolne do. Isse aapko uski expectation ka idea mil sakta hai. Ho sakta hai uska number aapke expected number se different ho. Isliye pehla offer dene se pehle doosre person ka position samajhna useful ho sakta hai.
+B|Use a Range: Agar aap kisi service ko approximately $1,000 par close karna chahte ho, toh ek specific single number bolne ke bajay range ka use kiya ja sakta hai. Example: "Top companies mein is service ke liye $1,300 se $1,600 tak charge kiya jata hai." Is tarah aap ek range establish kar rahe ho jo negotiation ki expectations ko influence kar sakti hai.
+B|Sirf Money par Bargain Mat Karo: Negotiation sirf price ke baare mein nahi honi chahiye. Aap doosri valuable cheezein bhi negotiate kar sakte ho. Matlab agar price par movement limited hai, toh other valuable terms ko discuss kiya ja sakta hai. Document ka point hai: Keval paise ko hi negotiation ka ekmatra subject mat banao.
+B|Odd Numbers: Round number $40,000 dekhne par ek estimate jaisa lag sakta hai. Lekin $38,257 jaisa specific number zyada calculated lag sakta hai. Yaani saamne wale ko lag sakta hai: "Yeh number carefully calculate kiya gaya hai aur shayad actual bottom-line figure hai." Isliye negotiation mein specific odd number ka psychological effect ho sakta hai.
+B|Surprise Gift: Negotiation mein kabhi-kabhi ek unexpected aur unrelated gift dena goodwill create kar sakta hai. Iska purpose saamne wale ko positive surprise dena hai. Document ke according, aisa surprise counter-offer ke liye saamne wale ko psychologically open kar sakta hai.
+H1|Part 6 — Creating the Illusion of Control
+H2|Calibrated Questions
+P|Calibrated questions aise questions hain jo saamne wale ko control ka feeling dete hain. Usko lag sakta hai ki: "Solution main decide kar raha hoon." Lekin actually aap questions ke through conversation ko apne desired goal ki direction mein guide kar rahe hote ho.
+H2|Calibrated Questions kaise banayein? — "What" aur "How" se start karo
+B|Examples: "How am I supposed to do that?" — "Main ye practically kaise kar sakta hoon?" "What can I do to make this work?" — "Isko workable banane ke liye main kya kar sakta hoon?" "How would you like me to proceed?" — "Aap chahte hain ki main aage kaise proceed karun?"
+P|In questions mein aap direct refusal nahi kar rahe. Aap saamne wale ko solution explain karne ke liye push kar rahe ho.
+H2|Kaunse Questions Avoid Karein?
+P|Simple Yes/No questions se bachna chahiye jab unka purpose sirf conversation ko close karna ho. "What" aur "How" questions zyada useful ho sakte hain.
+B|Document ke according: "Who", "When", "Where" jaise questions ka answer log bina zyada soche factual tareeke se de sakte hain. "Why" bhi carefully use karna chahiye kyunki kai situations mein yeh accusatory lag sakta hai.
+P|Tone calm aur respectful rehni chahiye, even agar saamne wala aggressive ho raha ho.
+H1|Part 7 — Ensure Execution
+H2|Agreement ko real banana
+P|Sirf saamne wale ka "Yes." bol dena enough nahi hai. Real success tab hai jab agreement properly execute bhi ho.
+H2|Keep Asking "How"
+P|"Kaise?" poochte rehna execution ki problems ko pehle identify karne mein help karta hai.
+B|Isse pata chal sakta hai: implementation kaise hoga, kis difficulty ka saamna ho sakta hai, kis person ki zarurat hogi, agreement practically possible hai ya nahi.
+P|Saath hi saamne wale ko feel ho sakta hai ki solution uska apna idea hai.
+H2|Entire Team ko Consider Karo
+P|Negotiation table par sirf ek ya do log baithe ho sakte hain. Lekin decision ko influence karne wale aur bhi log ho sakte hain. Isliye pooch sakte ho: "How does this affect others?" — "Iska doosre logon par kya effect padega?"
+P|Isse hidden stakeholders ke baare mein information mil sakti hai.
+H2|Pronoun Analysis
+P|Document ek conversational clue batata hai. Agar koi person baar-baar "I" ya "Me" use karta hai, toh ho sakta hai uske paas actual decision-making power kam ho. Agar koi person baar-baar "We" ya "Them" use karta hai, toh ho sakta hai woh organization ke broader decision-makers ya team ke baare mein baat kar raha ho.
+P|Document isse real decision-maker identify karne ka ek clue batata hai.
+H2|7-38-55 Rule
+P|Professor Mehrabian ke according, communication mein 7% message words se, 38% tone of voice se, 55% body language aur facial expressions se jaata hai.
+P|Iska practical lesson hai: Sirf words par depend mat karo. Tone aur body language ko bhi observe karo.
+H2|Rule of Three
+P|Ek agreement ko sirf ek baar confirm karna enough nahi maana jaana chahiye. Same agreement ko 3 different ways mein confirm karo.
+B|Iske liye use kar sakte ho: labels, summaries, calibrated questions.
+P|Purpose yeh check karna hai ki saamne wale ka agreement genuine hai ya sirf conversation mein "yes" bol diya gaya hai.
+H2|Lying ke Possible Giveaway Signs
+P|Document ke according, jhooth bolne wale log kabhi-kabhi third-person pronouns jaise "him", "her", "them" zyada use karte hain, unusually long sentences bolte hain. Yeh signs hain jo observe kiye ja sakte hain; inhe automatic proof nahi samajhna chahiye.
+H2|Multiple "No" — Saamne Wale Ko Khud Better Offer Karne Dena
+P|Aap ekdum hard "No." bolne ke bajay multiple polite aur indirect "No" use kar sakte ho.
+B|Example sequence: First: "How am I supposed to do that?" Second: "Your offer is very generous, but I'm afraid it won't work for me." Third: "I'm sorry, no."
+P|Is process ka purpose yeh hai ki saamne wala khud apne offer ko improve karne ki taraf move kare.
+H1|Part 8 — Professional Bargainers ka Samna
+P|Experienced negotiators ke saath deal karte waqt preparation aur bhi important ho jaati hai. Document negotiation ke 3 styles batata hai.
+H2|Analysts
+B|Analysts detail-oriented hote hain, systematic hote hain, patient hote hain, mistakes kam karna chahte hain.
+P|Agar aap khud Analyst ho, toh document ke according thoda zyada smile karna useful hai, taaki aap bahut cold ya distant na lago.
+B|Agar aap kisi Analyst ke saath negotiation kar rahe ho, toh: data ready rakho, details ready rakho, unhe analysis karne ka time do.
+H2|Accommodators
+P|Accommodators relationships aur win-win par focus karte hain. Unke liye relationship important hota hai. Lekin unmein kabhi-kabhi time management ki problem, focus ki kami ho sakti hai.
+B|Ek important caution: Aise concessions ya promises se bacho jo woh baad mein actually deliver na kar paayein.
+H2|Assertives
+B|Assertive negotiators direct hote hain, task-focused hote hain, result-focused hote hain, har situation mein jeetna chahte hain.
+P|Inke saath deal karte waqt pehle unko properly sunna important hai. Use: summaries, mirroring, calibrated questions. Pehle unhe feel karao ki aap unki baat samajh rahe ho. Uske baad negotiation ko aage le jao.
+H2|Strategic "I" Statements
+P|Gusse mein react karne ke bajay strategic pause create karne ke liye ek structure diya gaya hai:
+B|"I feel _____ when you _____ because _____." — "Mujhe _____ feel hota hai jab aap _____ karte hain, kyunki _____." Iska purpose bina unnecessary anger ke apni feeling aur problem clearly express karna hai.
+H2|Ackerman Plan
+P|Yeh ek step-by-step bargaining process hai.
+B|Step 1 — Target decide karo: Sabse pehle apna target price ya goal decide karo. Aapko pata hona chahiye ki aap actually kya achieve karna chahte ho.
+B|Step 2 — First offer: Apne target ka approximately 65% first offer ke roop mein rakho. Yeh extreme anchor ka role play karta hai.
+B|Step 3 — Counter-offers: Negotiation aage badhne par counters ko 85% → 95% → 100% tak le jao. Lekin document ke according in concessions ko blindly nahi dena. Inhe calibrated questions aur "No" ke baad use karna hai.
+B|Step 4 — Final number: Final offer mein round number ke bajay specific number use karo. Example: $7,893. Iske saath ek non-monetary item bhi offer karo. Isse signal mil sakta hai ki: "Main apni absolute limit par pahunch gaya hoon."
+H1|Part 9 — Finding the Black Swans
+H2|Black Swan kya hai?
+P|Black Swan ek aisi hidden ya unexpected information hai jo negotiation ka poora direction badal sakti hai. Simple words mein: Aisi important information jiske baare mein aapko pehle pata hi nahi tha.
+P|Voss negotiation mein kam se kam 3 Black Swans discover karne ki koshish karte hain.
+H2|3 Types of Leverage
+B|Positive Leverage: Aapke paas koi aisi cheez hai jo saamne wala chahta hai aur aap usse de sakte ho. Woh cheez aapki bargaining power ban sakti hai.
+B|Negative Leverage: Aisa potential loss jo saamne wala avoid karna chahta hai. Document examples deta hai: money, reputation, time. Agar saamne wala in cheezon ko lose nahi karna chahta, toh yeh negotiation mein important leverage ban sakta hai.
+B|Normative Leverage: Normative leverage mein aap saamne wale ke apne values, principles aur norms ko use karte ho. Matlab agar unke apne principles aapki position ko support karte hain, toh unhi principles ke through conversation ko frame kiya ja sakta hai.
+H2|Black Swans kaise Discover Karein?
+P|Black Swans usually directly nahi milte. Aapko carefully observe aur question karna padta hai. Document suggest karta hai:
+B|Face-to-face meetings: Possible ho toh face-to-face meeting karo.
+B|Unguarded moments: Meeting ke pehle, baad, khane ke waqt jaise moments par dhyan do. In moments mein log kabhi-kabhi zyada naturally baat karte hain.
+B|Calibrated questions: "What" aur "How" questions se hidden constraints ke baare mein information lene ki koshish karo.
+B|Labels aur Mislabels: Labels aur intentionally incorrect labels ke through saamne wale ko correction dene ke liye encourage kiya ja sakta hai. Is tarah hidden constraints ya important information saamne aa sakti hai.
+H1|Putting It Together — 1-Page Negotiation Sheet
+P|Chris Voss suggest karte hain ki negotiation table par jaane se pehle apni strategy ko ek page par condense karna useful hai.
+B|Goal: Apna best-case scenario, worst-case scenario define karo. Lekin apne aap ko sirf best-case number tak limit mat karo. Agar negotiation se better outcome mil sakta hai, toh uske liye open raho.
+B|Summary: Negotiation tak situation kaise pahunchi, uske important facts ko 2–3 sentences mein likho. Summary aisi honi chahiye ki saamne wala sun kar bole: "That's right." Yaani summary mein unki reality accurately reflect honi chahiye.
+B|Accusation Audit: Socho: "Saamne wala mere khilaaf kya-kya keh sakta hai?" Har possible accusation ke liye 3–5 labels pehle se prepare karo. Jaise: "It seems like…", "It sounds like…", "It looks like…" Isse negotiation ke waqt aap mentally prepared rahoge.
+B|Calibrated Questions: Pehle se 3–5 calibrated questions prepare karo. In questions ka purpose ho sakta hai: value badhana, problem samajhna, deal-breaker ko address karna, saamne wale ko solution explain karne dena. Questions ko saamne wale ke point of view se design karo.
+B|Non-Cash Items: Un cheezon ki list banao jo aap saamne wale se le sakte ho ya saamne wale ko de sakte ho. Yaani negotiation ko sirf cash/price tak limited mat rakho. Non-cash items bhi valuable ho sakte hain.
+H1|Book ke Other Details
+P|Uploaded document ke according, book mein decision-making processes ka background aur negotiation approach ki history bhi cover ki gayi hai.
+B|Ismein different real-life situations ke case studies bhi hain, jinmein: bank robbery, prison siege, hostage situations, business negotiations, salary negotiations jaise examples shamil hain.
+H1|Quick Reference — Important Terms
+B|Hypothesize, Don't Assume: Pehle se kuch assume mat karo. Different possibilities rakho aur unhe test karo.
+B|Active Listening: Apna jawab sochne ke bajay saamne wale ki baat properly suno.
+B|Mirroring: Saamne wale ke last 3 ya 1–3 important words repeat karo.
+B|Tactical Empathy: Saamne wale ki feelings aur point of view samjho, bina zaroori taur par agree kiye.
+B|Labeling: Saamne wale ki hidden feeling ko naam do.
+B|Accusation Audit: Apne khilaaf possible negative accusations ko pehle hi acknowledge karo.
+B|No: "No" ko sirf rejection mat samjho. Yeh safety aur control ka feeling de sakta hai.
+B|That's Right: Yeh tab aata hai jab saamne wale ko feel ho ki aapne uski situation genuinely samajh li hai.
+B|Calibrated Questions: "What" aur "How" wale questions jo saamne wale ko solution ke baare mein sochne par majboor karte hain.
+B|Extreme Anchor: Strong starting number jo negotiation ki expectations ko influence kare.
+B|Black Swan: Hidden information jo negotiation ka poora result badal sakti hai.
+B|Positive Leverage: Aapke paas woh cheez hai jo saamne wala chahta hai.
+B|Negative Leverage: Saamne wala kisi loss se bachna chahta hai.
+B|Normative Leverage: Saamne wale ke apne values aur principles ko use karna.
+B|Ackerman Plan: 65% → 85% → 95% → 100% ka structured bargaining process.
+B|Rule of Three: Agreement ko teen different ways mein verify karna.
+B|No Deal is Better Than a Bad Deal: Sirf deal close karne ke liye bad deal accept nahi karni chahiye.

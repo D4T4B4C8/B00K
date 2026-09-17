@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 3.4rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 20</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</span>
+          <span class="headline-main">Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</span>
+        </div>
+        <p class="subhead">Reading notes on Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</p>
+        <div class="meta-row">
+          <span>12 min read</span><span class="meta-dot">•</span><span>By Kim Scott</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<p class="drop-cap">Yeh book Kim Scott ne likhi hai. Iska main focus yeh hai ki ek accha boss kaise bana jaye jo apni insaniyat khoye bina behtar results de sake.</p>
+<p>Book ke hisaab se boss ka kaam sab kuch khud karna nahi hota. Uska kaam ek aisi team banana aur guide karna hai jo achhe results la sake. Boss ki 3 main responsibilities hain: Guidance, yani feedback dena aur lena; Team-building, yani sahi logon ko sahi role mein rakhna aur motivate karna; aur Results, yani team ko effectively manage karna. In sab ki success is baat par depend karti hai ki boss ka apne direct reports ke saath relationship kaisa hai.</p>
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>1. A New Management Philosophy</h2></div>
+<p>Radical Candor ka main concept do dimensions par based hai.</p>
+<p><strong>Care Personally:</strong> Iska matlab hai team members ko sirf employees ki tarah na dekhna, balki unhe poore insaan ki tarah dekhna. Unki work life ke bahar bhi life aur dreams hote hain. Iske liye do common myths ko samajhna zaroori hai.</p>
+<p><strong>Myth #1:</strong> Professionalism ka matlab feelings chhupana hai. Asal mein Radical Candor mein aapko apne direct reports ke saamne ek insaan ki tarah rehna chahiye, apni hopes aur vulnerabilities ke saath, taaki woh bhi naturally aisa kar saken.</p>
+<p><strong>Myth #2:</strong> Boss superior hote hain. Boss hona sirf ek role hai. Isse kisi insaan ki human value ya intelligence decide nahi hoti.</p>
+<p><strong>Challenge Directly:</strong> Iska matlab hai seedha feedback dena aur lena, mushkil decisions lena aur high standards maintain karna. Agar aapse team ka koi member kabhi gussa nahi hota, toh ho sakta hai aap unhe enough challenge nahi kar rahe hain.</p>
+<h3 class="sub-heading">Guidance aur Feedback ke 4 Quadrants</h3>
+<p>Yeh 4 quadrants kisi insaan ki permanent personality ko describe nahi karte. Yeh uske particular time ke behavior ko describe karte hain.</p>
+<p><strong>Radical Candor:</strong> Jab aap kisi ke fayde aur growth ke liye use clear aur honest feedback dete hain, chahe woh praise ho ya criticism.</p>
+<p><strong>Obnoxious Aggression:</strong> Jab aap kisi ko bina care dikhaye criticize karte hain. Isse feedback arrogant lagta hai aur log defensive ho jaate hain. Sabse kharab situation tab hoti hai jab aap jaan-boojhkar kisi ki weakness ya vulnerability ko target karte hain.</p>
+<p><strong>Ruinous Empathy:</strong> Jab aap conflict se bachne ya saamne wale ko bura feel hone se bachane ke liye zaroori feedback nahi dete. Isse log seekh nahi paate, unka career ruk sakta hai aur aakhir mein unhe fire bhi kiya ja sakta hai. Low-quality work accept karne se baaki team par extra burden padta hai aur standards low ho jaate hain.</p>
+<p><strong>Manipulative Insincerity:</strong> Jab aap directly challenge nahi karte aur feedback sirf apne fayde ke liye dete hain. Jaise kisi employee ko achha bolna taaki woh job na chhode, jabki aap secretly uski jagah kisi aur ko laane ki planning kar rahe hon. Isse team mein trust khatam hota hai.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>2. Team: Understand People to Motivate Them</h2></div>
+<p>Ambition aur potential ko sirf hierarchy mein upar jaane ke roop mein nahi dekhna chahiye. Growth ke point of view se dekhna zyada useful hai. Har organization mein do tarah ke log ho sakte hain.</p>
+<p><strong>Superstars:</strong> Inhe fast aur steep growth chahiye hoti hai. Yeh jaldi seekhna aur naye challenges lena chahte hain. Iska matlab zaroori nahi ki unhe hamesha promotion hi chahiye.</p>
+<p><strong>Rock Stars:</strong> Yeh strong aur stable performers hote hain jo gradual growth chahte hain. Yeh apne craft ke master hote hain aur apne kaam se pyaar karte hain. Agar unhe promotion dekar kisi doosre role mein daal diya jaye, toh zaroori nahi ki woh khush hon.</p>
+<p>Ek strong team ke liye Superstars aur Rock Stars dono ka balance zaroori hai. Log time ke saath steep aur gradual growth ke beech move kar sakte hain, isliye kisi ko permanent label nahi dena chahiye.</p>
+<h3 class="sub-heading">Top Performers ko Manage Kaise Karein</h3>
+<p>Top performers ko apna partner samjhein aur unke raaste mein aane wali problems ko door karein.</p>
+<p><strong>Rock Stars ko Manage Karna:</strong> Unki gradual growth aur stability ka respect karein. Unki rating unke actual contributions aur expertise ke basis par fair tareeke se karein, sirf leadership potential ke basis par nahi. Promotion ke alawa unhe pay raise, bonuses, go-to expert banana, ya mentor aur trainer banana jaise rewards diye ja sakte hain.</p>
+<p><strong>Superstars ko Manage Karna:</strong> Unhe seekhne aur grow karne ke naye opportunities dein. Sirf isliye unhe current role mein mat rokein ki aapka kaam easy rahe ya woh aapse aage na nikal jaayen. Unka replacement dhoondhein aur unhe doosron ko sikhane ke liye encourage karein, taaki woh bina rukawat grow kar saken.</p>
+<h3 class="sub-heading">Middle aur Poor Performers ko Manage Kaise Karein</h3>
+<p>Underperformance ke 5 common reasons ho sakte hain.</p>
+<p><strong>Galat Role:</strong> Ho sakta hai employee apni strengths ke hisaab se galat role mein ho.</p>
+<p><strong>Naya Employee:</strong> Ho sakta hai woh kaam mein naya ho aur use proper training ya clear expectations na mili hon.</p>
+<p><strong>Personal Problem:</strong> Ho sakta hai uski personal life mein koi problem chal rahi ho.</p>
+<p><strong>Culture Fit:</strong> Ho sakta hai uske paas required skills hon, lekin woh company culture ke saath fit na hota ho.</p>
+<p><strong>Role Suit Na Karna:</strong> Ho sakta hai employee ya uski situation badal gayi ho aur ab current role uske liye suitable na ho.</p>
+<p>Agar koi insaan sach mein us kaam ke liye suitable nahi hai, toh use jaane dena, yani firing, sahi decision ho sakta hai. Fire karne se pehle teen sawal poochne chahiye.</p>
+<p><strong>Pehla Sawal:</strong> Kya aapne use Radically Candid guidance di thi?</p>
+<p><strong>Doosra Sawal:</strong> Uska poor performance baaki team ko kaise affect kar raha hai?</p>
+<p><strong>Teesra Sawal:</strong> Kya aapne kisi objective person se us situation par opinion liya?</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>3. Driving Results Collaboratively: The Get Stuff Done, GSD, Wheel</h2></div>
+<p>Long-term results ke liye decisions mein team ko involve karna zaroori hai. GSD Wheel ke 7 steps hain.</p>
+<p><strong>Listen:</strong> Listening culture banayein. Aisa system rakhein jahan staff apne ideas aur complaints share kar sake. Iske liye budget bhi ho aur logon ko bataya jaye ki kuch issues par action kyun nahi liya gaya. Meetings mein sabko bolne aur doosron ko sunne ka proper chance dein.</p>
+<p><strong>Clarify:</strong> Jab tak problem clear nahi hogi, use solve karna mushkil hoga. Naye ideas discuss karne ke liye 1:1 meetings ya time off dein. Team ko apne thoughts clearly express karne ke liye encourage karein.</p>
+<p><strong>Debate:</strong> Ideas ko test aur improve karein. Focus ego par nahi, facts par hona chahiye. Agar sab log agree kar rahe hain, toh dissent, yani alag opinion, ko deliberately include karein taaki ideas par achhi debate ho.</p>
+<p><strong>Decide:</strong> Boss ko har decision khud nahi lena chahiye. Team ko facts ke basis par decisions lene dein. Kabhi-kabhi boss ko details mein khud involve bhi hona chahiye, taaki team ko lage ki unke liye koi kaam chhota nahi hai.</p>
+<p><strong>Persuade:</strong> Jo log beginning se involved nahi the, unhe decision ka reason samjhayen aur convince karein. Iske liye humble tareeke se apni credibility dikhayein, listeners ke emotional reactions jaise fatigue ya worry ko address karein aur apna kaam dikha kar, yani show work karke, logic samjhayein.</p>
+<p><strong>Execute:</strong> Leading aur actual execution ke beech balance rakhein. Calendar mein execution ke liye meeting-free time block karein aur kabhi-kabhi khud bhi kaam karke details ko samjhein.</p>
+<p><strong>Learn:</strong> Apni mistakes se seekhein aur naye facts milne par apni thinking change karne se na darein.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>4. Tools aur Techniques</h2></div>
+<h3 class="sub-heading">A. Trusting Relationships aur Emotions Build Karna</h3>
+<p><strong>Center Yourself:</strong> Agar aap khud stress mein hain, toh achhe se lead nahi kar sakte. Work-life integration dhoondhein aur sleep, exercise ya family time ko calendar mein important meeting ki tarah block karein.</p>
+<p><strong>Environment:</strong> Team ko aisa environment dein jahan woh apna best self dikha sakein, lekin un par apni personal values force na karein. Daily interactions ke through relationship banayein, taaki office ke baad unnecessary social events ki zaroorat na pade.</p>
+<p><strong>Emotions Master Karna:</strong> Work par emotions ko hide karne ke bajay unhe sahi tareeke se handle karein. Agar koi team member emotional ho, toh uski feelings acknowledge karein.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> "I can see that you're upset" kehkar uski baat dhyan se sunein.</p>
+<p>Agar aap khud emotionally affected ho rahe hain, toh thoda break lein aur baad mein conversation par wapas aane ka promise karein.</p>
+</div>
+<h3 class="sub-heading">B. Feedback Solicit Kaise Karein</h3>
+<p>Boss ke liye feedback lena mushkil ho sakta hai. Isliye public criticism ko accept karein, taaki team ko safe feel ho.</p>
+<p><strong>Opening Question:</strong> "Is there anything I could do or stop doing to make it easier to work with me?"</p>
+<p>Agar log kahen ki sab theek hai, toh 6 seconds tak silence rakhein aur kahen, "surely kuch toh hoga jo main behtar kar sakta hoon."</p>
+<p><strong>Feedback Receive Karna:</strong> Feedback milne par hamesha thank you bolein. Turant defend na karein. Feedback mein jo baatein aap agree karte hain unhe identify karein aur un par follow-up discussion karein.</p>
+<p><strong>Feedback Systems:</strong> Anonymous drop box aur management fix-it weeks jaise systems banayein, jaise Google mein use kiye jaate hain.</p>
+<h3 class="sub-heading">C. Impromptu Guidance Kaise Dein</h3>
+<p><strong>Humble Rehna:</strong> Humble rahen aur Situation-Behavior-Impact, SBI, technique ka use karein, taaki feedback arrogant na lage.</p>
+<p><strong>Left-Hand Column Technique:</strong> Ek paper ke right side par jo aapne actually kaha woh likhein aur left side par jo aap soch rahe the woh likhein. Isse hidden assumptions ko identify karne mein help milti hai.</p>
+<p><strong>Specific Feedback:</strong> Apna help karne ka intention clear rakhein aur specific feedback dein. Sirf "she is brilliant" kehne ke bajay exact behavior batayein.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> "She explained the problem in 5 minutes" kehna zyada specific hai.</p>
+<p>Aapko har cheez khud fix karne ki zaroorat nahi hai.</p>
+</div>
+<p><strong>Immediately Feedback:</strong> Feedback jaldi dein aur face-to-face, ya video ya phone call par dein. Email ya text se misunderstanding ho sakti hai.</p>
+<p><strong>Praise in Public, Criticize in Private:</strong> Tareef sabke saamne karein aur criticism private mein karein.</p>
+<p><strong>Feedback ko Personalize Na Karein:</strong> Kisi person ko "lazy" ya "greedy" kehne ke bajay uske specific behavior par baat karein, jaise "that's wrong".</p>
+<h3 class="sub-heading">D. Formal Performance Reviews</h3>
+<p><strong>Feedback Pehle Lein:</strong> Performance review se pehle khud feedback solicit karein aur 360-degree feedback ka use karein.</p>
+<p><strong>Review ki Preparation:</strong> Review se pehle apne important points likh lein.</p>
+<p><strong>Past aur Future:</strong> Review ka 50% focus past performance aur 50% future development plans par hona chahiye.</p>
+<p><strong>Time:</strong> Har review ke liye kam se kam 50 minutes dein aur sessions ke beech recovery ke liye 10 minutes ka gap rakhein.</p>
+<p><strong>Rating aur Compensation:</strong> Rating ya compensation ki discussion ko performance review session se bilkul alag rakhein.</p>
+<h3 class="sub-heading">E. Peer aur Boss ke Sath Guidance</h3>
+<p><strong>Peer Guidance:</strong> Peer feedback ke liye stories aur voting ka use karein. Kisi member ko doosre member ki peeth peeche burai karne na dein. Zaroorat ho toh 3-way conversation karein.</p>
+<p><strong>Boss ke Sath Guidance:</strong> Apne boss par directly Radical Candor try na karein. Pehle unse permission lein aur unki guidance maang kar feedback share karein.</p>
+<h3 class="sub-heading">F. Skip-Level, Career aur Growth Plans</h3>
+<p><strong>Skip-Level Meetings:</strong> Saal mein ek baar apne direct reports ke bina unke staff ke saath meeting karein. Consent lekar sabhi reports ke saath aisa karein aur notes lein. Notes ko anonymize, yani identity hata kar, direct reports ke saath share karein aur unhe 1-2 cheezein immediately change karne ke liye kahein.</p>
+<p><strong>Career Conversations:</strong> Direct reports ke dreams aur ambitions samajhne ke liye 3 steps follow karein.</p>
+<div class="sub-points">
+<p><strong>Life Story:</strong> Bachpan se ab tak unki life mein kya changes aaye aur kyun aaye, yeh samjhein. Isse unki values samajhne mein help milti hai.</p>
+<p><strong>Dreams:</strong> Unke dreams aur un dreams ke liye zaroori skills ki list banayein.</p>
+<p><strong>18-Month Plan:</strong> Unke skill gaps ko fill karne ke liye milkar ek joint plan banayein.</p>
+</div>
+<p><strong>Growth Management Plan:</strong> Saal mein ek baar team ko temporarily Top, Good aur Underperformer groups mein divide karein. Peer calibration ka use karke rating bias ko kam karein.</p>
+<h3 class="sub-heading">G. Hiring, Firing, Promotions aur Rewards</h3>
+<p><strong>Hiring:</strong> Pre-screening ke liye projects aur real problems ka use karein. Sirf degree par depend na karein. Bias kam karne ke liye 4-person diverse interview committee banayein. Casual interactions jaise lunch aur receptionist ke feedback se bhi insights lein. Iske baad debrief meeting karein.</p>
+<p><strong>Firing:</strong> Underperformance ko jaldi accept karein aur action lein, taaki baaki team aur us employee dono ko unnecessary nuksaan na ho. Saath hi insaaniyat aur staff ki needs ka khayal rakhein.</p>
+<p><strong>Promotions aur Rewards:</strong> Promotions ko fair rakhne ke liye calibration meetings ka use karein. Rock Stars aur Superstars dono ko public praise, bonuses aur unke expertise areas mein teaching ya sharing opportunities ke through reward karein.</p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>5. Better Communication se Results Sudharna</h2></div>
+<p>Better results ke liye communication ko properly organize karna zaroori hai.</p>
+<p><strong>1:</strong> 1 Conversations: Yeh informal sessions hote hain jahan direct reports apna agenda set karte hain. Har direct report ke liye weekly 50 minutes ka time nikalna chahiye, jab tak direct reports ki sankhya 10 tak ho.</p>
+<p><strong>Staff Meetings:</strong> In meetings ke 3 key goals hain aur total time 65 minutes hai.</p>
+<div class="sub-points">
+<p><strong>Learn, 20 mins:</strong> Key metrics aur important updates discuss karein.</p>
+<p><strong>Share, 15 mins:</strong> Sabhi log 5-7 minutes mein apne updates likhein aur bina debate kiye doosre logon ke updates padhein.</p>
+<p><strong>Clarify, 30 mins:</strong> Aane wale week ke 1-2 sabse bade decisions aur ek debate identify karein jise Big Debate ya Decision meetings mein bheja ja sake.</p>
+</div>
+<p><strong>Big Debate Meetings:</strong> Yahan ego ko side mein rakhkar facts ke basis par decisions par deep debate ki jaati hai.</p>
+<p><strong>Big Decision Meetings:</strong> Yahan debate rok di jaati hai aur "decider" available facts ke basis par final decision leta hai. Iske notes share kiye jaate hain.</p>
+<p><strong>All-Hands Meetings:</strong> Presentation aur Q&amp;A ke through poori company tak information pahunchayi jaati hai. In meetings mein dissent aur questions allowed hone chahiye.</p>
+<p><strong>Thinking aur Execution Time:</strong> Calendar mein daily 1-2 ghante thinking ke liye block karein aur execution ke liye meeting-free slots rakhein.</p>
+<p><strong>Kanban Boards aur Walking Around:</strong> Kanban board mein To Do, In Progress aur Done jaise stages se workflow transparent hota hai. Team ke logon ke paas jaakar baat karne se unke challenges aur actual work ka pata chalta hai.</p>
+<p><strong>Culture-Consciousness:</strong> Har chhota decision company culture ko shape karta hai. Jaise annual party ka naam kya rakha jaye ya mistakes par kaise react kiya jaye.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>6. Conclusion aur Shuruat Kaise Karein</h2></div>
+<p>Radical Candor ko implement karne mein time aur energy lagti hai, lekin iska impact bahut bada ho sakta hai. Shuruat karne ke liye kuch steps follow karein.</p>
+<p><strong>Stories aur Feedback:</strong> Apni stories share karein, feedback invite karein aur logon ke saath career aur 1:1 conversations shuru karein.</p>
+<p><strong>1:</strong> 1 aur Guidance ke Baad: Jab 1:1 meetings aur guidance achhe se chalne lage, tab staff meetings, debates aur decision meetings par focus karein.</p>
+<p><strong>Growth aur Processes:</strong> Uske baad growth plans, rewards aur company processes jaise hiring, firing, promotions aur reviews par kaam karein.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

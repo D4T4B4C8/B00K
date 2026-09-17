@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grit — Comprehensive Breakdown — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 4.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 17</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">Grit — Comprehensive Breakdown</span>
+          <span class="headline-main">Grit — Comprehensive Breakdown</span>
+        </div>
+        <p class="subhead">Reading notes on Grit — Comprehensive Breakdown</p>
+        <div class="meta-row">
+          <span>11 min read</span><span class="meta-dot">•</span><span>By Angela Duckworth</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Introduction aur Grit ki Importance</h2></div>
+<p class="drop-cap"><strong>Grit ki Definition:</strong> Grit do cheezon ka combination hai.</p>
+<div class="sub-points">
+<p><strong>Passion:</strong> Ek gehri aur lambe samay tak tikne wali samajh ki aapko zindagi mein kya chahiye.</p>
+<p><strong>Perseverance:</strong> Kathin mehnat karna aur kisi bhi setback ya mushkil se darr kar bhaag na jana. Ismein resilience, yani mushkil ke baad dobara khade hone ki ability, bhi shamil hai.</p>
+</div>
+<p><strong>Intelligence aur Talent se Bada Predictor:</strong> Duckworth ki research se pata chala hai ki high achievement ko predict karne mein grit talent ya IQ se zyada asardaar ho sakti hai.</p>
+<p><strong>Grit se yeh predict kiya ja sakta hai ki:</strong> </p>
+<div class="sub-points">
+<p>Kya elite military recruits apne bahut mushkil training programs ko complete karke graduate kar payenge.</p>
+<p>Kya salespeople apni jobs mein tike rahenge.</p>
+<p>Kya high-school ke students time par graduate honge.</p>
+<p>Kya adults apni postgraduate degrees poori kar payenge.</p>
+</div>
+<p><strong>Aptitude Tests aur Talent ki Seemayein:</strong> West Point Academy ka "Whole Candidate Score" cadets ke potential ko shortlist karne ke liye banaya gaya tha. Lekin iske bawajood sirf 20% recruits hi graduate ho paate the.</p>
+<div class="sub-points">
+<p>Wahan graduate hone ka sabse bada predictor aptitude score nahi, balki unka Grit score tha.</p>
+<p>Author ke ek student ke aptitude test ko dekhkar use advanced math ke liye unsuitable maana gaya tha. Lekin usne mehnat ki, achha perform kiya aur aage chal kar rocket scientist bana.</p>
+<p>Isse yeh baat saamne aati hai ki aptitude tests hamesha kisi insaan ka asli potential nahi bata paate.</p>
+</div>
+<p><strong>Talent ka Nuksan:</strong> Jab logon ko lagta hai ki woh naturally talented hain, toh woh aksar kam mehnat karte hain ya apni weaknesses ko theek karne ke bajaye unhe chhupane ki koshish karte hain.</p>
+<div class="sub-points">
+<p>Jo log sochte hain ki unmein talent nahi hai, woh aksar bina koshish kiye hi haar maan lete hain.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Effort ka Doubly Important Hona</h2></div>
+<p><strong>Talent aur Effort:</strong> Duckworth kehti hain ki talent tabhi useful banta hai jab usmein effort, yani mehnat, lagayi jaye.</p>
+<p><strong>Talent x Effort = Skill:</strong> Natural talent ko practice ke through ek real aur useful skill mein badalna padta hai.</p>
+<p><strong>Skill x Effort = Achievement:</strong> Skill ko lagatar real-world problems solve karne aur bade goals paane ke liye use karna padta hai.</p>
+<p><strong>Grit ka Role:</strong> Is poore process mein grit effort ko lambe samay tak banaye rakhne mein madad karti hai.</p>
+<p><strong>Warren MacKenzie ka Example:</strong> Warren MacKenzie, jo ek famous potter the, unhone pottery par focus karne se pehle painting aur textile design jaise kai artistic interests try kiye.</p>
+<div class="sub-points">
+<p>Unke pehle 10,000 pots banana sabse mushkil kaam tha.</p>
+<p>Lekin jab unki skill develop ho gayi, toh unke liye masterpieces banana aasan ho gaya.</p>
+</div>
+<p><strong>Dan Chambliss ka Competitive Swimmers Study:</strong> Sociologist Dan Chambliss ne dekha ki swimming excellence mein genes ka role bahut chhota hota hai.</p>
+<div class="sub-points">
+<p>Asli results roz ki aam activities, jaise daily training aur conditioning, se aate hain.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Talent-Bias aur Naturals vs. Strivers</h2></div>
+<p><strong>Talent-Bias:</strong> Hum sab kehte hain ki hum hard work ki respect karte hain, lekin hamare andar ek talent-bias hota hai.</p>
+<div class="sub-points">
+<p>Hum un logon ki taraf zyada attract hote hain jinmein natural talent dikhta hai.</p>
+</div>
+<p><strong>Naturals vs. Strivers:</strong> Investors aur aam log aksar hardworking "striver" ke bajaye "natural", yani naturally talented insaan, par paisa aur bharosa lagana zyada pasand karte hain.</p>
+<p><strong>Talent ko Devta Kyun Banate Hain?:</strong> Natural-born talent ka magic dekhna hume daily mehnat ki boring routine dekhne se zyada exciting lagta hai.</p>
+<p><strong>Sabse Bada Karan:</strong> Jab hum dusron ki success ko sirf "magical talent" ka result maan lete hain, toh hum khud ko aaram se status quo mein rehne dete hain.</p>
+<div class="sub-points">
+<p>Hum sochne lagte hain ki hamare paas woh talent hai hi nahi, isliye hume mehnat karne ki zaroorat bhi nahi hai.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Grit ko Samajhna aur Goal Hierarchy</h2></div>
+<p><strong>Consistency aur Endurance:</strong> Grit ka matlab sirf ek din ki intensity ya temporary junoon nahi hai.</p>
+<div class="sub-points">
+<p>Iska matlab hai ek hi direction mein lagatar aur mushkilon ko jhelte hue aage badhte rehna.</p>
+<p>Yeh ek clear inner compass ki tarah hai jo aapke actions ko guide karta hai.</p>
+</div>
+<p><strong>Grit Scale:</strong> Duckworth ne 10 self-assessment questions ka ek scale diya hai.</p>
+<div class="sub-points">
+<p>Yeh measure karta hai ki aap naye projects se kitni jaldi distract hote hain.</p>
+<p>Yeh dekhta hai ki kya aap shuru kiya hua kaam poora karte hain.</p>
+<p>Yeh bhi dekhta hai ki aap setbacks ka saamna kaise karte hain.</p>
+<p>Yeh score samay ke saath badal bhi sakta hai.</p>
+</div>
+<p><strong>Goal Hierarchy:</strong> Hamare goals ek hierarchy, yani alag levels ki shreni, mein hote hain.</p>
+<div class="sub-points">
+<p><strong>Low-level goals:</strong> Yeh bahut concrete aur specific goals hote hain, jaise to-do list ke tasks. Yeh bade goals tak pahunchne ka zariya hote hain.</p>
+<p><strong>Mid-level goals:</strong> Yeh beech ke level ke goals hote hain.</p>
+<p><strong>High-level goal:</strong> Yeh aapka ultimate end-goal ya life-purpose hota hai.</p>
+<p><strong>Example:</strong> Pitcher Tom Seaver ka goal tha "to be the best I possibly can day after day, year after year."</p>
+<p><strong>Example:</strong> Duckworth ka goal hai "use psychological science to help kids thrive."</p>
+</div>
+<p><strong>Goals ko Align Karna:</strong> Gritty log apne lower-level goals ko apne top-level goal ke saath align karte hain.</p>
+<div class="sub-points">
+<p>Grit ka matlab har chhote goal ko pakad kar baithe rehna nahi hai.</p>
+<p>Iska matlab apne high-level goal ke prati loyal rehna hai.</p>
+<p>Agar koi low-level goal kaam nahi kar raha, toh use badal dena chahiye.</p>
+</div>
+<p><strong>Prioritization ke 4 Steps:</strong> </p>
+<div class="sub-points">
+<p>Apne 25 goals ki ek list banayein.</p>
+<p>Unpar sochiye aur unmein se sirf 5 top-priority goals chuniye. Means-goals aur end-goals ke beech ka farq samajhiye.</p>
+<p>Baaki 20 goals ko poori tarah avoid kijiye, kyunki woh aapke sabse bade distractions hain.</p>
+<p>Apna ek single top-level goal, yani compass, taiyar kijiye aur baaki goals ko uske saath align kijiye.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Nature vs. Nurture aur Age ka Badlaav</h2></div>
+<p><strong>Genes aur Environment:</strong> Hamare human traits, jaise height, personality aur grit, genes aur environment dono ka result hote hain.</p>
+<p><strong>Grit Polygenic Hai:</strong> Grit ke liye koi ek single "grit gene" nahi hota. Yeh kai genes par depend karti hai.</p>
+<p><strong>Age aur Grit:</strong> Dekha gaya hai ki sabse zyada gritty adults aam taur par 70 ya usse zyada age ke hote hain, jabki 20s ke log sabse kam gritty hote hain.</p>
+<p><strong>Iske Do Possible Reasons:</strong> </p>
+<div class="sub-points">
+<p>Ho sakta hai older generation alag cultural values ke saath badi hui ho.</p>
+<p>Ya phir log jaise-jaise mature hote hain, unmein grit badhti jaati ho.</p>
+</div>
+<p><strong>Life Experiences ka Role:</strong> Duckworth ke anusar life experiences hume situations se seekhna aur setbacks ke baad dobara uthna sikhate hain.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Inside-Out se Grit Develop Karna</h2></div>
+<p>Grit ko andar se develop karne ke liye chaar psychological assets hote hain. Inhe hum khud ya external help ke saath seekh sakte hain.</p>
+<h3 class="sub-heading">Interest</h3>
+<p><strong>Passion ko Dhoondhna aur Develop Karna:</strong> Passion pehle se dimaag mein ready nahi hota. Use dhoondhna aur dheere-dheere develop karna padta hai.</p>
+<div class="sub-points">
+<p>Grit paragons ko pehli baar mein hi perfect career nahi mila. Unhone saalon tak alag cheezein explore ki.</p>
+</div>
+<p><strong>Interest ke 4 Core Ingredients:</strong> </p>
+<div class="sub-points">
+<p><strong>Age:</strong> Vocational interests aam taur par middle school ke aas-paas shuru hote hain.</p>
+<p><strong>Real-life triggers:</strong> Koi bhi random event kisi interest ko shuru kar sakta hai.</p>
+<p><strong>Period of interest development:</strong> Kisi interest ko majboot hone ke liye baar-baar us par attention dena zaroori hota hai.</p>
+<p><strong>Supportive people:</strong> Parents aur coaches ka positive feedback us interest ko banaye rakhne mein madad karta hai.</p>
+</div>
+<p><strong>Shuruat Fun se Hoti Hai:</strong> Shuru mein beginner par zyada pressure nahi dalna chahiye. Use fun aur autonomy ke saath explore karne dena chahiye.</p>
+<p><strong>Will Shortz ka Example:</strong> NYT Puzzle Editor Will Shortz ko bachpan mein unki maa ne puzzles se introduce karwaya.</p>
+<div class="sub-points">
+<p>Unhone 14 saal ki age mein apna pehla puzzle becha.</p>
+</div>
+<p><strong>Jeff Bezos ka Example:</strong> Jeff Bezos ko bachpan mein kai cheezein assemble karna pasand tha.</p>
+<div class="sub-points">
+<p>Unki maa unke ideas sunti thi aur parts khareedne mein bhi unki madad karti thi.</p>
+</div>
+<p><strong>Novelty in Nuance:</strong> Experts aur novices mein ek farq yeh hota hai ki novices jaldi bore ho jaate hain.</p>
+<div class="sub-points">
+<p>Experts ek hi cheez ke andar bahut chhoti nuances aur details dhoondhkar naya-pan dhoondh lete hain.</p>
+</div>
+<p><strong>Passion Kaise Dhoondhein?:</strong> Apne aap se kuch sawal poochiye.</p>
+<div class="sub-points">
+<p>Main kis cheez ke baare mein sabse zyada sochta hoon?</p>
+<p>Mujhe kis cheez se zinda aur energetic mehsoos hota hai?</p>
+<p>Phir us direction mein trial aur error shuru kijiye.</p>
+</div>
+<h3 class="sub-heading">Practice</h3>
+<p><strong>Deliberate Practice:</strong> Cognitive psychologist Anders Ericsson ne "Deliberate Practice" ka concept diya.</p>
+<p><strong>Experts ki Practice:</strong> Experts sirf bahut ghante practice nahi karte. Woh sahi tareeke se practice karte hain.</p>
+<div class="sub-points">
+<p>Woh ek stretch goal set karte hain jo unki kisi specific weakness ko theek kare.</p>
+<p>Woh 100% focus ke saath aur akele practice karte hain.</p>
+<p>Woh immediate feedback dhoondhte hain taaki unhe apni galtiyon ka turant pata chale.</p>
+<p>Woh practice ko baar-baar repeat karte hain jab tak struggle khatam na ho jaye aur "unconscious competence" na aa jaye.</p>
+<p><strong>Unconscious competence:</strong> Jab kaam bina zyada soche naturally hone lage.</p>
+</div>
+<p><strong>Deliberate Practice vs. Flow:</strong> </p>
+<div class="sub-points">
+<p>Deliberate Practice ek behavior hai jo mushkil, challenging aur aksar unpleasant hota hai, kyunki ismein aap apni limits ko push karte hain.</p>
+<p>Flow, jiska concept Mihaly Csikszentmihalyi ne diya, ek enjoyable aur effortless experience hai jahan aap apne current skill level par perform karte hain.</p>
+<p>Deliberate practice hamari skills ko improve karti hai taaki hum flow state ke dauran flawless performance de saken.</p>
+</div>
+<p><strong>Practice Routine:</strong> Deliberate practice ko develop karne ke liye roz ek hi time aur ek hi place par practice karne ki aadat banayein.</p>
+<div class="sub-points">
+<p>Khud ko judge karne ke bajaye challenge ko enjoy karne ki koshish karein.</p>
+</div>
+<h3 class="sub-heading">Purpose</h3>
+<p><strong>Purpose:</strong> Purpose ka matlab yeh ichha hona hai ki aapka kaam dusron ki bhalai ke liye bhi useful ho.</p>
+<p><strong>Gritty Log aur Calling:</strong> Gritty log aksar apne kaam ko ek "calling" ki tarah dekhte hain.</p>
+<p><strong>Amy Wrzesniewski ka Model:</strong> Yale management professor Amy Wrzesniewski ke anusar, kisi bhi kaam ko teen tarikon se dekha ja sakta hai. Yeh aapke job title se zyada aapke mindset par depend karta hai.</p>
+<div class="sub-points">
+<p><strong>Job:</strong> Sirf jeevika chalane ki majboori.</p>
+<p><strong>Career:</strong> Ek job se doosri aur behtar job ki taraf badhne ka rasta.</p>
+<p><strong>Calling:</strong> Zindagi ka ek bahut important hissa jo dusron ke kaam bhi aaye.</p>
+</div>
+<p><strong>Purpose Jagane ke Tareeqe:</strong> </p>
+<div class="sub-points">
+<p>Apne kaam ko ek bade vision ke saath jodiye.</p>
+<p>Apne personal values ko kaam mein reflect karne ke liye usmein thoda badlaav kijiye. Isse job-crafting kaha gaya hai.</p>
+<p>Kisi aise role model ko follow kijiye jo aapko inspire karta ho.</p>
+</div>
+<h3 class="sub-heading">Hope</h3>
+<p><strong>Hope:</strong> Hope ka matlab yeh belief rakhna hai ki hamare apne efforts se hamara future badal sakta hai.</p>
+<p><strong>Optimists vs. Pessimists:</strong> </p>
+<div class="sub-points">
+<p>Optimists apne setbacks ko temporary aur specific maante hain. Example: "Mujhse is baar ek chhoti galti hui, main agli baar sudharunga."</p>
+<p>Isliye woh koshish karte rehte hain.</p>
+<p><strong>Pessimists setbacks ko permanent aur pervasive maante hain. Example:</strong> "Main toh loser hoon, main kabhi nahi jeetunga."</p>
+<p>Isliye woh jaldi haar maan lete hain.</p>
+</div>
+<p><strong>Growth Mindset:</strong> Carol Dweck ke anusar growth mindset wale log maante hain ki dimaag aur skills ek muscle ki tarah hain jo challenges lene se aur strong hote hain.</p>
+<div class="sub-points">
+<p>Grit aur growth mindset hamesha ek doosre ke saath chalte hain.</p>
+</div>
+<p><strong>Optimism Train Karna:</strong> Hum controllable challenges ka saamna karke prefrontal cortex ko neural levels par train kar sakte hain.</p>
+<div class="sub-points">
+<p><strong>Hum optimistic self-talk kar sakte hain. Example:</strong> "Yeh mushkil hai, par main ise abhi solve nahi kar pa raha hoon. Main koshish jaari rakhta hoon."</p>
+<p>Hum dusron se help bhi maang sakte hain.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>Outside-In se Grit Develop Karna</h2></div>
+<p>Agar hum kisi aur, jaise apne bachche ya students, ke andar grit develop karna chahte hain, toh do main cheezein zaroori hain.</p>
+<h3 class="sub-heading">Wise Parenting</h3>
+<p><strong>Role Model Banna:</strong> Agar hum bachchon ko gritty banana chahte hain, toh hume khud apne goals ke prati passion aur perseverance ka role model banna hoga.</p>
+<p><strong>Wise Parenting Model:</strong> Yeh parenting ek saath supportive aur demanding hoti hai.</p>
+<div class="sub-points">
+<p>Aise parents bachchon ke liye strict rules banate hain, lekin unka purpose bachchon ko control karna nahi hota.</p>
+<p>Yeh rules bachchon ke self-esteem aur bhalai ke liye hote hain.</p>
+<p>Parents bachchon ki privacy aur freedom ki respect karte hain.</p>
+<p>Saath hi woh bachchon ko unke decisions ke liye accountable, yani zimmedar, bhi rakhte hain.</p>
+<p>Bachche bade hokar aksar aise parents ke behavior ko copy karte hain.</p>
+</div>
+<p><strong>Teachers ka Role:</strong> Jo teachers supportive aur demanding dono hote hain, unke students sudhaar ke liye double mehnat karte hain.</p>
+<h3 class="sub-heading">Extra-curricular Activities aur Hard Thing Rule</h3>
+<p><strong>Extra-curricular Activities:</strong> Jo bachche school ke bahar sports, music ya drama jaise activities mein tike rehte hain, unki grades aur self-esteem badhti hai.</p>
+<p><strong>Follow-through:</strong> Kisi activity ke liye commit karna aur saalon tak usmein tike rehna success ka sabse bada predictor hai.</p>
+<p><strong>Hard Thing Rule:</strong> Yeh ghar ka ek rule hai.</p>
+<div class="sub-points">
+<p>Ghar ke har member, parents samet, ko ek hard thing, yani mushkil kaam, chunna hoga jisme deliberate practice ki zaroorat ho.</p>
+<p>Har koi apni pasand ka hard thing khud chun sakta hai.</p>
+<p>Aap tabhi quit kar sakte hain jab koi natural stop point aaye, jaise season ya term ka end.</p>
+<p>Aap apni marzi se beech mein nahi chhod sakte.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>Grit ki Culture ko Build Karna</h2></div>
+<p><strong>Culture aur Identity:</strong> Culture hamari identity ko shape karta hai.</p>
+<p><strong>Grit ko Fast-track Karne ka Tareeqa:</strong> Grit ko jaldi develop karne ka sabse aasan tareeqa ek gritty culture ko join karna hai.</p>
+<p><strong>Social Multiplier Effect:</strong> Jab hum gritty logon ke beech rehte hain, toh conformity ki wajah se hum bhi gritty banne lagte hain.</p>
+<p><strong>Identity ka Role:</strong> Jab grit hamari identity ban jaati hai, jaise "I am a Navy SEAL" ya "I am not a quitter", toh hum sirf logical cost-benefit analysis ki wajah se nahi chalte.</p>
+<div class="sub-points">
+<p>Hum apni self-identity ki wajah se aage badhte rehte hain.</p>
+</div>
+<p><strong>Gritty Culture ka Leadership:</strong> Gritty culture banane ke liye leaders ko har din aur har tareeke se grit ko lagatar communicate aur demonstrate karna padta hai.</p>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>Conclusion: Character is Multi-dimensional</h2></div>
+<p><strong>Grit ki Importance:</strong> Grit success ke liye bahut zaroori hai, lekin grit hi sab kuch nahi hai.</p>
+<p><strong>Character Multi-dimensional Hai:</strong> Character ke kai alag dimensions hote hain.</p>
+<p><strong>Dusri Virtues ka Role:</strong> Grit ke saath social intelligence aur curiosity jaise doosre qualities bhi utne hi important hain.</p>
+<div class="sub-points">
+<p>Yeh qualities hume seekhne aur logon ke saath healthy tareeke se engage karne mein madad karti hain.</p>
+</div>
+<p><strong>Final Idea:</strong> Character ke sabhi aspects milkar hi hume life mein flourish aur achhe tareeke se grow karne mein madad karte hain.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

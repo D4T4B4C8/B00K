@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eat That Frog — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 7.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 10</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">Eat That Frog</span>
+          <span class="headline-main">Eat That Frog</span>
+        </div>
+        <p class="subhead">Reading notes on Eat That Frog</p>
+        <div class="meta-row">
+          <span>11 min read</span><span class="meta-dot">•</span><span>By Brian Tracy</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Core Concept aur Frog Eating ka Analogy</h2></div>
+<p class="drop-cap">Brian Tracy ki yeh book lagbhag 30 saal ki time-management studies par based hai. Isme 21 tips batayi gayi hain jo procrastination, yani kaam talne ki aadat, ko rokne aur kam samay me zyada kaam karne me madad karti hain.</p>
+<p><strong>Frog Eating Analogy:</strong> Mark Twain ke hisaab se agar aap har subah sabse pehle ek zinda mendhak kha lete hain, toh poore din aapko yeh tasalli rahegi ki din ka sabse bura kaam pehle hi khatam ho gaya hai.</p>
+<p><strong>Frog kya hai?:</strong> Aapka "frog" woh sabse crucial aur important task hai jise aap sabse zyada talne ki koshish karte hain, lekin use poora karne se aapke results aur career par sabse bada positive impact padta hai.</p>
+<p><strong>Frog-Eating ke Do Rules:</strong> </p>
+<div class="sub-points">
+<p><strong>Rule 1:</strong> Agar aapke paas do frogs hain, toh sabse pehle sabse "ugliest", yani sabse mushkil frog ko khayein.</p>
+<p><strong>Rule 2:</strong> Frog ko bahut der tak dekhte ya sochte na rahein. Bina delay kiye turant kha lein, yani jaldi action lein.</p>
+</div>
+<p><strong>Positive Addiction:</strong> Jab bhi aap koi bada task complete karte hain, toh brain me endorphins release hote hain jo aapko accha feel karate hain. Isse task complete karne ki ek "positive addiction" ban sakti hai aur dheere-dheere success ki habit ban jaati hai.</p>
+<p><strong>Habit Formation ke 3Ds:</strong> Kisi bhi nayi habit ko banane ke liye teen cheezein zaroori hain.</p>
+<div class="sub-points">
+<p><strong>Decision:</strong> Task completion ki habit banane ka pakka faisla karna.</p>
+<p><strong>Discipline:</strong> Book ke ideas ko lagatar apply karte rehna.</p>
+<p><strong>Determination:</strong> Tab tak lage rehna jab tak yeh habit aapke character ka important part na ban jaye.</p>
+</div>
+<p><strong>Mental Image:</strong> Apne aap ko aise insaan ke roop me imagine karein jo har kaam ko jaldi aur acche tareeke se poora karne ki habit rakhta hai.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Goals Set aur Achieve Karne ke 7 Steps (Thinking on Paper)</h2></div>
+<p>Clarity productivity ka sabse important ingredient hai. Jo log apne goals ko paper par likhte hain, woh aam logon se 5 se 10 guna zyada achieve karte hain. Goals set karne ke liye 7 steps diye gaye hain.</p>
+<p><strong>Decide specifically what you want:</strong> Bilkul clearly tay karein ki aapko kya chahiye.</p>
+<p><strong>Write it down:</strong> Apne goal ko paper par likhein taaki woh tangible, yani clearly saamne maujood, ban sake.</p>
+<p><strong>Set a deadline:</strong> Goal ke liye ek deadline aur zaroorat ke hisaab se sub-deadlines set karein.</p>
+<p><strong>List down everything:</strong> Goal poora karne ke liye jo bhi kaam karne hain, un sabki ek list banayein.</p>
+<p><strong>Form a plan:</strong> List ko priority aur sequence ke hisaab se arrange karke ek plan banayein.</p>
+<p><strong>Take action immediately:</strong> Turant action lein, kyunki sirf sochne se results nahi milte.</p>
+<p><strong>Do something everyday:</strong> Har roz kuch na kuch aisa karein jo aapko apne goal ke kareeb le jaye.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Procrastination Door Karne ke 21 Tarike (21 Ways to Eat That Frog)</h2></div>
+<h3 class="sub-heading">1. Set The Table</h3>
+<p>Apne goals ko clear karein aur unhe paper par likhein. Saal bhar ke liye 10 goals ki list banayein aur unhe present tense me likhein, jaise woh pehle hi sach ho chuke hain. Inme se ek aisa goal select karein jiska aapki life par sabse bada positive impact ho aur us par roz kaam karein.</p>
+<h3 class="sub-heading">2. Plan Every Day In Advance</h3>
+<p>Har din, hafte aur mahine ki planning pehle se karein.</p>
+<p><strong>10/90 Rule:</strong> Kaam shuru karne se pehle ki gayi 10% planning execution ke 90% samay ko bacha sakti hai. Planning ka 1 minute aapke 10 minutes bacha sakta hai.</p>
+<p><strong>Lists ke Types:</strong> Aapke paas chaar tarah ki lists honi chahiye: Master list, Monthly list, Weekly list aur Daily list.</p>
+<div class="sub-points">
+<p><strong>Master list:</strong> Future me kiye jaane wale sabhi tasks ke liye list.</p>
+<p><strong>Monthly list:</strong> Mahine ke tasks ki list.</p>
+<p><strong>Weekly list:</strong> Hafte ke tasks ki list.</p>
+<p><strong>Daily list:</strong> Har din ke tasks ki list. Task complete hone par use tick karein, kyunki isse motivation milti hai.</p>
+</div>
+<h3 class="sub-heading">3. Apply The 80/20 Rule To Everything</h3>
+<p><strong>Pareto's Principle:</strong> Sirf 20% activities se 80% results milte hain.</p>
+<p><strong>Focus:</strong> Apne sabse important 20% tasks, yani frogs, par focus karein. Chhote aur aasan tasks ko pehle karne ki lalach se bachein.</p>
+<p><strong>Daily Question:</strong> Har subah khud se puchein, "Kya yeh task mere top 20% me aata hai ya bottom 80% me?"</p>
+<h3 class="sub-heading">4. Consider the Consequences</h3>
+<p>Ek acche thinker ki pehchaan yeh hai ki woh kisi kaam ko karne ya na karne ke consequences, yani parinaamon, ko accurately predict kar sakta hai. Long-term thinking short-term decision-making ko behtar banati hai. Apna focus dhoondhne ke liye teen questions ka use karein.</p>
+<p><strong>High-Value Activities:</strong> Meri sabse high-value activities kaun si hain?</p>
+<p><strong>Unique Contribution:</strong> Aisa kaun sa kaam hai jo sirf main kar sakta hoon aur agar main use acche se karoon toh bada difference aayega? Yeh sawal Peter Drucker ne pucha tha.</p>
+<p><strong>Valuable Use of Time:</strong> Is samay mere time ka sabse valuable use kya hai?</p>
+<h3 class="sub-heading">5. Apply Creative Procrastination</h3>
+<p>Aap sab kuch nahi kar sakte, isliye aapko jaan-bujhkar low-value activities ko postpone ya eliminate karna hoga. Isi ko creative procrastination kaha gaya hai.</p>
+<p><strong>Example:</strong> TV dekhne me lagne wale samay ko family ke saath rehne ya exercise ke liye use karna.</p>
+<p><strong>Action:</strong> Har area se ek low-value activity ko hata dein.</p>
+<h3 class="sub-heading">6. Use the ABCDE Method</h3>
+<p>Agle din ki list ke har item ko A, B, C, D ya E rating dein.</p>
+<p><strong>A Tasks:</strong> Sabse important kaam, jise na karne se bade nuksan ho sakte hain. Agar ek se zyada A tasks hain, toh unhe A-1, A-2 jaise priority dein. A-1 aapka ugliest frog hai.</p>
+<p><strong>B Tasks:</strong> Aise kaam jo karne chahiye, lekin unhe na karne ke consequences chhote hote hain. Jab tak A tasks khatam na hon, B tasks ko haath na lagayein.</p>
+<p><strong>C Tasks:</strong> Aise kaam jinhe karna accha lagta hai, lekin agar na karein toh koi nuksan nahi hota.</p>
+<p><strong>D Tasks (Delegate):</strong> Aise kaam jo aap kisi doosre person ko de sakte hain, taaki aap A tasks ke liye apna time nikal sakein.</p>
+<p><strong>E Tasks (Eliminate):</strong> Aise kaam jinhe bina kisi consequence ke poori tarah khatam kiya ja sakta hai.</p>
+<h3 class="sub-heading">7. Focus On Key Result Areas</h3>
+<p>Har job ko 5 se 7 Key Result Areas, yani KRAs, me baanta ja sakta hai. KRA ka matlab hai aisa area jiske liye aap fully responsible hote hain, jiska kaam aap nahi karenge toh nahi hoga, jo aapke control me hai aur jiska output doosre logon ke kaam ko affect karta hai.</p>
+<p><strong>Examples:</strong> Management me planning, organizing, staffing, delegating, supervising, measuring aur reporting jaise areas hote hain. Sales me prospecting, trust building, needs identify karna, persuading, objections ka answer dena, closing aur resales/referrals jaise areas hote hain.</p>
+<p><strong>Self-Rating:</strong> Har area me apne aap ko 1 se 10 ke scale par rate karein. Aapki sabse weak skill hi aapki performance ki limit tay karti hai.</p>
+<p><strong>Key Question:</strong> Khud se puchein, "Aisi kaun si ek skill hai jisme master banne se mere career par sabse bada positive impact padega?"</p>
+<h3 class="sub-heading">8. Apply The Law Of Three</h3>
+<p><strong>Quick List Method:</strong> Apne business ya organization me contribute kiye jaane wale teen core tasks identify karein jo aapki total value ka 90% banate hain.</p>
+<p><strong>Three Important Life Areas:</strong> Apni life ke teen sabse important areas, Career, Family/Relationships aur Health/Fitness, ke liye ek-ek goal set karein.</p>
+<p><strong>Work-life Balance:</strong> Jab aap kaam par hon, toh 100% focus ke saath kaam karein. Office me bekaar ki baaton ya idle chit-chat me time waste na karein, taaki aap jaldi kaam khatam karke ghar par family ke saath quality time bita sakein.</p>
+<h3 class="sub-heading">9. Prepare Thoroughly Before You Begin</h3>
+<p>Kaam shuru karne se pehle poori taiyari kar lene se procrastination khatam karne me madad milti hai.</p>
+<p><strong>Workspace:</strong> Apne desk ko comfortable aur clean rakhein. Ek samay par sirf wahi sabse important task saamne rakhein.</p>
+<p><strong>Preparation:</strong> Saari information, tools aur materials ko pehle se proper sequence me rakh lein.</p>
+<p><strong>Positive Body Language:</strong> Seedhe baithhein aur khud se kahein, "Let's get to work!"</p>
+<p><strong>Completion:</strong> Kaam shuru karne ke baad tab tak na rukein jab tak woh poora na ho jaye.</p>
+<h3 class="sub-heading">10. Take It One Step at a Time</h3>
+<p><strong>Sahara Desert Example:</strong> Sahara desert ko cross karne ke liye French logon ne har 5 km par oil drums, yani tel ke dibbe, lagaye the. Ek samay par sirf agle oil drum ko follow karke poore 500-mile desert ko cross kiya ja sakta tha.</p>
+<p><strong>Lesson:</strong> Isi tarah kisi bade task ko bite-by-bite ya step-by-step complete karein. Poore task ka pressure ek saath na lein.</p>
+<h3 class="sub-heading">11. Upgrade Your Key Skills</h3>
+<p>Key Result Areas me apni skills ko upgrade karne se confidence aur energy badhti hai aur procrastination door karne me madad milti hai.</p>
+<p><strong>Mastery ke 3 Steps:</strong> Apne field me mastery badhane ke liye teen steps diye gaye hain.</p>
+<div class="sub-points">
+<p><strong>Step 1:</strong> Apne field ke baare me roz kam se kam 1 ghanta padhein.</p>
+<p><strong>Step 2:</strong> Har available course aur seminar join karein.</p>
+<p><strong>Step 3:</strong> Travel time ko audio learning ke zariye learning time me convert karein.</p>
+</div>
+<h3 class="sub-heading">12. Leverage Your Special Talents</h3>
+<p>Apni uniqueness aur talents ko pehchanein. Identify karein ki aapko kaunsa kaam sabse accha lagta hai aur kis kaam ke liye aapko sabse zyada compliments milte hain.</p>
+<p><strong>Focus:</strong> Apne potential ko unlock karne ke liye unhi areas par focus karein jinme aap expert hain aur jinhe aap love karte hain.</p>
+<h3 class="sub-heading">13. Identify Your Key Constraints</h3>
+<p>Har goal ke raste me kuch limiting factors ya constraints, yani rukawatein, hoti hain jo bottlenecks banati hain.</p>
+<p><strong>80/20 Rule of Constraints:</strong> Sirf 20% constraints external hote hain, jabki baaki 80% constraints internal hote hain, jaise aapke beliefs, habits, skills aur discipline.</p>
+<p><strong>Key Question:</strong> Apne aap se puchein, "Mere andar aisa kya hai jo mujhe rok raha hai?"</p>
+<p><strong>Action:</strong> Jab aap apne constraint ko identify kar lein, toh poori tarah us constraint ko door karne par focus karein.</p>
+<h3 class="sub-heading">14. Apply Pressure On Yourself</h3>
+<p>Sirf 2% log aise hote hain jo khud se kaam karte hain aur unhe kisi supervisor ki zaroorat nahi hoti.</p>
+<p><strong>Artificial Deadlines:</strong> Khud par pressure dalne ke liye artificial deadlines set karein, jaise imagine karein ki aap kal chhutti par ja rahe hain.</p>
+<p><strong>Self-Competition:</strong> Apne aap ke saath ek game khelein aur apne hi records ko beat karne ki koshish karein.</p>
+<h3 class="sub-heading">15. Maximize Your Personal Powers</h3>
+<p>Aapki performance aur productivity aapki physical, mental aur emotional energy par depend karti hai.</p>
+<p><strong>Peak Periods:</strong> Apne din ke peak periods, jaise subah ya dopahar, ko identify karein aur sabse mushkil kaam usi time karein. Jab thake hue hon toh kaam karne ke bajaye rest karein.</p>
+<p><strong>Rest aur Health:</strong> Hafte me 5 raatein jaldi soyein. Hafte me kam se kam 1 full day off lein jisme bilkul kaam na karein. Regular vacations lein.</p>
+<p><strong>Physical Health:</strong> Apni physical health ka dhyan rakhein. Accha khayein aur hafte me kam se kam 200 minutes exercise karein.</p>
+<h3 class="sub-heading">16. Motivate Yourself Into Action</h3>
+<p>Apne dimaag ka control apne haath me rakhein aur hamesha ek complete optimist banein. Optimist banne ke chaar rules hain.</p>
+<p><strong>Good in Every Situation:</strong> Har situation me kuch accha dhoondhein.</p>
+<p><strong>Learn from Setbacks:</strong> Setbacks aur failures se valuable lessons seekhein.</p>
+<p><strong>Focus on Solutions:</strong> Problems ke bajaye solutions par focus karein.</p>
+<p><strong>Positive Self-Talk:</strong> Hamesha apne goals ke baare me sochein aur baat karein. Apne aap se positive self-talk karein, jaise "I can do it!" aur "I love myself!"</p>
+<h3 class="sub-heading">17. Stop the Technological Time-Drain</h3>
+<p>Technology ko ek tool ki tarah use karein, uske slave na banein. Incessant, low-value communications, jaise emails aur messages, ko kam karein.</p>
+<p><strong>Zones of Silence:</strong> Apne phone aur devices ko din me kam se kam 1-1 ghante ke liye, subah aur dopahar, switch off karein.</p>
+<p><strong>Weekly Technology Break:</strong> Hafte me 1 din technology se poori tarah detach rahein taaki dimaag clear rahe.</p>
+<h3 class="sub-heading">18. Breakdown the Task</h3>
+<p>Bade tasks ko psychologically manage karne ke liye do approaches hain.</p>
+<p><strong>Salami Slice Approach:</strong> Kaam ko salami ke slices ki tarah chhote-chhote hisson me divide karein aur ek samay par sirf ek slice par kaam karein.</p>
+<p><strong>Swiss Cheese Approach:</strong> Kaam ke liye ek fixed short time limit set karein, jaise 15-30 minutes, taaki bade task me ek chhota hole punch kiya ja sake. Phir break lekar doosra hole punch karein.</p>
+<h3 class="sub-heading">19. Create Large Chunks of Time</h3>
+<p>Apne planner me 30, 60 ya 90 minutes ke uninterrupted time blocks schedule karein aur unhe apne saath ek appointment ki tarah treat karein.</p>
+<p><strong>Business Travel:</strong> Business travel ke dauran plane me bina kisi distraction ke kaam karne ke fayde ka use karein.</p>
+<h3 class="sub-heading">20. Develop a Sense of Urgency</h3>
+<p>Kaam ko tezi se aur focus ke saath karne se aap "in the zone" ya "flow" state me chale jaate hain. Is state me aapki competence, creativity aur energy badh jaati hai.</p>
+<p><strong>Momentum:</strong> Ek baar momentum banne par inertia overcome hoti hai aur momentum bana rehta hai.</p>
+<p><strong>Action:</strong> Procrastination door karne ke liye tezi se action lene ki habit banayein.</p>
+<h3 class="sub-heading">21. Single-Handle Every Task</h3>
+<p><strong>Single Handling:</strong> Jab aap kisi task ko shuru karte hain, toh bina kisi distraction ya deviation ke use 100% complete hone tak lagatar karte rahein.</p>
+<p><strong>Starting-and-Stopping:</strong> Aksar kisi kaam ko baar-baar rokne aur phir shuru karne se use complete karne me 500% tak zyada time lag sakta hai, kyunki har baar momentum dobara banane me mehnat lagti hai.</p>
+<p><strong>Self-Mastery:</strong> Is discipline se self-mastery aur self-control badhta hai, jo high performance ke liye zaroori hai.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Conclusion (Nishkarsh)</h2></div>
+<p>Brian Tracy book ke ant me sabhi 21 rules ka recap karte hain. In principles ko lagatar apply karne se aap apni personal productivity badha sakte hain aur life me badi success, personal power aur satisfaction hasil kar sakte hain.</p>
+<p>Sabse important baat yeh hai ki aapko procrastinate kiye bina turant action lena shuru karna hoga.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

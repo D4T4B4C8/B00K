@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 Rules for Life — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 5.6rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 6</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">12 Rules for Life</span>
+          <span class="headline-main">12 Rules for Life</span>
+        </div>
+        <p class="subhead">Reading notes on 12 Rules for Life</p>
+        <div class="meta-row">
+          <span>12 min read</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Introduction aur "The Big So What?"</h2></div>
+<h3 class="sub-heading">Secularism aur Nihilism ka Asar</h3>
+<p class="drop-cap">Sadiyon tak religion ne insaan ki life mein stability aur meaning, yani zindagi ka matlab, dene mein bada role nibhaya. Lekin secularism aur nihilism ke aane ke baad naye ideas aur ideologies to aaye, par logon ke andar ek khaali-pan bhi badhne laga.</p>
+<p>Jordan B. Peterson ne neuroscience, psychology, history aur mythology ki research ke basis par 12 rules diye hain. Ye rules humein ek purposeful aur meaningful life jeene mein help karte hain.</p>
+<h3 class="sub-heading">Rules vs Freedom</h3>
+<p>Insaan ko rules pasand nahi hote, lekin bina structure ke life mein order nahi aa sakta. Rules cooperation, stable relationships aur social order banaye rakhne mein help karte hain. Inke bina chaos aur uncertainty badh sakti hai.</p>
+<p>Peterson ka maanna hai ki achhe rules humein unnecessarily restrict nahi karte. Balki ye humein zyada free aur better life jeene mein help kar sakte hain.</p>
+<h3 class="sub-heading">Relativists vs Ideologues</h3>
+<p>Relativists ka maanna hai ki koi universal truth nahi hai aur har cheez subjective hai. Is wajah se life mein direction ki kami ho sakti hai.</p>
+<p>Dusri taraf, ideologues apne beliefs ko authoritarian tareeke se doosron par thop sakte hain.</p>
+<p>Peterson in dono ke beech ka rasta choose karte hain. Unka maanna hai ki "Good", yani achhai, asal mein "Evil", yani burai, ko rokne se judi hai. Jo rules suffering ko kam karte hain, woh better rules hain.</p>
+<h3 class="sub-heading">Responsibility</h3>
+<p>Humein apni personal life, society aur poori duniya ke liye jitni zyada responsibility le sakte hain, leni chahiye. Isse hum milkar better tareeke se grow aur flourish kar sakte hain.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Dominance Hierarchies aur Biochemical Responses</h2></div>
+<h3 class="sub-heading">Lobsters ka Example</h3>
+<p>Peterson batate hain ki animals aur humans dono dominance hierarchies se jude hue hain.</p>
+<p>Lobsters apne status aur dominance ke liye fight karte hain. Confrontation ke time woh ek-doosre ki body aur claw size ke saath chemical secretions ko bhi assess karte hain. In cheezon se unhe saamne wale ki health aur strength ka andaaza milta hai.</p>
+<p>Dominant lobsters mein serotonin level zyada hota hai. Isse unka posture better hota hai, confidence dikhta hai aur kabhi-kabhi physical fight ke bina bhi woh jeetne wali position mein aa jate hain.</p>
+<p>Jeetne wale lobster ka serotonin aur confidence badhta hai. Harne wale ka brain future conflict se bachne ke liye adapt ho jata hai.</p>
+<h3 class="sub-heading">Humans mein Dominance Detector</h3>
+<p>Insaan ke brain mein bhi ek basic dominance system hota hai jo hamari social aur economic position ko track karta hai.</p>
+<p>High self-esteem wale logon mein serotonin levels zyada ho sakte hain. Isse health, resilience aur happiness better ho sakti hai.</p>
+<p>Jab kisi insaan ki self-perception low hoti hai, to woh defensive aur reactive ho sakta hai. Isse uska "loser complex" aur strong ho sakta hai.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>The 12 Rules for Life</h2></div>
+<h3 class="sub-heading">Rule 1: Fix Your Posture</h3>
+<p>Apna posture sahi rakho.</p>
+<h3 class="sub-heading">Explanation aur Definition</h3>
+<p>"Stand up straight with your shoulders back" ka simple matlab sirf seedha khade hona nahi hai. Iska matlab life ki difficult aur serious responsibilities ko aankhen kholkar accept karna bhi hai.</p>
+<p>"Order" woh situation hai jahan cheezein largely hamari expectations aur wishes ke hisaab se chalti hain.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Agar aap low confidence feel karte ho, to sabse pehle slouching, yani jhuk kar baithna ya khade hona, kam karo. Slouching defeat ya haar jaisa signal de sakta hai.</p>
+<p>Seedhe khade ho, shoulders peeche rakho, eye contact karo aur confidence ke saath bolo. Isse ek positive feedback loop shuru ho sakta hai. Log aapko zyada confident samajh sakte hain aur respect bhi kar sakte hain.</p>
+<h3 class="sub-heading">Rule 2: Care for Yourself the Way You Care for Others</h3>
+<p>Apni care waise karo jaise aap doosron ki karte ho.</p>
+<h3 class="sub-heading">Self-Sabotage aur Biblical Example</h3>
+<p>Hum kabhi-kabhi apne pets ke bimar hone par unki medicine time par le aate hain, lekin apni prescription fill karna bhool jate hain.</p>
+<p>Iska ek reason self-loathing, yani khud se nafrat ya khud ko kam samajhna, ho sakta hai.</p>
+<p>Biblical story mein Adam aur Eve ne forbidden fruit khaya. Uske baad unhe apni nakedness aur weaknesses par sharm mehsoos hui.</p>
+<p>Idea ye hai ki hum sabke andar galat kaam karne ki capacity hoti hai. Isi wajah se hum andar hi andar khud ko dislike kar sakte hain. Pets aur bachche humein zyada innocent lagte hain, isliye humein lagta hai ki woh care deserve karte hain.</p>
+<h3 class="sub-heading">Order aur Chaos ka Balance</h3>
+<p>Chaos aur Order ek doosre ke opposite hote hue bhi saath exist karte hain.</p>
+<p><strong>Order:</strong> Woh territory jo hum already jaante aur samajhte hain.</p>
+<p><strong>Chaos:</strong> Woh unexplored territory jahan disaster, betrayal ya unexpected problems aa sakti hain aur sab kuch hil sakta hai.</p>
+<p>Life mein dono ka balance zaroori hai. Ek pair known aur mastered territory mein ho aur doosra new ya unexplored territory ki taraf badh raha ho. Isi balance se growth aur meaning mil sakta hai.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Khud ko ek aise person ki tarah treat karo jise aap genuinely care karte ho. Apni strengths aur limits samjho, goals set karo aur khud se kiye promises poore karke discipline build karo.</p>
+<h3 class="sub-heading">Rule 3: Surround Yourself with People Who Want the Best for You</h3>
+<p>Un logon ke saath raho jo genuinely aapki bhalai chahte hain.</p>
+<h3 class="sub-heading">Toxic Company ka Karan</h3>
+<p>Hum kabhi-kabhi toxic logon ke saath isliye rehne lagte hain kyunki humein unhe "save" karke khud ko virtuous ya achha feel karna hota hai. Kabhi hum apni problems se attention hatana chahte hain. Ya hum easy rasta choose karte hain, kyunki virtue yani bhalai ka rasta mushkil ho sakta hai.</p>
+<h3 class="sub-heading">Process aur Rule of Thumb</h3>
+<p>Negative log poori team ki effectiveness ko sabse weak member ke level tak neeche la sakte hain.</p>
+<p>True friendship reciprocity, yani aapas mein support aur help, par chalti hai. Achhi dosti dono logon ko upar uthne mein help karti hai.</p>
+<p>Simple rule: Agar aap kisi aise person ko ye friendship recommend nahi kar sakte jise aap dil se chahte ho, to khud bhi us friendship se door rehna better hai.</p>
+<h3 class="sub-heading">Rule 4: Improve Your Own Game Instead of Playing Others'</h3>
+<p>Dusron se compete karne ke bajaye apne kal se compete karo.</p>
+<h3 class="sub-heading">Inferiority Complex</h3>
+<p>Aaj ki highly connected duniya mein koi na koi aapse wealth, looks ya status mein better zaroor hoga. Agar aap constantly compare karoge, to inferiority complex develop ho sakta hai.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Life ko ek game ki tarah dekho. Aap apni unique strengths ke according apne liye alag goals aur "games" choose kar sakte ho.</p>
+<p>Har din chhote steps lo. Khud se poochho: "Main aaj apni life mein kaunsi chhoti cheez better kar sakta hoon jo mere control mein hai?"</p>
+<p>Time ke saath chhote improvements ka compounding effect bada change la sakta hai.</p>
+<h3 class="sub-heading">Perspective</h3>
+<p>Aap jis cheez ko aim karte ho, aapka attention usi taraf zyada jata hai. Agar aap broad goal set karte ho jo doosron ki life ko bhi better banaye, to naye opportunities aapko zyada clearly dikhne lag sakte hain.</p>
+<h3 class="sub-heading">Rule 5: Teach Your Children to Abide by Society's Rules</h3>
+<p>Apne bachchon ko society ke rules follow karna sikhao.</p>
+<h3 class="sub-heading">Discipline ka Mahatva</h3>
+<p>Bachche social skills lekar paida nahi hote. Woh boundaries ko test karke seekhte hain ki kya allowed hai aur kya nahi.</p>
+<p>Agar parents bachchon ko properly discipline nahi karte, to future mein society unhe zyada harsh tareeke se punish kar sakti hai.</p>
+<p>Clear boundaries bachchon mein creativity, security aur achievement ko badhne mein help kar sakti hain.</p>
+<h3 class="sub-heading">Parenting ke 5 Principles</h3>
+<div class="sub-points">
+<p>Rules ko sirf essential cheezon tak rakho, jaise violence allowed nahi hai.</p>
+<p>Rules enforce karte waqt minimum force ya pressure use karo.</p>
+<p>Parenting partner ke saath milkar karo, taaki fatigue aur mistakes ko handle kiya ja sake.</p>
+<p>Apne gusse aur limited patience ko samjho, taaki bachchon ke liye resentment develop na ho.</p>
+<p>Real-world proxy bano, taaki bachcha society ke norms ko gracefully follow karna seekhe.</p>
+</div>
+<h3 class="sub-heading">Goal</h3>
+<p>Parents ki primary duty hai ki bachche ko socially desirable behavior sikhaya jaye, taaki use life mein opportunities aur security mil sake.</p>
+<h3 class="sub-heading">Rule 6: Get Your Own House in Order Before Criticizing Others</h3>
+<p>Dusron ko criticize karne se pehle apni life ko theek karo.</p>
+<h3 class="sub-heading">Suffering par Response</h3>
+<p>Life mein setbacks aur dukh aana inevitable hai.</p>
+<p>Kuch log suffering par gusse aur badle ki feeling se react karte hain. Kuch log usi suffering se seekhte hain aur apne aap ko positively transform karte hain.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Jo cheezein aapke control mein hain, un par energy lagao. Agar aap jaante ho ki aap kuch galat kar rahe ho, to use karna band karo. Agar koi zaroori kaam hai, to use poora karo.</p>
+<p>Dusron ko advice dene se pehle apni life mein order aur internal peace lane ki koshish karo. Hamesha sach par tikne ki koshish karo.</p>
+<h3 class="sub-heading">Rule 7: Focus on a Higher Purpose, Not Instant Gratification</h3>
+<p>Higher purpose par focus karo, sirf temporary pleasure par nahi.</p>
+<h3 class="sub-heading">Delayed Gratification</h3>
+<p>Insaan ke paas delayed gratification ki important ability hai. Iska matlab hai ki hum aaj hard work ya sacrifice kar sakte hain taaki future better ho.</p>
+<p>Challenge ye hai ki kitna sacrifice karna chahiye aur kya future mein milne wala result us sacrifice ke worth hoga.</p>
+<h3 class="sub-heading">Nihilism vs Totalitarianism</h3>
+<p>Nihilism rules aur meaning ko hata kar ek void, yani khaali-pan, create kar sakta hai.</p>
+<p>Totalitarianism iske opposite ek hi worldview ko rigidly sab par impose karta hai.</p>
+<p>Peterson ka maanna hai ki religion har question ka answer na bhi de, phir bhi woh guiding principles de sakta hai.</p>
+<p>Modern Christianity ke baare mein Peterson ki criticism ye hai ki ye earthly suffering ko properly address nahi karti aur logon ko moral obligation se free kar sakti hai.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Ek bada universal goal suffering aur dukh ko kam karna hai. Apne instant impulses ko control karo aur apni energy ko ek higher goal ke saath align karo, aisa goal jo aapki values aur society dono ko benefit kare.</p>
+<h3 class="sub-heading">Rule 8: Find Your Personal Truth and Live It</h3>
+<p>Apna sach pehchano aur uske according jiyo.</p>
+<h3 class="sub-heading">Life-Lie</h3>
+<p>Hum aksar doosron se aur khud se jhoot bolte hain taaki conflict se bach sakein ya kisi fixed, narrow goal ko achieve kar sakein, jaise retirement age par kisi ek plan par itna zyada atak jana ki reality badalne ke baad bhi usi par insist karte rehna.</p>
+<p>Ek chhota jhoot dheere-dheere humein ek bade trap mein phansa sakta hai.</p>
+<h3 class="sub-heading">Sach ki Takaat</h3>
+<p>Sach ka saamna karne se naye solutions dikh sakte hain. Jaise organisms new environment mein naye genes activate kar sakte hain, waise hi sach bolna aur reality accept karna self-transformation mein help kar sakta hai.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Apni shortcomings ke baare mein honest raho. Apni ambition ko character development ki direction do. Apni progress ko measure karo aur inner conflict par dhyan do.</p>
+<p>Agar kisi direction mein ghabrahat ya weakness repeatedly feel ho, to apna rasta dobara check karo aur zaroorat ho to direction badlo.</p>
+<h3 class="sub-heading">Rule 9: Learn to Be a Good Listener</h3>
+<p>Ek achha listener banna seekho.</p>
+<h3 class="sub-heading">Thinking aur Listening</h3>
+<p>Sochna asal mein ek internal dialogue jaisa hai. Hum apne mind mein alag-alag viewpoints ko compare aur debate karte hain.</p>
+<p>Lekin kyunki ye difficult ho sakta hai, log aksar doosron ke saamne bolte hue apni thinking ko clear karna prefer karte hain.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Jab koi bol raha ho, bina interrupt kiye suno, turant judge mat karo aur samne wale ko apni baat clearly rakhne ka chance do.</p>
+<p>Har conversation mein ye assume karke jao ki aap saamne wale se kuch seekh sakte ho.</p>
+<h3 class="sub-heading">Dispute Rule</h3>
+<p><strong>Agar dispute ho, to ek simple rule rakho:</strong> Har person tabhi bole jab woh pehle bolne wale person ke ideas aur emotions ko uski satisfaction tak sahi tareeke se repeat kar sake.</p>
+<p>Isse genuinely sunne aur samajhne ki habit develop hoti hai.</p>
+<h3 class="sub-heading">Rule 10: Define Your Problem Precisely to Make It Manageable</h3>
+<p>Apni problem ko clearly aur precisely define karo.</p>
+<h3 class="sub-heading">Avoiding the Problem</h3>
+<p>Hum aksar problems ko avoid karte hain taaki unka saamna na karna pade. Lekin jo emotions aur problems hum ignore karte rehte hain, woh time ke saath bahut bade aur serious failure mein badal sakte hain.</p>
+<h3 class="sub-heading">Precision ka Mahatva</h3>
+<p>Problem ko precise words mein define karna tragedy ko automatically khatam nahi karta. Lekin ye unnecessary fears, yani imagination ke ghosts aur demons, ko kam kar sakta hai.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Doctor ki tarah problem ko specifically diagnose karo.</p>
+<p>Clearly likho:</p>
+<div class="sub-points">
+<p>Problem kya hai?</p>
+<p>Aap kya chahte ho?</p>
+<p>Aap kya action loge?</p>
+</div>
+<p>Relationships mein bhi specific issue par baat karo. Purani aur unrelated baaton ko baar-baar beech mein mat lao.</p>
+<h3 class="sub-heading">Rule 11: Accept That Inequality Exists</h3>
+<p>Ye accept karo ki inequality ek reality hai.</p>
+<h3 class="sub-heading">Postmodernists ke Khilaf</h3>
+<p>Postmodernists ka maanna hai ki gender largely social construct hai aur hierarchy exploitation ka tool hai.</p>
+<p>Peterson is view se disagree karte hain. Woh batate hain ki men aur women biologically different hote hain.</p>
+<p>Hierarchies societies ko organize karne mein role play karti hain. Healthy societies mein status sirf power se nahi, balki competence, yani ability, se bhi decide hota hai.</p>
+<h3 class="sub-heading">Feminization of Boys</h3>
+<p>Peterson warning dete hain ki boys ko excessively protect karna aur unhe competitive ya aggressive behavior se bahut zyada rokna dono genders ke liye harmful ho sakta hai.</p>
+<p>Unka view hai ki bachchon ko unki biological nature ke according natural tareeke se grow karne diya jana chahiye.</p>
+<h3 class="sub-heading">Rule 12: Take Time to Appreciate the Good Things in Life</h3>
+<p>Zindagi ki chhoti-chhoti achhi cheezon ko appreciate karo.</p>
+<h3 class="sub-heading">Suffering aur Limitations</h3>
+<p>Suffering life ka inevitable part hai.</p>
+<p>Peterson apni beti ke rare rheumatoid arthritis ke chronic pain ka example dete hain.</p>
+<p>Hamari limitations hi kabhi-kabhi hamari joy aur triumphs ko meaningful banati hain.</p>
+<p><strong>Example:</strong> Superman ka character tab tak utna interesting nahi tha jab tak uski kryptonite weakness nahi di gayi.</p>
+<h3 class="sub-heading">Process</h3>
+<p>Pain aur illness ke baare mein sochne ke liye apne aap ko unlimited time mat do.</p>
+<p>Roz ki chhoti achhi cheezon ko notice karo, jaise:</p>
+<div class="sub-points">
+<p>Kisi billi ko pyaar se stroke karna.</p>
+<p>Coffee enjoy karna.</p>
+<p>Bachche ko paani mein splash karte dekhna.</p>
+</div>
+<p>Jab aap achha feel kar rahe ho, tabhi future ki planning karna useful hai.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Other Details aur Conclusion</h2></div>
+<p>Peterson is book mein Biblical aur mythical stories ke deep psychological meanings explain karte hain.</p>
+<p>Woh:</p>
+<div class="sub-points">
+<p>Ancient texts ka reference dete hain.</p>
+<p>Ancient philosophers ke ideas aur citations share karte hain.</p>
+<p>Apne clinical experiences ko use karte hain.</p>
+<p>Personal anecdotes share karte hain.</p>
+</div>
+<p>In sab ko mila kar woh 12 Rules for Life ke ideas ko explain karte hain.</p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Main Idea</h2></div>
+<p>Book ka overall message ye hai ki meaningful life ke liye sirf freedom enough nahi hai. Humein responsibility, structure, truth, discipline, achhe relationships, higher purpose aur life ki chhoti achhi cheezon ki appreciation bhi chahiye.</p>
+<p>Apni life ko better banane ke liye pehle apni responsibilities aur apne actions ko seriously lena, phir apne aas-paas ke logon aur society ke saath better tareeke se jeena important hai.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

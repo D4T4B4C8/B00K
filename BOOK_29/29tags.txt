@@ -1,0 +1,103 @@
+B="What We Know about our Universe (Hum Apne Universe Ke Baare Mein Kya Jaante Hain)"
+A="Stephen Hawking"
+H1|Historical Theories
+B|Aristotle (340 B.C.): Aristotle ne sabse pehle yeh theory di ki Earth gol hai, flat nahi. Unke hisaab se Sun, Moon, stars aur planets circular orbits mein Earth ke chakkar lagate hain.
+B|1600s Shift: 1600s mein observations aur predictions ek doosre se match hui jab yeh bataya gaya ki Moon, stars aur planets, Earth samet, Sun ke around ellipses yani lambe circles mein orbit karte hain.
+B|Newton's Gravity (1687): Newton ki gravity theory ne explain kiya ki celestial bodies gravitational forces ki wajah se ek doosre ki taraf attract hoti hain.
+B|The Goal of Modern Science: Aaj bhi hum universe ko poori tarah nahi samajh paaye hain. Hum universe ke alag-alag parts ko different theories se predict kar sakte hain, lekin abhi hamare paas ek unified theory nahi hai jo poore universe ko ek saath explain kar sake. Aisi theory dhoondhna science aur hamari understanding ka ultimate goal hai.
+H1|Everything is in Motion (Newton's Laws)
+P|Purane samay mein log sochte the ki objects ki natural state rest, yani ruka rehna, hoti hai. Sir Isaac Newton ne is idea ko galat bataya aur samjhaya ki sab kuch motion mein hai aur cheezein ek doosre ke relation mein move karti hain.
+B|First Law: Agar kisi object par koi doosri force kaam na kare, toh woh straight line mein move karti rahegi, jaise balls slope par straight line mein roll karti hain agar sirf gravity kaam kar rahi ho.
+B|Second Law: Kisi object ki acceleration us par lagne wale force ke proportional hoti hai. Jaise strong engine wali car zyada tez accelerate karegi. Lekin mass jitna zyada hoga, acceleration utni kam hogi, jaise bhari gaadi ko accelerate hone mein zyada time lagega.
+H1|Space and Time (Space aur Time Absolute Nahi Hain)
+B|Newton's Third Law: Sabhi bodies ek doosre ko attract karti hain, aur force dono bodies ke mass ke proportional hota hai.
+B|Space-Time Relativity: Space aur time absolute nahi hote. Yeh observer ke hisaab se relative hote hain.
+B|Space is Relative: Space ka koi fixed ya absolute standard nahi hai. Sab kuch move kar raha hai, isliye yeh batana impossible hai ki alag-alag samay par hone wale do events bilkul ek hi jagah par hue ya nahi.
+B|Time is Relative: Time alag-alag observers ke liye alag speed se chal sakta hai.
+B|Ole Romer Discovery: Romer ne observe kiya ki light uniform speed, 186,000 miles per second, se travel karti hai.
+S|Speed ka formula hai Distance divided by Time: S = D/T.
+S|Agar light ki speed constant hai, toh distance D badalne par time T ko bhi badalna hoga.
+B|Einstein & Poincare (Relativity): Unhone bataya ki jab aap light ki speed ke kareeb pahunchte hain, toh time slow ho jata hai.
+S|Einstein ki famous equation E = mc² mein E energy hai, m mass hai aur c speed of light hai.
+S|Is equation ke mutabik speed badhne se object ka mass badhta hai. Isi wajah se koi bhi cheez light ki speed se tez travel nahi kar sakti.
+B|Space-Time Fabric: Space aur time ko alag-alag nahi dekha ja sakta. Dono aapas mein jude hue hain aur milkar space-time ka fabric banate hain.
+H1|Space-Time Coordinates & General Relativity
+B|4 Coordinates: Kisi bhi event ko space-time mein map karne ke liye 4 coordinates chahiye hote hain.
+S|Point in time.
+S|Point in space.
+S|Observer ki position.
+S|Observer ka motion.
+B|Light-Cones Concept: Light waves ke form mein travel karti hai aur space-time mein failti jaati hai, jaise pond mein patthar phenkne par ripples bante hain. Isko light-cone se visualize kiya jata hai.
+S|Future light cone mein maujood log Event X ko dekh sakte hain.
+S|Past light cone se Event X signals receive kar sakta hai.
+S|Jo events in dono ke bahar hote hain unhe "elsewhere" kaha jata hai, aur unka Event X par koi effect nahi hota.
+B|Sun Burning Out Example: Agar Sun burn out ho jaye, yani Event X ho, toh uski light waves ko hum tak pahunchne mein time lagega. Jab hum stars ko dekhte hain, toh hum unka past dekh rahe hote hain kyunki hum unke future light cone mein hote hain.
+B|General Theory of Relativity (1916): Einstein ne gravity ko space-time curvature ke roop mein explain kiya. Space-time flat nahi hai.
+S|Jaise stretched fabric par koi bhari object rakhne se fabric neeche dhans jata hai, waise hi gravity space-time ko warp kar deti hai. Is wajah se objects curved path par move karte hain.
+S|Isi curvature ki wajah se door ke stars apni actual position se alag dikh sakte hain. Isse The Great Circle concept se joda gaya hai.
+H1|Time Dilation & The Uncertainty Principle
+B|Twin Paradox Example: Aap kahan hain aur kaise move kar rahe hain, isse aapka time badal sakta hai. Agar aap space mein light ki speed ke kareeb travel karte hain, jahan gravity kam hai, toh 50 saal baad wapas aane par aap Earth par rehne wale apne twin se bahut young dikhenge.
+B|Uncertainty Principle (Heisenberg, 1926): Pehle scientists determinism par believe karte the. Iska matlab tha ki agar perfect information ho, toh sab kuch predict kiya ja sakta hai.
+S|Heisenberg ne Uncertainty Principle diya: Kisi particle ki position aur velocity measure karne ke liye us par high-frequency light daalni padegi. Lekin yeh light particle ko disturb kar degi aur uski velocity badal degi.
+S|Isliye kisi particle ki position aur speed ko ek saath bilkul accurately measure karna impossible hai.
+B|Quantum Mechanics Foundation: Is idea se quantum mechanics ki shuruaat hui, jo randomness aur probabilistic approach par based hai. Yeh ek fixed result batane ke bajaye alag-alag outcomes ki probability batati hai.
+H1|Particle-Wave Duality & Building Blocks of Nature
+B|Interference: Quantum mechanics physical world ko particles aur waves dono ke roop mein dekhti hai. Jab do waves ya particles milte hain, toh interference hota hai.
+S|Kabhi woh ek doosre ko strong banate hain, yani reinforce karte hain.
+S|Kabhi woh ek doosre ko cancel out kar dete hain.
+B|Two-slit Experiment: Light aur matter dono wave aur particle ki characteristics dikha sakte hain.
+S|Agar light ko parallel slits se pass kiya jaye, toh screen par bright aur dark bands bante hain, jo uski wave nature dikhate hain.
+S|Agar electrons ko ek-ek karke bhi bheja jaye, toh bhi fringes bante hain. Iska matlab hai ki har electron dono slits se ek saath guzarta hai.
+H2|The Building Blocks of Nature
+B|Atoms: Atoms basic building blocks hain jo molecules banate hain. Atom mein negatively charged electrons hote hain jo positively charged nucleus, jisme protons aur neutrons hote hain, ke around move karte hain.
+B|Quarks (1960s): Protons aur neutrons quarks se bane hote hain. Quarks universe ke sabse chhote known bits hain.
+B|Quark's Spin: Quark ka "spin" batata hai ki woh alag-alag angles se kaisa dikhta hai. Jaise 0 spin wala particle har direction se ek jaisa dikhta hai.
+H1|Exclusion Principle, Forces, and GUT
+B|Exclusion Principle (Pauli): Do similar particles ek hi position aur ek hi velocity ke saath ek saath nahi ho sakte.
+B|Antiparticles: Har particle ka ek antiparticle hota hai. Particle aur antiparticle ek doosre ko destroy, yani annihilate, kar sakte hain.
+S|Example: Electron aur positron.
+B|Force-carrying Particles: Matter particles force-carrying particles emit karte hain. Baar-baar hone wale collisions se strong forces bante hain.
+H2|4 Types of Force-carrying Particles
+B|Gravitons: Gravitational forces carry karte hain.
+B|Photons: Electromagnetic forces produce karte hain.
+B|Bosons: Weak nuclear forces banate hain.
+B|Gluons: Quarks ko protons aur neutrons se, aur unhe nucleus mein, bind karke rakhte hain.
+B|Grand Unified Theory (GUT): Bahut high energy par nuclear forces weak ho jati hain, jisse gluons aur quarks free agents ki tarah act karte hain. Is level par electromagnetic, weak aur strong forces ko theoretically ek single force mein merge karna possible hai.
+B|Expanding Universe: Pehle log sochte the ki universe infinite aur unchanging hai. Baad mein pata chala ki universe actually dynamic hai aur expand kar raha hai.
+H1|Doppler Effect, Red-shift & Hot Big Bang
+B|Doppler Effect & Red-shift: Light spectrum colors, yani rainbow ke colors, se bani hoti hai. Jab wave ka source observer se door jata hai, toh wavelength lambi ho jati hai aur red-shift hota hai. Jab source observer ke paas aata hai, toh wavelength chhoti ho jati hai aur blue-shift hota hai.
+B|Universe Expansion: Astronomers ne dekha ki zyadatar galaxies red-shift dikha rahi hain, yani woh humse door ja rahi hain. Universe itni tezi se expand ho raha hai ki yeh gravity ke pull ko overcome kar leta hai.
+B|Hot Big Bang Model: Big Bang ke turant baad universe bahut zyada hot tha. Particles tezi se move karke protons, neutrons, atoms aur molecules banane lage.
+S|Seconds ke andar expansion ki wajah se cooling hui.
+S|Nuclear fusion se hydrogen aur helium ke bade clouds bane, jo baad mein stars aur planets ke building blocks bane.
+H1|Inflation, Singularity, and Black Holes
+B|Guth's Inflationary Theory: Alan Guth ne bataya ki Big Bang ke baad ek second se bhi kam samay mein universe ka radius million million million million million times badh gaya.
+S|Is rapid expansion ki wajah se supercooling hui aur large-scale smoothing aur uniformity bani, jo aaj bhi hum dekhte hain.
+B|Singularity Event: Big Bang ek singularity event hai jahan conditions infinite aur irreversible ho jati hain aur reality ke saare rules badal jate hain. Yahin se time ki shuruaat hui.
+B|Future of Universe: Universe har 1000 million years mein 5-10% expand ho raha hai aur hamesha expand hota rahega. Agar re-collapse, yani Big Crunch, hona bhi ho, toh woh kam se kam 10,000 million years tak nahi hoga.
+B|Black Holes Formation: Hydrogen atoms ke clusters gravity ki wajah se ek saath aate hain, jisse nuclear reactions ke through stars bante hain.
+H1|Stars, Chandrasekhar Limit & Black Holes
+B|Star Stability: Stars tab tak stable rehte hain jab tak core mein nuclear reaction ka outward pressure aur gravity ka inward pressure balance mein rehta hai.
+B|Chandrasekhar Limit: Jab star ka fuel khatam hota hai, toh uska future is limit par depend karta hai.
+S|Below Limit, yani Sun ke mass se 1.5 times se kam: Star shrink hokar white dwarf ya neutron star ban jata hai.
+S|Above Limit, yani Sun ke mass se 1.5 times se zyada: Star gravity ke pressure mein collapse hokar black hole ban jata hai.
+B|Black Hole Gravity & Hawking Radiation: Black holes ki gravity itni infinite hoti hai ki light bhi unse escape nahi kar sakti. Inke andar space aur time ka koi matlab nahi hota.
+S|Lekin black hole ke edge par gravity ki wajah se positive-energy particles escape kar jate hain, jise Hawking radiation kaha jata hai, aur negative-energy particles andar gir jate hain.
+H1|Metaphysics of Black Holes & Arrows of Time
+B|Mass/Energy Recycling: Black hole se nikalne wali radiation ka matlab hai ki matter kabhi poori tarah destroy nahi hota, balki energy mein recycle ho jata hai. Agar koi insan black hole mein gir jaye toh woh mar jayega, lekin uski mass aur energy exist karti rahegi.
+H2|Why Backward Time Travel is Unlikely (3 Arrows of Time)
+B|Thermodynamic Arrow: Entropy, yani disorder, hamesha badhti hai. Agar time peeche jaye toh ek toota hua cup khud se wapas jud jana chahiye, jo thermodynamics ke second law ke against hai.
+B|Psychological Arrow: Hum sirf past ko yaad rakh sakte hain, future ko nahi.
+B|Cosmological Arrow: Universe expand ho raha hai, isliye entropy badh rahi hai, aur yeh time ko aage ki direction mein le jaati hai.
+B|Time Travel Paradox: Time travel ke liye light ki speed se tez chalna hoga, jo impossible hai.
+H1|Grandfather Paradox, Wormholes & String Theory
+B|Grandfather Paradox: Agar aap past mein jaakar apne grandfather ko maar dein, toh aap paida hi nahi honge.
+S|Is problem ka hal yeh hai ki backward time travel se aap past ko change nahi kar sakte. Iske bajaye aap ek alternate history mein enter karte hain.
+B|Wormholes: Shuruat mein space-time ka curvature bahut zyada warped tha. Quantum physics kehta hai ki wormholes space-time ko bend karke do door ke regions ko jod sakte hain aur ek shortcut bana sakte hain.
+B|Quest for a Unified Theory: General relativity sub-atomic levels aur singularities par kaam nahi karti, aur quantum mechanics gravity ko include nahi karti. Isliye dono ko combine karne ki zaroorat hai.
+B|String Theory: Yeh theory particles ko tiny strings se replace karti hai. Yeh strings vibration ke through combine ya split hoti hain. Lekin is theory ko kaam karne ke liye space-time ke up to 26 dimensions chahiye hote hain.
+H1|Extra Dimensions & Conclusion (Unified Theory Ka Sapna)
+B|Extra Dimensions: Hum sirf 4 dimensions, yani 3 space aur 1 time, ko hi dekh paate hain. Extra dimensions shayad itne chhote hain ki hum unhe observe nahi kar sakte, ya phir hum sirf un regions mein rehte hain jahan 4 dimensions hain.
+B|Quest for Understanding: Kisi bhi theory ko 100% prove nahi kiya ja sakta, lekin hum observations ke basis par us par confidence rakh sakte hain. Unified theory dhoondhne ke baad yeh aam logon tak bhi pahunchegi aur human race universe ke laws ko poori tarah samajh sakegi.
+B|"If we do discover a complete theory... Then we shall all, philosophers, scientists, and just ordinary people, be able to take part in the discussion of the question of why it is that we and the universe exist."
+S|Simple meaning: Agar hum ek complete theory discover kar lete hain, toh philosophers, scientists aur aam log sab milkar is sawal par baat kar sakenge ki hum aur universe kyun exist karte hain.

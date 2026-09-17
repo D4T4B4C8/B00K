@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Never Split the Difference — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 4.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 1</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">Never Split the Difference</span>
+          <span class="headline-main">Never Split the Difference</span>
+        </div>
+        <p class="subhead">Reading notes on Never Split the Difference</p>
+        <div class="meta-row">
+          <span>23 min read</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Core Philosophy — Basic Soch aur Introduction</h2></div>
+<h3 class="sub-heading">Book aur Author</h3>
+<p class="drop-cap">Yeh document Chris Voss ki book Never Split the Difference par based hai. Chris Voss ek experienced FBI hostage negotiator aur award-winning teacher rahe hain.</p>
+<p>Unka maanna hai ki FBI mein hostage negotiation se seekhi gayi techniques sirf hostage situations ke liye useful nahi hain. Inhe hum apni personal life aur business life mein bhi use kar sakte hain.</p>
+<h3 class="sub-heading">Life is Negotiation</h3>
+<p>Voss kehte hain: "Life is negotiation." Matlab, zindagi mein hum bahut saari situations mein negotiation kar rahe hote hain.</p>
+<p>Ghar mein, office mein, business mein aur doosre logon ke saath hone wali bahut si conversations ke peeche ek basic feeling hoti hai: "I want." — "Mujhe ye chahiye."</p>
+<p>Har person ki apni needs, wants aur expectations hoti hain. Isi wajah se logon ke beech negotiation hoti hai.</p>
+<h3 class="sub-heading">Decisions sirf logic se nahi hote</h3>
+<p>Log aksar sochte hain ki woh logical decisions lete hain. Lekin Voss ke according, human decision-making bahut had tak emotions se influence hoti hai aur hamesha perfectly logical nahi hoti.</p>
+<p>Isliye negotiation mein sirf facts aur logic dena enough nahi hota. Aapko saamne wale ki feelings aur emotional thinking ko bhi samajhna padta hai.</p>
+<h3 class="sub-heading">Negotiation ka asli matlab</h3>
+<p>Negotiation ko ek fight ya battle ki tarah nahi dekhna chahiye. Yeh ek "process of discovery" hai.</p>
+<p>Aapka kaam sirf apni baat manwana nahi hai. Aapka kaam saamne wale ke baare mein jitni possible information ho sake, utni discover karna hai.</p>
+<p>Jitni zyada information aapke paas hogi, utna better aap samajh paoge ki saamne wala kya chahta hai aur kis wajah se chahta hai.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Part 1 — Establishing Rapport</h2></div>
+<h3 class="sub-heading">Achha Rishta Banana aur Saamne Wale Ko Sunna</h3>
+<p>Negotiation ki shuruaat mein sabse important cheez hai rapport build karna aur saamne wale ko properly sunna.</p>
+<p>Rapport ka simple matlab hai: Saamne wale ke saath comfortable aur trust-based connection banana.</p>
+<p>Iske liye document mein kuch important techniques di gayi hain.</p>
+<h3 class="sub-heading">Hypothesize, Don't Assume (Andaza mat lagao, hypothesis banao)</h3>
+<p>Smart negotiator kisi baat ko bina verify kiye sach nahi maan leta.</p>
+<p><strong>Example:</strong> Agar saamne wala kisi demand ko reject karta hai, toh turant yeh assume nahi karna chahiye ki "Woh ye deal karna hi nahi chahta." Ho sakta hai uske paas koi aur reason ho.</p>
+<p>Isliye different possibilities ko hypothesis ki tarah rakho aur negotiation ke dauran questions aur observation ke through check karo ki actual reason kya hai.</p>
+<p><strong>Simple rule:</strong> Assumption ko fact mat samjho. Pehle test karo.</p>
+<h3 class="sub-heading">Listen Fully (Puri tarah suno)</h3>
+<p>Bahut se log saamne wale ki baat sunte waqt actually sun nahi rahe hote. Unke dimaag mein already yeh chal raha hota hai: "Iska jawab main kya dunga?" Ya: "Main iski baat ko kaise counter karunga?" Isse hum saamne wale ki baat properly samajh nahi paate.</p>
+<p>Isliye negotiation ke waqt apne dimaag ke is inner dialogue ko shaant karo. Saamne wale ki baat poori attention se suno.</p>
+<p>Jab doosre person ko feel hota hai ki aap genuinely uski baat sun rahe ho, toh woh zyada safe feel karta hai aur khulkar baat karne lagta hai.</p>
+<h3 class="sub-heading">Don't Rush (Jaldi mat karo)</h3>
+<p>Negotiation mein hum aksar jaldi se result chahte hain. Hum sochte hain: "Chalo jaldi se decision lete hain."</p>
+<p>Lekin agar aap resolution ki taraf bahut jaldi bhagte ho, toh saamne wale ko lag sakta hai: "Meri baat suni hi nahi ja rahi." Isse trust kam ho sakta hai.</p>
+<p>Isliye conversation ko slow rakho. Logon ko time do taaki woh:</p>
+<div class="sub-points">
+<p>apni baat properly bata sakein</p>
+<p>apni problem explain kar sakein</p>
+<p>apni feelings share kar sakein</p>
+<p>aur khud ko comfortable feel karein.</p>
+</div>
+<h3 class="sub-heading">Tone of Voice</h3>
+<p>Aap kya bolte ho sirf wahi important nahi hai. Aap kis tone mein bolte ho, woh bhi bahut important hai. Tone saamne wale ke emotions ko influence kar sakti hai. Document mein 3 types ki voices batayi gayi hain.</p>
+<p><strong>Positive / Playful Voice:</strong> Zyadatar situations mein isi tone ka use karna chahiye. Awaaz relaxed, friendly, calm, clear, pleasant ho. Agar possible ho toh smile karte hue aur dheere bolna useful hai. Goal yeh hai ki saamne wale ko aap pleasant aur friendly lago.</p>
+<p><strong>Late-night FM DJ Voice:</strong> Jab aapko kisi important point par emphasis dena ho ya authority dikhani ho, tab yeh voice useful hai. Ismein awaaz calm, slow, warm honi chahiye. Awaaz ko neeche ki taraf le jaane wali tone authority show kar sakti hai. Jab awaaz upar ki taraf jaati hai, toh woh saamne wale se response invite kar sakti hai.</p>
+<p><strong>Assertive Voice:</strong> Iska use bahut kam karna chahiye. Agar aap bahut assertive ya forceful tone use karte ho, toh saamne wala naturally push back kar sakta hai. Matlab woh aapki baat ko resist karne lag sakta hai.</p>
+<h3 class="sub-heading">Pause and Encourage (Chup rehna bhi ek technique hai)</h3>
+<p>Negotiation mein silence bahut powerful ho sakti hai. Kabhi-kabhi saamne wale ko bolne ke liye bas thoda silence chahiye hota hai. Aapko har pause ko apni baat se fill karne ki zarurat nahi.</p>
+<p><strong>Simple phrases:</strong> "Yes.", "OK.", "I see." Inka purpose agreement dena zaroori nahi hai. Inka purpose hai saamne wale ko signal dena: "Main sun raha hoon. Aap continue karo." Isse woh aur information share kar sakta hai.</p>
+<h3 class="sub-heading">Mirroring (Saamne wale ke important words repeat karna)</h3>
+<p>Mirroring ka simple matlab hai saamne wale ke bolne ke style ya words ko reflect karna. Document ke according, aap uske speech pattern, tone aur vocabulary ko mirror kar sakte ho.</p>
+<p><strong>Method:</strong> Saamne wale ke last 3 words ya 1–3 important words repeat karo. Isse saamne wala aksar apni baat aur explain karta hai. Aapko bina directly argue kiye zyada information mil sakti hai.</p>
+<div class="sub-points">
+<p><strong>Boss aur Employee ka Example:</strong> Maan lo boss aapse kehta hai: "Aaj hi poora project dobara karo." Aap directly confront karke yeh mat bolo: "Ye impossible hai." Iske badle calm Late-night FM DJ voice mein bolo: "I'm sorry, redo everything by today?" Phir kam se kam 4 seconds chup raho. Is silence se boss ko apni demand explain karne ka mauka milega. Ho sakta hai boss khud clarify kare: exactly kya redo karna hai, kya urgent hai, kab tak chahiye, ya uski actual problem kya hai. Yaani aapne fight start nahi ki. Aapne usko apni demand clarify karne ke liye encourage kiya.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Part 2 — Showing Empathy and Building Trust</h2></div>
+<h3 class="sub-heading">Tactical Empathy</h3>
+<p>Tactical Empathy ka matlab sirf kisi ke saath nice hona nahi hai. Aur iska matlab yeh bhi nahi hai ki aap saamne wale se agree karte ho. Iska matlab hai: khud ko saamne wale ki position mein rakhkar uska perspective aur motivation samajhna.</p>
+<p><strong>Aapko samajhna hai:</strong> woh situation ko kaise dekh raha hai, usko kya chahiye, usko kis cheez ki tension hai, woh kis wajah se resist kar raha hai.</p>
+<p>Is understanding ka use karke aap negotiation ko better direction mein le ja sakte ho.</p>
+<h3 class="sub-heading">Labeling (Feelings ko naam dena)</h3>
+<p>Kabhi-kabhi saamne wale ke behavior ke peeche ek emotion chhupi hoti hai. Labeling ka matlab hai us emotion ko pehchan kar uska naam lena.</p>
+<p><strong>Example:</strong> "It seems like you're worried about losing control of the situation." — "Mujhe lag raha hai ki aapko situation par control lose hone ki tension hai."</p>
+<p>Aap emotion ko identify karte ho, lekin usse judge nahi karte.</p>
+<h3 class="sub-heading">Labeling ka Process</h3>
+<p><strong>Step 1 — Feelings detect karo:</strong> Saamne wale ke words, behavior aur response ko carefully observe karo. Dekho ki uske peeche kaunsi feeling ho sakti hai.</p>
+<p><strong>Step 2 — Label lagao:</strong> Aap apni line in phrases se start kar sakte ho: "It seems like…", "It looks like…", "It sounds like…" Inka simple sense hai: "Mujhe lag raha hai…", "Aisa lagta hai…", "Aisa sunai de raha hai…"</p>
+<p><strong>Step 3 — "I" se bachna:</strong> Label lagate waqt sentence ko "I" se start karna avoid karo. Kyunki "I think you are…" ya "I feel you are…" saamne wale ko defensive bana sakta hai. Instead "It seems like…" use karo.</p>
+<p><strong>Step 4 — Label ke baad chup raho:</strong> Label bolne ke turant baad apni explanation mat shuru karo. Chup ho jao aur listen karo. Saamne wale ko respond karne do.</p>
+<h3 class="sub-heading">Negative aur Positive Feelings ko Label Karna</h3>
+<p>Document ke according: Negative feelings ko label karne se unki intensity kam ho sakti hai. Aur: Positive feelings ko label karne se unka effect badh sakta hai. Isliye feelings ko ignore karne ke bajay unhe identify karna useful hai.</p>
+<h3 class="sub-heading">Accusation Audit (Apne khilaaf hone wale aarop pehle hi bol dena)</h3>
+<p>Kabhi-kabhi saamne wala negotiation mein aapke baare mein kuch negative soch raha hota hai. Jaise: "Ye person unfair hai." "Ye apni authority ka misuse kar raha hai." "Ye sirf apna fayda dekh raha hai."</p>
+<p>Agar yeh negative thoughts saamne wale ke mind mein already hain, toh unka negotiation par effect ho sakta hai. Accusation Audit mein aap in negative accusations ko pehle hi khud saamne rakh dete ho. Isse unka effect kam karne ki koshish ki jaati hai.</p>
+<h3 class="sub-heading">Accusation Audit ka Process</h3>
+<p><strong>Step 1:</strong> Socho ki saamne wala aap par kaun-kaun se negative accusations laga sakta hai. Unki list banao.</p>
+<p><strong>Step 2:</strong> Un fears ko pehle hi label kar do. Example: "Aapko lag sakta hai ki main apni authority ka galat fayda utha raha hoon." Ya: "You may feel like I'm treating you unfairly." — "Aapko shayad lag raha ho ki main aapke saath fair nahi ho raha."</p>
+<p><strong>Step 3:</strong> Uske baad saamne wale se feedback ya input maango. Matlab unko opportunity do ki woh batayein ki unki actual concern kya hai.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Part 3 — "No" ka Use</h2></div>
+<h3 class="sub-heading">"No" se Safety aur Momentum banana</h3>
+<p>Log jab "Yes" bolte hain, toh iska matlab hamesha genuine commitment nahi hota. Kabhi-kabhi person sirf conversation se bachne ke liye "Yes" bol deta hai. Isliye saamne wale ko "No" bolne ki permission dena useful ho sakta hai. No bolne par person ko zyada safe aur control mein feel ho sakta hai.</p>
+<h3 class="sub-heading">"No" ka Actually Kya Matlab Ho Sakta Hai?</h3>
+<p>"No" ka matlab hamesha "Main ye deal reject karta hoon." nahi hota.</p>
+<p><strong>Iska matlab ho sakta hai:</strong> "Main abhi agree karne ke liye ready nahi hoon." "Mujhe aur information chahiye." "Mujhe thoda time chahiye."</p>
+<p>Isliye "No" ko conversation ka end samajhna zaroori nahi hai.</p>
+<h3 class="sub-heading">"No" se "Yes" ki taraf kaise badhein?</h3>
+<p>Jab person "No" bolta hai, toh usko lag sakta hai ki "Mere paas control hai." Uske baad aap calibrated questions use kar sakte ho.</p>
+<p><strong>Examples:</strong> "What about this doesn't work for you?" — "Is proposal mein aapko kya theek nahi lag raha?" Ya: "How could we make this work?" — "Hum isko kaise workable bana sakte hain?"</p>
+<p>Aise questions se saamne wale ko lag sakta hai ki solution develop karne mein uska bhi control hai.</p>
+<h3 class="sub-heading">"No" ko Extract Karna</h3>
+<p>Kabhi-kabhi person apni objection directly nahi bolta. Aise case mein document ek technique suggest karta hai:</p>
+<p><strong>Wants ko deliberately mis-label karo, ya unse poochho ki:</strong> "Aapko kya nahi chahiye?" Galat label sun kar person aksar correction karta hai. Us correction ke through aapko actual information mil sakti hai.</p>
+<h3 class="sub-heading">Email Technique — Jab Reply Na Mile</h3>
+<p>Agar aap kisi ko emails bhej rahe ho aur woh reply nahi kar raha, toh normal "Just following up…" type message ke bajay No-oriented question use kiya ja sakta hai.</p>
+<p><strong>Example:</strong> "Have you given up on this deal?" — "Kya aapne is deal ko chhod diya hai?" Document ke according log is tarah ke question ka reply jaldi kar sakte hain kyunki woh yeh clarify karna chahte hain ki unhone deal abandon nahi ki hai.</p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Part 4 — "That's Right"</h2></div>
+<h3 class="sub-heading">Persuade karne ki Permission</h3>
+<p>Negotiation mein ek important moment tab hota hai jab saamne wala kehta hai: "That's right." Lekin "You're right." aur "That's right." same nahi hain.</p>
+<h3 class="sub-heading">"You're Right"</h3>
+<p>Kabhi-kabhi saamne wala "You're right." sirf isliye bolta hai taaki aap chup ho jao aur conversation khatam ho. Iska matlab yeh zaroori nahi ki usne aapki baat ko genuinely accept kiya hai. Isliye sirf "You're right" sun kar yeh assume mat karo ki negotiation successful ho gayi.</p>
+<h3 class="sub-heading">"That's Right"</h3>
+<p>"That's right" tab aata hai jab saamne wale ko genuinely feel hota hai: "Is person ne meri situation, meri baat aur mere concerns ko properly samajh liya hai." Yeh ek important breakthrough ho sakta hai. Iske baad saamne wala aapki baat ko zyada openly sunne aur consider karne ke liye ready ho sakta hai.</p>
+<h3 class="sub-heading">"That's Right" kaise laayein? — Summary Technique</h3>
+<p>Ek strong summary mein do important cheezein honi chahiye:</p>
+<p><strong>Paraphrasing:</strong> Saamne wale ne jo kaha hai, usko apne simple words mein repeat karo. Matlab: "Aap basically ye keh rahe hain…"</p>
+<p><strong>Labeling:</strong> Uske words ke peeche jo feelings aur fears hain, unko acknowledge karo. Matlab: "Aapko main concern ye lag raha hai…"</p>
+<p>Jab aap dono cheezein accurately combine karte ho, saamne wala keh sakta hai: "That's right." Yeh signal hai ki usko feel hua ki aapne uski situation genuinely samajh li.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Part 5 — Reality aur Perception ko Shape Karna</h2></div>
+<p>Log emotional aur irrational tareeke se decisions le sakte hain. Isliye negotiation mein sirf facts rakhna enough nahi hota. Aapko yeh bhi samajhna hota hai ki saamne wala situation ko kis tarah perceive kar raha hai. Document mein reality aur fairness ko frame karne ke kuch methods diye gaye hain.</p>
+<h3 class="sub-heading">Time is on Your Side (Deadline hamesha utni fixed nahi hoti jitni dikhai deti hai)</h3>
+<p>Negotiation mein deadlines ko blindly accept nahi karna chahiye. Document ke according, deadlines aksar arbitrary hoti hain, flexible hoti hain. Isliye agar koi bole: "Aaj last day hai." toh automatically panic karne ki zarurat nahi.</p>
+<p><strong>Important principle:</strong> "No deal is better than a bad deal."</p>
+<p>Agar aapko saamne wale ki actual drop-dead deadline pata chal jaye, toh aap us information ka use better negotiation ke liye kar sakte ho. Example ke taur par month ya quarter ke end mein saamne wali party deal close karne ke liye zyada motivated ho sakti hai.</p>
+<h3 class="sub-heading">Perception of Fairness (Fair feel karna bahut important hai)</h3>
+<p>Log sirf yeh nahi dekhte ki unhe kitna benefit mil raha hai. Woh yeh bhi dekhte hain: "Kya mere saath fair treatment ho raha hai?" Agar unhe deal unfair lagti hai, toh woh kabhi-kabhi khud ka nuksaan hone ke baad bhi deal reject kar dete hain.</p>
+<div class="sub-points">
+<p><strong>Ultimatum Game Example:</strong> Is example mein proposer ko $10 diye jaate hain. Usko doosre person ke saath paisa divide karne ka proposal dena hota hai. Maan lo proposer doosre person ko sirf $1 offer karta hai aur khud $9 rakhta hai. Doosra person $1 accept karne ke bajay offer reject kar sakta hai. Result: Dono ko $0 milta hai. Logical point of view se $1 lena $0 se better hai. Lekin agar doosre person ko offer bahut unfair lagta hai, toh woh apna $1 bhi sacrifice karke deal reject kar sakta hai. Is example ka lesson hai: Fairness ka feeling negotiation mein bahut powerful hota hai.</p>
+<p><strong>Fairness Strategy:</strong> Negotiation ke beginning mein aap keh sakte ho: "Main chahta hoon ki aap hamesha fair feel karein. Agar aapko kahin bhi lage ki main unfair ho raha hoon, toh mujhe turant rokein." Iska purpose saamne wale ko signal dena hai ki fairness important hai aur agar usko kuch unfair lage toh woh openly bol sakta hai.</p>
+</div>
+<h3 class="sub-heading">Bending Their Reality</h3>
+<p>Is section ka focus hai ki emotional aur mental patterns ko samajhkar saamne wale ki perception ko influence kaise kiya ja sakta hai.</p>
+<p><strong>Extreme Anchor:</strong> Ek extreme starting number saamne wale ki expectations ko influence kar sakta hai. Is technique mein pehle Accusation Audit karo. Matlab pehle saamne wale ke fears aur negative thoughts acknowledge karo. Uske baad extreme anchor offer karo. Isse negotiation ke numbers ke baare mein saamne wale ki starting expectation change ho sakti hai.</p>
+<p><strong>Let Them Make the First Offer:</strong> Possible ho toh saamne wale ko pehla number bolne do. Isse aapko uski expectation ka idea mil sakta hai. Ho sakta hai uska number aapke expected number se different ho. Isliye pehla offer dene se pehle doosre person ka position samajhna useful ho sakta hai.</p>
+<p><strong>Use a Range:</strong> Agar aap kisi service ko approximately $1,000 par close karna chahte ho, toh ek specific single number bolne ke bajay range ka use kiya ja sakta hai. Example: "Top companies mein is service ke liye $1,300 se $1,600 tak charge kiya jata hai." Is tarah aap ek range establish kar rahe ho jo negotiation ki expectations ko influence kar sakti hai.</p>
+<p><strong>Sirf Money par Bargain Mat Karo:</strong> Negotiation sirf price ke baare mein nahi honi chahiye. Aap doosri valuable cheezein bhi negotiate kar sakte ho. Matlab agar price par movement limited hai, toh other valuable terms ko discuss kiya ja sakta hai. Document ka point hai: Keval paise ko hi negotiation ka ekmatra subject mat banao.</p>
+<p><strong>Odd Numbers:</strong> Round number $40,000 dekhne par ek estimate jaisa lag sakta hai. Lekin $38,257 jaisa specific number zyada calculated lag sakta hai. Yaani saamne wale ko lag sakta hai: "Yeh number carefully calculate kiya gaya hai aur shayad actual bottom-line figure hai." Isliye negotiation mein specific odd number ka psychological effect ho sakta hai.</p>
+<p><strong>Surprise Gift:</strong> Negotiation mein kabhi-kabhi ek unexpected aur unrelated gift dena goodwill create kar sakta hai. Iska purpose saamne wale ko positive surprise dena hai. Document ke according, aisa surprise counter-offer ke liye saamne wale ko psychologically open kar sakta hai.</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>Part 6 — Creating the Illusion of Control</h2></div>
+<h3 class="sub-heading">Calibrated Questions</h3>
+<p>Calibrated questions aise questions hain jo saamne wale ko control ka feeling dete hain. Usko lag sakta hai ki: "Solution main decide kar raha hoon." Lekin actually aap questions ke through conversation ko apne desired goal ki direction mein guide kar rahe hote ho.</p>
+<h3 class="sub-heading">Calibrated Questions kaise banayein? — "What" aur "How" se start karo</h3>
+<p><strong>Examples:</strong> "How am I supposed to do that?" — "Main ye practically kaise kar sakta hoon?" "What can I do to make this work?" — "Isko workable banane ke liye main kya kar sakta hoon?" "How would you like me to proceed?" — "Aap chahte hain ki main aage kaise proceed karun?"</p>
+<p>In questions mein aap direct refusal nahi kar rahe. Aap saamne wale ko solution explain karne ke liye push kar rahe ho.</p>
+<h3 class="sub-heading">Kaunse Questions Avoid Karein?</h3>
+<p>Simple Yes/No questions se bachna chahiye jab unka purpose sirf conversation ko close karna ho. "What" aur "How" questions zyada useful ho sakte hain.</p>
+<p><strong>Document ke according:</strong> "Who", "When", "Where" jaise questions ka answer log bina zyada soche factual tareeke se de sakte hain. "Why" bhi carefully use karna chahiye kyunki kai situations mein yeh accusatory lag sakta hai.</p>
+<p>Tone calm aur respectful rehni chahiye, even agar saamne wala aggressive ho raha ho.</p>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>Part 7 — Ensure Execution</h2></div>
+<h3 class="sub-heading">Agreement ko real banana</h3>
+<p>Sirf saamne wale ka "Yes." bol dena enough nahi hai. Real success tab hai jab agreement properly execute bhi ho.</p>
+<h3 class="sub-heading">Keep Asking "How"</h3>
+<p>"Kaise?" poochte rehna execution ki problems ko pehle identify karne mein help karta hai.</p>
+<p><strong>Isse pata chal sakta hai:</strong> implementation kaise hoga, kis difficulty ka saamna ho sakta hai, kis person ki zarurat hogi, agreement practically possible hai ya nahi.</p>
+<p>Saath hi saamne wale ko feel ho sakta hai ki solution uska apna idea hai.</p>
+<h3 class="sub-heading">Entire Team ko Consider Karo</h3>
+<p>Negotiation table par sirf ek ya do log baithe ho sakte hain. Lekin decision ko influence karne wale aur bhi log ho sakte hain. Isliye pooch sakte ho: "How does this affect others?" — "Iska doosre logon par kya effect padega?"</p>
+<p>Isse hidden stakeholders ke baare mein information mil sakti hai.</p>
+<h3 class="sub-heading">Pronoun Analysis</h3>
+<p>Document ek conversational clue batata hai. Agar koi person baar-baar "I" ya "Me" use karta hai, toh ho sakta hai uske paas actual decision-making power kam ho. Agar koi person baar-baar "We" ya "Them" use karta hai, toh ho sakta hai woh organization ke broader decision-makers ya team ke baare mein baat kar raha ho.</p>
+<p>Document isse real decision-maker identify karne ka ek clue batata hai.</p>
+<h3 class="sub-heading">7-38-55 Rule</h3>
+<p>Professor Mehrabian ke according, communication mein 7% message words se, 38% tone of voice se, 55% body language aur facial expressions se jaata hai.</p>
+<p>Iska practical lesson hai: Sirf words par depend mat karo. Tone aur body language ko bhi observe karo.</p>
+<h3 class="sub-heading">Rule of Three</h3>
+<p>Ek agreement ko sirf ek baar confirm karna enough nahi maana jaana chahiye. Same agreement ko 3 different ways mein confirm karo.</p>
+<p><strong>Iske liye use kar sakte ho:</strong> labels, summaries, calibrated questions.</p>
+<p>Purpose yeh check karna hai ki saamne wale ka agreement genuine hai ya sirf conversation mein "yes" bol diya gaya hai.</p>
+<h3 class="sub-heading">Lying ke Possible Giveaway Signs</h3>
+<p>Document ke according, jhooth bolne wale log kabhi-kabhi third-person pronouns jaise "him", "her", "them" zyada use karte hain, unusually long sentences bolte hain. Yeh signs hain jo observe kiye ja sakte hain; inhe automatic proof nahi samajhna chahiye.</p>
+<h3 class="sub-heading">Multiple "No" — Saamne Wale Ko Khud Better Offer Karne Dena</h3>
+<p>Aap ekdum hard "No." bolne ke bajay multiple polite aur indirect "No" use kar sakte ho.</p>
+<p><strong>Example sequence:</strong> First: "How am I supposed to do that?" Second: "Your offer is very generous, but I'm afraid it won't work for me." Third: "I'm sorry, no."</p>
+<p>Is process ka purpose yeh hai ki saamne wala khud apne offer ko improve karne ki taraf move kare.</p>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>Part 8 — Professional Bargainers ka Samna</h2></div>
+<p>Experienced negotiators ke saath deal karte waqt preparation aur bhi important ho jaati hai. Document negotiation ke 3 styles batata hai.</p>
+<h3 class="sub-heading">Analysts</h3>
+<p>Analysts detail-oriented hote hain, systematic hote hain, patient hote hain, mistakes kam karna chahte hain.</p>
+<p>Agar aap khud Analyst ho, toh document ke according thoda zyada smile karna useful hai, taaki aap bahut cold ya distant na lago.</p>
+<p><strong>Agar aap kisi Analyst ke saath negotiation kar rahe ho, toh:</strong> data ready rakho, details ready rakho, unhe analysis karne ka time do.</p>
+<h3 class="sub-heading">Accommodators</h3>
+<p>Accommodators relationships aur win-win par focus karte hain. Unke liye relationship important hota hai. Lekin unmein kabhi-kabhi time management ki problem, focus ki kami ho sakti hai.</p>
+<p><strong>Ek important caution:</strong> Aise concessions ya promises se bacho jo woh baad mein actually deliver na kar paayein.</p>
+<h3 class="sub-heading">Assertives</h3>
+<p>Assertive negotiators direct hote hain, task-focused hote hain, result-focused hote hain, har situation mein jeetna chahte hain.</p>
+<p>Inke saath deal karte waqt pehle unko properly sunna important hai. Use: summaries, mirroring, calibrated questions. Pehle unhe feel karao ki aap unki baat samajh rahe ho. Uske baad negotiation ko aage le jao.</p>
+<h3 class="sub-heading">Strategic "I" Statements</h3>
+<p>Gusse mein react karne ke bajay strategic pause create karne ke liye ek structure diya gaya hai:</p>
+<p>"I feel _____ when you _____ because _____." — "Mujhe _____ feel hota hai jab aap _____ karte hain, kyunki _____." Iska purpose bina unnecessary anger ke apni feeling aur problem clearly express karna hai.</p>
+<h3 class="sub-heading">Ackerman Plan</h3>
+<p>Yeh ek step-by-step bargaining process hai.</p>
+<p><strong>Step 1 — Target decide karo:</strong> Sabse pehle apna target price ya goal decide karo. Aapko pata hona chahiye ki aap actually kya achieve karna chahte ho.</p>
+<p><strong>Step 2 — First offer:</strong> Apne target ka approximately 65% first offer ke roop mein rakho. Yeh extreme anchor ka role play karta hai.</p>
+<p><strong>Step 3 — Counter-offers:</strong> Negotiation aage badhne par counters ko 85% → 95% → 100% tak le jao. Lekin document ke according in concessions ko blindly nahi dena. Inhe calibrated questions aur "No" ke baad use karna hai.</p>
+<p><strong>Step 4 — Final number:</strong> Final offer mein round number ke bajay specific number use karo. Example: $7,893. Iske saath ek non-monetary item bhi offer karo. Isse signal mil sakta hai ki: "Main apni absolute limit par pahunch gaya hoon."</p>
+<div class="specimen-row"><span class="specimen-label">48pt</span><h2>Part 9 — Finding the Black Swans</h2></div>
+<h3 class="sub-heading">Black Swan kya hai?</h3>
+<p>Black Swan ek aisi hidden ya unexpected information hai jo negotiation ka poora direction badal sakti hai. Simple words mein: Aisi important information jiske baare mein aapko pehle pata hi nahi tha.</p>
+<p>Voss negotiation mein kam se kam 3 Black Swans discover karne ki koshish karte hain.</p>
+<h3 class="sub-heading">3 Types of Leverage</h3>
+<p><strong>Positive Leverage:</strong> Aapke paas koi aisi cheez hai jo saamne wala chahta hai aur aap usse de sakte ho. Woh cheez aapki bargaining power ban sakti hai.</p>
+<p><strong>Negative Leverage:</strong> Aisa potential loss jo saamne wala avoid karna chahta hai. Document examples deta hai: money, reputation, time. Agar saamne wala in cheezon ko lose nahi karna chahta, toh yeh negotiation mein important leverage ban sakta hai.</p>
+<p><strong>Normative Leverage:</strong> Normative leverage mein aap saamne wale ke apne values, principles aur norms ko use karte ho. Matlab agar unke apne principles aapki position ko support karte hain, toh unhi principles ke through conversation ko frame kiya ja sakta hai.</p>
+<h3 class="sub-heading">Black Swans kaise Discover Karein?</h3>
+<p>Black Swans usually directly nahi milte. Aapko carefully observe aur question karna padta hai. Document suggest karta hai:</p>
+<p><strong>Face-to-face meetings:</strong> Possible ho toh face-to-face meeting karo.</p>
+<p><strong>Unguarded moments:</strong> Meeting ke pehle, baad, khane ke waqt jaise moments par dhyan do. In moments mein log kabhi-kabhi zyada naturally baat karte hain.</p>
+<p><strong>Calibrated questions:</strong> "What" aur "How" questions se hidden constraints ke baare mein information lene ki koshish karo.</p>
+<p><strong>Labels aur Mislabels:</strong> Labels aur intentionally incorrect labels ke through saamne wale ko correction dene ke liye encourage kiya ja sakta hai. Is tarah hidden constraints ya important information saamne aa sakti hai.</p>
+<div class="specimen-row"><span class="specimen-label">56pt</span><h2>Putting It Together — 1-Page Negotiation Sheet</h2></div>
+<p>Chris Voss suggest karte hain ki negotiation table par jaane se pehle apni strategy ko ek page par condense karna useful hai.</p>
+<p><strong>Goal:</strong> Apna best-case scenario, worst-case scenario define karo. Lekin apne aap ko sirf best-case number tak limit mat karo. Agar negotiation se better outcome mil sakta hai, toh uske liye open raho.</p>
+<p><strong>Summary:</strong> Negotiation tak situation kaise pahunchi, uske important facts ko 2–3 sentences mein likho. Summary aisi honi chahiye ki saamne wala sun kar bole: "That's right." Yaani summary mein unki reality accurately reflect honi chahiye.</p>
+<p><strong>Accusation Audit:</strong> Socho: "Saamne wala mere khilaaf kya-kya keh sakta hai?" Har possible accusation ke liye 3–5 labels pehle se prepare karo. Jaise: "It seems like…", "It sounds like…", "It looks like…" Isse negotiation ke waqt aap mentally prepared rahoge.</p>
+<p><strong>Calibrated Questions:</strong> Pehle se 3–5 calibrated questions prepare karo. In questions ka purpose ho sakta hai: value badhana, problem samajhna, deal-breaker ko address karna, saamne wale ko solution explain karne dena. Questions ko saamne wale ke point of view se design karo.</p>
+<p><strong>Non-Cash Items:</strong> Un cheezon ki list banao jo aap saamne wale se le sakte ho ya saamne wale ko de sakte ho. Yaani negotiation ko sirf cash/price tak limited mat rakho. Non-cash items bhi valuable ho sakte hain.</p>
+<div class="specimen-row"><span class="specimen-label">64pt</span><h2>Book ke Other Details</h2></div>
+<p>Uploaded document ke according, book mein decision-making processes ka background aur negotiation approach ki history bhi cover ki gayi hai.</p>
+<p>Ismein different real-life situations ke case studies bhi hain, jinmein: bank robbery, prison siege, hostage situations, business negotiations, salary negotiations jaise examples shamil hain.</p>
+<div class="specimen-row"><span class="specimen-label">72pt</span><h2>Quick Reference — Important Terms</h2></div>
+<p><strong>Hypothesize, Don't Assume:</strong> Pehle se kuch assume mat karo. Different possibilities rakho aur unhe test karo.</p>
+<p><strong>Active Listening:</strong> Apna jawab sochne ke bajay saamne wale ki baat properly suno.</p>
+<p><strong>Mirroring:</strong> Saamne wale ke last 3 ya 1–3 important words repeat karo.</p>
+<p><strong>Tactical Empathy:</strong> Saamne wale ki feelings aur point of view samjho, bina zaroori taur par agree kiye.</p>
+<p><strong>Labeling:</strong> Saamne wale ki hidden feeling ko naam do.</p>
+<p><strong>Accusation Audit:</strong> Apne khilaaf possible negative accusations ko pehle hi acknowledge karo.</p>
+<p><strong>No:</strong> "No" ko sirf rejection mat samjho. Yeh safety aur control ka feeling de sakta hai.</p>
+<p><strong>That's Right:</strong> Yeh tab aata hai jab saamne wale ko feel ho ki aapne uski situation genuinely samajh li hai.</p>
+<p><strong>Calibrated Questions:</strong> "What" aur "How" wale questions jo saamne wale ko solution ke baare mein sochne par majboor karte hain.</p>
+<p><strong>Extreme Anchor:</strong> Strong starting number jo negotiation ki expectations ko influence kare.</p>
+<p><strong>Black Swan:</strong> Hidden information jo negotiation ka poora result badal sakti hai.</p>
+<p><strong>Positive Leverage:</strong> Aapke paas woh cheez hai jo saamne wala chahta hai.</p>
+<p><strong>Negative Leverage:</strong> Saamne wala kisi loss se bachna chahta hai.</p>
+<p><strong>Normative Leverage:</strong> Saamne wale ke apne values aur principles ko use karna.</p>
+<p><strong>Ackerman Plan:</strong> 65% → 85% → 95% → 100% ka structured bargaining process.</p>
+<p><strong>Rule of Three:</strong> Agreement ko teen different ways mein verify karna.</p>
+<p><strong>No Deal is Better Than a Bad Deal:</strong> Sirf deal close karne ke liye bad deal accept nahi karni chahiye.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

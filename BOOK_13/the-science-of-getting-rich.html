@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Science of Getting Rich — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 4.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 13</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">The Science of Getting Rich</span>
+          <span class="headline-main">The Science of Getting Rich</span>
+        </div>
+        <p class="subhead">Reading notes on The Science of Getting Rich</p>
+        <div class="meta-row">
+          <span>10 min read</span><span class="meta-dot">•</span><span>By Wallace D. Wattles</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Introduction aur Background</h2></div>
+<p class="drop-cap"><strong>Historical Context:</strong> Yeh book sabse pehle 1910 mein publish hui thi. Ismein metaphysical concepts ke base par ameer banne ka ek scientific formula bataya gaya hai. Wattles ka daava hai ki agar aap is book ke ideas ko ek scientific formula ki tarah apply karenge, toh ameer banna sikhane ke liye aapko koi aur book padhne ki zaroorat nahi padegi.</p>
+<p><strong>Philosophical Foundations:</strong> Yeh book Descartes, Spinoza, Leibniz, Schopenhauer, Hegel aur Emerson jaise bade philosophers ki gehri study par based hai. Lekin Wattles ne metaphysics ki gehrai mein jaane ke bajaye sirf un practical ideas par focus kiya hai jo insaan ko ameer banne mein madad kar sakein. Unhone readers se kaha hai ki is book mein diye gaye facts ko sach maana jaye. Agar koi aur research karna chahe, toh woh Hegel aur Emerson ke works padh sakta hai.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Wealth Ki Definition</h2></div>
+<p><strong>Poori Tarah Se Jeena:</strong> Is book mein richness ka matlab sirf paisa hona nahi hai. Iska matlab apni life mein woh sab cheezein paana bhi hai jo aap paana chahte hain.</p>
+<p><strong>Full Potential Ko Achieve Karna:</strong> Sachchi success tab milti hai jab aap woh ban paate hain jo aap banna chahte hain aur apni poori potential ko jeete hain. Ismein contribution, fulfillment aur beauty ki appreciation bhi shamil hai.</p>
+<p><strong>Paisa Kyun Zaroori Hai?:</strong> Hamara society is tarah bana hua hai ki cheezon ko khareedne, use karne aur organize karne ke liye paise ki zaroorat hoti hai. Jab aapke paas bahut paisa hota hai, toh aap apne growth aur impact ko kai guna badha sakte hain.</p>
+<p>"In order to know more, do more, and be more we must have more."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Humein aur jaanne, aur karne aur aur zyada banne ke liye hamare paas aur resources hone chahiye.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Getting Rich Ek Science Hai</h2></div>
+<p><strong>Exact Science Jaise Math:</strong> Wattles ke mutabiq ameer banna ek exact science hai. Yeh mathematics ke addition aur subtraction ke rules ki tarah kaam karta hai. Jo bhi is science ke laws ko follow karega, woh ameer banega.</p>
+<p><strong>Kiske Upar Depend Nahi Karta?:</strong> Ameer banna aapke environment, aas-paas ke mahaul, talent, paise bachane ki ability ya kisi specific business ya profession par depend nahi karta. Do log jo ek hi situation mein hain ya ek jaise talent rakhte hain, unki wealth bilkul alag ho sakti hai.</p>
+<p><strong>Kiske Upar Depend Karta Hai?:</strong> Yeh is baat par depend karta hai ki aap ameer banne ke metaphysical laws ke according sochte aur kaam karte hain ya nahi. Isse "Thinking and Acting in a Certain Way" kaha gaya hai. Is law ko test karne ka ek hi tarika hai, ise khud par apply karna.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Part 1: Sacchaiyon ko Apnana</h2></div>
+<p>Ameer banne ke liye sabse pehle aapko kuch basic truths ko poori tarah accept karna hoga.</p>
+<h3 class="sub-heading">Original Substance ya Source Kya Hai?</h3>
+<p><strong>Original Substance ya Source:</strong> Poore universe ki har cheez ek hi basic substance se bani hai, jise "Original Substance" ya "Source" kaha jata hai.</p>
+<p><strong>Nature of Source:</strong> Yeh formless, yani bina kisi shape ke, bahut intelligent hai aur hamare aas-paas ki har inorganic aur organic cheez ke beech ke space mein maujood hai.</p>
+<p><strong>Different Names:</strong> Wattles iske liye Formless Substance, Thinking Substance, Supreme Intelligence, Living Presence, God aur Nature jaise alag-alag terms use karte hain.</p>
+<p><strong>Pro-Life Nature:</strong> Yeh Source hamesha life aur creation ko support karta hai. Yeh hamesha us direction mein flow karta hai jahan life ka growth aur expansion ho sake.</p>
+<h3 class="sub-heading">Thoughts Se Creation Ka Process Kaise Hota Hai?</h3>
+<p><strong>Thought Impression:</strong> Jab bhi aap koi thought sochte hain, toh uski ek chhap Formless Substance par padti hai. Yeh us thought ko physical form dene ka process shuru kar deti hai.</p>
+<p><strong>Example:</strong> Makaan ka Example</p>
+<div class="sub-points">
+<p>Agar aap ek makaan ke baare mein sochte hain, toh us thought ka impression Source par padta hai.</p>
+<p>Iske baad makaan banne ka process shuru hota hai.</p>
+<p>Yeh process existing commerce, construction industries aur raw materials ke through dheere-dheere physical form leta hai.</p>
+</div>
+<p><strong>Lines of Growth:</strong> Creation achanak hawa se nahi hota. Yeh nature ke pehle se chal rahe growth aur action ke tarikon ke through hota hai. Ismein time lag sakta hai.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Oak tree ka thought process ko turant start kar sakta hai, lekin tree ko poori tarah grow hone mein saal lag sakte hain.</p>
+</div>
+<p><strong>Mankind as Thinking Centers:</strong> Insaan ek thinking center hai. Hum jo bhi physical cheez banate hain, use pehle apne mind mein sochte hain. Tangible wealth, yani asli physical sampatti, banane ka rasta hamesha hamari thinking se shuru hota hai.</p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Part 2: Ek Vishesh Tarike Se Sochna</h2></div>
+<h3 class="sub-heading">Create, Don't Compete</h3>
+<p><strong>Galat Perspective:</strong> Zyada log sochte hain ki wealth limited hai aur us par sirf kuch logon ka control hai. Is wajah se unhe darr hota hai ki koi unki wealth chheen lega. Phir woh doosron se compete karte hain aur doosron ka nuksan karke apna fayda sochne lagte hain.</p>
+<p><strong>Sahi Perspective:</strong> Anant Supply: Source ka supply infinite, yani anant, hai aur kabhi khatam nahi ho sakta. Koi bhi aapki opportunities ya wealth ko aapse nahi chheen sakta.</p>
+<p><strong>Creator Banna Hai:</strong> Aapko competitor nahi, creator banna hai. Aapko apni riches is tarah paani hain ki doosron ka bhi bhala ho aur unke paas bhi pehle se zyada ho.</p>
+<h3 class="sub-heading">Use Value vs Cash Value Ka Siddhant</h3>
+<p><strong>Main Secret:</strong> Har business transaction mein aapko doosron ko "Use Value", yani unke liye asli fayda aur usefulness, unke diye gaye "Cash Value", yani paisa, se zyada dena chahiye.</p>
+<p><strong>Example:</strong> Eskimo ka Example</p>
+<div class="sub-points">
+<p>Agar aap kisi Eskimo ko $200 mein $2 million ki famous painting bechte hain, toh aap value create nahi kar rahe, kyunki us painting ka uske liye koi practical use nahi hai.</p>
+<p>Lekin agar aap use $200 mein ek gun ya heater bechte hain, toh aap use bahut zyada Use Value de rahe hain, kyunki usse uski life better hogi.</p>
+</div>
+<p><strong>Employees Ki Growth:</strong> Aap apne employees ko salary ke saath-saath growth ke aise opportunities bhi de sakte hain jisse woh khud bhi ameer aur better ban sakein.</p>
+<h3 class="sub-heading">Faith aur Gratitude Ka Law</h3>
+<p><strong>The Law of Gratitude:</strong> Action aur reaction hamesha barabar aur opposite direction mein kaam karte hain. Jab aap Source ko gratitude, yani aabhar, bhejte hain, toh aap uske saath ek strong connection banate hain.</p>
+<p><strong>Gratitude Ka Fayda:</strong> Jitna zyada aap har chhoti aur badi cheez ke liye gratitude express karenge, utni hi tezi se better cheezein aapki taraf aayengi.</p>
+<p><strong>Complaining Se Nuksan:</strong> Jab aap kisi cheez ki kami ya doosron ki galtiyon par focus karte hain, toh aap Source par kami ka impression chhodte hain. Isse aapki life mein aur kami aa sakti hai.</p>
+<p><strong>Faith Ki Shakti:</strong> Thought se aapka goal aapki taraf aata hai, lekin faith se aap use paane ke liye kaam karte hain. Apni request par doubt mat karo. Vishwas rakho ki jo aapne maanga hai, woh aapka hi hai.</p>
+<h3 class="sub-heading">Clear aur Consistent Mental Picture</h3>
+<p><strong>Vague Desires Nahi Chalengi:</strong> Sirf "behtar zindagi" ya "bahut saara paisa" chahiye, aisi unclear desires kaafi nahi hain. Aapko ek bilkul clear aur precise mental picture banani hogi.</p>
+<p><strong>Vivid Details:</strong> Jaise ek ghar ke baare mein sochte waqt uski har diwar, furniture aur aas-paas ke mahaul ko mind mein poori detail ke saath ek picture ki tarah dekho. Is mental picture ko bina bhatke lagatar hold karke rakhna hoga. Iske liye aapke andar ek sachchi aur strong desire honi chahiye.</p>
+<h3 class="sub-heading">Willpower Ka Sahi Use</h3>
+<p><strong>Doosron Par Force Na Karein:</strong> Apni willpower ka use kabhi doosron ko bewakoof banane, unse zabardasti kaam karwane ya unhe control karne ke liye mat karo. Source par bhi apni marzi thopne ki koshish mat karo.</p>
+<p><strong>Willpower Ko Apne Upar Apply Karein:</strong> Apni willpower ka use sirf apne upar karo, taaki aap apne mind ko sahi direction mein rakh saken, apni mental picture par focused rahen aur sahi action le saken.</p>
+<p><strong>Poverty Par Dhyan Na Dena:</strong> Gareebi ke baare mein sochna, purane financial struggles ko yaad karna, ya gareeb logon par daya karke unhe lachar samajhna band karo. Gareebi door karne ka sabse achha tarika yeh hai ki aap khud ameer banein aur doosron ko bhi ameer banne ke liye inspire karein.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Part 3: Ek Vishesh Tarike Se Acting Karna</h2></div>
+<h3 class="sub-heading">Efficient Action</h3>
+<p><strong>Fervent Intention aur Lazy Action Ka Fail Hona:</strong> Bahut log bade dreams dekhte hain, lekin unka action half-hearted aur distracted hota hai. Aap aaj jo bhi action le rahe hain, usmein apna 100 percent focus dijiye.</p>
+<p><strong>Daily Perfect Action:</strong> Har roz jo bhi kaam aap kar sakte hain, use poori tarah best tareeke se karein. Kaam jaldbazi, darr ya chinta ke bina karein.</p>
+<p>"Go fast, but never hurry."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Tezi se kaam karo, lekin ghabrahat aur jaldbazi mein mat karo.</p>
+</div>
+<h3 class="sub-heading">Getting into the Right Business</h3>
+<p><strong>Talents Ke Hisab Se Chunav:</strong> Aisa business ya career choose karna best hai jo aapke inborn talents aur skills ke saath match karta ho. Isse kam mehnat mein zyada success mil sakti hai.</p>
+<p><strong>Naya Talent Develop Karna:</strong> Agar aap kisi aise business mein jaana chahte hain jiska talent aapke paas abhi nahi hai, toh chinta na karein. Apne mind mein use ek end goal ki tarah rakhein aur dheere-dheere woh skills develop karein. Lekin shuruaat aapko apne current work se hi karni hogi.</p>
+<p><strong>Hate Se Bachna:</strong> Agar aap kisi kaam se nafrat karte hain, toh use zabardasti mat karein, jab tak woh aapke end goal tak pahunchne ka ek main zariya na ho. Decisions lene mein jaldbazi mat karein. Pehle Source ke saath align hokar sahi action ke baare mein sochein.</p>
+<h3 class="sub-heading">Advancement</h3>
+<p><strong>Innate Desire for Increase:</strong> Har insaan ke andar aage badhne ki ek natural desire hoti hai. Log un logon ki taraf attract hote hain jo unhe better aur richer life de sakte hain.</p>
+<p><strong>Advancing Personality:</strong> Aap jo bhi kaam karein, chahe job ho ya business, hamesha yeh dikhayein ki aap aage badh rahe hain. Jab aap apne current role se bade ban jate hain, yani apni current place ko sirf fill nahi balki usse zyada karte hain, toh aapka natural promotion agle level par ho sakta hai.</p>
+<p><strong>Boasting Se Bachna:</strong> Apni success ka dikhawa ya ghamand mat karein. Doosron par power dikhane ya unhe neecha dikhane ki koshish kabhi mat karein.</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>Conclusion aur Core Formula</h2></div>
+<p>Wattles ne poori book ke saar ko ek simple aur powerful mantra mein sameta hai aur ise baar-baar yaad rakhne ko kaha hai.</p>
+<p>"There is a thinking Stuff from which all things are made, and which, in its original state, permeates, penetrates, and fills the interspaces of the universe."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Ek Thinking Substance hai jisse sab cheezein bani hain aur jo apni original state mein poore universe ke beech ke har space mein maujood hai.</p>
+</div>
+<p>"A thought, in this Substance, produces the thing that is imaged by the thought."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Is Substance mein ek thought us cheez ko create karta hai jiski image us thought mein hoti hai.</p>
+</div>
+<p>"Man can form things in his thought, and, by impressing his thought upon formless substance, can cause the thing he thinks about to be created."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Insaan apne thoughts mein cheezein bana sakta hai aur apne thought ko Formless Substance par impress karke us cheez ke creation ka process shuru kar sakta hai.</p>
+</div>
+<p>"In order to do this, man must pass from the competitive to the creative mind; he must form a clear mental picture of the things he wants, and do, with faith and purpose, all that can be done."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Iske liye insaan ko competitive mind se creative mind ki taraf jaana hoga. Use apni chahi hui cheezon ki clear mental picture banani hogi aur faith aur purpose ke saath woh sab karna hoga jo kiya ja sakta hai.</p>
+</div>
+<p><strong>Live and Spread the Truth:</strong> Purane established systems ya sarkar jo logon ko gareebi mein rakhna chahti hain, woh bhi aapko ameer banne se nahi rok sakti agar aap is science ko follow karte hain. Jab bahut saare log is sach ko apna kar aage badhenge, toh poora system khud change ho jayega.</p>
+<p><strong>Final Promise:</strong> Wattles ka wada hai ki jo bhi insaan in rules ko practice karega, woh 100 percent ameer banega. Uski riches uske vision ki definiteness, faith aur gratitude ki gehrai ke exact proportion mein hogi.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+B="To Sell is Human: The Surprising Truth About Persuading, Convincing and Influencing Others"
+A="Daniel H. Pink"
+H1|1. Redefining Sales: Sales Ki Nayi Definition
+H2|Selling Se Moving Tak: Naya Tareeqa
+B|Traditional vs. Non-Monetary Sales: Daniel Pink kehte hain ki zyadatar log sales ko pushy ya dishonest door-to-door sales ke roop mein dekhte hain. Lekin aaj ke samay mein sales badal chuki hai. Aaj do tarah ki sales hoti hain.
+S|Monetary Sales: Paise ke badle products bechna.
+S|Non-Monetary Sales: Ismein log apne resources, jaise time, effort, attention ya expertise, ko kisi doosri cheez ke badle exchange karte hain.
+B|Hum Sab Sellers Hain: Aaj digital aur smartphone ke daur mein information chhupana ya zabardasti convince karna jaisi traditional sales approaches kaam nahi karti. Pink ke mutabik, "Like it or not, we’re all in sales now."
+S|Iska matlab hai ki chahe humein pasand ho ya na ho, hum sab ab logon ko move karne, yani unhe kisi baat ya action ki taraf le jaane ke kaam mein lage hue hain.
+H2|Moving Business Ke Peeche Ke Teen Factors: The 3Es
+B|Entrepreneurship: Internet aur smartphones ki wajah se naye aur chhote businesses, yani micro-businesses, shuru karna bahut aasan aur sasta ho gaya hai.
+S|Chhote businesses mein alag-alag kaam ke liye hamesha specialized roles nahi hote, isliye har entrepreneur ko khud sales aur marketing bhi sambhalni padti hai.
+B|Elasticity: Pehle ke stable environments mein ek specialized skill kaafi hoti thi. Lekin aaj ke flat organizations aur badalte samay mein humein marketing, design aur accounting jaise functional boundaries ke bahar jaakar flexible skills seekhni padti hain.
+S|Atlassian enterprise software company iska ek bada example hai. Unhone bina kisi professional salesperson ke $100 million ki annual sales achieve ki, kyunki unka har employee sales par focus karta hai.
+S|Palantir ek aur example hai. Yeh company sales trainers ke bajay "forward-deployed engineers" ko seedha customers ke paas bhejti hai taaki woh customers ki problems ko samajh saken.
+B|Ed-Med: Education aur Medicine do bahut tezi se badhne wale industries hain.
+S|Kisi student ko padhne ke liye motivate karna ya kisi patient ko healthy lifestyle apnane ke liye razi karna bhi nonsales selling, yani moving, hai.
+S|Is process mein logon ko pawns ke bajay partners ki tarah treat kiya jata hai.
+H2|Caveat Emptor Se Caveat Venditor Tak
+B|Caveat Emptor: Pehle sellers ke paas buyers se zyada information hoti thi. Isliye rule tha Caveat Emptor, yani Buyer Beware.
+S|Iska matlab tha ki khariddar ko khud savdhan rehna chahiye.
+B|Caveat Venditor: Internet ke aane ke baad buyers ke paas bhi lagbhag barabar information aa gayi hai aur woh bad reviews share karke sellers ke khilaf response bhi de sakte hain.
+S|Isliye ab naya rule Caveat Venditor hai, yani Seller Beware.
+S|Ab seller ka kaam sirf information dena nahi, balki information ko filter aur clearly samjhana bhi hai.
+H2|Teen Myths: Galatfahmiyan
+B|Myth 1: Selling kam dimaag wale logon ke liye hai.
+S|Sach: Selling ke liye engineering ya medicine jitni hi high-value skills ki zaroorat hoti hai.
+B|Myth 2: Salespeople sirf paise ke peeche bhaagte hain.
+S|Sach: Bahut behtareen salespeople hamesha kisi bade purpose se driven hote hain.
+B|Myth 3: Kuch log natural salespeople paida hote hain.
+S|Sach: Hum sabke andar doosron ko influence ya move karne ka natural instinct hota hai.
+H1|2. How to Be a Good Mover: The New ABCs
+P|Daniel Pink purane sales mantra "Always Be Closing", yani ABC, ko replace karke ek naya ABC model dete hain.
+H2|A: Attunement
+B|Attunement: Iska matlab hai khud ko doosron ke perspective aur situation ke saath align karna.
+S|Attunement ke teen important rules hain.
+B|Lessen your power to amplify it: Jin logon ke paas zyada power hoti hai, unka empathy level kam ho sakta hai.
+S|Isliye baat shuru karte waqt yeh maan kar chalein ki aapki power samne wale se kam hai.
+S|Amazon ke founder Jeff Bezos iska example dete hain. Woh meetings mein hamesha ek empty chair rakhte hain jo customer ke perspective ko represent karti hai.
+B|Use your head + heart: Kisi ko move karne ke liye aapko dimaag, yani logic, aur dil, yani empathy, dono ka use karna hota hai.
+S|Meet the time traveller: Kisi 300 saal purane insaan ko smartphone jaisi modern cheez samjhane ki koshish karein. Isse aap doosron ke perspective ko samajhna seekh sakte hain.
+S|Draw a discussion: Kisi meeting mein chal rahe moods aur content ke flow ka ek map banayein.
+B|Strategic Mimicry: Samne wale ki body language, gestures aur words ko dheere aur naturally copy karna, yani mirroring, sales aur negotiations mein achhe results de sakta hai.
+S|Yeh bilkul natural aur sincere hona chahiye.
+S|Iske liye Watch-Wait-Wane approach apnaya ja sakta hai.
+B|Ambiverts Ka Fayda: Research ke mutabik extraverts ya introverts ke bajay ambiverts sabse behtareen movers hote hain.
+S|Ambiverts woh log hote hain jo bolne aur sunne dono mein balance rakhte hain.
+H2|B: Buoyancy
+B|Buoyancy: Sales mein sabse mushkil kaam rejection ko jhelna hota hai. Buoyancy aapko har situation mein tairte rehne, yani optimistic aur resilient rehne, mein madad karti hai.
+S|Iske teen hisse hain.
+B|Before: Questioning Self-Talk
+S|Taiyari karte waqt sirf positive statement, jaise "Main yeh kar sakta hoon", bolne ke bajay khud se sawal poochein: "Kya main yeh kar sakta hoon?"
+S|Uske baad un 5 reasons ki list banayein jinke wajah se jawab "Yes" ho sakta hai.
+S|Yeh aapki intrinsic motivation aur strategies ko activate karta hai.
+B|During: Positivity Ratio
+S|Negative emotions samne wale ke andar defense mechanism activate kar sakte hain.
+S|Positivity logon ko open-minded banati hai aur long-term relationships develop karne mein madad karti hai.
+S|Pink ke mutabik ideal ratio 3:1 hona chahiye, yani 3 positive encounters ke badle 1 negative encounter.
+B|After: Explanatory Style
+S|Rejection ke baad aap us experience ko kaise samjhate hain, isse aapka resilience tay hota hai.
+S|Rejection ko temporary, yani kuch samay ke liye, specific, yani sirf us particular situation ke liye, aur external, yani sirf aapki personal kami ki wajah se nahi, is tarah dekhna chahiye.
+S|Ek achha tareeqa hai khud ko ek rejection letter likhna taaki rejection ka darr kam ho sake.
+H2|C: Clarity
+B|Clarity: Aaj information ki kami nahi hai. Isliye sirf problem solve karne se zyada zaroori problem find karna hai.
+S|Iska matlab hai aisi problems dhoondhna jo customer ko khud pehle dikhai bhi nahi de rahi thi.
+S|Clarity ke do main aspects hain.
+B|Curation: Bahut zyada data dene ke bajay sirf sabse relevant aur useful information pesh karein.
+S|Seek: Data collect karna.
+S|Sense: Data ko samajhna.
+S|Share: Samjhi hui useful information ko doosron ke saath share karna.
+B|Asking Questions: Sahi sawal poochkar logon ko apni situation aur problems ko samajhne mein madad milti hai.
+S|The 2-Questions approach: Kisi se poochein, "1 se 10 ke scale par aap is kaam ke liye kitne ready hain?"
+S|Uske baad poochein, "Aapka number isse lower kyun nahi hai?"
+S|Isse samne wala khud apne positive reasons dhoondhne lagta hai.
+S|The Five Whys approach: Kisi bhi problem ki jad tak pahunchne ke liye 5 baar "Kyun?" poochein.
+H2|Framing the Offer: Apne Offer Ko Kaise Present Karein
+B|Reduce: Logon ko kam options dene se sales badh sakti hain, kyunki "less is more".
+B|Experience: Sirf products ke bajay experiences bechein.
+S|Example: Chocolate ke bajay indulgence, yani us chocolate ko enjoy karne ka experience, bechna.
+B|Labels: Jab aap logon ko positive label dete hain, jaise "kind" ya "generous", toh woh us label ke mutabik behave karne lag sakte hain.
+B|Blemishes: Apne offer ki ek chhoti si kami, yani blemish, batane se honesty dikhai deti hai aur baaki positive points par dhyan badh sakta hai.
+B|Potential: Log un cheezon ke prati zyada receptive hote hain jinka future potential bada ho, jaise "this could be the next game-changer", bajay un cheezon ke jo pehle se hi best maani ja rahi hain.
+B|Give Clear Directions: Jab samne wale ko problem aur solution samajh aa jaye, toh use clear next steps batayein ki use aage kya karna hai.
+H1|3. What To Do to Move People: Logon Ko Move Karne Ke Liye Kya Karein
+P|Jab aapke paas ABCs ki qualities aa jayein, toh logon ko move karne ke liye aapko teen kaam karne honge.
+H2|I. Pitch: Apni Baat Rakhna
+B|Pitch: Pitch ka maqsad kisi ko zabardasti convince karna nahi, balki uska interest jagana aur conversation shuru karna hota hai.
+P|Pink purane elevator pitch ke bajay 6 naye pitches batate hain.
+B|One-Word Pitch: Apne poore message ko sirf ek word mein badal dena.
+S|Example: Google ne "search" ko claim kiya aur Mastercard ne "priceless" ko.
+B|Question Pitch: Statements passive ho sakte hain, jabki sawal logon ko khud sochne aur agree karne ki taraf le ja sakte hain.
+B|Rhyming Pitch: Jo sentences rhyme karte hain, jaise "Leaders are readers", log unhe aasan samajhte hain aur un par subconscious level par jaldi trust kar sakte hain.
+B|Subject-Line Pitch: Emails ki subject lines aisi honi chahiye jo ya toh bahut useful hon, yani Utility dein, ya curiosity jagayein, yani Uncertainty create karein.
+B|Twitter Pitch: Apne message ko 140 characters, ya 120 characters, se kam mein likhna, sawal poochte hue ya koi link dete hue.
+B|Pixar Pitch: Pixar movies ki tarah ek 6-part narrative structure banana.
+S|"Once upon a time... Every day... One day... Because of that... Because of that... Until finally..."
+H2|II. Improvise: Turant Sochna Aur Situation Ke Hisaab Se Badalna
+P|Jab cheezein plan ke mutabik na chalein, toh improvise karein.
+S|Iske teen rules hain.
+B|Listen out for offers: Har rejection ko dhyan se sunein, kyunki uske andar ek chhupi hui "offer" ho sakti hai.
+S|Example: "Budget nahi hai" ka matlab price negotiation ki offer ho sakti hai.
+B|Use "Yes and...": "No" ya "Yes, but" ke bajay "Yes, and..." ka use karein taaki dimaag possibilities ki taraf badhe.
+B|Make others look good: Sirf apne views share karne ke bajay samne wale ko dhyan se sunein aur open-ended sawal poochein.
+S|Isse samne wala achha aur important feel kar sakta hai.
+H2|III. Serve: Sewa Bhaav
+B|Serve: Selling tab meaningful aur long-lasting banti hai jab aap sach mein samne wale ko serve karte hain.
+B|Be Personal: Kisi bhi problem ya report mein jab aap kisi real person ka face, yani photograph, add karte hain, toh woh kaam zyada personal aur real lagne lagta hai.
+S|Har customer ko ek unique individual ki tarah samjhein.
+B|Focus on Purpose: Upserve, Don't Upsell.
+S|Log kisi bade purpose ke liye jaldi action lete hain.
+S|Example: Hospital staff ne apne haath tab zyada dhoye jab unhe patients ki health ki yaad dilayi gayi, bajay sirf unki apni health ki.
+S|Logon ko sirf zyada bechne ke bajay unhe "upserve" karein, yani bina extra expectations ke unhe extra value dein.
+B|The Self-Check Test: Hamesha khud se do sawal poochein.
+S|Agar samne wala kharidta hai, toh kya uski life behtar hogi?
+S|Kya is interaction ke baad duniya ek behtar jagah banegi?
+S|Agar dono sawalon ka jawab "Yes" hai, toh hi aage badhein.
+H1|Conclusion: Nishkarsh
+P|Daniel Pink is book mein yeh clearly batate hain ki modern sales ab chalaki ya manipulation ka kaam nahi hai.
+P|Aaj information parity ke daur mein buyers aur sellers ke paas information ka gap kam ho gaya hai.
+P|Sabse behtar seller aur mover wahi hai jo empathetic ho, honesty se baat kare, sahi problems dhoondhe aur sachche dil se samne wale ki life ko behtar banana chahe.

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atomic Habits — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 7.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 3</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">Atomic Habits</span>
+          <span class="headline-main">Atomic Habits</span>
+        </div>
+        <p class="subhead">Reading notes on Atomic Habits</p>
+        <div class="meta-row">
+          <span>14 min read</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Core Idea: 1% Improvement aur Compounding ki Power</h2></div>
+<p class="drop-cap">Atomic Habits ka matlab hai chhoti-chhoti habits aur daily behaviors jo ek ke baad ek build hote hain aur time ke saath bahut bade results dete hain. Log aksar bade breakthroughs ko importance dete hain, lekin asal mein hamare roz ke chhote decisions aur actions hi long term mein compound hokar bade results banate hain.</p>
+<h3 class="sub-heading">1% Compounding ka Maths</h3>
+<p>Agar aap poore saal har din 1% better hote ho, to aap sirf 365% better nahi hote. Compounding ki wajah se aap saal ke end tak lagbhag 37 guna better ho sakte ho (1.01^365 ≈ 37.78).</p>
+<p>Iska ulta bhi sach hai. Agar aap har din 1% worse hote jao, to aapki ability aur performance lagbhag zero tak pahunch sakti hai.</p>
+<p>Aapki aaj ki situation chahe jo bhi ho, aapki habits aapke future ki direction tay karti hain.</p>
+<h3 class="sub-heading">British Cycling Case Study</h3>
+<p>Lagbhag ek century tak British Cycling ko koi badi international success nahi mili. 2003 mein Dave Brailsford Performance Director bane. Unhone poore system mein chhote-chhote 1% improvements karne ka program shuru kiya.</p>
+<p>Unhone bike seats ko redesign kiya, racing suits par experiments kiye aur better sleep ke liye special mattresses, pillows aur massage gels tak test kiye.</p>
+<p>Results:</p>
+<div class="sub-points">
+<p>2008 Beijing Olympics mein British team ne available gold medals ka 60% jeeta.</p>
+<p>2012 London Games mein unhone 9 Olympic records aur 7 world records banaye.</p>
+<p>2007 se 2017 tak unhone 178 world championships aur 66 Olympic/Paralympic gold medals jeete.</p>
+</div>
+<p>Itne bade results bahut saare chhote improvements ke compound effect se aaye.</p>
+<h3 class="sub-heading">Plateau of Latent Potential</h3>
+<p>Habits banana mushkil isliye hota hai kyunki unka result turant dikhai nahi deta.</p>
+<p>6 mahine paise save karne se koi turant crorepati nahi banta. 3 din gym jaane se koi fit nahi hota. Jab result turant nahi milta, hum aksar haar maan lete hain aur purani habits par laut jaate hain.</p>
+<p>Positive compounding ka fayda lene ke liye hume us point tak consistent rehna padta hai jahan hidden progress finally visible result banne lagti hai.</p>
+<p><strong>Ice Cube Example:</strong> Ek ice cube tab tak nahi pigalta jab tak temperature 32°F tak nahi pahunchta. 25°F se 31°F tak jo heat mili wo waste nahi hui. Usne andar potential build kiya. 32°F par pahunchte hi ice pigalna shuru ho gaya.</p>
+<p><strong>Chinese Bamboo Example:</strong> Chinese Bamboo pehle 5 saal zameen ke neeche apna root system banata hai. Bahar se bahut kam progress dikhti hai. Phir wo sirf 6 hafton mein lagbhag 90 feet tak grow kar sakta hai.</p>
+<p>Isliye progress hamesha seedhi line mein nahi hoti. Compounding ka bada result aksar der se dikhta hai. Consistent rehne par ek point aata hai jahan growth bahut tez ho jati hai.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>The Three Levels of Behavior Change</h2></div>
+<p>Behavior change ke 3 levels hain:</p>
+<div class="sub-points">
+<p><strong>Outcomes:</strong> Sabse bahar ka level. Aapko kya result chahiye, jaise target weight, achhe grades ya business profit.</p>
+<p><strong>Processes:</strong> Beech ka level. Aap kya karte ho, jaise daily routines aur systems.</p>
+<p><strong>Identity:</strong> Sabse andar ka level. Aap kya believe karte ho aur khud ko kaise dekhte ho.</p>
+</div>
+<h3 class="sub-heading">Sirf Goals par Focus Karne ki Problem</h3>
+<p><strong>Happiness Sabotage:</strong> Agar happiness ko goal se jod diya, to aap tabhi khush honge jab goal complete hoga. Is wajah se goal tak pahunchne ka poora journey failure jaisa lag sakta hai, chahe aapne kitni bhi progress ki ho.</p>
+<p><strong>Yo-Yo Effect:</strong> Goal complete hone ke baad motivation khatam ho sakti hai. Phir log habits chhod dete hain aur purani state mein laut sakte hain.</p>
+<p><strong>Symptom-Treating:</strong> Sirf outcome change karna root cause ko solve nahi karta. Jaise ganda room saaf karna immediate problem solve karta hai, lekin agar cleaning system aur habits nahi badli, to room dobara ganda ho jayega.</p>
+<h3 class="sub-heading">Identity-Driven Habits</h3>
+<p>Long-term change andar se shuru hota hai. Aap short-term motivation se habit shuru kar sakte ho, lekin us habit par long term tikne ke liye use apni identity ka hissa banana zaroori hai.</p>
+<p>Cigarette Example: Agar cigarette offer karne par koi kehta hai "Nahi thanks, main quit karne ki koshish kar raha hoon," to uski identity abhi bhi smoker wali hai.</p>
+<p>Agar woh kehta hai "Nahi thanks, main smoke nahi karta," to woh apni identity ko non-smoker ke roop mein dekh raha hai.</p>
+<h3 class="sub-heading">Identity ko Shape Karna</h3>
+<p>Goal sirf book padhna nahi hona chahiye. Goal ek reader banna hona chahiye.</p>
+<p>Goal sirf marathon complete karna nahi hona chahiye. Goal ek runner banna hona chahiye.</p>
+<p>Apne beliefs ko baar-baar improve aur update karke apni identity ko upgrade karna long-term change ka important part hai.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>The Habit Loop</h2></div>
+<h3 class="sub-heading">Habits Mental Shortcuts Hain</h3>
+<p>Habits dimaag ke automatic shortcuts hain. Ye repetitive problems ko kam conscious effort ke saath solve karte hain aur dimaag ki mental energy bachate hain.</p>
+<h3 class="sub-heading">Four-Step Habit Loop</h3>
+<p><strong>Cue:</strong> Koi physical ya environmental signal jo brain ko reward ki prediction deta hai.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Phone par message aane ki notification.</p>
+</div>
+<p><strong>Craving:</strong> Us cue ke baad jo desire paida hoti hai. Aap apni current internal state ko badalna chahte ho.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Message mein kya hai ye jaanne ki desire.</p>
+</div>
+<p><strong>Response:</strong> Actual action jo aap karte ho.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Phone uthakar message padhna.</p>
+</div>
+<p><strong>Reward:</strong> Final result jo craving ko satisfy karta hai aur brain ko sikhata hai ki ye action dobara karna chahiye.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Message ka content jaan lena.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Four Laws of Behavior Change</h2></div>
+<h3 class="sub-heading">Good Habits Banane ke Liye</h3>
+<div class="sub-points">
+<p>Isko obvious banao.</p>
+<p>Isko attractive banao.</p>
+<p>Isko easy banao.</p>
+<p>Isko satisfying banao.</p>
+</div>
+<h3 class="sub-heading">Bad Habits Chhodne ke Liye</h3>
+<div class="sub-points">
+<p>Isko invisible banao.</p>
+<p>Isko unattractive banao.</p>
+<p>Isko difficult banao.</p>
+<p>Isko unsatisfying banao.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Law 1: Make the Cue More Visible or Invisible</h2></div>
+<h3 class="sub-heading">Awareness aur Habits Scorecard</h3>
+<p>Habit badalne se pehle us habit ko consciously notice karna zaroori hai.</p>
+<p>Habits Scorecard mein subah se raat tak ki daily activities likho. Phir har habit ko categorize karo, based on whether wo aapki desired identity ko support karti hai ya nahi:</p>
+<div class="sub-points">
+<p>Positive (+)</p>
+<p>Negative (−)</p>
+<p>Neutral (=)</p>
+</div>
+<h3 class="sub-heading">Implementation Intentions</h3>
+<p>Habit ko action mein badalne ke liye time aur location ka clear trigger use karo.</p>
+<p><strong>Formula:</strong> "Main [time] par [location] mein [action] karunga."</p>
+<div class="sub-points">
+<p><strong>Example:</strong> "Main subah 6:00 baje study room mein 10 minutes meditate karunga."</p>
+</div>
+<h3 class="sub-heading">Habit Stacking</h3>
+<p>Nayi habit ko kisi existing habit ke saath jod do.</p>
+<p><strong>Formula:</strong> "[Existing habit] ke baad, main [new habit] karunga."</p>
+<div class="sub-points">
+<p><strong>Example:</strong> "Subah ki tea finish karne ke baad, main 10 minutes meditate karunga."</p>
+</div>
+<p>Aap kai habits ko ek chain ki tarah jod sakte ho. Naya cue specific hona chahiye aur us habit ki normal frequency ke saath match karna chahiye.</p>
+<h3 class="sub-heading">Environment Design</h3>
+<p>Environment hamare behavior ko bahut strongly shape karta hai. Ye kai baar willpower aur motivation se bhi zyada powerful hota hai.</p>
+<p>Example: Shops mein eye-level par rakhi cheezein log zyada khareedte hain.</p>
+<p>Good habits ke liye:</p>
+<div class="sub-points">
+<p>Achhe cues ko visible rakho.</p>
+<p>Agar zyada paani peena hai, to soda ko fridge ke peeche rakho aur paani ki bottles visible jagahon par rakho.</p>
+</div>
+<p><strong>Objects aur Spaces:</strong> Habits ko specific places ke saath connect karo. Agar couch relaxation aur TV ke liye use hota hai, to wahan productivity badhana mushkil ho sakta hai. Alag habits ke liye alag spaces rakho, jaise kaam ke liye alag desk aur relaxation ke liye alag jagah.</p>
+<h3 class="sub-heading">Bad Habits ko Invisible Banao</h3>
+<p>Sirf willpower par depend mat karo. Temptation ko environment se hata do.</p>
+<p>Agar phone distraction deta hai, to phone ko doosre room mein rakh do.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Law 2: Make the Habit Attractive or Unattractive</h2></div>
+<h3 class="sub-heading">Dopamine Feedback Loop</h3>
+<p>Dopamine motivation ka important chemical driver hai. Dopamine sirf pleasure milne par nahi badhta; pleasure ki expectation par bhi badhta hai.</p>
+<p>Reward ki expectation hume action lene ke liye motivate karti hai. Isliye good habit banate waqt anticipation ka use karna useful hai.</p>
+<h3 class="sub-heading">Craving aur Underlying Motives</h3>
+<p>Humare basic motives purane evolutionary needs se jude hain:</p>
+<div class="sub-points">
+<p>Energy bachana</p>
+<p>Food aur water secure karna</p>
+<p>Love aur connection paana</p>
+<p>Reproduce karna</p>
+</div>
+<p>Modern cravings inhi basic motives ke naye forms ho sakte hain.</p>
+<p>Aap sirf cigarette ya social media ke liye crave nahi karte. Aap apni internal state badalne ke liye crave karte ho.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Stress kam karne ke liye smoking.</p>
+<p><strong>Example:</strong> Connected feel karne ke liye social media use karna.</p>
+</div>
+<h3 class="sub-heading">Temptation Bundling</h3>
+<p>Ek aisi cheez jo aapko karni zaroori hai, use us cheez ke saath jodo jo aap karna chahte ho.</p>
+<p>Example: Sirf tab reality show dekho jab treadmill par workout kar rahe ho.</p>
+<p>Isse habit stacking ke saath combine kiya ja sakta hai: 30 minutes gym workout ke baad 30 minutes reality show.</p>
+<h3 class="sub-heading">Social Influence aur Communities</h3>
+<p>Hum naturally belong karna chahte hain aur social groups ki habits copy karte hain.</p>
+<p>Teen important groups:</p>
+<div class="sub-points">
+<p><strong>The Close:</strong> Family, friends aur close colleagues.</p>
+<p><strong>The Masses:</strong> Bada social group ya tribe. Hum fit-in hone ke liye group ki habits follow kar sakte hain.</p>
+<p><strong>The Powerful:</strong> High-status log jin jaisa ban kar hum approval aur respect paana chahte hain.</p>
+</div>
+<p><strong>Action:</strong> Aisi community join karo jahan aapka desired behavior hi normal behavior ho.</p>
+<p>Common interest share karne se shared identity banti hai, jaise "Hum sab readers hain." Ye long-term change ko strong bana sakti hai.</p>
+<h3 class="sub-heading">Mindset Reframing</h3>
+<p>Good habits ko sacrifice ki tarah mat dekho. Unhe opportunity ki tarah dekho.</p>
+<p>Money save karna = financial sacrifice nahi, financial freedom ki taraf step.</p>
+<p>Exercise = sirf physical fatigue nahi, health aur fitness ki taraf step.</p>
+<p>Bad habits chhodne ke liye unke negative effects ko highlight karo taaki wo mentally unattractive lagen.</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>Law 3: Make the Steps Easy or Hard</h2></div>
+<h3 class="sub-heading">Analysis Paralysis</h3>
+<p>Log perfect strategy banane ke chakkar mein bahut research, planning aur discussion karte rehte hain. Ye progress jaisa lag sakta hai, lekin kai baar ye procrastination ka form hota hai.</p>
+<p>Real progress aur learning active practice aur baar-baar karne se aati hai.</p>
+<h3 class="sub-heading">Law of Least Effort</h3>
+<p>Hum naturally aise option ko choose karte hain jisme kam physical aur mental effort lage.</p>
+<h3 class="sub-heading">Repetition over Time</h3>
+<p>Habit banne ke liye sirf kitne din beet gaye ye important nahi hai. Important ye hai ki aapne habit kitni baar repeat ki.</p>
+<p>Bahut repetition ke baad neural pathways aur muscle memory develop hoti hai, aur behavior effortless lagne lagta hai.</p>
+<h3 class="sub-heading">Friction Reduction</h3>
+<p>Positive actions ko jitna easy bana sakte ho banao.</p>
+<p>Example: Aisa gym jo daily commute ke raste mein hai, wahan jaana us gym se easy hoga jahan jaane ke liye extra route lena pade.</p>
+<h3 class="sub-heading">Environmental Preparation</h3>
+<p>Environment ko pehle se prepare karo.</p>
+<p>Example: Exercise clothes raat ko hi nikal kar rakh do, taaki subah exercise start karne mein kam friction ho.</p>
+<h3 class="sub-heading">Decisive Moments</h3>
+<p>Din mein kuch chhote decisions aise hote hain jo aane wale kai ghanton ka behavior decide kar dete hain.</p>
+<p>Example: Pajamas pehenne ke bajaye workout clothes pehenna.</p>
+<p>In turning points ko control karna important hai.</p>
+<h3 class="sub-heading">The 2-Minute Rule</h3>
+<p>Nayi habit ko itna chhota bana do ki use start karne mein 2 minutes ya usse kam lage.</p>
+<div class="sub-points">
+<p>"Book padhna" → "Ek page padhna."</p>
+<p>"Marathon run karna" → "Running shoes pehenna."</p>
+</div>
+<h3 class="sub-heading">Showing Up First</h3>
+<p>Pehle sirf habit ko start karne aur show up karne ki habit banao. Baad mein usko optimize karo.</p>
+<p>Example: 10-minute walk → 10,000 steps → 5 km run → marathon.</p>
+<h3 class="sub-heading">Bad Habits ko Hard Banao</h3>
+<p>Bad habit ko karna physically aur practically difficult bana do.</p>
+<p><strong>Environmental Friction:</strong> TV dekhne ki habit control karni ho to TV unplug kar do aur remote ki batteries hata do.</p>
+<p><strong>Commitment Devices:</strong> Future mein better decision lene ke liye pehle se restrictions set karo.</p>
+<div class="sub-points">
+<p>Overeating se bachne ke liye small single-serving packets khareedo.</p>
+<p>Kharch kam karne ke liye wallet ghar par chhod do.</p>
+</div>
+<p><strong>One-Time Actions:</strong> Aise systems banao jinke baad daily effort kam ho jaye.</p>
+<div class="sub-points">
+<p>Chhoti plate use karna.</p>
+<p>Savings account mein automatic transfer set karna.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>Law 4: Create Instant Satisfaction or Make it Unsatisfying</h2></div>
+<h3 class="sub-heading">Instant vs Delayed Gratification</h3>
+<p>Hamari logical thinking long-term rewards ko value karti hai, lekin brain ka purana evolutionary system instant reward ko strongly prefer karta hai.</p>
+<p><strong>Good habit:</strong> Cost abhi → reward baad mein.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Gym ki thakan abhi, fitness baad mein.</p>
+</div>
+<p><strong>Bad habit:</strong> Reward abhi → cost baad mein.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Nicotine ka rush abhi, health problems baad mein.</p>
+</div>
+<h3 class="sub-heading">Toothpaste ka Trick</h3>
+<p>Toothpaste companies mint flavor aur foaming agents use karti hain. Ye sirf cleaning ke liye nahi, balki fresh aur clean feeling dene ke liye bhi useful hain.</p>
+<p>Ye instant satisfaction brushing ko regular banane mein help karti hai.</p>
+<h3 class="sub-heading">Immediate Rewards</h3>
+<p>Good habit complete karne ke baad ya bad habit avoid karne par immediate reward design karo.</p>
+<p>Example: Jab bhi sugary milkshake na khareedo, turant $5 vacation savings account mein transfer karo.</p>
+<h3 class="sub-heading">Habit Tracker</h3>
+<p>Calendar par habit complete hone par cross lagao.</p>
+<p>Ye teen kaam karta hai:</p>
+<div class="sub-points">
+<p>Repeat karne ka visual cue deta hai.</p>
+<p>Instant satisfaction deta hai.</p>
+<p>Progress ka clear proof deta hai.</p>
+</div>
+<h3 class="sub-heading">Never Miss Twice Rule</h3>
+<p>Ek baar habit miss hona accident ho sakta hai. Do baar miss karna negative pattern ki shuruaat ban sakta hai.</p>
+<p>Isliye worst day par bhi habit ka chhota version karo.</p>
+<p>Example: 50 push-ups nahi ho rahe to 5 push-ups kar lo. Bilkul zero mat karo.</p>
+<h3 class="sub-heading">Bad Habits ko Painful Banao</h3>
+<p>Bad habit ke saath immediate painful ya social consequence jodo.</p>
+<p><strong>Habit Contracts aur Accountability Partners:</strong> Clear rules aur violation par punishment ke saath habit contract banao.</p>
+<p>Accountability partner hone se social cost badh jati hai, kyunki hum doosron ke saamne apni respect khona nahi chahte.</p>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>Becoming Exceptional: Habits ko Talents aur Interests ke Saath Align Karna</h2></div>
+<h3 class="sub-heading">Genetics ka Influence</h3>
+<p>Genes hard work ki need ko khatam nahi karte. Wo ye affect kar sakte hain ki kis area mein aapko natural advantage milta hai.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Lambi torso wala person swimming mein better ho sakta hai, lekin long-distance running mein struggle kar sakta hai.</p>
+<p><strong>Example:</strong> Bahut tall person basketball mein advantage pa sakta hai, lekin gymnastics mein disadvantage ho sakta hai.</p>
+</div>
+<h3 class="sub-heading">Path of Least Resistance</h3>
+<p>Aap tab zyada fast progress karoge jab habits ko apni natural strengths, personality aur situation ke saath align karoge.</p>
+<h3 class="sub-heading">Apni Strengths kaise Identify Karein</h3>
+<p>Different options explore karo aur un activities par focus karo jo:</p>
+<div class="sub-points">
+<p>Aapko enjoyable lagti hain, jabki doosron ke liye hard work hoti hain.</p>
+<p>Aapko flow state mein le jaati hain, jahan aap time bhool jaate ho.</p>
+<p>Average se better ROI deti hain.</p>
+<p>Natural, exciting aur energizing lagti hain.</p>
+</div>
+<h3 class="sub-heading">The Goldilocks Rule</h3>
+<p>Motivation tab highest hoti hai jab task aapki current ability ke bilkul edge par ho.</p>
+<div class="sub-points">
+<p>Bahut easy task → boredom.</p>
+<p>Bahut difficult task → demotivation.</p>
+<p>Best zone → challenging, lekin manageable.</p>
+</div>
+<p><strong>Tennis Analogy:</strong> Chhote bachche ke saath tennis khelna boring ho sakta hai. Roger Federer ke saath khelna demotivating ho sakta hai. Apne similar skill level wale person ke saath khelna engaging hota hai, jahan kuch points aap jeette ho aur kuch haarte ho.</p>
+<p>Habits ko easy level se start karo aur dheere-dheere difficulty badhao.</p>
+<h3 class="sub-heading">Motivated Rehna aur Boredom ko Handle Karna</h3>
+<p>Successful person aur amateur ke beech ek bada difference ye hai ki successful person boredom ke baad bhi kaam karta rehta hai.</p>
+<p>Mastery ke liye repetitive practice zaroori hai, lekin repetition boring ho sakti hai. Amateurs aksar naye excitement ke liye successful strategy ko chhod dete hain.</p>
+<h3 class="sub-heading">Variable Rewards</h3>
+<p>Complacency ya boredom se bachne aur dopamine ko stimulate karne ke liye reward ki timing aur type ko thoda vary kiya ja sakta hai.</p>
+<div class="specimen-row"><span class="specimen-label">48pt</span><h2>Good Habits ki Limitations aur Mastery ko Sustain Karna</h2></div>
+<h3 class="sub-heading">Double-Edged Sword</h3>
+<p>Jab habit fully automatic ho jati hai, to aap use bina soche karte ho. Lekin automaticity ki wajah se hum apni mistakes ko notice karna band kar sakte hain.</p>
+<p>Research ke mutabik, skill master hone ke baad agar conscious monitoring na ho, to performance dheere-dheere decline kar sakti hai.</p>
+<h3 class="sub-heading">Habits + Deliberate Practice = Mastery</h3>
+<p>True mastery ke liye automatic habits ke saath deliberate practice bhi zaroori hai.</p>
+<p>Apne kaam ko chhote parts mein divide karo. Ek element ko master karo, phir next element par kaam karo.</p>
+<p><strong>Steve Martin Example:</strong> Comedian Steve Martin ne 18 saal tak gradual improvement par kaam kiya. Woh har week apne routine mein sirf 1–2 minutes ka naya material add karte aur use perfect hone tak refine karte. Uske baad next material par jaate.</p>
+<h3 class="sub-heading">Review aur Reflection Systems</h3>
+<p>Performance ko decline hone se bachane ke liye regular review aur reflection ka system rakho.</p>
+<p><strong>Elite Athletes:</strong> Apni training, workouts, diet aur sleep ke detailed daily records rakhte hain, taaki performance mein decline jaldi notice ho.</p>
+<p><strong>Chris Rock:</strong> Apne raw jokes ko chhote comedy clubs mein test karte hain. Wo notes lete hain ki kaunse punchlines kaam karte hain aur best material ko bade TV specials ke liye choose karte hain.</p>
+<h3 class="sub-heading">Identity Brittleness</h3>
+<p>Apni identity ko ek hi rigid role se bahut zyada attach karna risky ho sakta hai.</p>
+<p>Agar aap khud ko sirf ek role se define karte ho, jaise:</p>
+<div class="sub-points">
+<p>"Main entrepreneur hoon."</p>
+<p>"Main vegan hoon."</p>
+<p>"Main elite soldier hoon."</p>
+</div>
+<p>to injury, retirement ya business sale jaise changes ke baad identity crisis ho sakta hai.</p>
+<p><strong>Solution:</strong> Apni identity ko flexible aur adaptable rakho. Khud ko sirf ek single role se define mat karo. Isse changing circumstances ke saath aap khud ko easily redefine kar paoge.</p>
+<div class="specimen-row"><span class="specimen-label">56pt</span><h2>Conclusion: Hazaaron Changes ka Compound Effect</h2></div>
+<p>Habit change ka asli secret koi ek bada breakthrough nahi hai. Asli power hazaaron chhote 1% improvements ke compound effect mein hai.</p>
+<p>Jab chhote improvements ek ke upar ek build hote hain, to ek point par tipping point aata hai jahan good habits ko maintain karna bahut easy ho jata hai.</p>
+<p>Aapki current situation ya goals jo bhi hain, ek-ek karke atomic habits banana long term mein extraordinary results de sakta hai.</p>
+<p><strong>Main Lesson:</strong> Chhote improvements ko underestimate mat karo. Roz thoda better bano, good habits ko repeat karo, environment ko apne favor mein design karo, aur long-term consistency rakho. Compound effect time ke saath bahut bada result de sakta hai.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

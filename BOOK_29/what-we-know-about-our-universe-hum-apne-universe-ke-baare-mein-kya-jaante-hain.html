@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What We Know about our Universe (Hum Apne Universe Ke Baare Mein Kya Jaante Hain) — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 3.4rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 29</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">What We Know about our Universe (Hum Apne Universe Ke Baare Mein Kya Jaante Hain)</span>
+          <span class="headline-main">What We Know about our Universe (Hum Apne Universe Ke Baare Mein Kya Jaante Hain)</span>
+        </div>
+        <p class="subhead">Reading notes on What We Know about our Universe (Hum Apne Universe Ke Baare Mein Kya Jaante Hain)</p>
+        <div class="meta-row">
+          <span>11 min read</span><span class="meta-dot">•</span><span>By Stephen Hawking</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Historical Theories</h2></div>
+<p class="drop-cap"><strong>Aristotle (340 B.C.):</strong> Aristotle ne sabse pehle yeh theory di ki Earth gol hai, flat nahi. Unke hisaab se Sun, Moon, stars aur planets circular orbits mein Earth ke chakkar lagate hain.</p>
+<p><strong>1600s Shift:</strong> 1600s mein observations aur predictions ek doosre se match hui jab yeh bataya gaya ki Moon, stars aur planets, Earth samet, Sun ke around ellipses yani lambe circles mein orbit karte hain.</p>
+<p><strong>Newton's Gravity (1687):</strong> Newton ki gravity theory ne explain kiya ki celestial bodies gravitational forces ki wajah se ek doosre ki taraf attract hoti hain.</p>
+<p><strong>The Goal of Modern Science:</strong> Aaj bhi hum universe ko poori tarah nahi samajh paaye hain. Hum universe ke alag-alag parts ko different theories se predict kar sakte hain, lekin abhi hamare paas ek unified theory nahi hai jo poore universe ko ek saath explain kar sake. Aisi theory dhoondhna science aur hamari understanding ka ultimate goal hai.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Everything is in Motion (Newton's Laws)</h2></div>
+<p>Purane samay mein log sochte the ki objects ki natural state rest, yani ruka rehna, hoti hai. Sir Isaac Newton ne is idea ko galat bataya aur samjhaya ki sab kuch motion mein hai aur cheezein ek doosre ke relation mein move karti hain.</p>
+<p><strong>First Law:</strong> Agar kisi object par koi doosri force kaam na kare, toh woh straight line mein move karti rahegi, jaise balls slope par straight line mein roll karti hain agar sirf gravity kaam kar rahi ho.</p>
+<p><strong>Second Law:</strong> Kisi object ki acceleration us par lagne wale force ke proportional hoti hai. Jaise strong engine wali car zyada tez accelerate karegi. Lekin mass jitna zyada hoga, acceleration utni kam hogi, jaise bhari gaadi ko accelerate hone mein zyada time lagega.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Space and Time (Space aur Time Absolute Nahi Hain)</h2></div>
+<p><strong>Newton's Third Law:</strong> Sabhi bodies ek doosre ko attract karti hain, aur force dono bodies ke mass ke proportional hota hai.</p>
+<p><strong>Space-Time Relativity:</strong> Space aur time absolute nahi hote. Yeh observer ke hisaab se relative hote hain.</p>
+<p><strong>Space is Relative:</strong> Space ka koi fixed ya absolute standard nahi hai. Sab kuch move kar raha hai, isliye yeh batana impossible hai ki alag-alag samay par hone wale do events bilkul ek hi jagah par hue ya nahi.</p>
+<p><strong>Time is Relative:</strong> Time alag-alag observers ke liye alag speed se chal sakta hai.</p>
+<p><strong>Ole Romer Discovery:</strong> Romer ne observe kiya ki light uniform speed, 186,000 miles per second, se travel karti hai.</p>
+<div class="sub-points">
+<p><strong>Speed ka formula hai Distance divided by Time:</strong> S = D/T.</p>
+<p>Agar light ki speed constant hai, toh distance D badalne par time T ko bhi badalna hoga.</p>
+</div>
+<p><strong>Einstein &amp; Poincare (Relativity):</strong> Unhone bataya ki jab aap light ki speed ke kareeb pahunchte hain, toh time slow ho jata hai.</p>
+<div class="sub-points">
+<p>Einstein ki famous equation E = mc² mein E energy hai, m mass hai aur c speed of light hai.</p>
+<p>Is equation ke mutabik speed badhne se object ka mass badhta hai. Isi wajah se koi bhi cheez light ki speed se tez travel nahi kar sakti.</p>
+</div>
+<p><strong>Space-Time Fabric:</strong> Space aur time ko alag-alag nahi dekha ja sakta. Dono aapas mein jude hue hain aur milkar space-time ka fabric banate hain.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Space-Time Coordinates &amp; General Relativity</h2></div>
+<p><strong>4 Coordinates:</strong> Kisi bhi event ko space-time mein map karne ke liye 4 coordinates chahiye hote hain.</p>
+<div class="sub-points">
+<p>Point in time.</p>
+<p>Point in space.</p>
+<p>Observer ki position.</p>
+<p>Observer ka motion.</p>
+</div>
+<p><strong>Light-Cones Concept:</strong> Light waves ke form mein travel karti hai aur space-time mein failti jaati hai, jaise pond mein patthar phenkne par ripples bante hain. Isko light-cone se visualize kiya jata hai.</p>
+<div class="sub-points">
+<p>Future light cone mein maujood log Event X ko dekh sakte hain.</p>
+<p>Past light cone se Event X signals receive kar sakta hai.</p>
+<p>Jo events in dono ke bahar hote hain unhe "elsewhere" kaha jata hai, aur unka Event X par koi effect nahi hota.</p>
+</div>
+<p><strong>Sun Burning Out Example:</strong> Agar Sun burn out ho jaye, yani Event X ho, toh uski light waves ko hum tak pahunchne mein time lagega. Jab hum stars ko dekhte hain, toh hum unka past dekh rahe hote hain kyunki hum unke future light cone mein hote hain.</p>
+<p><strong>General Theory of Relativity (1916):</strong> Einstein ne gravity ko space-time curvature ke roop mein explain kiya. Space-time flat nahi hai.</p>
+<div class="sub-points">
+<p>Jaise stretched fabric par koi bhari object rakhne se fabric neeche dhans jata hai, waise hi gravity space-time ko warp kar deti hai. Is wajah se objects curved path par move karte hain.</p>
+<p>Isi curvature ki wajah se door ke stars apni actual position se alag dikh sakte hain. Isse The Great Circle concept se joda gaya hai.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Time Dilation &amp; The Uncertainty Principle</h2></div>
+<p><strong>Twin Paradox Example:</strong> Aap kahan hain aur kaise move kar rahe hain, isse aapka time badal sakta hai. Agar aap space mein light ki speed ke kareeb travel karte hain, jahan gravity kam hai, toh 50 saal baad wapas aane par aap Earth par rehne wale apne twin se bahut young dikhenge.</p>
+<p><strong>Uncertainty Principle (Heisenberg, 1926):</strong> Pehle scientists determinism par believe karte the. Iska matlab tha ki agar perfect information ho, toh sab kuch predict kiya ja sakta hai.</p>
+<div class="sub-points">
+<p><strong>Heisenberg ne Uncertainty Principle diya:</strong> Kisi particle ki position aur velocity measure karne ke liye us par high-frequency light daalni padegi. Lekin yeh light particle ko disturb kar degi aur uski velocity badal degi.</p>
+<p>Isliye kisi particle ki position aur speed ko ek saath bilkul accurately measure karna impossible hai.</p>
+</div>
+<p><strong>Quantum Mechanics Foundation:</strong> Is idea se quantum mechanics ki shuruaat hui, jo randomness aur probabilistic approach par based hai. Yeh ek fixed result batane ke bajaye alag-alag outcomes ki probability batati hai.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Particle-Wave Duality &amp; Building Blocks of Nature</h2></div>
+<p><strong>Interference:</strong> Quantum mechanics physical world ko particles aur waves dono ke roop mein dekhti hai. Jab do waves ya particles milte hain, toh interference hota hai.</p>
+<div class="sub-points">
+<p>Kabhi woh ek doosre ko strong banate hain, yani reinforce karte hain.</p>
+<p>Kabhi woh ek doosre ko cancel out kar dete hain.</p>
+</div>
+<p><strong>Two-slit Experiment:</strong> Light aur matter dono wave aur particle ki characteristics dikha sakte hain.</p>
+<div class="sub-points">
+<p>Agar light ko parallel slits se pass kiya jaye, toh screen par bright aur dark bands bante hain, jo uski wave nature dikhate hain.</p>
+<p>Agar electrons ko ek-ek karke bhi bheja jaye, toh bhi fringes bante hain. Iska matlab hai ki har electron dono slits se ek saath guzarta hai.</p>
+</div>
+<h3 class="sub-heading">The Building Blocks of Nature</h3>
+<p><strong>Atoms:</strong> Atoms basic building blocks hain jo molecules banate hain. Atom mein negatively charged electrons hote hain jo positively charged nucleus, jisme protons aur neutrons hote hain, ke around move karte hain.</p>
+<p><strong>Quarks (1960s):</strong> Protons aur neutrons quarks se bane hote hain. Quarks universe ke sabse chhote known bits hain.</p>
+<p><strong>Quark's Spin:</strong> Quark ka "spin" batata hai ki woh alag-alag angles se kaisa dikhta hai. Jaise 0 spin wala particle har direction se ek jaisa dikhta hai.</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>Exclusion Principle, Forces, and GUT</h2></div>
+<p><strong>Exclusion Principle (Pauli):</strong> Do similar particles ek hi position aur ek hi velocity ke saath ek saath nahi ho sakte.</p>
+<p><strong>Antiparticles:</strong> Har particle ka ek antiparticle hota hai. Particle aur antiparticle ek doosre ko destroy, yani annihilate, kar sakte hain.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Electron aur positron.</p>
+</div>
+<p><strong>Force-carrying Particles:</strong> Matter particles force-carrying particles emit karte hain. Baar-baar hone wale collisions se strong forces bante hain.</p>
+<h3 class="sub-heading">4 Types of Force-carrying Particles</h3>
+<p><strong>Gravitons:</strong> Gravitational forces carry karte hain.</p>
+<p><strong>Photons:</strong> Electromagnetic forces produce karte hain.</p>
+<p><strong>Bosons:</strong> Weak nuclear forces banate hain.</p>
+<p><strong>Gluons:</strong> Quarks ko protons aur neutrons se, aur unhe nucleus mein, bind karke rakhte hain.</p>
+<p><strong>Grand Unified Theory (GUT):</strong> Bahut high energy par nuclear forces weak ho jati hain, jisse gluons aur quarks free agents ki tarah act karte hain. Is level par electromagnetic, weak aur strong forces ko theoretically ek single force mein merge karna possible hai.</p>
+<p><strong>Expanding Universe:</strong> Pehle log sochte the ki universe infinite aur unchanging hai. Baad mein pata chala ki universe actually dynamic hai aur expand kar raha hai.</p>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>Doppler Effect, Red-shift &amp; Hot Big Bang</h2></div>
+<p><strong>Doppler Effect &amp; Red-shift:</strong> Light spectrum colors, yani rainbow ke colors, se bani hoti hai. Jab wave ka source observer se door jata hai, toh wavelength lambi ho jati hai aur red-shift hota hai. Jab source observer ke paas aata hai, toh wavelength chhoti ho jati hai aur blue-shift hota hai.</p>
+<p><strong>Universe Expansion:</strong> Astronomers ne dekha ki zyadatar galaxies red-shift dikha rahi hain, yani woh humse door ja rahi hain. Universe itni tezi se expand ho raha hai ki yeh gravity ke pull ko overcome kar leta hai.</p>
+<p><strong>Hot Big Bang Model:</strong> Big Bang ke turant baad universe bahut zyada hot tha. Particles tezi se move karke protons, neutrons, atoms aur molecules banane lage.</p>
+<div class="sub-points">
+<p>Seconds ke andar expansion ki wajah se cooling hui.</p>
+<p>Nuclear fusion se hydrogen aur helium ke bade clouds bane, jo baad mein stars aur planets ke building blocks bane.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>Inflation, Singularity, and Black Holes</h2></div>
+<p><strong>Guth's Inflationary Theory:</strong> Alan Guth ne bataya ki Big Bang ke baad ek second se bhi kam samay mein universe ka radius million million million million million times badh gaya.</p>
+<div class="sub-points">
+<p>Is rapid expansion ki wajah se supercooling hui aur large-scale smoothing aur uniformity bani, jo aaj bhi hum dekhte hain.</p>
+</div>
+<p><strong>Singularity Event:</strong> Big Bang ek singularity event hai jahan conditions infinite aur irreversible ho jati hain aur reality ke saare rules badal jate hain. Yahin se time ki shuruaat hui.</p>
+<p><strong>Future of Universe:</strong> Universe har 1000 million years mein 5-10% expand ho raha hai aur hamesha expand hota rahega. Agar re-collapse, yani Big Crunch, hona bhi ho, toh woh kam se kam 10,000 million years tak nahi hoga.</p>
+<p><strong>Black Holes Formation:</strong> Hydrogen atoms ke clusters gravity ki wajah se ek saath aate hain, jisse nuclear reactions ke through stars bante hain.</p>
+<div class="specimen-row"><span class="specimen-label">48pt</span><h2>Stars, Chandrasekhar Limit &amp; Black Holes</h2></div>
+<p><strong>Star Stability:</strong> Stars tab tak stable rehte hain jab tak core mein nuclear reaction ka outward pressure aur gravity ka inward pressure balance mein rehta hai.</p>
+<p><strong>Chandrasekhar Limit:</strong> Jab star ka fuel khatam hota hai, toh uska future is limit par depend karta hai.</p>
+<div class="sub-points">
+<p><strong>Below Limit, yani Sun ke mass se 1.5 times se kam:</strong> Star shrink hokar white dwarf ya neutron star ban jata hai.</p>
+<p><strong>Above Limit, yani Sun ke mass se 1.5 times se zyada:</strong> Star gravity ke pressure mein collapse hokar black hole ban jata hai.</p>
+</div>
+<p><strong>Black Hole Gravity &amp; Hawking Radiation:</strong> Black holes ki gravity itni infinite hoti hai ki light bhi unse escape nahi kar sakti. Inke andar space aur time ka koi matlab nahi hota.</p>
+<div class="sub-points">
+<p>Lekin black hole ke edge par gravity ki wajah se positive-energy particles escape kar jate hain, jise Hawking radiation kaha jata hai, aur negative-energy particles andar gir jate hain.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">56pt</span><h2>Metaphysics of Black Holes &amp; Arrows of Time</h2></div>
+<p><strong>Mass/Energy Recycling:</strong> Black hole se nikalne wali radiation ka matlab hai ki matter kabhi poori tarah destroy nahi hota, balki energy mein recycle ho jata hai. Agar koi insan black hole mein gir jaye toh woh mar jayega, lekin uski mass aur energy exist karti rahegi.</p>
+<h3 class="sub-heading">Why Backward Time Travel is Unlikely (3 Arrows of Time)</h3>
+<p><strong>Thermodynamic Arrow:</strong> Entropy, yani disorder, hamesha badhti hai. Agar time peeche jaye toh ek toota hua cup khud se wapas jud jana chahiye, jo thermodynamics ke second law ke against hai.</p>
+<p><strong>Psychological Arrow:</strong> Hum sirf past ko yaad rakh sakte hain, future ko nahi.</p>
+<p><strong>Cosmological Arrow:</strong> Universe expand ho raha hai, isliye entropy badh rahi hai, aur yeh time ko aage ki direction mein le jaati hai.</p>
+<p><strong>Time Travel Paradox:</strong> Time travel ke liye light ki speed se tez chalna hoga, jo impossible hai.</p>
+<div class="specimen-row"><span class="specimen-label">64pt</span><h2>Grandfather Paradox, Wormholes &amp; String Theory</h2></div>
+<p><strong>Grandfather Paradox:</strong> Agar aap past mein jaakar apne grandfather ko maar dein, toh aap paida hi nahi honge.</p>
+<div class="sub-points">
+<p>Is problem ka hal yeh hai ki backward time travel se aap past ko change nahi kar sakte. Iske bajaye aap ek alternate history mein enter karte hain.</p>
+</div>
+<p><strong>Wormholes:</strong> Shuruat mein space-time ka curvature bahut zyada warped tha. Quantum physics kehta hai ki wormholes space-time ko bend karke do door ke regions ko jod sakte hain aur ek shortcut bana sakte hain.</p>
+<p><strong>Quest for a Unified Theory:</strong> General relativity sub-atomic levels aur singularities par kaam nahi karti, aur quantum mechanics gravity ko include nahi karti. Isliye dono ko combine karne ki zaroorat hai.</p>
+<p><strong>String Theory:</strong> Yeh theory particles ko tiny strings se replace karti hai. Yeh strings vibration ke through combine ya split hoti hain. Lekin is theory ko kaam karne ke liye space-time ke up to 26 dimensions chahiye hote hain.</p>
+<div class="specimen-row"><span class="specimen-label">72pt</span><h2>Extra Dimensions &amp; Conclusion (Unified Theory Ka Sapna)</h2></div>
+<p><strong>Extra Dimensions:</strong> Hum sirf 4 dimensions, yani 3 space aur 1 time, ko hi dekh paate hain. Extra dimensions shayad itne chhote hain ki hum unhe observe nahi kar sakte, ya phir hum sirf un regions mein rehte hain jahan 4 dimensions hain.</p>
+<p><strong>Quest for Understanding:</strong> Kisi bhi theory ko 100% prove nahi kiya ja sakta, lekin hum observations ke basis par us par confidence rakh sakte hain. Unified theory dhoondhne ke baad yeh aam logon tak bhi pahunchegi aur human race universe ke laws ko poori tarah samajh sakegi.</p>
+<p>"If we do discover a complete theory... Then we shall all, philosophers, scientists, and just ordinary people, be able to take part in the discussion of the question of why it is that we and the universe exist."</p>
+<div class="sub-points">
+<p><strong>Simple meaning:</strong> Agar hum ek complete theory discover kar lete hain, toh philosophers, scientists aur aam log sab milkar is sawal par baat kar sakenge ki hum aur universe kyun exist karte hain.</p>
+</div>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

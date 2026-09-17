@@ -1,0 +1,105 @@
+B="Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity"
+A="Kim Scott"
+P|Yeh book Kim Scott ne likhi hai. Iska main focus yeh hai ki ek accha boss kaise bana jaye jo apni insaniyat khoye bina behtar results de sake.
+P|Book ke hisaab se boss ka kaam sab kuch khud karna nahi hota. Uska kaam ek aisi team banana aur guide karna hai jo achhe results la sake. Boss ki 3 main responsibilities hain: Guidance, yani feedback dena aur lena; Team-building, yani sahi logon ko sahi role mein rakhna aur motivate karna; aur Results, yani team ko effectively manage karna. In sab ki success is baat par depend karti hai ki boss ka apne direct reports ke saath relationship kaisa hai.
+H1|1. A New Management Philosophy
+P|Radical Candor ka main concept do dimensions par based hai.
+B|Care Personally: Iska matlab hai team members ko sirf employees ki tarah na dekhna, balki unhe poore insaan ki tarah dekhna. Unki work life ke bahar bhi life aur dreams hote hain. Iske liye do common myths ko samajhna zaroori hai.
+B|Myth #1: Professionalism ka matlab feelings chhupana hai. Asal mein Radical Candor mein aapko apne direct reports ke saamne ek insaan ki tarah rehna chahiye, apni hopes aur vulnerabilities ke saath, taaki woh bhi naturally aisa kar saken.
+B|Myth #2: Boss superior hote hain. Boss hona sirf ek role hai. Isse kisi insaan ki human value ya intelligence decide nahi hoti.
+B|Challenge Directly: Iska matlab hai seedha feedback dena aur lena, mushkil decisions lena aur high standards maintain karna. Agar aapse team ka koi member kabhi gussa nahi hota, toh ho sakta hai aap unhe enough challenge nahi kar rahe hain.
+H2|Guidance aur Feedback ke 4 Quadrants
+P|Yeh 4 quadrants kisi insaan ki permanent personality ko describe nahi karte. Yeh uske particular time ke behavior ko describe karte hain.
+B|Radical Candor: Jab aap kisi ke fayde aur growth ke liye use clear aur honest feedback dete hain, chahe woh praise ho ya criticism.
+B|Obnoxious Aggression: Jab aap kisi ko bina care dikhaye criticize karte hain. Isse feedback arrogant lagta hai aur log defensive ho jaate hain. Sabse kharab situation tab hoti hai jab aap jaan-boojhkar kisi ki weakness ya vulnerability ko target karte hain.
+B|Ruinous Empathy: Jab aap conflict se bachne ya saamne wale ko bura feel hone se bachane ke liye zaroori feedback nahi dete. Isse log seekh nahi paate, unka career ruk sakta hai aur aakhir mein unhe fire bhi kiya ja sakta hai. Low-quality work accept karne se baaki team par extra burden padta hai aur standards low ho jaate hain.
+B|Manipulative Insincerity: Jab aap directly challenge nahi karte aur feedback sirf apne fayde ke liye dete hain. Jaise kisi employee ko achha bolna taaki woh job na chhode, jabki aap secretly uski jagah kisi aur ko laane ki planning kar rahe hon. Isse team mein trust khatam hota hai.
+H1|2. Team: Understand People to Motivate Them
+P|Ambition aur potential ko sirf hierarchy mein upar jaane ke roop mein nahi dekhna chahiye. Growth ke point of view se dekhna zyada useful hai. Har organization mein do tarah ke log ho sakte hain.
+B|Superstars: Inhe fast aur steep growth chahiye hoti hai. Yeh jaldi seekhna aur naye challenges lena chahte hain. Iska matlab zaroori nahi ki unhe hamesha promotion hi chahiye.
+B|Rock Stars: Yeh strong aur stable performers hote hain jo gradual growth chahte hain. Yeh apne craft ke master hote hain aur apne kaam se pyaar karte hain. Agar unhe promotion dekar kisi doosre role mein daal diya jaye, toh zaroori nahi ki woh khush hon.
+P|Ek strong team ke liye Superstars aur Rock Stars dono ka balance zaroori hai. Log time ke saath steep aur gradual growth ke beech move kar sakte hain, isliye kisi ko permanent label nahi dena chahiye.
+H2|Top Performers ko Manage Kaise Karein
+P|Top performers ko apna partner samjhein aur unke raaste mein aane wali problems ko door karein.
+B|Rock Stars ko Manage Karna: Unki gradual growth aur stability ka respect karein. Unki rating unke actual contributions aur expertise ke basis par fair tareeke se karein, sirf leadership potential ke basis par nahi. Promotion ke alawa unhe pay raise, bonuses, go-to expert banana, ya mentor aur trainer banana jaise rewards diye ja sakte hain.
+B|Superstars ko Manage Karna: Unhe seekhne aur grow karne ke naye opportunities dein. Sirf isliye unhe current role mein mat rokein ki aapka kaam easy rahe ya woh aapse aage na nikal jaayen. Unka replacement dhoondhein aur unhe doosron ko sikhane ke liye encourage karein, taaki woh bina rukawat grow kar saken.
+H2|Middle aur Poor Performers ko Manage Kaise Karein
+P|Underperformance ke 5 common reasons ho sakte hain.
+B|Galat Role: Ho sakta hai employee apni strengths ke hisaab se galat role mein ho.
+B|Naya Employee: Ho sakta hai woh kaam mein naya ho aur use proper training ya clear expectations na mili hon.
+B|Personal Problem: Ho sakta hai uski personal life mein koi problem chal rahi ho.
+B|Culture Fit: Ho sakta hai uske paas required skills hon, lekin woh company culture ke saath fit na hota ho.
+B|Role Suit Na Karna: Ho sakta hai employee ya uski situation badal gayi ho aur ab current role uske liye suitable na ho.
+P|Agar koi insaan sach mein us kaam ke liye suitable nahi hai, toh use jaane dena, yani firing, sahi decision ho sakta hai. Fire karne se pehle teen sawal poochne chahiye.
+B|Pehla Sawal: Kya aapne use Radically Candid guidance di thi?
+B|Doosra Sawal: Uska poor performance baaki team ko kaise affect kar raha hai?
+B|Teesra Sawal: Kya aapne kisi objective person se us situation par opinion liya?
+H1|3. Driving Results Collaboratively: The Get Stuff Done, GSD, Wheel
+P|Long-term results ke liye decisions mein team ko involve karna zaroori hai. GSD Wheel ke 7 steps hain.
+B|Listen: Listening culture banayein. Aisa system rakhein jahan staff apne ideas aur complaints share kar sake. Iske liye budget bhi ho aur logon ko bataya jaye ki kuch issues par action kyun nahi liya gaya. Meetings mein sabko bolne aur doosron ko sunne ka proper chance dein.
+B|Clarify: Jab tak problem clear nahi hogi, use solve karna mushkil hoga. Naye ideas discuss karne ke liye 1:1 meetings ya time off dein. Team ko apne thoughts clearly express karne ke liye encourage karein.
+B|Debate: Ideas ko test aur improve karein. Focus ego par nahi, facts par hona chahiye. Agar sab log agree kar rahe hain, toh dissent, yani alag opinion, ko deliberately include karein taaki ideas par achhi debate ho.
+B|Decide: Boss ko har decision khud nahi lena chahiye. Team ko facts ke basis par decisions lene dein. Kabhi-kabhi boss ko details mein khud involve bhi hona chahiye, taaki team ko lage ki unke liye koi kaam chhota nahi hai.
+B|Persuade: Jo log beginning se involved nahi the, unhe decision ka reason samjhayen aur convince karein. Iske liye humble tareeke se apni credibility dikhayein, listeners ke emotional reactions jaise fatigue ya worry ko address karein aur apna kaam dikha kar, yani show work karke, logic samjhayein.
+B|Execute: Leading aur actual execution ke beech balance rakhein. Calendar mein execution ke liye meeting-free time block karein aur kabhi-kabhi khud bhi kaam karke details ko samjhein.
+B|Learn: Apni mistakes se seekhein aur naye facts milne par apni thinking change karne se na darein.
+H1|4. Tools aur Techniques
+H2|A. Trusting Relationships aur Emotions Build Karna
+B|Center Yourself: Agar aap khud stress mein hain, toh achhe se lead nahi kar sakte. Work-life integration dhoondhein aur sleep, exercise ya family time ko calendar mein important meeting ki tarah block karein.
+B|Environment: Team ko aisa environment dein jahan woh apna best self dikha sakein, lekin un par apni personal values force na karein. Daily interactions ke through relationship banayein, taaki office ke baad unnecessary social events ki zaroorat na pade.
+B|Emotions Master Karna: Work par emotions ko hide karne ke bajay unhe sahi tareeke se handle karein. Agar koi team member emotional ho, toh uski feelings acknowledge karein.
+S|Example: "I can see that you're upset" kehkar uski baat dhyan se sunein.
+S|Agar aap khud emotionally affected ho rahe hain, toh thoda break lein aur baad mein conversation par wapas aane ka promise karein.
+H2|B. Feedback Solicit Kaise Karein
+B|Boss ke liye feedback lena mushkil ho sakta hai. Isliye public criticism ko accept karein, taaki team ko safe feel ho.
+B|Opening Question: "Is there anything I could do or stop doing to make it easier to work with me?"
+B|Agar log kahen ki sab theek hai, toh 6 seconds tak silence rakhein aur kahen, "surely kuch toh hoga jo main behtar kar sakta hoon."
+B|Feedback Receive Karna: Feedback milne par hamesha thank you bolein. Turant defend na karein. Feedback mein jo baatein aap agree karte hain unhe identify karein aur un par follow-up discussion karein.
+B|Feedback Systems: Anonymous drop box aur management fix-it weeks jaise systems banayein, jaise Google mein use kiye jaate hain.
+H2|C. Impromptu Guidance Kaise Dein
+B|Humble Rehna: Humble rahen aur Situation-Behavior-Impact, SBI, technique ka use karein, taaki feedback arrogant na lage.
+B|Left-Hand Column Technique: Ek paper ke right side par jo aapne actually kaha woh likhein aur left side par jo aap soch rahe the woh likhein. Isse hidden assumptions ko identify karne mein help milti hai.
+B|Specific Feedback: Apna help karne ka intention clear rakhein aur specific feedback dein. Sirf "she is brilliant" kehne ke bajay exact behavior batayein.
+S|Example: "She explained the problem in 5 minutes" kehna zyada specific hai.
+S|Aapko har cheez khud fix karne ki zaroorat nahi hai.
+B|Immediately Feedback: Feedback jaldi dein aur face-to-face, ya video ya phone call par dein. Email ya text se misunderstanding ho sakti hai.
+B|Praise in Public, Criticize in Private: Tareef sabke saamne karein aur criticism private mein karein.
+B|Feedback ko Personalize Na Karein: Kisi person ko "lazy" ya "greedy" kehne ke bajay uske specific behavior par baat karein, jaise "that's wrong".
+H2|D. Formal Performance Reviews
+B|Feedback Pehle Lein: Performance review se pehle khud feedback solicit karein aur 360-degree feedback ka use karein.
+B|Review ki Preparation: Review se pehle apne important points likh lein.
+B|Past aur Future: Review ka 50% focus past performance aur 50% future development plans par hona chahiye.
+B|Time: Har review ke liye kam se kam 50 minutes dein aur sessions ke beech recovery ke liye 10 minutes ka gap rakhein.
+B|Rating aur Compensation: Rating ya compensation ki discussion ko performance review session se bilkul alag rakhein.
+H2|E. Peer aur Boss ke Sath Guidance
+B|Peer Guidance: Peer feedback ke liye stories aur voting ka use karein. Kisi member ko doosre member ki peeth peeche burai karne na dein. Zaroorat ho toh 3-way conversation karein.
+B|Boss ke Sath Guidance: Apne boss par directly Radical Candor try na karein. Pehle unse permission lein aur unki guidance maang kar feedback share karein.
+H2|F. Skip-Level, Career aur Growth Plans
+B|Skip-Level Meetings: Saal mein ek baar apne direct reports ke bina unke staff ke saath meeting karein. Consent lekar sabhi reports ke saath aisa karein aur notes lein. Notes ko anonymize, yani identity hata kar, direct reports ke saath share karein aur unhe 1-2 cheezein immediately change karne ke liye kahein.
+B|Career Conversations: Direct reports ke dreams aur ambitions samajhne ke liye 3 steps follow karein.
+S|Life Story: Bachpan se ab tak unki life mein kya changes aaye aur kyun aaye, yeh samjhein. Isse unki values samajhne mein help milti hai.
+S|Dreams: Unke dreams aur un dreams ke liye zaroori skills ki list banayein.
+S|18-Month Plan: Unke skill gaps ko fill karne ke liye milkar ek joint plan banayein.
+B|Growth Management Plan: Saal mein ek baar team ko temporarily Top, Good aur Underperformer groups mein divide karein. Peer calibration ka use karke rating bias ko kam karein.
+H2|G. Hiring, Firing, Promotions aur Rewards
+B|Hiring: Pre-screening ke liye projects aur real problems ka use karein. Sirf degree par depend na karein. Bias kam karne ke liye 4-person diverse interview committee banayein. Casual interactions jaise lunch aur receptionist ke feedback se bhi insights lein. Iske baad debrief meeting karein.
+B|Firing: Underperformance ko jaldi accept karein aur action lein, taaki baaki team aur us employee dono ko unnecessary nuksaan na ho. Saath hi insaaniyat aur staff ki needs ka khayal rakhein.
+B|Promotions aur Rewards: Promotions ko fair rakhne ke liye calibration meetings ka use karein. Rock Stars aur Superstars dono ko public praise, bonuses aur unke expertise areas mein teaching ya sharing opportunities ke through reward karein.
+H1|5. Better Communication se Results Sudharna
+P|Better results ke liye communication ko properly organize karna zaroori hai.
+B|1:1 Conversations: Yeh informal sessions hote hain jahan direct reports apna agenda set karte hain. Har direct report ke liye weekly 50 minutes ka time nikalna chahiye, jab tak direct reports ki sankhya 10 tak ho.
+B|Staff Meetings: In meetings ke 3 key goals hain aur total time 65 minutes hai.
+S|Learn, 20 mins: Key metrics aur important updates discuss karein.
+S|Share, 15 mins: Sabhi log 5-7 minutes mein apne updates likhein aur bina debate kiye doosre logon ke updates padhein.
+S|Clarify, 30 mins: Aane wale week ke 1-2 sabse bade decisions aur ek debate identify karein jise Big Debate ya Decision meetings mein bheja ja sake.
+B|Big Debate Meetings: Yahan ego ko side mein rakhkar facts ke basis par decisions par deep debate ki jaati hai.
+B|Big Decision Meetings: Yahan debate rok di jaati hai aur "decider" available facts ke basis par final decision leta hai. Iske notes share kiye jaate hain.
+B|All-Hands Meetings: Presentation aur Q&A ke through poori company tak information pahunchayi jaati hai. In meetings mein dissent aur questions allowed hone chahiye.
+B|Thinking aur Execution Time: Calendar mein daily 1-2 ghante thinking ke liye block karein aur execution ke liye meeting-free slots rakhein.
+B|Kanban Boards aur Walking Around: Kanban board mein To Do, In Progress aur Done jaise stages se workflow transparent hota hai. Team ke logon ke paas jaakar baat karne se unke challenges aur actual work ka pata chalta hai.
+B|Culture-Consciousness: Har chhota decision company culture ko shape karta hai. Jaise annual party ka naam kya rakha jaye ya mistakes par kaise react kiya jaye.
+H1|6. Conclusion aur Shuruat Kaise Karein
+P|Radical Candor ko implement karne mein time aur energy lagti hai, lekin iska impact bahut bada ho sakta hai. Shuruat karne ke liye kuch steps follow karein.
+B|Stories aur Feedback: Apni stories share karein, feedback invite karein aur logon ke saath career aur 1:1 conversations shuru karein.
+B|1:1 aur Guidance ke Baad: Jab 1:1 meetings aur guidance achhe se chalne lage, tab staff meetings, debates aur decision meetings par focus karein.
+B|Growth aur Processes: Uske baad growth plans, rewards aur company processes jaise hiring, firing, promotions aur reviews par kaam karein.

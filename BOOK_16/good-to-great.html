@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good to Great — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 7.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 16</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">Good to Great</span>
+          <span class="headline-main">Good to Great</span>
+        </div>
+        <p class="subhead">Reading notes on Good to Great</p>
+        <div class="meta-row">
+          <span>10 min read</span><span class="meta-dot">•</span><span>By Jim Collins</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Introduction aur "The Big 'SO WHAT'"</h2></div>
+<p class="drop-cap"><strong>Core Question:</strong> Is book ka sabse bada sawaal yeh hai: Kya ek "good" yani achhi company ek "great" yani mahaan company ban sakti hai? Aur agar haan, toh kaise?</p>
+<p><strong>Timeless Principles:</strong> Jim Collins aur unki research team ne lambi research ke baad kuch aise timeless principles, yani hamesha kaam aane wale siddhant, dhoondhe jo kisi bhi company ko market se aage badhne aur lambe samay tak achha performance dene me madad karte hain.</p>
+<p>"Good is the enemy of great"</p>
+<div class="sub-points">
+<p>Iska simple matlab hai ki sirf achha hone par santusht ho jana, mahaan banne se rok sakta hai. Yeh sirf business ki problem nahi, balki insaan ki bhi problem hai.</p>
+</div>
+<p>"Greatness is not a function of circumstance"</p>
+<div class="sub-points">
+<p>Mahaanta sirf halat par depend nahi karti. Greatness focus aur soch-samajhkar kiye gaye choices ka result hoti hai.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Identifying Greatness</h2></div>
+<h3 class="sub-heading">Research Methodology</h3>
+<p><strong>The Study:</strong> Jim Collins aur unki team ne 1,435 companies ke 40 saal ke performance ko analyze kiya.</p>
+<p><strong>Great Companies:</strong> Is research me unhone 11 companies ko identify kiya jo sach me "great" banne me safal rahin.</p>
+<div class="sub-points">
+<p>Abbott</p>
+<p>Circuit City</p>
+<p>Fannie Mae</p>
+<p>Gillette</p>
+<p>Kimberly-Clark</p>
+<p>Kroger</p>
+<p>Nucor</p>
+<p>Philip Morris</p>
+<p>Pitney Bowes</p>
+<p>Walgreens</p>
+<p>Wells Fargo</p>
+</div>
+<h3 class="sub-heading">Selection Criteria</h3>
+<p><strong>Pehle 15 Saal:</strong> In companies ne 15 saal tak market ke barabar ya market se kam stock returns diye.</p>
+<p><strong>Transition Point:</strong> Inke paas ek saaf transition point, yani badlaav ka ek clear samay, tha.</p>
+<p><strong>Agle 15 Saal:</strong> Transition ke baad agle 15 saalon tak inke cumulative stock returns market se kam se kam 3 guna zyada rahe.</p>
+<h3 class="sub-heading">Comparison Groups</h3>
+<p><strong>Direct Comparison:</strong> In great companies ko un companies se compare kiya gaya jo same industry me thin aur jinke halat bhi milte-julte the, lekin woh badi chhalaang nahi laga sakin.</p>
+<p><strong>Unsustained Comparison:</strong> Inhe un companies se bhi compare kiya gaya jinhone transition karke badi chhalaang toh lagayi, lekin apne high performance ko lambe samay tak barkarar nahi rakh sakin.</p>
+<p><strong>Why Greatness?:</strong> Jim Collins kehte hain ki ek great organization banana, ek good organization banane se zyada mushkil ya zyada mehnat wala kaam nahi hai. Jab log us kaam par focus karte hain jiske liye woh sach me passionate hote hain, toh woh khud organization ko great banana chahte hain.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Level 5 Leadership</h2></div>
+<p><strong>Definition:</strong> Transition ke samay sabhi good-to-great companies me Level 5 Leadership thi. Level 5 leaders ek anokha paradox hote hain. Unme Personal Humility, yani vyaktigat namrata, aur Professional Will, yani mazboot professional sankalp, dono ka behtareen mel hota hai.</p>
+<h3 class="sub-heading">The 5-Level Hierarchy</h3>
+<p><strong>Level 1:</strong> Highly Capable Individual — Apne talent aur achhi work habits se contribution deta hai.</p>
+<p><strong>Level 2:</strong> Contributing Team Member — Team ke goals achieve karne me madad karta hai.</p>
+<p><strong>Level 3:</strong> Competent Manager — Logon aur resources ko organize karta hai.</p>
+<p><strong>Level 4:</strong> Effective Leader — Ek clear vision ke piche logon ko motivate karta hai.</p>
+<p><strong>Level 5:</strong> Level 5 Executive — Humility aur professional will ke through lambe samay tak chalne wali greatness laata hai.</p>
+<p><strong>Examples:</strong> Colman Mockler, David Maxwell, Darwin Smith, Joe Cullman aur Fred Allen.</p>
+<h3 class="sub-heading">Core Characteristics</h3>
+<p><strong>Ambition for the Institution:</strong> Inka bada vision aur ambition khud ke liye nahi, balki apni company ke liye hota hai.</p>
+<p><strong>The Window-and-Mirror Syndrome:</strong> Jab kaam achha chal raha hota hai, toh yeh leaders khidki ke bahar dekhte hain aur success ka credit luck ya doosre logon ko dete hain. Lekin jab kaam kharab hota hai, toh yeh aayine me dekhte hain, poori responsibility khud lete hain aur bad luck ko blame nahi karte.</p>
+<p><strong>No Celebrity Leaders:</strong> Yeh companies bahar se kisi mashhoor ya celebrity leader ko nahi lati thin.</p>
+<div class="sub-points">
+<p>11 me se 10 companies ke CEOs company ke andar se hi choose kiye gaye the.</p>
+<p>Iske opposite, comparison companies ne bahar se CEOs lane ki koshish 6 guna zyada ki thi.</p>
+</div>
+<p><strong>Setting Successors:</strong> Yeh leaders aise successors taiyaar karte hain jo unke jaane ke baad bhi company ko great banaye rakh saken.</p>
+<div class="sub-points">
+<p>Iske opposite, unsustained companies ke ego-centric leaders short-term leap toh laate the, lekin unke jaane ke baad company ka performance gir jata tha.</p>
+</div>
+<p><strong>How to Cultivate:</strong> Aise logon ko dhoondhiye jo extraordinary results la rahe hon, lekin un results ka sara credit khud akele na le rahe hon.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>First Who... Then What</h2></div>
+<p><strong>Core Concept:</strong> Pehle strategy ya vision banana aur phir logon ko usme fit karna galat approach hai. Good-to-great companies pehle sahi logon ko bus par bithati hain, galat logon ko bus se utarti hain, aur sahi logon ko sahi seats par bithati hain. Uske baad woh decide karti hain ki bus ko kis direction me le jana hai.</p>
+<p><strong>Strategy vs People:</strong> Pehle "Who", yani kaun log, aur uske baad "What", yani kya karna hai.</p>
+<div class="sub-points">
+<p><strong>Example:</strong> Fannie Mae ke CEO David Maxwell ne strategy ko tab tak rok kar rakha jab tak unki team taiyaar nahi ho gayi.</p>
+<p>Yeh tab bhi kiya gaya jab board ka bahut pressure tha.</p>
+<p>Company har din $1 million gawa rahi thi aur $56 billion ke karz me thi.</p>
+</div>
+<p><strong>Comparison Companies:</strong> Yeh companies pehle vision banati thin aur phir logon ko roadmap me fit karti thin.</p>
+<div class="sub-points">
+<p>Inka model "a genius with a thousand helpers" tha, yani ek genius leader aur uske bahut saare madadgar.</p>
+<p>Leader ke chale jaane ke baad yeh model fail ho jata tha.</p>
+</div>
+<p><strong>Executive Compensation:</strong> Research me koi aisa saboot nahi mila ki compensation structure, jaise cash, stock ya salary, company ke transition me madad karta hai.</p>
+<div class="sub-points">
+<p>Sahi compensation sirf sahi logon ko company me laane aur unhe rok kar rakhne me madad kar sakta hai.</p>
+<p>Lekin compensation unke behavior ko change nahi karta.</p>
+<p>Sahi log excellence ki apni andar ki drive ki wajah se apna best dete hain, sirf compensation ke lalach me nahi.</p>
+</div>
+<h3 class="sub-heading">Be Rigorous, Not Ruthless</h3>
+<p><strong>Meaning:</strong> Good-to-great companies logon ke mamle me disciplined aur strict hoti hain, lekin woh be-reham nahi hoti.</p>
+<p><strong>Layoffs:</strong> Yeh companies baar-baar restructuring ya layoffs nahi karti thin.</p>
+<div class="sub-points">
+<p>Comparison companies me layoffs 5 guna zyada hote the.</p>
+</div>
+<h3 class="sub-heading">3 Practical Principles for Rigorousness</h3>
+<p><strong>When in doubt, don't hire — keep looking:</strong> Agar kisi candidate ko lekar doubt ho, toh hire mat kijiye. Sahi insaan milne tak dhoondhte rahiye.</p>
+<div class="sub-points">
+<p>Company ki growth ki speed utni hi rakhiye jitni speed se aap sahi log hire kar sakte hain.</p>
+</div>
+<p><strong>Need to make people changes? Do it:</strong> Agar logon ko badalne ki zarurat hai, toh zaroori action lijiye.</p>
+<div class="sub-points">
+<p><strong>Top management me ek bipolar pattern dikhta hai:</strong> Ya toh log bahut saalon tak company me rehte hain, ya phir jaldi chale jate hain.</p>
+<p>Kya aap is vyakti ko dobara hire karenge?</p>
+<p>Agar yeh vyakti chala jaye, toh aapko dukh hoga ya rahat milegi?</p>
+</div>
+<p><strong>Put your best people on biggest opportunities, not problems:</strong> Apne sabse achhe logon ko sabse badi opportunities par lagaiye, problems par nahi.</p>
+<div class="sub-points">
+<p>Agar aap kisi kharab division ya problem ko bech rahe hain, toh apne best logon ko uske saath mat bechiye.</p>
+</div>
+<h3 class="sub-heading">The 3 Simple Truths</h3>
+<p><strong>Who before What:</strong> Pehle sahi log chunne se badalte halat ke hisaab se company ki direction badalna aasan hota hai.</p>
+<p><strong>Intrinsic Motivation:</strong> Sahi log andar se motivated hote hain. Isliye unhe baar-baar manage ya motivate karne me time waste nahi hota.</p>
+<p><strong>Wrong People:</strong> Agar company me galat log hain, toh best strategy hone ke baad bhi success nahi milegi.</p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Confront the Brutal Facts</h2></div>
+<h3 class="sub-heading">Yet Never Lose Faith</h3>
+<p><strong>Core Process:</strong> Good-to-great companies decisions lete waqt kadi aur buri sachchaiyon ka seedha samna karti hain.</p>
+<h3 class="sub-heading">Climate of Truth</h3>
+<p>Sachchai ka mahaul banane ke liye 4 basic practices hain.</p>
+<p><strong>Lead with questions, not answers:</strong> Leaders answers dene se pehle sawal puchte hain taaki unhe sahi insights mil saken.</p>
+<div class="sub-points">
+<p>Real situations ko samne lane ke liye woh informal aur bina agenda wali meetings bhi karte hain.</p>
+</div>
+<p><strong>Engage in dialogue and debate, not coercion:</strong> Executives ek doosre ke saath dialogue aur debate karte hain taaki best answer mil sake.</p>
+<p><strong>Conduct autopsies, without blame:</strong> Galti hone par bina kisi par blame kiye autopsy, yani gehra analysis, kiya jata hai taaki sab log usse seekh saken.</p>
+<p><strong>Build "red flag" mechanisms:</strong> Aisi information aur feedback systems banaiye jise ignore karna namumkin ho.</p>
+<h3 class="sub-heading">The Stockdale Paradox</h3>
+<p><strong>The Stockdale Paradox:</strong> Aapko atal vishwas rakhna hai ki aakhir me aap jeetenge, aur saath hi apni sabse kadi aur buri sachchaiyon ka bina dare samna bhi karna hai.</p>
+<div class="sub-points">
+<p>Aise log andhe optimists nahi hote jo sochte hain ki sab kuch apne aap theek ho jayega.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>The Hedgehog Concept</h2></div>
+<h3 class="sub-heading">The Greek Parable</h3>
+<p><strong>Fox:</strong> Lomdi bahut saari cheezein karti hai aur duniya ko complex tareeke se dekhti hai.</p>
+<p><strong>Hedgehog:</strong> Hedgehog ek chhota kantedar janwar hai jo duniya ko ek simple aur single idea me samet leta hai. Wahi ek idea uske har kaam ko guide karta hai.</p>
+<h3 class="sub-heading">The Three Circles</h3>
+<p>Hedgehog Concept in teen circles ke intersection, yani milne wali jagah, par banta hai.</p>
+<p><strong>What you can be the best in the world at:</strong> Aap kis kaam me duniya me sabse best ban sakte hain, aur kis kaam me nahi ban sakte.</p>
+<div class="sub-points">
+<p>Iske liye "curse of competence" se bahar nikalna padta hai.</p>
+<p>Iska matlab hai ki jo kaam aapka core business hai, zaroori nahi ki aap usme duniya me sabse best ban sakte hon.</p>
+</div>
+<p><strong>What drives your economic engine:</strong> Kaun sa ek denominator, yani profit per "X", aapki economics ko sabse achhe tareeke se chalata hai.</p>
+<div class="sub-points">
+<p>Yeh "X" employee, customer, brand ya region ho sakta hai.</p>
+</div>
+<p><strong>What are you deeply passionate about:</strong> Aap kis cheez ke liye sach me bahut passionate hain.</p>
+<div class="sub-points">
+<p>Passion ko zabardasti paida nahi karna hai.</p>
+<p>Us passion ko dhoondhna hai jo aapke andar pehle se maujood hai.</p>
+</div>
+<p><strong>Iterative Process:</strong> Hedgehog Concept ko dhoondhne me average 4 saal ka samay lagta hai.</p>
+<div class="sub-points">
+<p>Iske liye "Council" ka use kiya jata hai.</p>
+<p>Council 5 se 12 sahi logon ka group hota hai.</p>
+<p>Yeh group baar-baar debate karta hai aur process ke steps ko repeat karta hai.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>A Culture of Discipline</h2></div>
+<p><strong>Core Principle:</strong> Bureaucracy aur zarurat se zyada controls se bachne ke liye company me Culture of Discipline, yani discipline ki ek strong culture, banani chahiye.</p>
+<div class="sub-points">
+<p>Isme disciplined people, disciplined thought aur disciplined action hote hain.</p>
+<p>Jab is discipline ko entrepreneurship ke saath joda jata hai, toh extraordinary performance milti hai.</p>
+</div>
+<h3 class="sub-heading">Key Components</h3>
+<p><strong>Freedom and Responsibility:</strong> Clear framework ya system ke rules ke andar logon ko poori freedom aur responsibility dijiye.</p>
+<p><strong>Manage Systems, Not People:</strong> Sirf self-disciplined logon ko hire kijiye jo apni responsibility poori karne ke liye zaruri mehnat karne ko taiyaar hon.</p>
+<p><strong>Level 5 Culture vs Tyrant:</strong> Level 5 leaders discipline ki ek enduring culture banate hain jo unke jaane ke baad bhi chalti rahe.</p>
+<div class="sub-points">
+<p>Iske opposite, unsustained companies ke leaders khud tyrannical disciplinarian ban kar zabardasti discipline lagu karne ki koshish karte the.</p>
+</div>
+<p><strong>Fanatical Adherence to Hedgehog Concept:</strong> Jo opportunities Hedgehog Concept ke teen circles ke intersection ke bahar hain, unhe seedha "NO" kehna chahiye.</p>
+<div class="sub-points">
+<p>Yeh tab bhi karna chahiye jab opportunity kitni bhi badi ho.</p>
+</div>
+<p><strong>Bureaucracy:</strong> Bureaucracy tab badhti hai jab company me galat log aa jate hain aur unki incompetence ko control karne ke liye naye-naye rules banane padte hain.</p>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>Technology Accelerators</h2></div>
+<p><strong>Technology ka Role:</strong> Technology kabhi bhi transformation ya momentum ko shuru nahi karti.</p>
+<div class="sub-points">
+<p>Technology pehle se bane momentum ko accelerate, yani tez, karti hai.</p>
+</div>
+<h3 class="sub-heading">Avoiding Tech Trap</h3>
+<p><strong>Research Finding:</strong> 80% good-to-great executives ne technology ko top 5 transformation factors me nahi rakha.</p>
+<p><strong>Technology Selection:</strong> Good-to-great companies technology ko bahut soch-samajhkar choose karti hain.</p>
+<div class="sub-points">
+<p>Jo technology unke Hedgehog Concept se match karti hai, usme woh pioneers ban jati hain.</p>
+</div>
+<p><strong>Technology Adoption:</strong> Yeh companies technology ko dar ki wajah se nahi, balki excellence hasil karne ke liye adopt karti hain.</p>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>The Flywheel and the Doom Loop</h2></div>
+<h3 class="sub-heading">The Flywheel Effect</h3>
+<p><strong>Transformation:</strong> Transformation koi ek raat ka chamatkar ya ek bahut bada single action nahi hota.</p>
+<p><strong>Flywheel:</strong> Yeh ek bhari flywheel, yani pahiye, ko ek hi direction me lagatar dhakka dene jaisa hai.</p>
+<div class="sub-points">
+<p>Dheere-dheere momentum banta hai.</p>
+<p>Ek samay aata hai jab breakthrough, yani badi kamyabi, milti hai.</p>
+</div>
+<p><strong>No Motivation Issues:</strong> Jab sahi conditions ban jati hain, toh commitment aur motivation ki problems apne aap kam ho jati hain.</p>
+<div class="sub-points">
+<p>Log results dekhte hain aur khud hi is flywheel ke piche khade ho jate hain.</p>
+</div>
+<h3 class="sub-heading">The Doom Loop</h3>
+<p><strong>The Doom Loop:</strong> Comparison companies bina momentum banaye baar-baar naye leaders, naye programs aur nayi directions ki taraf jump karti rehti hain.</p>
+<div class="sub-points">
+<p>Isse kharab results aate hain aur momentum aur zyada bigad jata hai.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">48pt</span><h2>From Good to Great to Built to Last</h2></div>
+<h3 class="sub-heading">The Relationship</h3>
+<p><strong>Good to Great:</strong> Yeh startup se lekar sustained great results tak pahunchne ka raasta dikhati hai.</p>
+<p><strong>Built to Last:</strong> Yeh sikhati hai ki un great results ko ek enduring aur iconic company, yani lambe samay tak chalne wali company, me kaise badla jaye.</p>
+<h3 class="sub-heading">Core Values and Progress</h3>
+<p><strong>Core Values and Purpose:</strong> Great companies apne core values aur purpose ko barkarar rakhti hain.</p>
+<p><strong>Progress:</strong> Saath hi woh progress ko bhi aage badhati rehti hain.</p>
+<p><strong>BHAG — Big Hairy Audacious Goal:</strong> Koi bhi bada goal set kiya jaye, toh woh hamesha Hedgehog Concept ke teen circles ki understanding par based hona chahiye.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

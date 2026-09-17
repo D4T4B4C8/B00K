@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 7 Habits of Highly Effective People — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 3.4rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 1</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">The 7 Habits of Highly Effective People</span>
+          <span class="headline-main">The 7 Habits of Highly Effective People</span>
+        </div>
+        <p class="subhead">Reading notes on The 7 Habits of Highly Effective People</p>
+        <div class="meta-row">
+          <span>5 min read</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>Shuruaat: Basic Idea</h2></div>
+<p class="drop-cap">Stephen R. Covey ki The 7 Habits of Highly Effective People ka main idea hai ki real success aur real change andar se shuru hota hai.</p>
+<p>Sirf skills, knowledge ya techniques seekhna enough nahi hai. Hume apni soch, character aur intentions ko improve karna hota hai. Jab andar badlav aata hai, tab bahar ki zindagi bhi badalti hai.</p>
+<p>Is approach ko Inside-Out kaha gaya hai.</p>
+<p>7 Habits ek sequence mein hain. Pehli habits hume khud ko manage karna sikhati hain, phir doosron ke saath better relationships banana, aur aakhir mein khud ko continuously improve karna.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Habit 1 — Be Proactive</h2></div>
+<h3 class="sub-heading">Simple Meaning</h3>
+<p>Apni life ki responsibility khud lo.</p>
+<p>Har situation mein hum apna response choose kar sakte hain. Situation hamare control mein na ho, phir bhi hum us situation par kaise react karein, yeh hamare control mein hota hai.</p>
+<p>Reactive hone ke bajay proactive bano.</p>
+<div class="sub-points">
+<p><strong>Reactive:</strong> "Main ye nahi kar sakta."</p>
+<p><strong>Reactive:</strong> "Mujhe ye karna hi padega."</p>
+<p><strong>Proactive:</strong> "Main ye kar sakta hoon."</p>
+<p><strong>Proactive:</strong> "Main ye karunga."</p>
+<p><strong>Proactive:</strong> "Main ye choose karta hoon."</p>
+</div>
+<h3 class="sub-heading">Circle of Influence</h3>
+<p>Apni energy un cheezon par lagao jinhe tum change kar sakte ho.</p>
+<div class="sub-points">
+<p>Apni soch</p>
+<p>Apna behaviour</p>
+<p>Apne decisions</p>
+<p>Apni habits</p>
+</div>
+<p>Un cheezon par energy waste mat karo jinpar tumhara control nahi hai, jaise weather ya economy.</p>
+<p><strong>Yaad rakho:</strong> "Jo mere control mein hai, us par focus karo."</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Habit 2 — Begin with the End in Mind</h2></div>
+<h3 class="sub-heading">Simple Meaning</h3>
+<p>Pehle decide karo ki tumhe banna kya hai aur pahunchna kahan hai.</p>
+<p>Har important cheez pehle mind mein create hoti hai, phir real life mein.</p>
+<p>Isliye pehle clear vision banao:</p>
+<div class="sub-points">
+<p>Main kya banna chahta hoon?</p>
+<p>Main kya achieve karna chahta hoon?</p>
+<p>Mere liye important principles kya hain?</p>
+</div>
+<h3 class="sub-heading">Personal Mission Statement</h3>
+<p>Apni life ke liye ek clear mission banao jo bataye: "Main kaun banna chahta hoon aur meri life mein kya important hai?"</p>
+<p>Ye mission tumhare daily decisions ko direction dega.</p>
+<h3 class="sub-heading">Principle-Centered Life</h3>
+<p>Apni life ka center sirf paisa, career, relationship ya kisi temporary cheez ko mat banao.</p>
+<p>Strong principles ko apna center banao.</p>
+<p>Isse tumhe milti hai:</p>
+<div class="sub-points">
+<p>Security</p>
+<p>Guidance</p>
+<p>Wisdom</p>
+<p>Power</p>
+</div>
+<p><strong>Yaad rakho:</strong> "Pehle destination clear karo, phir journey start karo."</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Habit 3 — Put First Things First</h2></div>
+<h3 class="sub-heading">Simple Meaning</h3>
+<p>Jo sabse important hai, use sabse pehle karo.</p>
+<p>Problem aksar discipline ki nahi hoti. Problem ye hoti hai ki hume apni priorities clearly pata nahi hoti.</p>
+<h3 class="sub-heading">Time Management ke 4 Quadrants</h3>
+<div class="sub-points">
+<p><strong>Quadrant 1:</strong> Urgent + Important — Crisis aur immediate problems.</p>
+<p><strong>Quadrant 2:</strong> Not Urgent + Important — Planning, prevention, relationships, personal growth. Ye sabse important quadrant hai.</p>
+<p><strong>Quadrant 3:</strong> Urgent + Not Important — Unnecessary calls, interruptions, meetings.</p>
+<p><strong>Quadrant 4:</strong> Not Urgent + Not Important — Time waste, excessive entertainment.</p>
+</div>
+<h3 class="sub-heading">Quadrant 2 par Focus Karo</h3>
+<p>Har week:</p>
+<div class="sub-points">
+<p>Apne important life roles identify karo.</p>
+<p>Har role ke liye 2–3 important goals banao.</p>
+<p>Un goals ke liye pehle se time schedule karo.</p>
+<p>Zarurat padne par daily plan adjust karo.</p>
+</div>
+<p>Important idea: Schedule mein jo aa gaya usko priority mat do. Pehle apni priorities decide karo, phir unke liye schedule mein time rakho.</p>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Habit 4 — Think Win-Win</h2></div>
+<h3 class="sub-heading">Simple Meaning</h3>
+<p>Aisi situation create karo jahan dono sides ka fayda ho.</p>
+<p>Win-Win sirf ek negotiation technique nahi hai. Ye relationships ko dekhne ka ek mindset hai.</p>
+<p>Agar dono ka fayda possible nahi hai, to zabardasti jeetne ki jagah "No Deal" karna better hai.</p>
+<h3 class="sub-heading">Win-Win ke liye</h3>
+<p><strong>Integrity:</strong> Jo tum kehte ho, us par khade raho.</p>
+<p><strong>Maturity:</strong> Apni baat kehne ka courage rakho aur doosron ki baat ka respect bhi karo.</p>
+<p><strong>Abundance Mindset:</strong> Ye socho ki success sirf ek insaan ke liye nahi hai. Sabke liye enough opportunities ho sakti hain.</p>
+<h3 class="sub-heading">Relationships mein Trust Banao</h3>
+<p>Trust badhta hai jab tum:</p>
+<div class="sub-points">
+<p>Doosre ko genuinely samajhne ki koshish karo.</p>
+<p>Chhoti kindness dikhao.</p>
+<p>Apne promises poore karo.</p>
+<p>Expectations clear rakho.</p>
+<p>Honest raho.</p>
+<p>Galti hone par dil se sorry bolo.</p>
+</div>
+<p><strong>Yaad rakho:</strong> "Mujhe sirf jeetna nahi hai; hume dono ko jeetna hai."</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Habit 5 — Pehle Samjho, Phir Samjhao</h2></div>
+<h3 class="sub-heading">Simple Meaning</h3>
+<p>Pehle doosre insaan ko genuinely samjho, phir apni baat samjhao.</p>
+<p>Normally log doosron ki baat isliye sunte hain taaki unhe apna answer dena ho.</p>
+<p>Empathic listening mein goal alag hai: "Mujhe pehle samajhna hai ki saamne wala kya feel aur soch raha hai."</p>
+<p>Sirf words mat suno. Unki in cheezon ko samajhne ki koshish karo:</p>
+<div class="sub-points">
+<p>Feelings</p>
+<p>Emotions</p>
+<p>Point of view</p>
+<p>Situation</p>
+</div>
+<p>Jab log ek doosre ko genuinely samajhte hain, tab naye aur creative solutions mil sakte hain — jise Third Alternative kaha gaya hai.</p>
+<p><strong>Yaad rakho:</strong> "Answer dene ke liye mat suno; samajhne ke liye suno."</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>Habit 6 — Synergize</h2></div>
+<h3 class="sub-heading">Simple Meaning</h3>
+<p>Differences ko problem nahi, strength samjho.</p>
+<p>Har insaan duniya ko apne experience aur thinking ke according dekhta hai.</p>
+<p>Isliye doosre insaan ka perspective tumse different ho sakta hai.</p>
+<p>Us difference ko reject karne ke bajay samjho aur value karo.</p>
+<p>Jab different ideas ko combine kiya jata hai, to kabhi-kabhi aisa solution milta hai jo dono individual ideas se better hota hai.</p>
+<p>Whole, parts ke simple sum se bada ho sakta hai.</p>
+<p><strong>Synergy ka matlab hai:</strong> "Tumhari strength + meri strength = kuch aur better."</p>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>Habit 7 — Sharpen the Saw</h2></div>
+<h3 class="sub-heading">Simple Meaning</h3>
+<p>Khud ko continuously renew aur improve karte raho.</p>
+<p>Agar tum khud ko maintain nahi karoge, to baaki habits bhi weak ho jayengi.</p>
+<p>Apne aap ko 4 areas mein regularly improve karo:</p>
+<h3 class="sub-heading">1. Physical</h3>
+<div class="sub-points">
+<p>Achha khana</p>
+<p>Proper rest</p>
+<p>Exercise</p>
+</div>
+<h3 class="sub-heading">2. Spiritual</h3>
+<p>Apne inner self ko strong karo:</p>
+<div class="sub-points">
+<p>Reading</p>
+<p>Nature</p>
+<p>Music</p>
+<p>Meditation</p>
+<p>Prayer</p>
+</div>
+<h3 class="sub-heading">3. Mental</h3>
+<p>Apne mind ko grow karo:</p>
+<div class="sub-points">
+<p>Study</p>
+<p>Reading</p>
+<p>Writing</p>
+<p>Apni thinking ko examine karna</p>
+</div>
+<h3 class="sub-heading">4. Social / Emotional</h3>
+<p>Daily relationships mein Habits 4–6 ko practice karo.</p>
+<p><strong>Yaad rakho:</strong> "Khud ko improve karna band mat karo."</p>
+<p>Jab tum doosron mein unki potential dekhte ho aur unhe encourage karte ho, to tum unhe grow karne mein help karte ho.</p>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>Sabhi 7 Habits ka Simple Formula</h2></div>
+<p><strong>Habit 1:</strong> Apni responsibility lo.</p>
+<p><strong>Habit 2:</strong> Apna destination clear karo.</p>
+<p><strong>Habit 3:</strong> Important cheezon ko priority do.</p>
+<p><strong>Habit 4:</strong> Dono sides ki jeet socho.</p>
+<p><strong>Habit 5:</strong> Pehle samjho, phir samjhao.</p>
+<p><strong>Habit 6:</strong> Differences ko use karke better solutions banao.</p>
+<p><strong>Habit 7:</strong> Khud ko continuously improve karte raho.</p>
+<div class="specimen-row"><span class="specimen-label">48pt</span><h2>Sabse Important Lesson</h2></div>
+<p>Pehle khud ko manage karo → phir relationships ko better karo → phir continuously khud ko renew karte raho.</p>
+<p>Ye poori book ka core idea hai: real effectiveness sirf results paane ka naam nahi hai; apni capacity ko bhi strong banana zaroori hai.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

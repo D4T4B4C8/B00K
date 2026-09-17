@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awaken the Giant Within — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 5.6rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 7</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">Awaken the Giant Within</span>
+          <span class="headline-main">Awaken the Giant Within</span>
+        </div>
+        <p class="subhead">Reading notes on Awaken the Giant Within</p>
+        <div class="meta-row">
+          <span>18 min read</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>1. Introduction aur Core Idea: The Big So What</h2></div>
+<h3 class="sub-heading">Mukhya Uddeshya</h3>
+<p class="drop-cap">Tony Robbins ka focus ye hai ki insaan apni life ki quality ko clearly aur practically better bana sake. Unka maanna hai ki har insaan ke andar bahut zyada potential hota hai. Lekin us potential ka use tabhi hota hai jab hum khud jagkar apni life ki responsibility lena shuru karte hain.</p>
+<h3 class="sub-heading">Self-Mastery</h3>
+<p>Self-mastery ka matlab hai khud par control. Iske through hum apni mental, emotional, physical aur financial life ko zyada control kar sakte hain.</p>
+<h3 class="sub-heading">Controlled Focus</h3>
+<p>Focused attention laser beam ki tarah hota hai. Jab hum ek clear cheez par poora focus karte hain, to hum un rukawaton ko paar kar sakte hain jo hume aage badhne se rok rahi hain.</p>
+<h3 class="sub-heading">Badlav ki Shuruaat</h3>
+<p>Kisi organization, company, desh ya duniya ko badalne ki shuruaat pehle khud ko badalne se hoti hai. Chhota sa personal change bhi aage chal kar bada change la sakta hai.</p>
+<h3 class="sub-heading">Knowledge vs Action</h3>
+<p>Bahut log jaante hain ki unhe kya karna chahiye. Lekin sirf knowledge kaafi nahi hai. Asli result tab aata hai jab insaan jo jaanta hai us par action bhi leta hai.</p>
+<h3 class="sub-heading">3 Pillars of Transformation</h3>
+<div class="sub-points">
+<p>Apne standards ko uncha karna.</p>
+<p>Apne limiting beliefs, yani rokne wale vishwason ko badalna.</p>
+<p>Apni strategies, yani kaam karne ke tareeqe, ko badalna.</p>
+</div>
+<h3 class="sub-heading">Decisions over Circumstances</h3>
+<p>Aapka future sirf aapki circumstances, yani halat, se decide nahi hota. Aapke decisions bhi bahut important hain. Agar aap khud decide nahi karte ki aap 10 saal baad kaisi life chahte hain, to circumstances aur default choices aapki life ko direction dene lagenge.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Part 1: Raising Your Standards (Apne Standards ko Uncha Karna)</h2></div>
+<h3 class="sub-heading">A. It Starts with a Decision (Shuruaat Ek Faisle Se Hoti Hai)</h3>
+<p>True decision tab hota hai jab aap baaki options ko side mein rakhkar apne goal ke liye seriously commit karte hain. Sirf "main ye karna chahta hoon" kehna decision nahi hai. Real decision ka sabse bada proof hai consistent action, yani lagataar kaam karte rehna.</p>
+<p>Kitab likhne se lagbhag 8 saal pehle Tony Robbins bahut mote the aur unke paas paise bhi nahi the. Unhone strong decision liya ki woh apni life badlenge aur apni best ability se kam par compromise nahi karenge.</p>
+<p>Failure se seekhna growth ka important part hai. Jitne zyada decisions aap lenge aur un par kaam karenge, utne hi aap experienced aur confident bante jayenge. Tony ne public speaking improve karne ke liye bahut practice ki. Jahan doosre log ek saal mein lagbhag 48 speaking events karte the, Tony ne utne hi events sirf 2 weeks mein kar liye.</p>
+<p>Goal ke saath long-term commitment rakho, lekin goal tak pahunchne ke tareeqe mein flexible raho. Agar ek method kaam nahi kar raha, to method badlo. Goal ko chhodna zaroori nahi hai. Apne mind ko naye options ke liye open rakho.</p>
+<p>Opportunities har jagah ho sakti hain, lekin unka fayda tabhi milega jab aap action lenge.</p>
+<p><strong>Example 1 — Becky se Mulaqat:</strong> Tony ne Denver mein seminar karne ka decision liya. Isi decision ki wajah se unki mulaqat Becky se hui, jo baad mein unki wife bani.</p>
+<p><strong>Example 2 — Business Loss:</strong> Ek business partner ki wajah se Tony ki company ko lagbhag $500,000 ka loss hua aur $758,000 ka debt ho gaya. Lekin isi difficult situation ne unhe company ko aur bada aur strong banane ke liye push kiya.</p>
+<h3 class="sub-heading">B. Pain and Pleasure: The Forces That Drive Us (Dard aur Khushi)</h3>
+<p>Hum jo bhi karte hain, uske peeche aam taur par do basic drives hoti hain: dard se bachna aur khushi paana. Hamare brain ne kis cheez ko pain ke saath aur kis cheez ko pleasure ke saath connect kiya hai, iska hamari choices par bahut bada effect hota hai.</p>
+<p>Kabhi-kabhi hum logically jaante hain ki koi cheez hamare liye achhi hai, jaise diet karna ya smoking chhodna. Phir bhi hum action nahi lete kyunki hume short-term discomfort ya pain ka darr hota hai.</p>
+<p>Insaan aksar loss se bachne ke liye profit paane se zyada motivated hota hai. Example: Kisi person ko $100,000 lose hone se bachane ke liye zyada effort karna aasaan lag sakta hai, compared to naye $100,000 earn karne ke liye effort karna.</p>
+<p>Har insaan ki pain ki ek limit hoti hai. Jab pain bahut zyada ho jata hai, tab insaan finally kehta hai: "Ab bas. Ab aur nahi."</p>
+<p><strong>Tony Robbins ka Beer Example:</strong> Bachpan mein Tony ne apne father ko beer peete dekha aur unhe bhi beer try karne ka mann hua. Unki mother ne kaha ki agar woh peena chahte hain to unhe ek saath 6-pack beer peeni hogi. Tony ne 6 cans forcefully pee liye aur unhe vomiting ho gayi. Ye experience itna unpleasant tha ki unke brain ne beer ko bahut strong pain ke saath connect kar diya. Uske baad unhone kabhi beer nahi pi.</p>
+<p>Agar kisi habit ko chhodna hai, to Tony Robbins ke according us purani habit ke saath strong pain ko associate karna useful ho sakta hai.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Part 2: Changing Your Limiting Beliefs (Apne Simit Vishwason ko Badalna)</h2></div>
+<h3 class="sub-heading">A. Understanding Belief Systems (Belief Systems ko Samajhna)</h3>
+<p>Beliefs hamare reality ko dekhne ke tareeqe ko influence karte hain. Ek simple idea ko table-top ki tarah samjho. Table-top akela khada nahi reh sakta. Jab naye experiences aur references us idea ko support karte hain, to woh idea strong belief ban sakta hai.</p>
+<p><strong>Belief ki Strength Kis Par Depend Karti Hai:</strong> References ki sankhya, aur un references ke saath judi emotional intensity.</p>
+<h3 class="sub-heading">Three Levels of Beliefs</h3>
+<div class="sub-points">
+<p><strong>Opinions — Rai:</strong> Opinions kuch limited references par based hoti hain aur relatively aasani se badal sakti hain.</p>
+<p><strong>Beliefs — Vishwas:</strong> Beliefs zyada aur stronger references par based hote hain. Inke saath strong emotions jude ho sakte hain. Kabhi-kabhi insaan itna sure ho jata hai ki naye information ko accept karna mushkil ho jata hai.</p>
+<p><strong>Convictions — Bahut Mazboot Vishwas:</strong> Conviction ek bahut strong belief hota hai jo insaan ko lag sakta hai ki uski identity ya existence ka important part hai. Aise beliefs insaan ko powerful action lene ke liye motivate kar sakte hain, lekin insaan doosre viewpoints ko dekhna bhi band kar sakta hai.</p>
+</div>
+<p>Beliefs sirf thoughts tak limited nahi hote. Woh body aur behavior ko bhi influence kar sakte hain. Jab insaan apne baare mein apni belief change karta hai, to uski personality, behavior aur kabhi-kabhi physical experience tak change ho sakta hai.</p>
+<p>Hazaaron saal tak log maante rahe ki ek mile ko 4 minutes se kam mein run karna impossible hai. 1954 mein Roger Bannister ne ye record tod diya. Uske baad usi saal 37 aur runners ne bhi 4-minute barrier cross kiya. Ek baar logon ko proof mil gaya ki ye possible hai, to unka belief change ho gaya.</p>
+<h3 class="sub-heading">B. Building and Changing Our Beliefs (Vishwas Banana aur Badalna)</h3>
+<p>References hamare conscious aur unconscious experiences hain. Hum references 3 main tareeqon se bana sakte hain:</p>
+<div class="sub-points">
+<p>Apne real-life experiences se.</p>
+<p>External sources se, jaise role models, books, biographies, movies aur seminars.</p>
+<p>Imagination se — imagination bhi powerful ho sakti hai kyunki brain kabhi-kabhi imagined aur real experience ko similar emotional response ke saath process karta hai.</p>
+</div>
+<p>Har belief ko sirf isliye useful nahi maana ja sakta kyunki hume lagta hai ki woh true hai. Insaan aksar kisi bhi belief ko support karne ke liye reasons bana sakta hai. Important question ye hai: "Kya ye belief mujhe stronger aur better action lene mein help karta hai?" Social proof ya kisi expert ki opinion ko blindly accept karne ke bajaye information ko independently evaluate karna chahiye.</p>
+<p>Brain strong neural connections bana sakta hai jab:</p>
+<div class="sub-points">
+<p>Situation mein kuch unique ya strong ho.</p>
+<p>Behavior aur sensation ek saath ho.</p>
+<p>Association baar-baar repeat ho.</p>
+</div>
+<p><strong>False Neuro-Association:</strong> Jab brain galat cheezon ya galat reasons ko aapas mein connect kar leta hai.</p>
+<p><strong>Mixed Neuro-Association:</strong> Jab ek hi cheez ke saath pain aur pleasure dono connect ho jate hain. Example: Kisi person ko paise chahiye, lekin uske mind mein ye belief bhi ho sakta hai ki zyada paise se greed badhegi. Isse andar conflict create hota hai aur person apne hi goals ko block kar sakta hai.</p>
+<h3 class="sub-heading">C. Neuro-Associative Conditioning (NAC) — The 6-Step System</h3>
+<p>Tony Robbins ne fast aur lasting change ke liye 6-step system bataya hai. Iska purpose sirf willpower par depend kiye bina old patterns ko change karna hai.</p>
+<p><strong>Step 1 — Define What You Want and What's Stopping You:</strong> Clearly define karo ki aapko kya chahiye aur kaunsi cheez aapko rok rahi hai.</p>
+<p><strong>Step 2 — Leverage:</strong> Sense of Urgency Create Karo: Not-changing ke saath strong pain aur changing ke saath strong pleasure connect karo. Goal ye hai ki aapki pain threshold itni clear ho jaye ki brain kahe: "Change ab hona hi chahiye."</p>
+<div class="sub-points">
+<p><strong>Lasting change ke liye 3 core beliefs:</strong> Things must change (Badlav zaroori hai), I must change it (Mujhe ise badalna hai), I can change it (Main ise badal sakta hoon).</p>
+<p><strong>Tony ka Chocolate Champion Example:</strong> Ek person chocolate addiction chhodna chahta tha, lekin andar se chocolate ko enjoy karta tha. Tony ne use 9 din tak chocolate khane ko kaha. Teesre din tak chocolate ke saath uska pleasure connection toot gaya aur usse chocolate se dislike hone lagi.</p>
+</div>
+<p><strong>Step 3 — Disrupt the Old Pattern:</strong> Purane behavior pattern ko break karne ke liye kuch unexpected karo.</p>
+<div class="sub-points">
+<p><strong>Example 1:</strong> Agar restaurant mein aap overeat kar rahe ho, to Tony ke example mein turant khade hokar zor se "WHAT A PIG!" kehne ka idea diya gaya hai. Isse embarrassment ka strong emotion old pattern ko interrupt kar sakta hai.</p>
+<p><strong>Example 2 — Scramble Memory:</strong> Agar negative memory baar-baar mind mein aa rahi hai, to us memory ko imagination mein comedy movie ki tarah dekho. Use fast-forward aur reverse karo, funny elements aur music imagine karo, aur memory ko itna change karo ki uski purani negative feeling weak ho jaye.</p>
+</div>
+<p><strong>Step 4 — Replace with an Empowering Alternative:</strong> Old habit ko sirf remove karna enough nahi hai. Uski jagah ek naya aur healthy option dena important hai. Drug rehab example mein book batati hai ki drugs ki jagah career, relationships ya doosri meaningful activities ko importance dena relapse ko kam karne mein help kar sakta hai.</p>
+<p><strong>Step 5 — Condition the New Pattern:</strong> Har chhote improvement ko reward ya praise ke through reinforce karo. Undesired behavior ke liye negative consequence bhi diya ja sakta hai. Reward ya consequence jitna immediate hoga, brain ke liye association utni clear ho sakti hai. New behavior ko emotional intensity ke saath mind mein rehearse karo.</p>
+<p><strong>Step 6 — Test the Programming:</strong> Pehle imagine karo ki woh situation aa rahi hai jisme pehle aapko gussa, frustration ya old reaction hota tha. Agar ab aap normal aur controlled feel karte ho, to new programming successful ho sakti hai. Agar old reaction wapas aaye, to Step 1 se Step 5 dobara karo.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Part 3: Changing Your Strategies (Apni Strategies ko Badalna)</h2></div>
+<h3 class="sub-heading">A. The Power of State (Aapki Emotional State ki Taaqat)</h3>
+<p>Hum jo goals banate hain, jaise money, career aur family goals, unke peeche aksar ek deeper feeling hoti hai. Hum paisa sirf paisa ke liye nahi chahte. Ho sakta hai hum uske through security, freedom ya respect feel karna chahte hon. Humari emotional state hamare actions aur reactions ko strongly influence karti hai.</p>
+<p>Aap apni emotional state ko 2 tareeqon se badal sakte hain:</p>
+<p><strong>Changing Your Physiology:</strong> Body posture aur movement feelings ko affect kar sakte hain. Agar aap shoulders gira kar baithte ho, to tired feel karna aasaan ho sakta hai. Seedha baithna aur deep breathing fresh aur energetic feel karne mein help kar sakta hai.</p>
+<div class="sub-points">
+<p><strong>John Denver Example:</strong> Songwriter John Denver ko apne best songs ke ideas aksar nature mein exciting activities, jaise skiing ya flying, ke baad milte the.</p>
+<p><strong>Physiology Exercises:</strong> Bina kisi special reason ke smile karna, mirror ke saamne grin karna ya jogging ke bajaye energetic movement karna brain ko positive state mein shift karne mein help kar sakta hai.</p>
+</div>
+<p><strong>Changing Your Focus:</strong> Brain camera lens ki tarah hai. Aap jis cheez par focus karte ho, woh mentally badi lagne lagti hai. Agar aap problems par focus karoge to negative feeling badh sakti hai. Agar aap solutions aur goals par focus karoge to better possibilities dikh sakti hain.</p>
+<div class="sub-points">
+<p><strong>Experiential Modes:</strong> Apne aap ko samjho ki aap visual, audio ya sensory information mein se kis type se zyada affected hote ho. Positive memories ko mentally stronger aur negative memories ko less powerful banane ke liye images, sounds aur sensations ka use kiya ja sakta hai.</p>
+<p><strong>State-Changing List:</strong> Kam se kam 15 aise positive activities ki list banao jo aapko relatively jaldi better feel karati hain. Examples: Swimming, bachchon ko hug karna, hot bath.</p>
+</div>
+<h3 class="sub-heading">B. The Power of Questions (Sawaalon ki Taaqat)</h3>
+<p>Successful log better questions poochte hain.</p>
+<p><strong>Instantly Shift Focus and Feelings:</strong> Agar aap poochte ho "Main itna pareshan kyun hoon?" to brain problem ko search karega. Iske badle pooch sakte ho: "Main is waqt khushi kaise dhoondh sakta hoon?"</p>
+<div class="sub-points">
+<p>Affirmation "Main khush hoon" kehne ke bajaye question poochna bhi useful ho sakta hai: "Main abhi kis cheez ke liye grateful ya khush ho sakta hoon?"</p>
+<p><strong>Disaster ke time poochho:</strong> "Main is situation ko kaise use kar sakta hoon?" aur "Mere paas abhi bhi kya bacha hua hai?"</p>
+</div>
+<p><strong>Help Us to Prioritize:</strong> Brain ek time par limited cheezon par focus karta hai. Agar aap galat question poochte ho, jaise "Agar main game haar gaya to kaisa lagega?", to brain haarne ki possibilities dhoondhne lagega.</p>
+<p><strong>Uncover Resources and Solutions:</strong> Agar aap poochte ho "Main 10x better results kaise paa sakta hoon?" to brain naye solutions aur possibilities search karna shuru karta hai.</p>
+<h3 class="sub-heading">C. The Power of Vocabulary and Metaphors (Shabdon aur Rupakon ki Taaqat)</h3>
+<p>Humare words emotions ko naam dete hain aur hamari emotional state ko influence kar sakte hain.</p>
+<p>Negative feeling ko kam karne ke liye "Main furious hoon" ke bajaye "Main thoda annoyed hoon" kehna emotional intensity ko kam kar sakta hai.</p>
+<p>"Main depressed hoon" ke bajaye recovery ya improvement wali language use karna state ko change karne mein help kar sakta hai.</p>
+<p>Positive feelings ko increase karne ke liye "good" ya "okay" ki jagah stronger positive words use kiye ja sakte hain, jaise amazing, unstoppable, smashing aur dynamite.</p>
+<p>"Sab barbaad ho gaya hai" kehne ke bajaye "Mujhe is baat ki thodi chinta hai. Kya hum iske baare mein baat kar sakte hain?" kehna conversation ko better direction de sakta hai.</p>
+<p>Metaphor, yani kisi cheez ko kisi doosri image ya idea ke through samajhna, emotions par strong effect daal sakta hai.</p>
+<p>Agar aap kehte ho "Life ek battle hai," to life hamesha struggle jaisi feel ho sakti hai. Iske badle "Life ek game hai" ya "Life sacred hai" jaise metaphors different emotional response create kar sakte hain.</p>
+<p>"Brick wall" se takrane ki jagah "success ladder" chadhne ka metaphor progress ka feeling de sakta hai.</p>
+<p>Relationships mein bhi words matter karte hain. Partner ko negative label se bulane ke bajaye loving aur respectful term use karna relationship ki feeling ko improve kar sakta hai.</p>
+<p>Apni life ko ek garden ki tarah samjho. Weeds, yani negative emotions aur problems, aate rahenge. Unpar sirf gussa karne ke bajaye unhe regularly remove karo aur positive emotions ke "flowers" grow karo.</p>
+<h3 class="sub-heading">D. Emotional Mastery (Bhavnaon par Kabu Paana)</h3>
+<p>Emotions internal signals ki tarah kaam kar sakti hain. Woh hume batati hain ki kisi situation mein kuch change karne ki zaroorat ho sakti hai.</p>
+<h3 class="sub-heading">Emotions ko Handle Karne ke Steps</h3>
+<div class="sub-points">
+<p>Apni feeling ko identify karo aur simple, less-intense vocabulary use karke uski intensity kam karo.</p>
+<p>Emotion ko sirf problem na samjho. Use action ka signal samjho.</p>
+<p>Apni state ko curiosity mein shift karo aur poochho ki is emotion ke peeche kya message hai.</p>
+<p>Apni purani successes ko yaad karke confidence build karo.</p>
+<p>Future ke liye 3-4 possible responses socho aur unhe mind mein rehearse karo.</p>
+<p>Action lo.</p>
+</div>
+<p><strong>10 Action Signals — Negative Emotions:</strong> Discomfort, Fear, Hurt, Anger, Frustration, Disappointment, Guilt, Inadequacy, Overwhelm aur Loneliness.</p>
+<p><strong>10 Emotions of Power — Positive Emotions:</strong> Love and Warmth, Appreciation and Gratitude, Curiosity, Excitement and Passion, Determination, Flexibility, Confidence, Cheerfulness, Vitality aur Contribution.</p>
+<p>Positive emotions negative states ko balance karne mein help kar sakti hain. Example: Gratitude fear ko reduce karne mein help kar sakti hai aur curiosity anger ko soften kar sakti hai.</p>
+<h3 class="sub-heading">E. Defining Your Goals (Apne Goals ko Clearly Set Karna)</h3>
+<p>Bahut log failure ke fear ki wajah se clear goals nahi banate. Lekin clear direction hona important hai.</p>
+<p>Robbins ne goal-setting ko 4 main areas mein divide kiya hai:</p>
+<div class="sub-points">
+<p>Personal Growth — Apna development.</p>
+<p>Career / Business / Financial — Career, business aur paisa.</p>
+<p>Things to Own / Do — Jo cheezein own karni ya activities karni hain.</p>
+<p>Contribution — Doosron ki help, daan aur seva.</p>
+</div>
+<h3 class="sub-heading">Goal-Setting Process</h3>
+<div class="sub-points">
+<p>Saare goals ko brainstorm karo aur har goal ke saamne timeline likho.</p>
+<p>Har area ka top 1-year goal choose karo.</p>
+<p>Har goal ke peeche apna "Why" clearly likho. Yani aap ye goal kyun chahte ho aur iske liye commit kyun karoge.</p>
+<p>Agle 10 din tak momentum banaye rakhne ke liye goals ko chhote daily actions mein divide karo.</p>
+<p>Subah aur raat din mein do baar imagine karo ki goal complete hone par aap kaisa feel karoge.</p>
+<p>Apne aas-paas aise role models rakho jo aapko motivate karein.</p>
+</div>
+<p>Goal achieve karna hi sabse badi khushi nahi hai. Sabse important baat ye hai ki goal achieve karne ke process mein aap kaise person bante ho. "Who you become" hi long-term fulfillment ka important source ho sakta hai.</p>
+<h3 class="sub-heading">F. Unleashing Your Inner Giant (Values, Rules aur Identity)</h3>
+<p>Values hamare decisions ko guide karte hain. Lekin aksar hum apne values khud consciously choose nahi karte. Hum unhe parents, society aur experiences se le lete hain.</p>
+<p>Agar aap freedom aur security ko equally important rakhte ho, to kabhi-kabhi decision lena difficult ho sakta hai. Agar aap success chahte ho lekin rejection se bahut darte ho, to aap action lene se ruk sakte ho.</p>
+<p>Apne values ko identify karo aur unhe consciously priority do. Khud se poochho: "Apne goal ko achieve karne ke liye mujhe kin values ke according jeena hoga?"</p>
+<p>Har person ke paas life ko evaluate karne ke apne rules hote hain. Example: "Ek good boss kaisa hona chahiye?"</p>
+<p>Agar hamare rules unrealistic ya contradictory hain, to hum repeatedly disappointed ho sakte hain.</p>
+<p>Example: Agar rule hai "Agar main kisi ke close hua to mujhe hurt hoga," to ye rule relationship aur love se bachne ka reason ban sakta hai.</p>
+<p>Jab aap upset hote ho, ho sakta hai aapka koi personal rule violate hua ho. Kyuki ye rules aapne banaye hain, aap unhe change bhi kar sakte ho.</p>
+<h3 class="sub-heading">Empowering Rules ke 3 Criteria</h3>
+<div class="sub-points">
+<p>Achievable hone chahiye.</p>
+<p>Aapke control mein hone chahiye.</p>
+<p>Aise hone chahiye jo unnecessary bad feeling ke bajaye positive response ko easier banayein.</p>
+</div>
+<h3 class="sub-heading">Changing Your Identity</h3>
+<p>Agar aap baar-baar change karne ki koshish karke fail ho rahe ho, to problem aapki old identity mein ho sakti hai.</p>
+<p>Example: "I'm conservative" ya "I have fat genes." Aise beliefs aapko new behavior adopt karne se rok sakte hain.</p>
+<h3 class="sub-heading">Identity Badalne ka Tareeqa</h3>
+<div class="sub-points">
+<p><strong>Shaant state mein poochho:</strong> "Who am I?"</p>
+<p>Jo answers aayen unhe likho.</p>
+<p>Apni identity ke different parts likho, jaise aap kaise chalte ho, kaise sochte ho aur kaise behave karte ho.</p>
+<p>Aise role models identify karo jinki qualities aap develop karna chahte ho.</p>
+<p>Un qualities ki list banao.</p>
+<p>Action plan banao ki kin logon ke saath zyada time spend karna hai aur kin influences se distance rakhna hai.</p>
+<p>New identity ko consciously accept karo, use logon ke saath share karo aur daily us identity ko reinforce karo.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>4. Taking Control of the Master System (5 Key Building Blocks)</h2></div>
+<p>Aapki personality aur decisions ko 5 important building blocks influence karte hain:</p>
+<p><strong>Mental / Emotional State:</strong> Important decisions tab lo jab aap resourceful aur balanced state mein ho.</p>
+<p><strong>Habitual Questions:</strong> Aapke questions badlenge to aapka focus bhi badlega.</p>
+<p><strong>Hierarchy of Values:</strong> Apne values ko apne highest goals ke saath align karo.</p>
+<p><strong>Beliefs:</strong> Aise beliefs develop karo jo aapko action aur growth ki energy dein.</p>
+<p><strong>References:</strong> Naye experiences aur references collect karo aur unhe empowering tareeqe se interpret karo.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>5. The 10-Day Mental Challenge (10 Din ki Dimaagi Challenge)</h2></div>
+<p>Tony Robbins ek 10-day challenge dete hain jiska purpose mental patterns ko train karna aur naye habits banana hai.</p>
+<h3 class="sub-heading">Main Rule</h3>
+<p>Agle 10 consecutive, yani lagataar 10 din, apni maximum mental energy solutions par lagao, problems par nahi.</p>
+<div class="sub-points">
+<p>Kisi bhi unsupportive thought ya negative emotion par unnecessarily focus mat karo.</p>
+<p>Agar negative thought aaye, to use 2 minutes ke andar notice karo.</p>
+<p>Apni state ko shift karo.</p>
+<p>Better questions poochho.</p>
+<p>Transformational vocabulary use karo.</p>
+<p>Zaroorat ho to metaphors badlo.</p>
+</div>
+<p>Agar bada slip-up ho jaye aur aap long time tak negative state mein phase raho, to challenge Day 1 se dobara start karna hoga.</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>6. Conclusion aur Book ke Other Details</h2></div>
+<p><strong>Famous Personalities:</strong> Book mein Tony Robbins ne kai famous personalities ke examples diye hain, jaise Donald Trump, Mother Teresa, Bill Gates, Mahatma Gandhi, Walt Disney, Warren Buffett aur Soichiro Honda.</p>
+<p><strong>Scientific and Economic Research:</strong> Book mein real-life economic issues aur scientific research ka bhi reference diya gaya hai.</p>
+<p><strong>7-Day Success Program:</strong> Book ke end mein ek 7-day program diya gaya hai jiska purpose book mein bataye gaye ideas aur components ko daily life mein apply karna hai.</p>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>Final Message</h2></div>
+<p>Success ek single event nahi hai. Success chhote-chhote disciplines aur habits ko consistently follow karne se build hoti hai. Jab achhe habits aur systems strong ho jate hain, to har baar willpower ki zaroorat kam padti hai.</p>
+<p>Main idea ye hai: Capability aapke andar pehle se maujood hai. Aapko apne standards ko improve karna hai, limiting beliefs ko change karna hai, better strategies use karni hain, apni emotional state ko manage karna hai, clear questions poochne hain, meaningful goals set karne hain aur daily action lena hai.</p>
+<p>Is tarah aap apne andar maujood potential ko actual results mein badal sakte ho.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

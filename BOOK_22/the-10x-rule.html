@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 10X Rule — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 7.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 22</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">The 10X Rule</span>
+          <span class="headline-main">The 10X Rule</span>
+        </div>
+        <p class="subhead">Reading notes on The 10X Rule</p>
+        <div class="meta-row">
+          <span>9 min read</span><span class="meta-dot">•</span><span>By Grant Cardone</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>1. Introduction aur The Core Philosophy of the 10X Rule</h2></div>
+<p class="drop-cap"><strong>Book Title aur Purpose:</strong> Grant Cardone ne yeh book un logon ke liye likhi hai jo apni life mein bahut badi kamyabi chahte hain aur uske liye bade actions lene se darte nahi hain. Yeh un logon ke liye nahi hai jo sirf comfort ya average results se khush hain.</p>
+<p><strong>Core Mindset:</strong> Agar aapko extraordinary results chahiye, toh aapko apni thinking aur apne actions ko 10 times bada karna hoga. Jab aap is level par sochte aur kaam karte hain, toh ek aisa momentum banta hai jise rokna bahut mushkil ho jata hai.</p>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>2. Hum Fail Kyun Hote Hain?</h2></div>
+<p>Book mein bataya gaya hai ki log apne goals ko achieve karne mein fail kyun ho jaate hain. Iske do main reasons hain.</p>
+<p><strong>Sub-par Goals Set Karna:</strong> Log society ke pressure mein aakar bahut chhote goals set karte hain. Woh aise standards rakhte hain jisse agar fail bhi ho jaayein toh disappointment kam ho.</p>
+<p><strong>Challenges aur Effort ko Underestimate Karna:</strong> Log success ko ek single event ya "overnight miracle" samajh lete hain. Woh raste ke obstacles, time aur resources ki zaroorat ko kam samajhte hain. Jab situation difficult hoti hai, toh woh haar maan kar excuses dhoondhne lagte hain.</p>
+<p><strong>The Solution:</strong> Kisi bhi kaam ke liye pehle se mentally aur physically ready raho. Apne estimates mein extra buffer rakho taaki achanak aane wali problems aapko rok na sakein. Hamesha complacency, yani zaroorat se zyada santusht hokar ruk jaane ki aadat, se bacho.</p>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>3. The 10X Rule Behind Massive Success</h2></div>
+<p><strong>The Rule:</strong> Is rule ke do main pillars hain: apne targets ko 10 times bada set karo aur unhe achieve karne ke liye 10 times zyada effort aur action lagao.</p>
+<p><strong>Subjective Nature of Success:</strong> Success har insaan ke liye alag ho sakti hai. Ek student ke liye success achhi grades ya popularity ho sakti hai. Ek young adult ke liye achhi job ya apartment ho sakta hai. Ek retiree ke liye achhi health aur legacy ho sakti hai.</p>
+<p><strong>Duty, Obligation, and Responsibility:</strong> Kamyabi koi sirf option ya luck ka game nahi hai. Yeh aapki ethical duty aur responsibility hai. Sirf kismat ke bharose baithna band karna hoga.</p>
+<p><strong>Success is Unlimited:</strong> Success zero-sum game nahi hai, jahan ek insaan ki kamyabi kisi doosre ke nuksan par depend kare. Success unlimited hai, aur ek insaan ki success doosre logon ke liye naye raste aur opportunities khol sakti hai.</p>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>4. Taking 10X Actions</h2></div>
+<p>Insaan apni life mein action ke chaar levels mein se kisi ek level par kaam karta hai.</p>
+<p><strong>Level 1:</strong> Doing Nothing: Yeh woh log hain jo boredom aur aimlessness, yani bina kisi direction ke, life jeete hain. Yeh har cheez ke liye excuses banate hain aur apna zyada time gaming, social media ya movies mein waste karte hain.</p>
+<p><strong>Level 2:</strong> Retreat, Play it Safe: Yeh log failure ya rejection ke darr se peeche hat jaate hain. Woh peeche hatne ko survival ya smart decision kehkar justify karte hain.</p>
+<p><strong>Level 3:</strong> Normal Action: Yeh sabse dangerous level hai. Ismein log sirf utna kaam karte hain jitna unse expect kiya jata hai. Yeh average work hota hai. Normal situation mein yeh chal sakta hai, lekin crisis aate hi yeh level fail ho jata hai.</p>
+<p><strong>Level 4:</strong> Massive Action, 10X Action: Yeh bahut strong drive wale log hote hain jo kaam ke hours count nahi karte. Yeh goals achieve karne ke liye bahut zyada action lene ko ready rehte hain.</p>
+<p><strong>Level 4 ke Do Indicators:</strong> Jab aap massive action lete hain, toh do cheezein hone lagti hain.</p>
+<div class="sub-points">
+<p><strong>Pehla:</strong> Aapke actions ki wajah se aapke saamne naye problems khade hone lagte hain.</p>
+<p><strong>Doosra:</strong> Aapke aas-paas ke log aapko criticize karne lagte hain aur keh sakte hain ki aap crazy ya off-balance ho gaye hain.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>5. Average Rehna Kyun Khatarnak Hai?</h2></div>
+<p><strong>Formula for Failure:</strong> Crisis ke time average rehna barbaadi ka reason ban sakta hai. Mushkil samay mein average log sabse pehle apna momentum aur assets kho dete hain.</p>
+<p><strong>The Middle Class Trap:</strong> 2008 ke financial crisis ka example dete hue Cardone batate hain ki jo log saal mein $22,000 se $65,000 kama rahe the, unhe sabse zyada nuksan hua kyunki unke paas extra financial cushion ya buffer nahi tha.</p>
+<p><strong>Top Earners vs Average:</strong> Top earners average logon se 319 times zyada earn karte hain kyunki woh connections banane aur skills develop karne mein massive action lete hain.</p>
+<p><strong>Reading Statistics:</strong> Ek average insaan saal mein 1 se bhi kam book padhta hai, jabki top US CEOs saal mein 60 se zyada books padhte hain.</p>
+<p><strong>Starbucks Example:</strong> 2008 ke downturn ke dauran Howard Schultz, Starbucks CEO, ne retreat nahi kiya. Unhone massive action liya, expenses cut kiye aur weak stores close kiye. Saath hi woh khud poore desh mein travel karke customers se direct feedback lete rahe aur strategy ko aggressively expand kiya.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>6. Setting 10X Goals</h2></div>
+<p><strong>Bigger is Better:</strong> Chhote aur realistic goals aapke andar ki fire ya passion ko nahi jaga paate. Goals exciting hone chahiye aur aapke ultimate life purpose ke saath aligned hone chahiye.</p>
+<p><strong>Benchmark with the Best:</strong> Apne goals ko average logon ke saath compare karne ke bajay apni field ke top players ke saath benchmark karo.</p>
+<p><strong>Grant Cardone ke Personal Goals:</strong> Cardone ne bataya ki unke goals mein 5,000 se zyada apartments own karna shamil hai, jinki cash flow 12% se zyada ho. Unka ek goal aisi healthy marriage rakhna bhi hai jo doosron ke liye example ban sake. Iske alawa woh 12 se zyada best-selling books likhna chahte hain.</p>
+<div class="specimen-row"><span class="specimen-label">32pt</span><h2>7. Core Principles behind the 10X Rule</h2></div>
+<p><strong>Take Control of Your Life:</strong> Yeh maanna band karo ki aapke saath jo hota hai woh sirf kismat ki wajah se hota hai. Accept karo ki aapki life mein jo achha ya bura ho raha hai, woh aapke actions ya lack of action ki wajah se hai. Victim mindset se bacho aur har galti par khud se poochho: "Main aisa kya kar sakta hoon ki yeh dubara na ho?"</p>
+<p><strong>No Excuses:</strong> Excuses asal mein woh jhooth hote hain jo hum apne dimaag ko shaant karne ke liye bolte hain. Agar aap traffic ki wajah se late hue, toh traffic asli reason nahi hai. Asli reason yeh hai ki aap ghar se late nikle.</p>
+<p><strong>Don't Compete, Dominate:</strong> Competition mein aap apne rivals ko chase karte rehte hain aur unke level par rehte hain. Iske bajay market ko itna dominate karo ki customer ke dimaag mein sirf aapka naam rahe. Cardone ke ek client ka example hai: customer ke showroom ya carpark se nikalne se pehle hi unhe ek naya counter-offer call karna, taaki customer ke dimaag mein aapki strong presence bani rahe.</p>
+<p><strong>Build Omnipresence:</strong> Aapka naam aapka sabse bada asset hai. Omnipresent bano, yani itne zyada visible ho jao ki millions aur billions log aapko jaanein, bilkul jaise log Coca-Cola, Google, Starbucks, McDonald's aur Visa ko jaante hain.</p>
+<p><strong>Get Obsessed:</strong> Apne goals ke saath bahut strongly obsessed ho jao. Jab tak aap fail ho rahe hote ho, log ise pagalpan bol sakte hain. Lekin jab aap successful ho jaate ho, wahi log aapko genius keh sakte hain.</p>
+<p><strong>Go All-In:</strong> Apni poori energy, effort aur creativity lagao. Overcommit karo taaki peeche hatne ka option na rahe. Sales mein targets par hamesha overcommit karo aur phir unhe deliver karne ke liye poori jaan laga do.</p>
+<p><strong>Expand, Never Contract:</strong> Downturn ya recession ke time peeche mat hato. Jab baaki duniya retreat kar rahi ho, tab aap expand karo. Energetic aur creative actions kabhi khatam nahi hote, isliye expansion continue rakho.</p>
+<p><strong>Build Massive Momentum:</strong> Jab thodi success mil jaye toh rukna nahi hai. Apni success ki aag mein aur actions dalo taaki momentum ek aisi strong force ban jaye jise rokna mushkil ho.</p>
+<p><strong>Do What You Fear:</strong> Fear asal mein real nahi hota, woh imaginary hota hai. Darr ko ek signal ki tarah dekho ki aapko wahi kaam turant karna chahiye. Apne action aur thinking ke beech ka time kam karo taaki darr ko badhne ka mauka na mile.</p>
+<p><strong>Optimize Time:</strong> Apne time ke har second se maximum value nikalo. Iske liye proper time-log banao.</p>
+<div class="sub-points">
+<p><strong>Time Math Example:</strong> Agar 40 saal ka koi insaan 80 saal ki age tak $10 million banana chahta hai, toh uske paas life mein sirf 350,400 hours bache hain. Agar woh 40-hour work week mein $10,000 per month kama raha hai, toh uske har ghante ki value $62.50 hai. Har din khud ko challenge karo ki is hourly value ko kaise badhaya ja sakta hai.</p>
+</div>
+<p><strong>Expect Criticism:</strong> Criticism success ka formula ho sakta hai. Agar log aapko criticize kar rahe hain, toh iska matlab hai ki aap unke attention mein aa gaye hain aur aap sahi direction mein ho sakte hain.</p>
+<p><strong>Go for Market Share, not Customer Satisfaction:</strong> Sabse pehle naye customers acquire karne par focus karo. Jab tak customers hi nahi honge, customer satisfaction ka koi matlab nahi hoga. Un logon se bhi feedback lo jinhone abhi tak aapse kuch kharida nahi hai.</p>
+<div class="specimen-row"><span class="specimen-label">36pt</span><h2>8. Winning Big in Life</h2></div>
+<p>Grant Cardone ne success ke liye 32 traits ko mila kar 8 main principles bataye hain.</p>
+<p><strong>'Can Do' Attitude:</strong> Har mushkil kaam ke liye hamesha positive attitude rakho.</p>
+<p><strong>Embrace Challenges &amp; Discomfort:</strong> Mushkilon aur uncomfortable situations se bhaagne ke bajay unhe accept karo.</p>
+<p><strong>Dare to Be Unreasonable:</strong> Unreasonable, yani aam soch se bahar, banne ki himmat rakho. History mein flight, electricity aur internet jaise ideas pehle unreasonable hi lagte the.</p>
+<p><strong>Create Wealth:</strong> Sirf paisa kamane par focus mat karo. Wealth assets create karne par bhi focus karo.</p>
+<p><strong>Commit and Go All-In:</strong> Poori tarah commit karo aur baar-baar apna rasta mat badlo.</p>
+<p><strong>Persist Till the End:</strong> Aakhri dam tak lage raho.</p>
+<p><strong>Focus on Goals &amp; Results:</strong> Apna dhyan goals aur unke results par rakho.</p>
+<p><strong>Grow Relentlessly:</strong> Apne aap ko lagataar improve karo aur apne se behtar logon ke saath uthna-baithna rakho.</p>
+<p><strong>Grant's Personal Story:</strong> Jab logon ne Grant Cardone ke naye ideas par online attacks kiye, toh unhone chup rehne ke bajay massive action liya. Agle 18 mahino mein unhone 200 se zyada videos, 150 blogs, 700 radio interviews, TV appearances aur hazaaron social media posts publish kiye. Unki extreme presence ne unhe sabse badi kamyabi dilayi, aur yahi unka best revenge tha.</p>
+<div class="specimen-row"><span class="specimen-label">42pt</span><h2>9. Getting Started with 10X</h2></div>
+<p><strong>10X Goals:</strong> Apne 10X goals ki ek list banao.</p>
+<p><strong>Immediate Actions:</strong> Un goals ko achieve karne ke liye turant actions ki list likho aur khud se poochho: "Main abhi kya kar sakta hoon?"</p>
+<p><strong>Take Action:</strong> Darr ya premature evaluation, yani pehle hi result ke baare mein sochkar ruk jaana, ke bina turant action lena shuru karo.</p>
+<p><strong>Daily Review:</strong> Apne goals ko har din subah aur raat likho aur review karo.</p>
+<div class="specimen-row"><span class="specimen-label">48pt</span><h2>10. About the Author</h2></div>
+<p><strong>Grant Cardone, Born 1958:</strong> Grant Cardone ek international sales trainer, real estate investor aur author hain. Woh Google, Wells Fargo aur Ford jaise globally top brands ke saath business consulting karte hain aur Whatever It Takes Network ke owner hain.</p>
+<p><strong>Book Exercises:</strong> Is book ke har chapter ke end mein practice karne ke liye exercises di gayi hain.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

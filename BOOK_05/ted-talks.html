@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TED Talks — Reading Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --reg-offset: 11px;
+    --measure: 700px;
+    --headline-max: 7.3rem;
+  }
+  html[data-theme="paper"]{
+    --bg: #EFE2BC; --ink: #18140E; --ink-soft: #5E5540;
+    --accent: #7A4E14; --accent-strong: #E0A83A; --mark: #A23324;
+    --rule: #DCC98F; --shadow: rgba(24,20,14,.10);
+  }
+  html[data-theme="press"]{
+    --bg: #16130D; --ink: #F1E7CA; --ink-soft: #AE9F7C;
+    --accent: #F0C267; --accent-strong: #E0A83A; --mark: #DD6C52;
+    --rule: #33291A; --shadow: rgba(0,0,0,.35);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Literata',Georgia,serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    transition:background-color .35s ease, color .35s ease;
+  }
+  ::selection{ background:var(--accent-strong); color:#18140E; }
+  .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%; background:var(--accent-strong); z-index:50; transition:width .1s ease-out; }
+  .masthead{
+    max-width:var(--measure); margin:0 auto; padding:1.7rem 1.5rem .9rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    border-bottom:1px solid var(--rule);
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.10em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .masthead-right{ display:flex; align-items:center; gap:.9rem; }
+  .proof-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--rule); border-radius:50%;
+    background:transparent; color:var(--ink-soft); cursor:pointer; flex-shrink:0;
+    transition:transform .45s ease, color .2s ease, border-color .2s ease;
+  }
+  .proof-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .proof-toggle.flipped{ transform:rotate(180deg); }
+  .proof-toggle:focus-visible, button:focus-visible{ outline:2px solid var(--accent-strong); outline-offset:3px; }
+  main{ max-width:var(--measure); margin:0 auto; padding:0 1.5rem; }
+  .hero{ padding-top:2.6rem; }
+  .headline-wrap{ position:relative; margin-bottom:1.9rem; }
+  .headline-shadow, .headline-main{
+    display:block; font-family:'Big Shoulders Display', sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 10vw, var(--headline-max)); line-height:.9;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .headline-shadow{
+    position:absolute; top:0; left:0; right:0; color:var(--accent-strong);
+    transform:translate(var(--reg-offset), var(--reg-offset)); z-index:0;
+    pointer-events:none; user-select:none;
+  }
+  .headline-main{ position:relative; z-index:1; color:var(--ink); }
+  .subhead{
+    font-style:italic; font-weight:500; font-size:clamp(1.08rem, 2vw, 1.32rem);
+    line-height:1.5; color:var(--ink-soft); max-width:52ch; margin:0 0 1.6rem;
+  }
+  .meta-row{
+    font-family:'Space Mono',monospace; font-size:.76rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:.6rem; padding-bottom:2.2rem; flex-wrap:wrap;
+  }
+  .meta-dot{ opacity:.6; }
+  hr.hero-rule{ border:none; height:1px; background:var(--rule); margin:0 0 2.6rem; }
+  .body-text p{ font-size:1.16rem; line-height:1.75; color:var(--ink); max-width:64ch; margin:0 0 1.5rem; }
+  .drop-cap::first-letter{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:900; font-size:4.1em;
+    line-height:.72; float:left; padding:.06em .09em 0 0; color:var(--accent);
+  }
+  .body-text strong{ font-weight:700; color:var(--ink); }
+  .body-text em{ font-style:italic; }
+  .specimen-row{ display:flex; align-items:baseline; gap:.9rem; margin:3.1rem 0 1.05rem; }
+  .specimen-label{
+    font-family:'Space Mono',monospace; font-size:.72rem; font-weight:700; letter-spacing:.05em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; white-space:nowrap;
+  }
+  .specimen-row h2{
+    margin:0; font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.4rem, 3vw, 2rem); text-transform:uppercase; letter-spacing:.005em; color:var(--ink);
+  }
+  .sub-heading{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700;
+    font-size:clamp(1.1rem, 2vw, 1.4rem); text-transform:uppercase; letter-spacing:.008em;
+    color:var(--ink); margin:2.3rem 0 .9rem; padding-left:.8rem; border-left:3px solid var(--accent);
+  }
+  .sub-points{ margin:-.4rem 0 1.5rem 1.6rem; padding-left:1rem; border-left:2px solid var(--rule); }
+  .sub-points p{ font-size:1.02rem; color:var(--ink-soft); margin-bottom:.9rem; }
+  blockquote{
+    margin:1rem 0 2.7rem; padding-left:1.4rem; border-left:4px solid var(--accent-strong);
+    font-style:italic; font-weight:600; font-size:clamp(1.4rem, 2.7vw, 1.85rem);
+    line-height:1.35; color:var(--ink); max-width:32ch;
+  }
+  .audio-section{ margin:3.6rem 0 1rem; padding-top:2.4rem; border-top:1px solid var(--rule); }
+  .audio-section-title{
+    font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft); margin:0 0 1.3rem;
+  }
+  .audio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  .audio-card{
+    border:1px solid var(--rule); border-radius:4px; padding:1.15rem 1.25rem 1.35rem;
+    background:transparent; transition:border-color .2s ease, background-color .2s ease;
+  }
+  .audio-card:hover{ border-color:var(--accent); }
+  .audio-card-label{ display:flex; align-items:center; gap:.6rem; margin-bottom:.9rem; }
+  .audio-card-badge{
+    font-family:'Space Mono',monospace; font-size:.66rem; font-weight:700; letter-spacing:.06em;
+    color:var(--accent); background:var(--rule); padding:.2rem .5rem; border-radius:2px; text-transform:uppercase;
+  }
+  .audio-card-name{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; letter-spacing:.01em; color:var(--ink);
+  }
+  .audio-card audio{ width:100%; accent-color:var(--accent-strong); }
+  .audio-card audio::-webkit-media-controls-panel{ background-color:transparent; }
+  @media (max-width:640px){ .audio-grid{ grid-template-columns:1fr; } }
+  footer.colophon{
+    text-align:center; font-family:'Space Mono',monospace; font-size:.7rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:1rem 0 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+  @media (max-width:640px){
+    :root{ --reg-offset:6px; }
+    .masthead-typeface{ display:none; }
+    .hero{ padding-top:2rem; }
+    main{ padding:0 1.15rem; }
+    .masthead{ padding:1.4rem 1.15rem .8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <header class="masthead">
+    <span>Specimen No. 05</span>
+    <div class="masthead-right">
+      <span class="masthead-typeface">Set in Big Shoulders Display</span>
+      <button class="proof-toggle" id="theme-toggle" title="Flip to press proof" aria-label="Toggle dark reading mode">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="0.5" x2="8" y2="15.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="0.5" y1="8" x2="15.5" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <div class="headline-wrap">
+          <span class="headline-shadow" aria-hidden="true">TED Talks</span>
+          <span class="headline-main">TED Talks</span>
+        </div>
+        <p class="subhead">Reading notes on TED Talks</p>
+        <div class="meta-row">
+          <span>10 min read</span><span class="meta-dot">•</span><span>By Chris Anderson</span>
+          <span class="meta-dot">•</span>
+          <span>Added August 2026</span>
+        </div>
+      </div>
+
+      <hr class="hero-rule">
+
+      <div class="body-text">
+<div class="specimen-row"><span class="specimen-label">14pt</span><h2>1. Introduction aur the Big "So What" (Mukhya Uddeshya)</h2></div>
+<p class="drop-cap"><strong>Public Speaking ki Power:</strong> Chris Anderson kehte hain ki public speaking empathy unlock karne, logon ke andar excitement jagane, knowledge share karne aur ek shared dream ko promote karne ka sabse behtareen zariya hai.</p>
+<p><strong>Presentation Literacy:</strong> Ye sirf kuch logon ke liye optional skill nahi hai. Ye 21st century ki ek important core skill hai. Har vyakti ka apna alag tareeqa hota hai bolne ka, aur practice karke koi bhi is skill ko achhe se seekh aur perform kar sakta hai.</p>
+<p><strong>Darr aur Use Overcome Karna:</strong> Public speaking se almost har kisi ko kuch darr lagta hai. Achhi baat ye hai ki ise seekha ja sakta hai. Eleanor Roosevelt, Warren Buffett aur Princess Diana jaise bade log bhi shuruat mein public speaking se bahut darte the, par unhone is darr par kaabu paya aur iska sahi istemal kiya.</p>
+<p><strong>Book ka Approach:</strong> Is book ke tips ko strict rules nahi, balki useful tools ki tarah use karna chahiye jo aapki apni unique style ko develop karne mein madad karein. Puri book ke key ideas ko 4 parts mein divide kiya gaya hai:</p>
+<div class="sub-points">
+<p>Start with the right foundations</p>
+<p>Develop/Build your ideas</p>
+<p>Preparation</p>
+<p>Delivery time!</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">16pt</span><h2>Part 1: Start with the Right Foundations (Sahi Buniyaad)</h2></div>
+<p><strong>Sabse Important Element — Idea:</strong> Achhi talk ke liye sabse important cheez ek aisa idea hai jiske baare mein aap genuinely care karte ho aur jo doosron ke saath share karne layak ho. Idea ka bahut bada ya bilkul naya invention hona zaroori nahi hai. yeh koi simple how-to tip ya aisi baat ho sakti hai jo logon ka nazariya badle. Hum sabke paas apne unique life experiences hote hain jinse hum behtareen insights share kar sakte hain. Jab aap kisi ke mental model ko naye tarike se build karte hain, toh aap unhe ek lasting gift de rahe hote hain.</p>
+<h3 class="sub-heading">Throughline (Mukhya Dhaaga) Banana</h3>
+<p>Throughline ek core theme hai jo aapki talk ke saare parts ko aapas mein jodta hai. Jaise behtareen movies aur novels mein ek thread hota hai jo audience ko aakhir tak lekar jata hai, waise hi throughline kaam karta hai.</p>
+<p><strong>Throughline ki Definition:</strong> Yeh sirf ek topic nahi hai balki ek aisi line hai jise 15 words se kam mein likha ja sake (jaise: "More choice actually makes us less happy"). Talk ka goal audience ko bina kisi mental gap ke is line par le jana hai.</p>
+<p><strong>Galat vs Sahi Tareeqa:</strong> Zyadatar speakers sochte hain ki unke paas time kam hai aur woh sab kuch compress karke talk mein thunsne ki koshish karte hain, jo galat hai. Sahi tareeqa yeh hai ki aap 1 core idea define karein, fir audience ko batayein ki yeh kyun matter karta hai aur use facts, stories aur examples ke sath detail mein samjhayein.</p>
+<p><strong>Common Talk Structures:</strong> </p>
+<div class="sub-points">
+<p>What → So what → Now what.</p>
+<p>Intro → Context → Key concepts → Implications → Conclusion.</p>
+</div>
+<p><strong>Authentic Raho:</strong> Public speaking kisi fixed formula se nahi aati. Aap jaise hain waise hi rahein aur us topic par bolein jiske baare mein aap sach mein passionate hain.</p>
+<p><strong>Audience Se Connect Karo:</strong> Hamesha audience ke level se shuruat karein aur unhi ki bhasha, terms aur examples ka istemal karein jisse woh relate kar sakein (jaise Loxodonta ki jagah Elephant bolna). Words, body language aur tone of voice bahut vital hote hain.</p>
+<h3 class="sub-heading">4 Common Mistakes (4 Badi Galtiyan Jinse Bacho)</h3>
+<div class="sub-points">
+<p><strong>Sales Pitch Na Karo:</strong> Stage par aapka kaam audience ko kuch dena hai, unse kuch lena nahi. Product ya service ka direct promotion puri tarah se avoid karein.</p>
+<p><strong>Bina Matlab Ke Na Bhatko (Rambling):</strong> Bina kisi clear message ya takeaway ke bolte rehna aur bina preparation ke stage par aana audience ke time ki disrespect hai.</p>
+<p><strong>Company Talk Se Audience Ko Bore Na Karo:</strong> Logon ko aapki company ke products aur milestones mein dilchaspi nahi hoti, balki woh un ideas aur challenges ke lessons ko sunna chahte hain jinhe woh apne kaam mein apply kar sakein.</p>
+<p><strong>Fake Inspiring Act Na Karo:</strong> Kuch log adulation pane ke liye fake performance dete hain. Sachi inspiration kisi drama se nahi, balki aapki courage, authenticity, selflessness aur wisdom se aati hai.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">18pt</span><h2>Part 2: Build Your Idea (Apne Idea Ko Build Karo)</h2></div>
+<p>Chris Anderson ne audience ke dimaag mein idea build karne ke liye 5 core tools bataye hain:</p>
+<h3 class="sub-heading">1. Connection (Audience ke saath Rishta Banana)</h3>
+<p><strong>Eye Contact:</strong> Walk karte hi stage par logon se eye contact banayein aur thodi warm smile dein. Yeh dono dimaago ko sync karta hai aur real bond banata hai.</p>
+<p><strong>Vulnerability (Apni Kamzori ko Chhupao Mat):</strong> Sachi vulnerability dikhane se audience aapko support karti hai, par manipulation ke liye fake vulnerability na dikhayein aur na hi un problems ko share karein jisse aap khud abhi tak nahi ubhre hain.</p>
+<p><strong>Humor (Hansi-Mazak):</strong> Laughter se tension release hoti hai. Agar aap naturally funny nahi hain, toh internet ke tacky jokes mat mariye. In tips ko follow karein:</p>
+<div class="sub-points">
+<p>Apne real personal anecdotes ko thoda funny tarike se exaggerate ya remix karein.</p>
+<p>Agar koi technical error ya blunder ho jaye, toh uske liye pehle se hi ek funny remark ready rakhein.</p>
+<p>Visuals mein contrast ya satire ka use karein.</p>
+<p>Jab audience hanse, toh thoda pause karein.</p>
+</div>
+<p><strong>Apna Ego Side Par Rakho:</strong> Apne ego ko side mein rakhein. Kisi dost par apni talk test karein taaki ensure ho sake ki aap boasting ya name-dropping toh nahi kar rahe.</p>
+<h3 class="sub-heading">2. Narration (Kahani Sunana)</h3>
+<p>Kahaniyaan logon ko aapas mein jodne aur dream karne mein help karti hain. Apne real personal experiences ya apne azeez logon ki sachi kahaniyaan sunayein.</p>
+<p><strong>Story ke 4 Compelling Components:</strong> </p>
+<div class="sub-points">
+<p>Ek aisa character ho jisse audience relate kar sake.</p>
+<p>Mystery, drama ya danger ke zariye tension build karein.</p>
+<p>Sahi matra mein details dein, fuzool details ko hata dein.</p>
+<p>Ek proper resolution par khatam karein jo surprising, insightful aur moving ho aur core message se judi ho.</p>
+<p>Aap parables (moral lessons wali choti kahani) ka bhi use kar sakte hain par analogies simple honi chahiye.</p>
+</div>
+<h3 class="sub-heading">3. Explanation (Samjhana)</h3>
+<p>Complex concepts ko samjhane ke liye hierarchy of understanding ka use karein — har naya layer pichle layer par hi banna chahiye.</p>
+<p>Audience jahan se shuru kar rahi hai wahan se start karein aur jargon avoid karein.</p>
+<p>Unki curiosity spark karein ("Why" aur "How" poochne par majboor karein).</p>
+<p>Related concepts ko blocks ki tarah ek-ek karke introduce karein aur metaphors ka use karein (jaise brain ka pre-frontal cortex ek flight simulator ki tarah kaam karta hai).</p>
+<p>Short examples ka use karein taaki brain understanding ko lock kar sake.</p>
+<h3 class="sub-heading">4. Persuasion (Manana / Prabhavit Karna)</h3>
+<p>Persuasion ka matlab hai audience ko yeh realize karana ki unka current worldview sahi nahi hai, taaki woh naye view ke liye taiyar ho sakein.</p>
+<p><strong>Prime / Nudge:</strong> Metaphors ka use karke naye idea ko plausible banayein.</p>
+<p><strong>Reasoning:</strong> Argument ko "if-then" statements mein break karein, jo kisi accepted truth se shuru hoti hon.</p>
+<p><strong>Reductio ad Absurdum:</strong> Apne opposite argument ko galat ya absurd dikha kar apne position ko sahi prove karein.</p>
+<p><strong>Detective Story Format:</strong> Ek mystery present karein, options ko eliminate karein aur aakhir mein ek logical conclusion par pahuchein.</p>
+<p>Logic se aage badhein aur humor, anecdotes, vivid examples, third-party validation aur visuals ka use karein.</p>
+<h3 class="sub-heading">5. Revelation (Dikhana aur Pragat Karna)</h3>
+<p><strong>Wonder Walk:</strong> Agar aapka kaam highly visual hai, toh audience ko impactful images aur videos ke throughline se connect karte hue ek walk par le jayein.</p>
+<p><strong>Demo:</strong> Nayi technology ya invention ko launch karne ke liye live demo sabse behtareen tareeqa hai (jaise Steve Jobs ne iPhone launch kiya tha).</p>
+<p><strong>Dreamscape:</strong> Vivid descriptions, sketches aur images ke zariye future ka ek aisa dreamscape build karein jise log desire karein aur use hope aur actionable steps ke sath link karein.</p>
+<h3 class="sub-heading">Visuals ko Effectively Kaise Use Karein?</h3>
+<p>Visuals (photos, graphs) tabhi use karein jab sach mein zaroori ho, kyunki bad slides talk ko damage kar sakti hain.</p>
+<p><strong>Value Add Karne ke 3 Tareeqe:</strong> </p>
+<div class="sub-points">
+<p>Aise details dikhana jo words mein batana mushkil ho.</p>
+<p>Show-and-tell ko enhance karna (jo bol rahe hain aur jo dikha rahe hain woh sync mein ho). Slide par sirf 1 core idea ho, jab jarurat na ho toh blank screen kar dein.</p>
+<p>Aesthetic appeal add karke audience ko delight dena.</p>
+</div>
+<p><strong>Presentation Design Tips:</strong> </p>
+<div class="sub-points">
+<p>Standard templates avoid karein aur original designs banayein.</p>
+<p>High-res images black background ke sath use karein.</p>
+<p>Sirf 1 simple, easy-to-read typeface use karein jisme ≤ 3 font sizes ho aur minimum font size 24pt ho. Italics aur underline avoid karein.</p>
+<p>Slide par content progressively build karein.</p>
+<p>Videos ko ≤ 30 seconds ka rakhein.</p>
+<p>Distracting animations ya flashy transitions use na karein.</p>
+<p>Zipped format mein backup folder (presentation, fonts, videos) ek USB drive mein rakhein.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">21pt</span><h2>Part 3: Prepare, Prepare, Prepare (Taiyari aur Practice)</h2></div>
+<h3 class="sub-heading">Scripting vs Unscripted</h3>
+<p><strong>Scripted Talks:</strong> Scripted talk se time ka maximum aur sahi use hota hai. Par ise deliver karne ki 3 strategies hain:</p>
+<div class="sub-points">
+<p>Talk ko itna practice karein ki lagay hi na ki yeh scripted hai.</p>
+<p>Lectern ya confidence monitor se script ko dekhein par har sentence ke dauran audience se eye contact karein.</p>
+<p>Script ko bullet points mein reduce karke apne words mein bolein.</p>
+</div>
+<p><strong>Unscripted Talks:</strong> Yeh kaafi fresh aur real lagti hain par iske liye clear structure aur potential problems (jaise bhool jana ya time overrun hona) ke liye backup ready rakhna padta hai.</p>
+<h3 class="sub-heading">Rehearsal</h3>
+<p>Baar-baar Practice Karein — mirror ke samne, dosto ke samne aur honest feedback lein. Goal yeh hona chahiye ki aap talk ko itna achha jaanein ki aapka focus sirf uske meaning par ho.</p>
+<h3 class="sub-heading">Opening aur Closing (Shuruat aur Ending)</h3>
+<p>Opening aur closing lines ko hamesha memorize (yaad) karein.</p>
+<p><strong>4 Ways to Start Strong:</strong> </p>
+<div class="sub-points">
+<p>Thoda drama, koi shocking fact ya humorous line use karein.</p>
+<p>Curiosity spark karne ke liye surprising question ya unexpected framing use karein.</p>
+<p>Impactful visual ya object dikhayein.</p>
+<p>Ek teaser dein par main punchline pehle hi na reveal karein.</p>
+</div>
+<p><strong>7 Ways to End Powerfully:</strong> </p>
+<div class="sub-points">
+<p>Big picture aur iske implications dikhakar.</p>
+<p>Call to action aur nudge dekar.</p>
+<p>Personal commitment share karke.</p>
+<p>Future ka ek vision create karke.</p>
+<p>Surprising question pooch kar jo logon ko sochne par majboor kare.</p>
+<p>Narrative symmetry (shuruat ki baat se link back) karke.</p>
+<p>Poetic language aur hope/humanity ke feelings evoke karke.</p>
+</div>
+<div class="specimen-row"><span class="specimen-label">24pt</span><h2>Part 4: Delivery Time! (Stage Par Perform Karna)</h2></div>
+<h3 class="sub-heading">What to Wear (Kya Pehnein)</h3>
+<div class="sub-points">
+<p>Aisa kapda pehnein jisme confidence mile aur jo personal style ko express kare.</p>
+<p>Audience se ek notch upar dress karein.</p>
+<p>Video filming ke liye solid black/white ya small, tight patterns avoid karein.</p>
+<p>Fitted kapde pehnein jo stage par achhi silhouette dein. Neutral colors ke sath bright colors (scarf, pocket square) ka splash use karein.</p>
+<p>Dangling earrings aur noisy accessories avoid karein.</p>
+<p>Mike battery pack lagane ke liye belt ya defined waistline zaroori hai.</p>
+<p>Rehearse hamesha isi planned outfit mein hi karein.</p>
+</div>
+<h3 class="sub-heading">Mental Preparation (Anxiety ko Energy Mein Badlo)</h3>
+<div class="sub-points">
+<p>Apne darr ko practice karne ke liye motivate hone ke liye use karein.</p>
+<p>Stage par jaane se pehle deep breathing karein aur dheere se release karein.</p>
+<p>1 ghante pehle thoda healthy food khayein; khali pet ya overeat na karein.</p>
+<p>Dry mouth se bachne ke liye 1/3 bottle paani piyein.</p>
+<p>Audience mein kuch friendly faces dhundhein aur unpar focus karein.</p>
+<p>Sari dikkaton ke liye backup plan ready rakhein.</p>
+</div>
+<h3 class="sub-heading">Setup (Stage Par Helpful Tools)</h3>
+<div class="sub-points">
+<p>Lectern ke bina bolna aur hand-held cards use karna ideal hai.</p>
+<p><strong>Note Cards:</strong> 5x8 inch ke cards ho jise ring clip se jodkar rakhein taaki girne par bikhrein na.</p>
+<p><strong>Comfort Backup:</strong> Side table par full script rakhein taaki blank out hone par review kar sakein.</p>
+<p>Slides par memory cues ke liye words ya images plant karein.</p>
+<p>Confidence monitors par over-rely na karein aur na hi unse continuous padhein.</p>
+<p>Sleek aur non-obstructive lectern ka use karein jo body ko block na kare.</p>
+</div>
+<h3 class="sub-heading">Voice aur Presence</h3>
+<p>Apni voice vary karein. Pauses, pace, volume, rhythm aur tone ke sath experiment karein. Natural aur conversational pace default rakhein.</p>
+<p><strong>Body Language:</strong> Stand tall, dono feet par barabar weight rakhein aur hand gestures se baat ko amplify karein. Stage par relaxed aur deliberate movements karein.</p>
+<h3 class="sub-heading">Creative Formats ka Use</h3>
+<p>Format innovations jaise dramatic props (mosquito jar ya human brain), panoramic screens, multisensorial stimulation, live podcasting, dual presenters ya debate formats use karein, par dhyan rahe ki yeh gimmicky na lage aur message na khoyen.</p>
+<div class="specimen-row"><span class="specimen-label">28pt</span><h2>Conclusion (Nishkarsh)</h2></div>
+<p><strong>The Talk Renaissance:</strong> Internet ke zariye aaj hum duniya ke behtareen teachers aur inspirers se seekh sakte hain aur unhe apne ghar bula sakte hain.</p>
+<p><strong>Contextual Knowledge:</strong> Future mein machine aur smart systems ke aane se specialist knowledge se zyada valuable contextual knowledge (big picture dekhne ki ability), creative knowledge aur deeper understanding of humanity ban jayegi.</p>
+<p><strong>Ultimate Impact:</strong> Jab aap life mein ek bade purpose ko dhoondhte hain, toh aapke paas bolne ke liye ek authentic idea aata hai. Aur jab aap use passion aur conviction ke sath connected world mein share karte hain, toh aapke impact ki koi limit nahi hoti.</p>
+      </div>
+
+      <div class="audio-section">
+        <p class="audio-section-title">Listen</p>
+        <div class="audio-grid">
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Broadcast</span>
+            </div>
+            <audio controls preload="none" src="b.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-card">
+            <div class="audio-card-label">
+              <span class="audio-card-badge">Audio</span>
+              <span class="audio-card-name">Debate</span>
+            </div>
+            <audio controls preload="none" src="d.m4a">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="colophon">◆ End of Sheet ◆</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    root.setAttribute('data-theme', dark ? 'press' : 'paper');
+    toggle.classList.toggle('flipped', dark);
+  }
+  applyTheme();
+  toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+</script>
+
+</body>
+</html>

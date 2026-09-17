@@ -1,0 +1,143 @@
+B="Influence: The Psychology of Persuasion"
+A="Robert B. Cialdini"
+H1|Introduction aur Basic Concepts
+B|Fixed-Action Patterns: Animals aur humans dono ke paas kuch pehle se programmed behaviors hote hain. Jab koi specific cue ya trigger milta hai, to yeh behaviors automatically activate ho jate hain.
+S|Turkey aur uske chick ka example: Mother turkey apne chick ki care tab karti hai jab woh "cheep-cheep" ki sound karta hai. Yeh sound itna strong trigger hai ki agar predator jaisa dikhne wala stuffed toy bhi "cheep-cheep" kare, to turkey uski bhi care karne lagti hai.
+S|Danger ka example: Sharp teeth ya blade ki chamak dekhkar hum bina soche turant piche hat jate hain.
+B|Shortcuts ki Zaroorat: Hamare environment mein itni information aur stimuli hote hain ki hamara brain sab kuch ek saath process nahi kar sakta. Shortcuts hume jaldi decision lene aur react karne mein madad karte hain.
+B|Shortcut par Depend Hone ka Kaaran: Jab hum bahut tired, stressed, distracted ya jaldi mein hote hain, tab hum in shortcuts par zyada depend karte hain. Aaj ki fast-paced aur information se bhari life ne hume in purane decision-making methods par aur zyada depend kar diya hai.
+B|"Because" Word ka Jaadu: Log kisi request ko zyada jaldi maan lete hain agar usme "because" word use kiya gaya ho, chahe uske baad diya gaya reason kitna hi simple ho.
+B|Contrast Principle: Hum kisi cheez ki value, weight ya quality ko aksar us cheez se compare karke judge karte hain jo humne usse just pehle dekhi ho.
+S|Example: Agar hum pehle bahut expensive cheez dekhen, to uske baad dikhne wali cheez hume relatively sasti lagne lagti hai.
+B|Compliance Professionals se Bachav: Salespeople, marketers aur manipulators in principles ka use karke logon se "haan" nikalwate hain. Har principle ko positive change ke liye bhi use kiya ja sakta hai aur kisi ko deceive karne ke liye bhi.
+S|Material Self-Interest: Iske peeche aksar yeh soch hoti hai ki har koi kam se kam kharch karke zyada se zyada paana chahta hai.
+
+H1|Reciprocity Principle: Len-Den ka Siddhant
+B|Definition: Jab koi hamare liye kuch karta hai ya hume gift deta hai, to hum andar se use badle mein kuch wapas dene ke liye obligated ya indebted feel karte hain.
+B|Social Importance: Yeh society ke liye bahut zaroori hai kyunki yeh help aur cooperation ko aasaan aur safe banata hai. Isi rule ki wajah se hum kabhi-kabhi un logon ko bhi repay karte hain jinhe hum pasand nahi karte.
+H2|Key Experiments aur Examples
+B|Coca-Cola Experiment: Ek experiment mein Joe naam ke aadmi ne kuch participants ko bina maange free Coca-Cola di aur doosron ko nahi di. Baad mein jab usne raffle tickets bechne ki koshish ki, to jin logon ko free drink mili thi unhone doosre logon ke comparison mein dugni tickets kharidi.
+B|Free Samples aur Donations: Marketing mein free samples isi principle par kaam karte hain. Pehle ek chhota gift ya flower dene se log zyada donation dene ke liye raazi ho sakte hain.
+B|WWI Soldier Example: Ek soldier ko dushman ne isliye chhod diya kyunki pakde jane par usne apni bread ka ek tukda dushman ke saath share kiya tha.
+H2|Compliance Techniques
+B|Reject-then-retreat aur Large-then-small: Manipulator pehle ek badi request karta hai, jaise $20 ki cheez bechna. Jab aap use reject kar dete hain, to woh piche hatkar ek chhoti request karta hai, jaise $5 ki cheez.
+S|Aapko lagta hai ki usne aapke liye concession kiya hai, isliye aap bhi compromise karke "yes" bol sakte hain. Contrast Principle ki wajah se doosri request bhi bahut chhoti lagti hai.
+B|Iske Outcomes: Yeh techniques agreement hone ke chances badhati hain, agreement poora hone ki possibility badhati hain, aur saamne wale ko arrangement se zyada satisfied feel karwati hain.
+H2|Manipulation Risks
+B|Unsolicited Debts: Bina maange mile favors ya gifts ke pressure mein log aisi cheez kharidne ya karne ke liye raazi ho sakte hain jo woh asal mein nahi chahte.
+B|Unfair Exchanges: Ek chhote gift ya favor ke badle log aapse bahut bada favor ya purchase karwa sakte hain.
+B|How to Say No: Har favor ya gift ko reject karna zaroori nahi hai. Lekin jab samajh aaye ki saamne wala genuine concession nahi de raha, balki persuasive trick use kar raha hai, to situation ko apne mind mein dobara define karein.
+S|Jab aap use ek trick ki tarah dekhte hain, to obligation ka pressure kam ho jata hai aur aap bina guilt ke "no" bol sakte hain.
+
+H1|Consistency Principle: Sthirta aur Commitment
+B|Definition: Ek baar jab hum koi stand lete hain ya choice karte hain, to hum khud ko aur doosron ko yeh dikhane ke liye consistent rehna chahte hain. Hum apne decisions ko sahi prove karne ke liye naye-naye reasons bhi dhoondhte hain.
+H2|Consistency kyun Important Hai?
+B|Culture mein consistent logon ko clear, reliable aur honest maana jata hai, jabki inconsistent logon ko confused ya dhokebaaz samjha ja sakta hai.
+B|Consistency hume baar-baar naya sochne se bachati hai aur ek mental shortcut deti hai.
+B|Yeh hume un difficult realities ka saamna karne se bhi bacha sakti hai jinhe hum dekhna nahi chahte.
+H2|Commitment ke 4 Key Components
+B|Active: Jab aap kuch actively karte ya likhte hain, to aapka commitment badh jata hai. Likha hua statement concrete aur visible hota hai.
+B|Public: Jab aapka stand public ho jata hai, to inconsistent dikhne ke darr se use badalna mushkil ho sakta hai.
+S|Ek study mein jin students ne apni choices likhkar sign ki thi, unhone baad mein apni choices badalne se mana kar diya.
+B|Effortful: Kisi cheez ko paane mein jitna zyada effort lagta hai, log us choice ko utna hi zyada value aur justify karte hain.
+S|Example: Tribal aur fraternal societies ke tough initiation programs.
+B|Inner Choice: Jab hum bina external pressure, bade reward ya dhamki ke koi decision lete hain, to hum uski inner responsibility lete hain aur us decision par zyada tikte hain.
+S|Agar hum sirf bade reward ke liye koi kaam karein, to reward hatne par woh behavior chhod sakte hain.
+H2|Blind Consistency ke Examples
+B|Toy Manufacturers: Christmas se pehle companies popular toys advertise karti hain, lekin stock kam rakhti hain. Parents Christmas par substitute toys kharidte hain. Christmas ke baad jab advertised toys dobara stock mein aate hain, to parents apne pehle promise ke consistent rehne ke liye unhe bhi kharid lete hain.
+B|Low-ball Strategy: Salesperson pehle artificially low price offer karta hai aur aapse paperwork ya trial run karwa leta hai. Jab aap commitment de dete hain, to last moment par woh kehta hai ki calculation error ki wajah se price badh gaya hai.
+B|Surveys aur Pleasantries: Charities pehle pooch sakti hain, "Kya aap social cause mein help karenge?" ya "Aap kaise hain?" Aapke "yes" bolne ke baad jab donation maanga jata hai, to consistent rehne ki feeling ki wajah se mana karna mushkil ho sakta hai.
+B|Korean War POWs: Chinese communists ne American POWs se pehle chhote aur harmless statements likhwaye, jaise "USA is not perfect." Dheere-dheere unse un topics par essays likhwaye gaye aur unhe poori tarah convert kar diya gaya.
+B|How to Say No: Agar kisi situation mein confusion ho, to pause karke khud se poochhein: "Knowing what I know now, if I could go back in time, would I still make the same choice?"
+S|Apne pehle gut-impression, yani sochne se pehle andar se aane wali uncomfortable feeling, par dhyan dein. Agar gut-feel comfortable nahi hai, to purane commitments ko side par rakhkar facts ko dobara review karein.
+
+H1|Social Proof Principle: Samajik Saboot
+B|Definition: Jab situation unclear ya confusing ho, to hum sahi behavior samajhne ke liye doosre logon ke actions aur reactions ko dekhte hain. Hum sochte hain ki agar bahut saare log kuch kar rahe hain, to shayad woh sahi hoga.
+H2|Daily Life Examples
+B|Canned Laughter: TV comedies mein fake laughter use ki jati hai, jisse logon ko joke zyada funny lag sakta hai.
+B|Long Queues: Clubs kabhi-kabhi jaanbujhkar bahar lambi lines banne dete hain taaki woh popular dikhein.
+B|Advertisers: Products par "fastest-growing" ya "best-selling" jaise labels lagaye jate hain.
+B|Tip Jars: Tip boxes mein pehle se kuch dollars rakhne se log zyada tip kar sakte hain.
+B|Similarity Factor: Social Proof tab sabse powerful hota hai jab hum apne jaise logon ka behavior dekhte hain.
+S|Isi liye ads mein aam aur regular logon ke testimonials use kiye jate hain.
+B|Phobias Door Karna: Jin bachchon ko dogs se darr lagta tha, unka darr un videos ko dekhkar kam ho gaya jisme unke jaise bachche dogs ke saath khushi se khel rahe the.
+H2|Pluralistic Ignorance
+B|Definition: Jab ek bade group ke beech koi incident hota hai, to log reaction samajhne ke liye ek-doosre ki taraf dekhte hain. Sab calm aur normal dikhne ki koshish karte hain, jisse sabko lag sakta hai ki emergency nahi hai aur koi action nahi leta.
+B|Kitty Genovese Case: Ek woman par uske ghar ke paas 30 minutes tak attack hua aur aakhir mein uski death ho gayi. 38 logon ne apne gharon se dekha, lekin kisi ne police ko phone nahi kiya kyunki sabko laga koi aur help karega.
+B|Urban Settings: Cities mein yeh problem zyada ho sakti hai kyunki wahan crowds hote hain, confusion hota hai aur log ek-doosre ke strangers hote hain.
+B|Emergency Strategy: Agar aap crowd wali emergency mein phansein, to pluralistic ignorance ko break karein.
+S|Bilkul clear aur specific batayein ki aapko help chahiye.
+S|Bheed mein se kisi ek specific insaan ko select karke duty dein.
+S|Example: "Suno, aap jo blue shirt mein hain, mujhe heart attack aaya hai, please ambulance ko call kijiye."
+H2|Copycat Aggression aur Suicide Spikes
+B|Boxer Matches: Jab black fighter match haarta hai, to agle 10 dinon mein young black victims ke homicide rates badh jate hain. White boxer ke haarne par white victims ke homicide rates badhte hain.
+B|Werther Effect: Ek German novel mein hero suicide karta hai. Book ko ban karna pada kyunki use padhne ke baad Europe mein suicide ki wave aa gayi thi.
+B|Suicide News aur Accidents: Jab front page par suicide ki news aati hai, to deadly accidents badh jate hain, jinhe insurance claim paane ke liye mask kiye gaye suicides maana gaya hai.
+S|Driver ki age aur profile news mein aaye person se match kar sakti hai.
+B|How to Say No: Intentionally-falsified social evidence, yani jhoothe testimonials aur fake statistics ko pehchanein aur fraud karne walon ko expose karein.
+B|Erroneous Social Evidence: Jab log bina soche herd mentality follow karte hain. Apne environment ko time-time par examine karein aur poori tarah autopilot par depend na karein.
+S|Example: Jaise pilot apne instruments ko monitor karta hai.
+
+H1|Liking Principle: Pasandida-pan
+B|Definition: Hum un logon ki requests ko jaldi maan lete hain jinhe hum jaante aur pasand karte hain. Personal relationships aur friendships connection aur safety ki feeling paida karti hain.
+B|Tupperware Parties Example: Isme ek dost apne doston ko invite karta hai aur lagbhag saare principles use hote hain.
+S|Reciprocity games ke through kaam karta hai.
+S|Commitment product ke benefits share karne se banta hai.
+S|Social Proof isliye hota hai kyunki doosre friends bhi buying kar rahe hote hain.
+S|Liking isliye hota hai kyunki event aapka dost host kar raha hota hai.
+B|Referrals: Salesperson ek buyer se uske friends ke names mangta hai aur un friends ko reference ke through approach karta hai. Isse unke liye mana karna mushkil ho sakta hai.
+H2|Likability ke Factors
+B|Physical Attractiveness aur Halo Effect: Hamare mind mein Halo Effect ho sakta hai, jisme hum attractive logon ko automatically talented, honest, kind aur intelligent maan lete hain.
+S|Attractive logon ko courts mein kam punishment aur better jobs mil sakti hain.
+B|Similarity: Hum un logon ko pasand karte hain jo hamare jaise dikhte hain ya hamara background, interests ya opinions share karte hain.
+S|Dress style ya hobbies match karke log liking create kar sakte hain.
+B|Compliments: Flattery aur praise, chahe jhoothi ho, hume achhi lag sakti hai aur hum flattery karne wale ko pasand karne lagte hain.
+B|Contact aur Cooperation: Hum familiar cheezon ko zyada pasand karte hain.
+S|Racial barriers kam karne ke liye cooperative classrooms banaye gaye jahan bachche milkar ek common goal par kaam karte the.
+S|Police mein Good Cop-Bad Cop approach iska example hai. Suspect Good Cop ko helper samajhkar sach bata sakta hai.
+B|Conditioning aur Association: Hum un logon ko na-pasand kar sakte hain jo hume bad news dete hain, chahe unki koi galti na ho.
+S|Advertisers models aur celebrities ko brand ke saath associate karte hain taaki brand beauty aur success se connect ho sake.
+B|Success Association: Log sports teams ke saath emotionally connect ho jate hain aur team ki success ya failure ko apni success ya failure jaisa feel karte hain.
+S|Jeetne par log kehte hain, "Hum jeet gaye," aur haarne par kehte hain, "Woh haar gaye."
+S|Low self-esteem wale log aksar name-dropping karte hain.
+B|How to Say No: Kisi ko pasand karne se khud ko rokna aasaan nahi hai. Lekin agar aapko lage ki aap bahut kam samay mein kisi salesperson ko bahut zyada pasand karne lage hain, to khud se poochhein ki kya is liking ke peeche koi genuine reason hai.
+S|Apni feelings ko request karne wale person se alag karein aur sirf request ya deal ki actual utility aur fayde par focus karein.
+
+H1|Authority Principle: Authority aur Satta
+B|Definition: Bachpan se hume sikhaya jata hai ki doctors, leaders, parents aur experts jaise authority figures ko obey karna sahi hai. Society ka structure chalane ke liye yeh zaroori ho sakta hai, lekin blind obedience bada nuksan bhi kar sakti hai.
+B|Authority Shortcut: Hum aksar sochte hain, "Experts ne bola hai to sahi hi hoga," aur authority ko decision lene ka shortcut bana lete hain.
+B|Milgram Experiment: Lab coat pehne psychologist, yani authority figure, ke order par participants ne screen par screams sunne ke baad bhi saamne wale person ko lethal levels ke shocks diye, sirf order follow karne ke liye.
+B|Hospital Blind Obedience: Hospital staff, jaise nurses aur assistants, doctors ke ajeeb aur galat prescriptions ko bhi kabhi-kabhi bina sawaal kiye blindly follow karte hain.
+H2|Symbols of Authority
+B|Titles: Degrees, Professor, Dr. aur Expert jaise titles hume automatically influence karte hain. Con-men in titles ko fake bhi kar sakte hain.
+B|Clothes: Uniforms aur well-tailored business suits authority ka effect paida kar sakte hain.
+S|Ek well-dressed suit pehne aadmi ke jaywalk karne par 3.5 times zyada logon ne use blindly follow kiya.
+B|Trappings: Expensive jewelry, luxury prestige cars aur doosre status symbols bhi authority ka effect paida karte hain.
+B|How to Say No: Alert rahein ki authority symbols aur credentials fake kiye ja sakte hain.
+B|Question 1: "Is this authority truly an expert?" Kya inke credentials valid hain aur kya woh is specific matter ke liye relevant hain?
+B|Question 2: "How truthful can I expect this expert to be?" Kya yeh sach mein objective aur honest hain, ya inka apna koi profit hai?
+S|Manipulators kabhi-kabhi pehle ek chhoti weakness admit karte hain taaki woh honest dikh sakein.
+
+H1|Scarcity Principle: Kami ya Durlabh-ta
+B|Definition: Jab koi cheez limited availability mein hoti hai, to hume lag sakta hai ki uski value aur quality bahut high hai. Humans loss-averse hote hain, yani kuch paane ki khushi se zyada strong kabhi-kabhi kuch khone ka darr hota hai.
+B|Quantity aur Deprivation: Agar pehle koi improvement ho aur uske baad sharp decline aa jaye, to log rebel ban sakte hain.
+S|Example: Historical revolutions.
+S|Consistent rules na rakhne wale parents ke bachche bhi rebellious ho sakte hain.
+B|Competition aur Demand: Hum un cheezon ko paane ke liye sabse zyada betaab ho sakte hain jinhe paane ke liye koi rival ya competitor bhi ho.
+S|Property agents jaanbujhkar multiple buyers ko ek saath ghar dikhane bulate hain taaki competition trigger ho.
+S|Advertisers "by popular demand" dikhakar scarcity ki feeling paida karte hain.
+B|Information Ban: Jab kisi information ya kitab par censorship lagti hai, to log use aur zyada jaanne ki koshish karte hain aur us par zyada trust kar sakte hain.
+S|Example: Court trials mein banned information par jury zyada focus kar sakti hai.
+H2|Common Sales Tactics
+B|"Limited number of products left."
+B|"Limited promotion ends today" ya "Deadline expiring soon."
+B|"Buy right now or price will go up."
+B|How to Say No: Scarcity trigger hote hi emotions strong ho sakte hain aur logic kam kaam kar sakta hai.
+B|Step 1: Apne andar hone wali emotional feeling, jaise darr, excitement ya curiosity, ko pehchanein.
+B|Step 2: Thoda rukein aur calm hon. Phir khud se poochhein: "Mujhe yeh cheez kyu chahiye?"
+S|Sirf kisi cheez ki kami hone se cookie ka taste behtar nahi ho jata aur na hi uski utility badh jati hai.
+S|Possession ke pleasure aur actual use, yani consumption, ke pleasure ke beech ka difference samjhein.
+
+H1|Nishkarsh
+P|Aaj ki fast-paced, complex aur information se overloaded duniya mein hum baar-baar in mental shortcuts ka use karne ke liye majboor hote hain.
+B|Robert B. Cialdini: Robert B. Cialdini, jinka janm 1945 mein hua aur jo Arizona State University ke Regents' Professor Emeritus hain, batate hain ki agar hum in weapons of influence ke psychological triggers ko achhi tarah samajh lein, to hum compliance battlefield se bina nuksan ke nikal sakte hain aur behtar position mein reh sakte hain.
